@@ -1,0 +1,148 @@
+{
+ "_note": "TEST FIXTURE, not a real acquisition (shapes copied from anonymous CMR responses, trimmed)",
+ "collection": {
+  "meta": {
+   "concept-id": "C-TEST-SPL3SMP_E",
+   "provider-id": "NSIDC_CPRD"
+  },
+  "umm": {
+   "ShortName": "SPL3SMP_E",
+   "Version": "006",
+   "EntryTitle": "SMAP Enhanced L3 Radiometer Global and Polar Grid Daily 9 km EASE-Grid Soil Moisture V006",
+   "Abstract": "test abstract",
+   "DOI": {
+    "DOI": "10.5067/M20OXIZHY3RJ"
+   },
+   "TemporalExtents": [
+    {
+     "EndsAtPresentFlag": true,
+     "TemporalResolution": {
+      "Unit": "Day",
+      "Value": 1
+     },
+     "RangeDateTimes": [
+      {
+       "BeginningDateTime": "2015-03-31T00:00:00.000Z"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "granules": [
+  {
+   "meta": {
+    "concept-id": "G-TEST-1",
+    "provider-id": "NSIDC_CPRD"
+   },
+   "umm": {
+    "GranuleUR": "SMAP_L3_SM_P_E_20240101_R19240_001.h5",
+    "TemporalExtent": {
+     "RangeDateTime": {
+      "BeginningDateTime": "2024-01-01T00:00:00.000Z",
+      "EndingDateTime": "2024-01-01T23:59:59.999Z"
+     }
+    },
+    "SpatialExtent": {
+     "HorizontalSpatialDomain": {
+      "Geometry": {
+       "BoundingRectangles": [
+        {
+         "WestBoundingCoordinate": -180,
+         "EastBoundingCoordinate": 180,
+         "NorthBoundingCoordinate": 85.04,
+         "SouthBoundingCoordinate": -85.04
+        }
+       ]
+      }
+     }
+    },
+    "CollectionReference": {
+     "ShortName": "SPL3SMP_E",
+     "Version": "006"
+    },
+    "DataGranule": {
+     "ArchiveAndDistributionInformation": [
+      {
+       "Name": "SMAP_L3_SM_P_E_20240101_R19240_001.h5",
+       "Size": 123456,
+       "SizeUnit": "B",
+       "Format": "HDF5",
+       "Checksum": {
+        "Value": "abc123",
+        "Algorithm": "MD5"
+       }
+      }
+     ]
+    },
+    "RelatedUrls": [
+     {
+      "URL": "https://example.test/smap/SMAP_L3_SM_P_E_20240101_R19240_001.h5",
+      "Type": "GET DATA"
+     },
+     {
+      "URL": "SMAP_L3_SM_P_E_20240101_R19240_001.h5.qa",
+      "Type": "EXTENDED METADATA"
+     }
+    ]
+   }
+  },
+  {
+   "meta": {
+    "concept-id": "G-TEST-2",
+    "provider-id": "NSIDC_CPRD"
+   },
+   "umm": {
+    "GranuleUR": "SMAP_L3_SM_P_E_20240102_R19240_001.h5",
+    "TemporalExtent": {
+     "RangeDateTime": {
+      "BeginningDateTime": "2024-01-02T00:00:00.000Z",
+      "EndingDateTime": "2024-01-02T23:59:59.999Z"
+     }
+    },
+    "SpatialExtent": {
+     "HorizontalSpatialDomain": {
+      "Geometry": {
+       "BoundingRectangles": [
+        {
+         "WestBoundingCoordinate": -180,
+         "EastBoundingCoordinate": 180,
+         "NorthBoundingCoordinate": 85.04,
+         "SouthBoundingCoordinate": -85.04
+        }
+       ]
+      }
+     }
+    },
+    "CollectionReference": {
+     "ShortName": "SPL3SMP_E",
+     "Version": "006"
+    },
+    "DataGranule": {
+     "ArchiveAndDistributionInformation": [
+      {
+       "Name": "SMAP_L3_SM_P_E_20240102_R19240_001.h5",
+       "Size": 123456,
+       "SizeUnit": "B",
+       "Format": "HDF5",
+       "Checksum": {
+        "Value": "abc123",
+        "Algorithm": "MD5"
+       }
+      }
+     ]
+    },
+    "RelatedUrls": [
+     {
+      "URL": "https://example.test/smap/SMAP_L3_SM_P_E_20240102_R19240_001.h5",
+      "Type": "GET DATA"
+     },
+     {
+      "URL": "SMAP_L3_SM_P_E_20240102_R19240_001.h5.qa",
+      "Type": "EXTENDED METADATA"
+     }
+    ]
+   }
+  }
+ ]
+}

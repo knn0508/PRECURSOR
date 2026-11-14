@@ -1,0 +1,184 @@
+{
+ "_comment": "TEST FIXTURE, not a real acquisition. Recorded SHAPE of a CMR UMM-G NISAR GUNW granule with synthetic values.",
+ "umm": {
+  "GranuleUR": "NISAR_L2_PR_GUNW_000_000_D_000_000_0000_SH_20000101T000000_20000101T000030_20000113T000000_20000113T000030_P00000_N_F_J_000",
+  "CollectionReference": {
+   "ShortName": "NISAR_L2_GUNW_V1",
+   "Version": "1"
+  },
+  "TemporalExtent": {
+   "RangeDateTime": {
+    "BeginningDateTime": "2000-01-01T00:00:00.000Z",
+    "EndingDateTime": "2000-01-13T00:00:30.000Z"
+   }
+  },
+  "OrbitCalculatedSpatialDomains": [
+   {
+    "OrbitNumber": 5036
+   }
+  ],
+  "AdditionalAttributes": [
+   {
+    "Name": "ASCENDING_DESCENDING",
+    "Values": [
+     "DESCENDING"
+    ]
+   },
+   {
+    "Name": "TRACK_NUMBER",
+    "Values": [
+     "32"
+    ]
+   },
+   {
+    "Name": "FRAME_NUMBER",
+    "Values": [
+     "84"
+    ]
+   },
+   {
+    "Name": "PRODUCT_TYPE",
+    "Values": [
+     "GUNW"
+    ]
+   },
+   {
+    "Name": "PRODUCT_VERSION",
+    "Values": [
+     "1.0.20"
+    ]
+   },
+   {
+    "Name": "FREQUENCY_A_POLARIZATION",
+    "Values": [
+     "HH"
+    ]
+   },
+   {
+    "Name": "REFERENCE_ZERO_DOPPLER_START_TIME",
+    "Values": [
+     "2000-01-01T00:00:00.000000Z"
+    ]
+   },
+   {
+    "Name": "REFERENCE_ZERO_DOPPLER_END_TIME",
+    "Values": [
+     "2000-01-01T00:00:30.000000Z"
+    ]
+   },
+   {
+    "Name": "SECONDARY_ZERO_DOPPLER_START_TIME",
+    "Values": [
+     "2000-01-13T00:00:00.000000Z"
+    ]
+   },
+   {
+    "Name": "SECONDARY_ZERO_DOPPLER_END_TIME",
+    "Values": [
+     "2000-01-13T00:00:30.000000Z"
+    ]
+   },
+   {
+    "Name": "PROCESSING_CENTER",
+    "Values": [
+     "JPL"
+    ]
+   },
+   {
+    "Name": "ORBIT_TYPE",
+    "Values": [
+     "PR"
+    ]
+   },
+   {
+    "Name": "FULL_FRAME",
+    "Values": [
+     "True"
+    ]
+   },
+   {
+    "Name": "JOINT_OBSERVATION",
+    "Values": [
+     "False"
+    ]
+   }
+  ],
+  "SpatialExtent": {
+   "HorizontalSpatialDomain": {
+    "Geometry": {
+     "GPolygons": [
+      {
+       "Boundary": {
+        "Points": [
+         {
+          "Longitude": -82.0,
+          "Latitude": 7.5
+         },
+         {
+          "Longitude": -81.0,
+          "Latitude": 7.5
+         },
+         {
+          "Longitude": -81.0,
+          "Latitude": 8.5
+         },
+         {
+          "Longitude": -82.0,
+          "Latitude": 8.5
+         },
+         {
+          "Longitude": -82.0,
+          "Latitude": 7.5
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  },
+  "PGEVersionClass": {
+   "PGEVersion": "1.0.20"
+  },
+  "InputGranules": [
+   "FAKE_INPUT_REF",
+   "FAKE_INPUT_SEC"
+  ],
+  "DataGranule": {
+   "ProductionDateTime": "2000-02-01T00:00:00.000Z",
+   "ArchiveAndDistributionInformation": [
+    {
+     "Name": "NISAR_L2_PR_GUNW_000_000_D_000_000_0000_SH_20000101T000000_20000101T000030_20000113T000000_20000113T000030_P00000_N_F_J_000.png",
+     "SizeInBytes": 1000,
+     "Format": "PNG"
+    },
+    {
+     "Name": "NISAR_L2_PR_GUNW_000_000_D_000_000_0000_SH_20000101T000000_20000101T000030_20000113T000000_20000113T000030_P00000_N_F_J_000.h5",
+     "SizeInBytes": 1400000000,
+     "Format": "HDF5",
+     "Checksum": {
+      "Value": "d41d8cd98f00b204e9800998ecf8427e",
+      "Algorithm": "MD5"
+     }
+    }
+   ]
+  },
+  "RelatedUrls": [
+   {
+    "Type": "GET RELATED VISUALIZATION",
+    "URL": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/L2_L_GUNW/FAKE_GRANULE/NISAR_L2_PR_GUNW_000_000_D_000_000_0000_SH_20000101T000000_20000101T000030_20000113T000000_20000113T000030_P00000_N_F_J_000.png"
+   },
+   {
+    "Type": "GET DATA VIA DIRECT ACCESS",
+    "URL": "s3://fake-bucket/NISAR_L2_PR_GUNW_000_000_D_000_000_0000_SH_20000101T000000_20000101T000030_20000113T000000_20000113T000030_P00000_N_F_J_000.h5"
+   },
+   {
+    "Type": "GET DATA",
+    "URL": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/L2_L_GUNW/FAKE_GRANULE/NISAR_L2_PR_GUNW_000_000_D_000_000_0000_SH_20000101T000000_20000101T000030_20000113T000000_20000113T000030_P00000_N_F_J_000.h5"
+   }
+  ]
+ },
+ "meta": {
+  "concept-id": "G0000000000-ASF"
+ }
+}

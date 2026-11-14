@@ -1,0 +1,76 @@
+"""Static catalog of the datasets Phase 4 knows about, with HONEST implementation status.
+
+Statuses mean: IMPLEMENTED_AND_TESTED (real data processed and checked) | IMPLEMENTED_BUT_NOT_TESTED_WITH_REAL_DATA |
+PARTIALLY_IMPLEMENTED | PLACEHOLDER | BLOCKED. No real file has been processed for any dataset yet, so nothing here
+may claim IMPLEMENTED_AND_TESTED. Property values come from the verified docs in docs/scientific/*.
+"""
+from __future__ import annotations
+
+from app.schemas.environmental import DatasetInfo
+
+NOT_REAL = "Verified on synthetic fixtures only; no real file has been processed."
+
+DATASETS: list[DatasetInfo] = [
+    DatasetInfo(layer_type="ELEVATION", provider="NASADEM", dataset_name="NASADEM_HGT V001 (1 arc-second, 1x1 degree tiles)",
+                implementation_status="IMPLEMENTED_BUT_NOT_TESTED_WITH_REAL_DATA",
+                description="Elevation from Phase 2 NASADEM downloads: mosaic, clip to AOI. Slope and aspect are derived from it.",
+                native_resolution="1 arc-second (~30 m)", temporal_resolution="static (2000 SRTM-derived)", units="metre",
+                access="Phase 2 acquisition (Earthdata login for download)", limitations=[NOT_REAL, "Vertical datum assumed per NASADEM docs; unverified on a real tile."]),
+    DatasetInfo(layer_type="SLOPE", provider="NASADEM", dataset_name="Slope derived from NASADEM (Horn method)",
+                implementation_status="IMPLEMENTED_BUT_NOT_TESTED_WITH_REAL_DATA",
+                description="Terrain slope in degrees, with latitude-dependent cell sizes for geographic grids.", units="degree",
+                limitations=[NOT_REAL, "Derived measurement, not a hazard classification."]),
+    DatasetInfo(layer_type="ASPECT", provider="NASADEM", dataset_name="Aspect derived from NASADEM",
+                implementation_status="IMPLEMENTED_BUT_NOT_TESTED_WITH_REAL_DATA",
+                description="Downslope direction, degrees clockwise from north; flat cells are no-data; circular statistics.", units="degree",
+                limitations=[NOT_REAL]),
+    DatasetInfo(layer_type="RAINFALL", provider="GPM", dataset_name="GPM IMERG V07 Final Run, daily",
+                implementation_status="IMPLEMENTED_BUT_NOT_TESTED_WITH_REAL_DATA",
+                description="Observed daily accumulated precipitation over the AOI; monthly and rolling sums need complete data. Optional half-hourly input (day observed only when all 48 intervals are present).",
+                native_resolution="0.1 degree (~10 km)", temporal_resolution="daily", units="mm",
+                access="Phase 2 acquisition (Earthdata login)", limitations=[NOT_REAL, "Satellite estimate, ~3.5 month latency, not real-time."]),
+    DatasetInfo(layer_type="SOIL", provider="SOILGRIDS", dataset_name="ISRIC SoilGrids 2.0",
+                implementation_status="PARTIALLY_IMPLEMENTED",
+                description="Reads user-placed SoilGrids GeoTIFFs from data/external/soilgrids: statistics and clipped map rasters (one per property/depth); produces a download proposal only.",
+                native_resolution="250 m", units="source units preserved (documented scaling factors)",
+                access="Public (CC BY 4.0); nothing is downloaded automatically", limitations=[NOT_REAL, "No acquisition automation: files must be placed after approval.", "Clipped map rasters are written on the native grid and aligned to the reference grid."]),
+    DatasetInfo(layer_type="LAND_COVER", provider="WORLDCOVER", dataset_name="ESA WorldCover",
+                implementation_status="PARTIALLY_IMPLEMENTED",
+                description="Reads user-placed land-cover GeoTIFFs from data/external/land_cover: statistics and a clipped class raster; class ids and the official legend are preserved.",
+                native_resolution="10 m", temporal_resolution="annual/epoch product", access="Public (CC BY 4.0); nothing is downloaded automatically",
+                limitations=[NOT_REAL, "No acquisition automation. Classes are never converted into risk labels."]),
+    DatasetInfo(layer_type="SMAP_SOIL_MOISTURE", provider="SMAP", dataset_name="SMAP L3 enhanced soil moisture (SPL3SMP_E)",
+                implementation_status="IMPLEMENTED_BUT_NOT_TESTED_WITH_REAL_DATA",
+                description="AOI statistics and a daily time series (AM/PM overpasses kept separate) from Phase 2 SMAP files; optional quality filter; missing days stay missing.",
+                native_resolution="9 km grid (~36 km footprint)", temporal_resolution="daily composites, ~3-day revisit", units="cm3/cm3 (published as m3/m3; numerically identical)",
+                access="Phase 2 acquisition (Earthdata login; ENABLE_SMAP)", limitations=[NOT_REAL, "Top ~5 cm only; coarse cells do not describe slope-scale moisture.", "HDF5 attribute names for units and fill in real files are unverified."]),
+    DatasetInfo(layer_type="LITHOLOGY", provider="USER", dataset_name="User-provided lithology / geology (raster or GeoJSON polygons)",
+                implementation_status="IMPLEMENTED_BUT_NOT_TESTED_WITH_REAL_DATA",
+                description="Class raster on the reference grid; class ids and names come only from the user's sidecar legend; never invented.",
+                access="Files placed in data/external/lithology (nothing is downloaded)", limitations=[NOT_REAL, "GeoJSON vectors only (no Shapefile/GeoPackage without an approved dependency).", "NOT_AVAILABLE when absent."]),
+    DatasetInfo(layer_type="NDVI", provider="USER", dataset_name="User-provided NDVI / MODIS vegetation index raster",
+                implementation_status="IMPLEMENTED_BUT_NOT_TESTED_WITH_REAL_DATA",
+                description="NDVI statistics and a raster on the reference grid; MODIS scaling applied only when the file declares it; out-of-range values are counted, never clipped.",
+                units="NDVI (dimensionless)", access="Files placed in data/external/ndvi (nothing is downloaded)",
+                limitations=[NOT_REAL, "Observation date is UNKNOWN unless stated in tags or the file name.", "No vegetation-health classes or thresholds."]),
+    DatasetInfo(layer_type="DISTANCE_RIVER", provider="USER", dataset_name="Distance to the nearest river / fault / road (user-provided GeoJSON)",
+                implementation_status="IMPLEMENTED_BUT_NOT_TESTED_WITH_REAL_DATA",
+                description="Euclidean distance in metres from each pixel centre, computed in the metric reference-grid CRS (never degrees), one raster per kind.",
+                units="metre", access="GeoJSON placed in data/external/{rivers,faults,roads} (nothing is downloaded)",
+                limitations=[NOT_REAL, "Straight-line distance only (no network or path distance).", "Grids above 4 million cells are refused, not coarsened."]),
+    DatasetInfo(layer_type="HISTORICAL_LANDSLIDES", provider="NASA_GLC", dataset_name="NASA Global Landslide Catalog (Phase 2 import)",
+                implementation_status="IMPLEMENTED_BUT_NOT_TESTED_WITH_REAL_DATA",
+                description="Cataloged historical events inside the AOI, reused from the Phase 2 table without re-import.",
+                temporal_resolution="events (catalog current to 2016-03-07)",
+                limitations=["One-time historical export: incomplete, reporting-biased, not ground truth.", "Phase 2 table is empty until the CSV is imported."]),
+    DatasetInfo(layer_type="SEISMIC", provider="USGS", dataset_name="USGS Earthquake Catalog (FDSN event API)",
+                implementation_status="IMPLEMENTED_BUT_NOT_TESTED_WITH_REAL_DATA",
+                description="Earthquakes as independent observations, fetched only on an explicit user action; stored with de-duplication.",
+                access="Public API, no credentials", limitations=["Parsing/pagination tested with a fake HTTP session; no live USGS call has been validated in tests.",
+                                                                   "No causal link to landslides is implied."]),
+    DatasetInfo(layer_type="INSAR_DISPLACEMENT", provider="INSAR_PHASE3", dataset_name="Phase 3 InSAR deformation products (reference only)",
+                implementation_status="PARTIALLY_IMPLEMENTED",
+                description="Phase 3 products are referenced with their provenance. Only real-satellite products feed features; synthetic ones stay labelled and excluded.",
+                units="mm | mm/year | dimensionless",
+                limitations=["Phase 3 real-data validation NOT_PERFORMED; sign convention unverified.", "A deformation map is not a risk map."]),
+]

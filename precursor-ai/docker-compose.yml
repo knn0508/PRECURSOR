@@ -1,0 +1,89 @@
+services:
+  postgres:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-precursor}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-precursor}
+    ports:
+      - "${POSTGRES_HOST_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks: [precursor]
+
+  backend:
+    build: ./backend
+    environment:
+      # Service hostname `postgres` resolves on the compose network.
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-precursor}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-precursor}
+      APP_ENV: ${APP_ENV:-development}
+      SECRET_KEY: ${SECRET_KEY:-change-me}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000}
+      # Phase 2: Earthdata credentials come from .env (optional; only needed to download)
+      EARTHDATA_USERNAME: ${EARTHDATA_USERNAME:-}
+      EARTHDATA_PASSWORD: ${EARTHDATA_PASSWORD:-}
+      DATA_ROOT: /data
+      NISAR_PRODUCTS: ${NISAR_PRODUCTS:-GUNW,GCOV,GSLC}
+      ALLOWED_MATURITIES: ${ALLOWED_MATURITIES:-VALIDATED}
+      MAX_CONCURRENT_DOWNLOADS: ${MAX_CONCURRENT_DOWNLOADS:-2}
+      MAX_FILE_SIZE_BYTES: ${MAX_FILE_SIZE_BYTES:-3221225472}
+      MAX_GRANULES_PER_REQUEST: ${MAX_GRANULES_PER_REQUEST:-10}
+      ENABLE_SMAP: ${ENABLE_SMAP:-false}
+      GPM_RESOLUTION: ${GPM_RESOLUTION:-daily}
+      SMAP_COLLECTION: ${SMAP_COLLECTION:-SPL3SMP_E}
+      REQUEST_TIMEOUT_S: ${REQUEST_TIMEOUT_S:-60}
+      DOWNLOAD_RETRIES: ${DOWNLOAD_RETRIES:-3}
+      MAX_AOI_BBOX_DEGREES: ${MAX_AOI_BBOX_DEGREES:-5}
+      ENABLE_NISAR: ${ENABLE_NISAR:-true}
+      ENABLE_NASADEM: ${ENABLE_NASADEM:-true}
+      ENABLE_GPM: ${ENABLE_GPM:-true}
+      ENABLE_LANDSLIDE_CATALOG: ${ENABLE_LANDSLIDE_CATALOG:-true}
+      # Phase 3: InSAR processing (no credentials needed; reads files already on disk)
+      INSAR_BLOCK_ROWS: ${INSAR_BLOCK_ROWS:-256}
+      INSAR_TIMEOUT_S: ${INSAR_TIMEOUT_S:-3600}
+      INSAR_MIN_FREE_DISK_BYTES: ${INSAR_MIN_FREE_DISK_BYTES:-1073741824}
+    volumes:
+      - ./data:/data
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; urllib.request.urlopen('http://localhost:8000/api/v1/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    networks: [precursor]
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # Baked into the client bundle at build time; must be reachable from the browser.
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000/api/v1}
+    ports:
+      - "3000:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3000').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 15s
+    networks: [precursor]
+
+volumes:
+  postgres_data:
+
+networks:
+  precursor:

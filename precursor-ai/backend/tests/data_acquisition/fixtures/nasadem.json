@@ -1,0 +1,117 @@
+{
+ "_note": "TEST FIXTURE, not a real acquisition (shapes copied from anonymous CMR responses, trimmed)",
+ "collection": {
+  "meta": {
+   "concept-id": "C-TEST-NASADEM_HGT",
+   "provider-id": "LPCLOUD"
+  },
+  "umm": {
+   "ShortName": "NASADEM_HGT",
+   "Version": "001",
+   "EntryTitle": "NASADEM Merged DEM Global 1 arc second V001",
+   "Abstract": "test abstract",
+   "DOI": {
+    "DOI": "10.5067/MEASURES/NASADEM/NASADEM_HGT.001"
+   },
+   "TemporalExtents": [
+    {
+     "EndsAtPresentFlag": false,
+     "RangeDateTimes": [
+      {
+       "BeginningDateTime": "2000-02-11T00:00:00.000Z",
+       "EndingDateTime": "2000-02-21T23:59:59.000Z"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "granules": [
+  {
+   "meta": {
+    "concept-id": "G-TEST-n40e043",
+    "provider-id": "LPCLOUD"
+   },
+   "umm": {
+    "GranuleUR": "NASADEM_HGT_n40e043",
+    "TemporalExtent": {
+     "RangeDateTime": {
+      "BeginningDateTime": "2000-02-11T00:00:00.000Z",
+      "EndingDateTime": "2000-02-21T23:59:59.000Z"
+     }
+    },
+    "SpatialExtent": {
+     "HorizontalSpatialDomain": {
+      "Geometry": {
+       "BoundingRectangles": [
+        {
+         "WestBoundingCoordinate": 42.9998611,
+         "EastBoundingCoordinate": 44.0001389,
+         "NorthBoundingCoordinate": 41.0001389,
+         "SouthBoundingCoordinate": 39.9998611
+        }
+       ]
+      }
+     }
+    },
+    "CollectionReference": {
+     "ShortName": "NASADEM_HGT",
+     "Version": "001"
+    },
+    "RelatedUrls": [
+     {
+      "URL": "https://example.test/NASADEM_HGT_n40e043.zip",
+      "Type": "GET DATA"
+     },
+     {
+      "URL": "s3://bucket/NASADEM_HGT_n40e043.zip",
+      "Type": "GET DATA VIA DIRECT ACCESS"
+     }
+    ]
+   }
+  },
+  {
+   "meta": {
+    "concept-id": "G-TEST-n40e044",
+    "provider-id": "LPCLOUD"
+   },
+   "umm": {
+    "GranuleUR": "NASADEM_HGT_n40e044",
+    "TemporalExtent": {
+     "RangeDateTime": {
+      "BeginningDateTime": "2000-02-11T00:00:00.000Z",
+      "EndingDateTime": "2000-02-21T23:59:59.000Z"
+     }
+    },
+    "SpatialExtent": {
+     "HorizontalSpatialDomain": {
+      "Geometry": {
+       "BoundingRectangles": [
+        {
+         "WestBoundingCoordinate": 43.9998611,
+         "EastBoundingCoordinate": 45.0001389,
+         "NorthBoundingCoordinate": 41.0001389,
+         "SouthBoundingCoordinate": 39.9998611
+        }
+       ]
+      }
+     }
+    },
+    "CollectionReference": {
+     "ShortName": "NASADEM_HGT",
+     "Version": "001"
+    },
+    "RelatedUrls": [
+     {
+      "URL": "https://example.test/NASADEM_HGT_n40e044.zip",
+      "Type": "GET DATA"
+     },
+     {
+      "URL": "s3://bucket/NASADEM_HGT_n40e044.zip",
+      "Type": "GET DATA VIA DIRECT ACCESS"
+     }
+    ]
+   }
+  }
+ ]
+}

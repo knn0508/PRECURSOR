@@ -1,0 +1,13 @@
+{
+ "_comment": "TEST FIXTURE, not a real acquisition. Recorded SHAPE of a CMR UMM-C collection record.",
+ "umm": {
+  "ShortName": "NISAR_L2_GUNW_V1",
+  "Version": "1",
+  "EntryTitle": "TEST FIXTURE GUNW",
+  "Abstract": "fixture",
+  "DataMaturity": "Validated"
+ },
+ "meta": {
+  "concept-id": "C0000000000-ASF"
+ }
+}

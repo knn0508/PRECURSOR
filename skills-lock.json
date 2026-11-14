@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "skills": {
+    "clean-architecture": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "clean-architecture/SKILL.md",
+      "computedHash": "3cc433bb434c6aae382758e4f054ae446777fb24ee33da2c20cae8c0c73735ca"
+    },
+    "docker": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "docker/SKILL.md",
+      "computedHash": "f9a56c9e4d06e5011b26a15a7b77673b5854dfdb8270b854da25a755aca39752"
+    },
+    "fastapi-python": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "fastapi-python/SKILL.md",
+      "computedHash": "dcd375a6d6b3874ad5a11237399a20c851e6b221dee5dd3ad52a7d67bb3e53e8"
+    },
+    "nextjs-react-typescript": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "nextjs-react-typescript/SKILL.md",
+      "computedHash": "bd325d613739a78e68c07eb2d4625982327641c7727f611d4c4754b523044e08"
+    },
+    "playwright": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "playwright/SKILL.md",
+      "computedHash": "e0cde841db8c2d907c8601c021b146895721ba422fccccac059ca0e707fe5c1f"
+    },
+    "postgresql-best-practices": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "postgresql-best-practices/SKILL.md",
+      "computedHash": "d0a6b67c67d1d4ce53fb99b862c6fb56927491af66496fde58579b61dc1cf60e"
+    },
+    "python-testing": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "python-testing/SKILL.md",
+      "computedHash": "a0c82b3ddcbdfdf88af8c8495ae5d828f8a59003fb1430c39a8f092630917e9e"
+    },
+    "readme-best-practices": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "readme-best-practices/SKILL.md",
+      "computedHash": "caf5a5fa7a9d4f41e45e7b7aaa4fa28d8cb81fbf2bff0bec739deb09a6e44065"
+    },
+    "tailwindcss": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "tailwindcss/SKILL.md",
+      "computedHash": "de97a043b202f707650a3eaf3b3fb44cacf5cfd3a85ad819ab9fbe7e633c3ce0"
+    }
+  }
+}

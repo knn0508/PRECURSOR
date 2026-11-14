@@ -1,0 +1,190 @@
+{
+ "_note": "TEST FIXTURE, not a real acquisition (shapes copied from anonymous CMR responses, trimmed)",
+ "collection": {
+  "meta": {
+   "concept-id": "C-TEST-GPM_3IMERGDF",
+   "provider-id": "GES_DISC"
+  },
+  "umm": {
+   "ShortName": "GPM_3IMERGDF",
+   "Version": "07",
+   "EntryTitle": "GPM IMERG Final Precipitation L3 1 day 0.1 degree x 0.1 degree V07 (GPM_3IMERGDF)",
+   "Abstract": "test abstract",
+   "DOI": {
+    "DOI": "10.5067/GPM/IMERGDF/DAY/07"
+   },
+   "TemporalExtents": [
+    {
+     "EndsAtPresentFlag": false,
+     "RangeDateTimes": [
+      {
+       "BeginningDateTime": "1998-01-01T00:00:00.000Z",
+       "EndingDateTime": "2025-09-30T23:59:59.999Z"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "granules": [
+  {
+   "meta": {
+    "concept-id": "G-TEST-1",
+    "provider-id": "GES_DISC"
+   },
+   "umm": {
+    "GranuleUR": "GPM_3IMERGDF.07:3B-DAY.MS.MRG.3IMERG.20240101-S000000-E235959.V07B.nc4",
+    "TemporalExtent": {
+     "RangeDateTime": {
+      "BeginningDateTime": "2024-01-01T00:00:00.000Z",
+      "EndingDateTime": "2024-01-01T23:59:59.999Z"
+     }
+    },
+    "SpatialExtent": {
+     "HorizontalSpatialDomain": {
+      "Geometry": {
+       "BoundingRectangles": [
+        {
+         "WestBoundingCoordinate": -180,
+         "EastBoundingCoordinate": 180,
+         "NorthBoundingCoordinate": 90,
+         "SouthBoundingCoordinate": -90
+        }
+       ]
+      }
+     }
+    },
+    "CollectionReference": {
+     "ShortName": "GPM_3IMERGDF",
+     "Version": "07"
+    },
+    "DataGranule": {
+     "ProductionDateTime": "2024-06-12T14:25:41.000Z",
+     "ArchiveAndDistributionInformation": [
+      {
+       "Name": "Not provided",
+       "Size": 26.98,
+       "SizeUnit": "MB"
+      }
+     ]
+    },
+    "RelatedUrls": [
+     {
+      "URL": "https://example.test/gpm/3B-DAY.MS.MRG.3IMERG.20240101-S000000-E235959.V07B.nc4",
+      "Type": "GET DATA"
+     },
+     {
+      "URL": "s3://b/3B-DAY.MS.MRG.3IMERG.20240101-S000000-E235959.V07B.nc4",
+      "Type": "GET DATA VIA DIRECT ACCESS"
+     }
+    ]
+   }
+  },
+  {
+   "meta": {
+    "concept-id": "G-TEST-2",
+    "provider-id": "GES_DISC"
+   },
+   "umm": {
+    "GranuleUR": "GPM_3IMERGDF.07:3B-DAY.MS.MRG.3IMERG.20240102-S000000-E235959.V07B.nc4",
+    "TemporalExtent": {
+     "RangeDateTime": {
+      "BeginningDateTime": "2024-01-02T00:00:00.000Z",
+      "EndingDateTime": "2024-01-02T23:59:59.999Z"
+     }
+    },
+    "SpatialExtent": {
+     "HorizontalSpatialDomain": {
+      "Geometry": {
+       "BoundingRectangles": [
+        {
+         "WestBoundingCoordinate": -180,
+         "EastBoundingCoordinate": 180,
+         "NorthBoundingCoordinate": 90,
+         "SouthBoundingCoordinate": -90
+        }
+       ]
+      }
+     }
+    },
+    "CollectionReference": {
+     "ShortName": "GPM_3IMERGDF",
+     "Version": "07"
+    },
+    "DataGranule": {
+     "ProductionDateTime": "2024-06-12T14:25:41.000Z",
+     "ArchiveAndDistributionInformation": [
+      {
+       "Name": "Not provided",
+       "Size": 26.98,
+       "SizeUnit": "MB"
+      }
+     ]
+    },
+    "RelatedUrls": [
+     {
+      "URL": "https://example.test/gpm/3B-DAY.MS.MRG.3IMERG.20240102-S000000-E235959.V07B.nc4",
+      "Type": "GET DATA"
+     },
+     {
+      "URL": "s3://b/3B-DAY.MS.MRG.3IMERG.20240102-S000000-E235959.V07B.nc4",
+      "Type": "GET DATA VIA DIRECT ACCESS"
+     }
+    ]
+   }
+  },
+  {
+   "meta": {
+    "concept-id": "G-TEST-3",
+    "provider-id": "GES_DISC"
+   },
+   "umm": {
+    "GranuleUR": "GPM_3IMERGDF.07:3B-DAY.MS.MRG.3IMERG.20240103-S000000-E235959.V07B.nc4",
+    "TemporalExtent": {
+     "RangeDateTime": {
+      "BeginningDateTime": "2024-01-03T00:00:00.000Z",
+      "EndingDateTime": "2024-01-03T23:59:59.999Z"
+     }
+    },
+    "SpatialExtent": {
+     "HorizontalSpatialDomain": {
+      "Geometry": {
+       "BoundingRectangles": [
+        {
+         "WestBoundingCoordinate": -180,
+         "EastBoundingCoordinate": 180,
+         "NorthBoundingCoordinate": 90,
+         "SouthBoundingCoordinate": -90
+        }
+       ]
+      }
+     }
+    },
+    "CollectionReference": {
+     "ShortName": "GPM_3IMERGDF",
+     "Version": "07"
+    },
+    "DataGranule": {
+     "ProductionDateTime": "2024-06-12T14:25:41.000Z",
+     "ArchiveAndDistributionInformation": [
+      {
+       "Name": "Not provided",
+       "Size": 26.98,
+       "SizeUnit": "MB"
+      }
+     ]
+    },
+    "RelatedUrls": [
+     {
+      "URL": "https://example.test/gpm/3B-DAY.MS.MRG.3IMERG.20240103-S000000-E235959.V07B.nc4",
+      "Type": "GET DATA"
+     },
+     {
+      "URL": "s3://b/3B-DAY.MS.MRG.3IMERG.20240103-S000000-E235959.V07B.nc4",
+      "Type": "GET DATA VIA DIRECT ACCESS"
+     }
+    ]
+   }
+  }
+ ]
+}
