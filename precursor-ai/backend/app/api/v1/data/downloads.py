@@ -3,11 +3,12 @@ import uuid
 from fastapi import APIRouter, Depends, Query, status
 from sqlalchemy.orm import Session
 
-from app.api.v1.data.deps import get_orchestrator, job_read, load_job
-from app.core.exceptions import ConflictError, NotFoundError
+from app.api.v1.data.deps import get_auth, get_orchestrator, job_read, load_job
+from app.core.exceptions import ConflictError, CredentialsMissing, NotFoundError
 from app.database.session import get_db
 from app.schemas.data_acquisition import (
     DownloadCreate, DownloadCreateResponse, DownloadJobList, DownloadJobRead, JobStatus)
+from app.services.data_acquisition.authentication import EarthdataAuthenticationService
 from app.services.data_acquisition.metadata_service import MetadataRegistrationService
 from app.services.data_acquisition.orchestrator import AcquisitionOrchestrator
 
@@ -25,7 +26,10 @@ def _get(db: Session, job_id: uuid.UUID):
              summary="Queue downloads for registered granules; returns immediately")
 def create_downloads(
     body: DownloadCreate, db: Session = Depends(get_db), orch: AcquisitionOrchestrator = Depends(get_orchestrator),
+    auth: EarthdataAuthenticationService = Depends(get_auth),
 ) -> DownloadCreateResponse:
+    if auth.status() == "missing":  # fail fast: no acquisitions are queued that could never download
+        raise CredentialsMissing("Earthdata credentials are not configured; set EARTHDATA_USERNAME and EARTHDATA_PASSWORD (or ~/.netrc).")
     plan = orch.plan_jobs(body.acquisition_ids)
     jobs = [job_read(_get(db, j.id)) for j in plan.jobs]
     return DownloadCreateResponse(jobs=jobs, skipped={str(k): v for k, v in plan.skipped.items()})

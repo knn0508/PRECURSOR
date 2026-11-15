@@ -11,7 +11,7 @@
 ## Always
 - Distinguish observed measurements from derived metrics, and both from model output.
 - Record provenance (source, collection, version, maturity, retrieval date, checksum) and data limitations.
-- State dataset limits: Global Landslide Catalog is a one-time export current to 2016-03-07, not complete or current; absence of an event proves nothing. IMERG is not real-time.
+- State dataset limits: Global Landslide Catalog is a one-time export whose last event is dated 2017-09-28 (corrected 2026-11-15, [M1 census](../../ml/reports/M1_census_and_download_list.md)), not complete or current; absence of an event proves nothing. IMERG is not real-time.
 - Mark unverified claims `UNKNOWN` or `NOT_VERIFIED`.
 
 ## ML development policy (applies to every phase prompt)

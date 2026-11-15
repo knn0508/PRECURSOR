@@ -1,0 +1,18 @@
+# M3 study configuration (B1 regions, user-approved 2026-11-15). Hashed into the M3 manifest.
+study: B1_us_west_coast
+windows:                       # W, S, E, N in degrees (EPSG:4326); from the M1 census; nothing else is hard-coded
+  OR_WA: [-124.0, 45.0, -121.0, 48.0]
+  CA_N:  [-123.0, 37.0, -120.0, 40.0]
+  CA_S:  [-119.0, 32.0, -116.0, 35.0]
+grid:
+  cell_m: 5000                 # analysis cell. Chosen to match the largest "strict" GLC accuracy class (5 km); see M3_preprocessing.md
+  crs: auto                    # UTM zone from the window centroid (Phase 4 choose_projected_crs)
+fine_grid_deg_per_block: 0.000833333333333   # 1/1200 deg ~ 100 m: land-cover / lithology class fractions are built here
+terrain:
+  slope_thresholds_deg: [15, 30]
+rainfall:
+  climatology_years: [2002, 2017]            # full calendar years inside the approved IMERG range 2001-06..2017-12
+labels:
+  accuracy_radius_m: {exact: 0, 1km: 1000, 5km: 5000, 10km: 10000, 25km: 25000, 50km: 50000, 100km: 100000, 250km: 250000}
+  strict_classes: [exact, 1km, 5km]
+  in_period: [2014-10-03, 2025-09-30]

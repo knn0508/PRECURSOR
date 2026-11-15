@@ -1,0 +1,1 @@
+Thank you. Scan the code to try the app.

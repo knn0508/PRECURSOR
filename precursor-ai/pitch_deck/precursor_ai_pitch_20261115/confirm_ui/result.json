@@ -1,0 +1,64 @@
+{
+  "primary_language": "en",
+  "canvas": "ppt169",
+  "audience": "NASA Space Apps Challenge judges and attendees: technically literate, short on time, not necessarily InSAR or landslide specialists.",
+  "communication_intent": "Explain the problem and how the platform works first; then persuade the judges that PRECURSOR AI is a credible, reusable use of NASA radar data for the \"Dancing with the SARs\" challenge.",
+  "audience_outcome": "Judges can say in one sentence what PRECURSOR AI does, which NASA datasets it uses and why it matters, and they scan the QR code to try the app.",
+  "core_message": "Open NASA data in, one usable landslide early-warning map out: PRECURSOR AI sees landslides before they happen, from space.",
+  "delivery_context": "Primary: presenter-led live pitch of a few minutes on a projected screen. Secondary: the deck is shared with judges as part of the submission and read without a presenter.",
+  "artifact_afterlife": "Submission artifact for the challenge; reused as the base deck once the Lorem ipsum placeholders are replaced with real results.",
+  "content_divergence": "Follow the supplied 9-slide plan: same slide order and titles, plan wording kept, Lorem ipsum placeholders kept as written. Steps 1-4 and Dashboard text on the How-it-works slide reuse the previous deck.",
+  "delivery_purpose": "balanced",
+  "page_count": "9",
+  "mode": "custom",
+  "mode_behavior": "Narrative arc over the user's fixed nine-slide order: the unseen warning sign (situation), data nobody can reach (tension), one platform and its pipeline (resolution), NASA data and impact (proof), phased roadmap, team and a scan-the-QR close. Slide titles stay the plan's labels as kickers; one short beat line per page advances the story. Lorem ipsum placeholders stay visible and are marked as to-fill.",
+  "visual_style": "ink-wash",
+  "color": {
+    "name": "Night radar",
+    "palette": {
+      "background": "#0B1426",
+      "secondary_bg": "#14213D",
+      "primary": "#2DD4BF",
+      "accent": "#F2994A",
+      "secondary_accent": "#5B8DEF",
+      "body_text": "#F4F6FA"
+    }
+  },
+  "icons": "phosphor-duotone",
+  "typography": {
+    "name": "Segoe UI + Consolas labels",
+    "heading": {
+      "css": "sans-serif",
+      "primary": "Segoe UI",
+      "sample_primary": ""
+    },
+    "body": {
+      "css": "sans-serif",
+      "primary": "Segoe UI",
+      "sample_primary": ""
+    },
+    "body_size": 24,
+    "sizes": {
+      "title": 42,
+      "subtitle": 32,
+      "annotation": 18
+    },
+    "note": "",
+    "body_size_unit": "px"
+  },
+  "image_usage": [
+    "none"
+  ],
+  "image_notes": "No photos or AI images. All visuals are native editable shapes: radar-fringe rings, a satellite pass over a slope, the six-step pipeline, the data table. The QR code on the last slide is a labelled native frame to be replaced with the real QR once the app URL exists.",
+  "proactive_speaker_notes": true,
+  "proactive_custom_animations": false,
+  "proactive_narration_audio": false,
+  "generation_mode": "continuous",
+  "refine_spec": false,
+  "design_spec_depth": "brief",
+  "stage": "final",
+  "status": "confirmed",
+  "stage1_sha256": "ead02c5f974ce2449ca9d9700ebe011002c703a281c39cac01fdd446daa9c86d",
+  "selection_sha256": "63eb2a80b7a6e9b4a05c514e1d2cb5ce24e6f9386165d3371796230aa0892425",
+  "confirmed_at": "2026-11-15T13:30:48"
+}

@@ -5,7 +5,7 @@ export type AcquisitionStatus =
   | "DISCOVERED" | "QUEUED" | "DOWNLOADING" | "DOWNLOADED" | "VALIDATING"
   | "VALIDATED" | "FAILED" | "SKIPPED" | "UNAVAILABLE";
 export type JobStatus = "QUEUED" | "RUNNING" | "COMPLETED" | "FAILED";
-export type ProviderName = "NISAR" | "NASADEM" | "GPM" | "SMAP" | "LANDSLIDE_CATALOG";
+export type ProviderName = "NISAR" | "NASADEM" | "GPM" | "SMAP" | "OPERA" | "LANDSLIDE_CATALOG";
 export type DataKind = "metadata_only" | "downloaded" | "validated";
 type Json = Record<string, unknown>;
 
@@ -34,6 +34,7 @@ export interface SearchRequest {
   aoi: AOIInput;
   start_date?: string | null;
   end_date?: string | null;
+  providers?: ("NISAR" | "OPERA" | "NASADEM" | "GPM")[];
   products?: string[];
   maturities?: Maturity[];
   max_results?: number;

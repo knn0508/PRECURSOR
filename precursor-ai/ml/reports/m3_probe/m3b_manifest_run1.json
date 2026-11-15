@@ -1,0 +1,3170 @@
+{
+ "stage": "M3b",
+ "built_utc": "2026-11-14T23:59:58Z",
+ "code_version": {
+  "git_commit": "ef35054a17928eab4b1c62960c097c17e45ac8d7",
+  "dirty": true
+ },
+ "cell_m": 5000,
+ "config_sha256": "249058502aa63f1f2f21e59aad953ccd113acd3db347ace4d4f74822943cfa3d",
+ "seed": "none (deterministic)",
+ "inputs": {
+  "manifest_round2_sha256": "e3f4334ff207ef4256b2c0549661e0cf9f9080651856612d9d22fdfedbd87fdc",
+  "files": {
+   "ndvi_viirs/VNP13A3.A2013182.h08v05.002.2024094105529.h5": {
+    "sha256": "5e37dc3981b4594de34a4e195cdb43f559c0067a8a72bb1693303fdf48f786fe",
+    "size_bytes": 26119317
+   },
+   "hydrorivers/HydroRIVERS_v10_na_shp.zip": {
+    "sha256": "47c2e30041b1a6e07ba3c1d82f07c70f2bfdd376a263153699902cf96ea006ea",
+    "size_bytes": 66335898
+   },
+   "faults/Qfaults_GIS.zip": {
+    "sha256": "447eadc5926256710d988c30e5996ba540604caa0154f9746c48bad637926893",
+    "size_bytes": 32371696
+   },
+   "soilgrids/_index/clay_0-5cm_mean.vrt": {
+    "sha256": "ad1a77d56090bf543e3600bc48d4cd6fa80f8e1a9eb37177044de65a64848ede",
+    "size_bytes": 5929079
+   },
+   "soilgrids/clay/0-5cm/tileSG-007-015_4-3__clay_0-5cm.tif": {
+    "sha256": "9ff54494ddc0f06f1820ab29ae06b74f598f8cb92521ae1edfefa05e0efe9f82",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-007-015_4-2__clay_0-5cm.tif": {
+    "sha256": "a41d1c9cb15e60a67b4e46a92ad151a9d284b93e6efc8dad9dfd38b94d351c4e",
+    "size_bytes": 9553
+   },
+   "soilgrids/clay/0-5cm/tileSG-007-015_3-3__clay_0-5cm.tif": {
+    "sha256": "464e035914332f831f0b89e736d2ef9e8a90d3d63480891715ed750eac64e959",
+    "size_bytes": 357873
+   },
+   "soilgrids/clay/0-5cm/tileSG-007-015_2-4__clay_0-5cm.tif": {
+    "sha256": "0b3a623a060fb6ad270605884f018baec839a532494dd9ffc2d85ad2c9dfb245",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-007-015_2-3__clay_0-5cm.tif": {
+    "sha256": "01a9e84cdffb4c92feb4bf91122597f4efd3a1736f706ce0feb05df95367bfaa",
+    "size_bytes": 388511
+   },
+   "soilgrids/clay/0-5cm/tileSG-007-015_3-4__clay_0-5cm.tif": {
+    "sha256": "ca0ae7f125eb4086234b82148303a301e49c1028d7a19723e95d31738951d441",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-007-015_4-4__clay_0-5cm.tif": {
+    "sha256": "f6589cd87e357e35afcfe32c6fee0643bfbf8cf571be607343595d046916bd76",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-007-016_4-1__clay_0-5cm.tif": {
+    "sha256": "41bbee7da92c9c0ed8f8c1a7500b86072ab47a34e8784803cff40b4d04d3dc3d",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-007-016_2-1__clay_0-5cm.tif": {
+    "sha256": "6085ca015c2d11730aa583a5bb776564b4b57cfbf36aa42b2e886549d468e623",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-007-016_3-1__clay_0-5cm.tif": {
+    "sha256": "a6a9beed8717a823faa2657e59d7d748e5d13c04e6b02adafc573936438b32d3",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-016_1-1__clay_0-5cm.tif": {
+    "sha256": "852a1bd2a7a62535cdddb16c48761e759d4da7ec64f6d319ba382c3c6e5ac296",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-016_3-1__clay_0-5cm.tif": {
+    "sha256": "a33f1af9948da2f6da29920cf15c5a1729a0bc1598d85de7c1719d223a08e056",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-016_2-1__clay_0-5cm.tif": {
+    "sha256": "d3bc246553b690b588c410d844091ed8ec1c95f856297aa87ce16c5cf17cdf51",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-016_4-1__clay_0-5cm.tif": {
+    "sha256": "cef807ce4f9c2c9e1b7d513019fad64629e786b40faef712ccccf024871558ed",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-015_3-1__clay_0-5cm.tif": {
+    "sha256": "0dceb4afc248ed008c2d201c353fc17c3f5104aeea20558c74a281149e528e50",
+    "size_bytes": 3129
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-015_2-4__clay_0-5cm.tif": {
+    "sha256": "46ba4f781bbc02eefa5619ad37f360cad3147cd1d52cc66a9fd3b60b83bbd74b",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-015_4-3__clay_0-5cm.tif": {
+    "sha256": "17873e0985e6934e2b1d204c20f99c204736d757920b01f017c1b485dc4b8fa4",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-015_3-3__clay_0-5cm.tif": {
+    "sha256": "f6f7a49584bc3c698c64a7ea470416d5f4a030d67b668f13b1bcd2dc2b832b6c",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-015_1-2__clay_0-5cm.tif": {
+    "sha256": "d8fc80f1e0bc2e6cd0bed43dfdd3096e99535776b9531ad299b83da0ea5ae639",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-015_2-3__clay_0-5cm.tif": {
+    "sha256": "b8749f33db655034fa74eed79a723d8430af83f80b7d468450933d1448751164",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-015_1-4__clay_0-5cm.tif": {
+    "sha256": "0948b07615667b2211c234426e294e8dff750169ceb8521520d64c19adb842c4",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-015_2-1__clay_0-5cm.tif": {
+    "sha256": "4d41b9857371cc1204e2421c1d0f8b570d7c13b47a67d3e21bd4813f491b0b8d",
+    "size_bytes": 28505
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-015_4-2__clay_0-5cm.tif": {
+    "sha256": "293f9c65edbf020974fc92ebccbede82aafa7156f8567d4705eb9b23805c8bdf",
+    "size_bytes": 208329
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-015_2-2__clay_0-5cm.tif": {
+    "sha256": "d9fceea1b4cba9b8f1b788642008c0569548115912e83b8410dfe0965497c4c9",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-015_1-3__clay_0-5cm.tif": {
+    "sha256": "4cb33da56160a03dc425cf2bfd24be67e9646f2fddb4dc62cf9601fcecf54d89",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-015_1-1__clay_0-5cm.tif": {
+    "sha256": "a7d618a317e22a6b4fe4f7f575f228aa39771c7a4d0c5614f1544d0809d150cc",
+    "size_bytes": 80153
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-015_3-2__clay_0-5cm.tif": {
+    "sha256": "1a3a2b8676597727fe2a1c951dac3dcc8467c692907322428376bfbedd772ed4",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-015_4-4__clay_0-5cm.tif": {
+    "sha256": "24fa991e5f7a813c6e060afc10d149b7dcc1e4be5b31306804ca70d89092492e",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-009-015_3-4__clay_0-5cm.tif": {
+    "sha256": "07253c91fa9f52bbc27b05ca99e55b79fa26caa8f0e086aac8be0c1d2e76ede2",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/0-5cm/tileSG-010-016_3-2__clay_0-5cm.tif": {
+    "sha256": "830454b1bb6471d3221b50fa6b4f3868c6fdc81ce21d0af30ebed9c70cc31c9c",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-010-016_3-3__clay_0-5cm.tif": {
+    "sha256": "6e6128cde5aa472f75087720d25c3248c4054ac5c7f2b27baaa7b329727bf6b4",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-010-016_2-1__clay_0-5cm.tif": {
+    "sha256": "cb00bdec018c060bba6707cfd92dbcddb87581803682fbdbc682ffd5bfe44a72",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-010-016_2-2__clay_0-5cm.tif": {
+    "sha256": "79a8b97b7ab2d62a11f535b180046b3956fba4cf78d73fd1f0ea1a649e1e371c",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-010-016_2-3__clay_0-5cm.tif": {
+    "sha256": "269a02bfa81aad5cecfebbf912536010d9caf9144765e74f1f395cdb0724bba0",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-010-016_3-1__clay_0-5cm.tif": {
+    "sha256": "92cef5a6d9dfbae2e28bce3b3a49f45ea5d50c10dd989254dde46dbf14ce5dca",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-010-016_4-1__clay_0-5cm.tif": {
+    "sha256": "eb7ff6667bd997584599738c0a3bde04d1c197be850b5be6dd310e6714803e65",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/0-5cm/tileSG-010-016_4-2__clay_0-5cm.tif": {
+    "sha256": "2077ac722fe30ce2df80f61ea472645a01fb051f372bda7306cd7fd948a2fc42",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-010-016_4-3__clay_0-5cm.tif": {
+    "sha256": "39d0785d6894799130317c88adc1492f1186e666504f0a885f8f97fa7b704a3a",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-011-016_1-1__clay_0-5cm.tif": {
+    "sha256": "833c5fddb8a30e405c21b55b0182081b01c60cefa9ae05a6a5874f026c7f37a1",
+    "size_bytes": 61881
+   },
+   "soilgrids/clay/0-5cm/tileSG-011-016_1-2__clay_0-5cm.tif": {
+    "sha256": "5b23fc5425591d1edbb1b6cbcec1536e6c23dfacb0fdb4a074b05ecf8bcaea6e",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/0-5cm/tileSG-011-016_1-3__clay_0-5cm.tif": {
+    "sha256": "ab2790031959ee8930fca686362e870eae1e17dff545c890af5e70ef6ff562a7",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-010-015_2-4__clay_0-5cm.tif": {
+    "sha256": "94538f5e7c170f4408864d11084d154a8e58281a5f27e58cf48ad22058d5faab",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/0-5cm/tileSG-010-015_4-4__clay_0-5cm.tif": {
+    "sha256": "faa26f52604852d379e1969560ee390bd99a515f3cd656c9b151ef9b6c31e392",
+    "size_bytes": 267777
+   },
+   "soilgrids/clay/0-5cm/tileSG-010-015_3-4__clay_0-5cm.tif": {
+    "sha256": "ac4adacfb7fdab38794748131c5f29ec99d8aa743d3aba860cabf3c7704d8fb0",
+    "size_bytes": 338947
+   },
+   "soilgrids/clay/5-15cm/tileSG-007-015_4-3__clay_5-15cm.tif": {
+    "sha256": "e7199a25c7fe5a565ac6154ae562181ce025a0346b15f28840ebe1cfea5ced4a",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-007-015_4-2__clay_5-15cm.tif": {
+    "sha256": "fb3a8691bd7844cef05b15ec32fdc993c780e5fa9dcef178b1e61c41f90ca291",
+    "size_bytes": 9551
+   },
+   "soilgrids/clay/5-15cm/tileSG-007-015_3-3__clay_5-15cm.tif": {
+    "sha256": "f22528c4df171f36decd83e12b535b56d6cc96f4438e7e14ef58c4d3d11426d4",
+    "size_bytes": 357873
+   },
+   "soilgrids/clay/5-15cm/tileSG-007-015_2-4__clay_5-15cm.tif": {
+    "sha256": "3a4a890052d2db27b39c785c818e1fd2715ce812dcf3b4106b38d562de1bba15",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-007-015_2-3__clay_5-15cm.tif": {
+    "sha256": "498027f9b04787837e1cfdce157018b66965cbacd3fd4548225707f0ab31eb69",
+    "size_bytes": 388513
+   },
+   "soilgrids/clay/5-15cm/tileSG-007-015_3-4__clay_5-15cm.tif": {
+    "sha256": "c87bb1b6dbcec7ab957b21ad6ec61dd21c24084b39d6d696d80a3d898b6c7422",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/5-15cm/tileSG-007-015_4-4__clay_5-15cm.tif": {
+    "sha256": "713f38bb8d95abc10970491dab3fe7ff488c36edc85e526f397d109d0871c213",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-007-016_4-1__clay_5-15cm.tif": {
+    "sha256": "5c76bd44d46d18da04820d6be689d0d986ba86c7426012cd30fc28c2232e50d5",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-007-016_2-1__clay_5-15cm.tif": {
+    "sha256": "4d3e83d288bfc8f03cb25428ef262722d72b5edc4b72bd314117f00f60203ce4",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-007-016_3-1__clay_5-15cm.tif": {
+    "sha256": "a115faa758434f8fde75e655870457a4782f8700cc077134ba4e75a5dc8a7161",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-016_1-1__clay_5-15cm.tif": {
+    "sha256": "7b3b3889e5e212e585daaf31980517b96c191ba23adf26a13531631ef884f327",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-016_3-1__clay_5-15cm.tif": {
+    "sha256": "37b2426c677b61b5d6a6a220520acd3eb9a0863f5a28e33188d9641e8c734705",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-016_2-1__clay_5-15cm.tif": {
+    "sha256": "3770102199d96e9c69e2ab52502b08a5f7df497380fa641c571362eda8a767fc",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-016_4-1__clay_5-15cm.tif": {
+    "sha256": "28662cded57de1bb83f03fb1749865a63453e33390fc53a69590497ede40722b",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-015_3-1__clay_5-15cm.tif": {
+    "sha256": "e0b1bc4365eb02983801fd14d9f2ef8088e6054aac5ae082a50950205618e7c0",
+    "size_bytes": 3129
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-015_2-4__clay_5-15cm.tif": {
+    "sha256": "3870d7982120bf96b0cb8b1c95a0ce2f1d182cc2e9feaa7ec3945562a69e367f",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-015_4-3__clay_5-15cm.tif": {
+    "sha256": "af2c47c28be253dc277e234492302a5f258f05219b700595b2357cd76bf7d0af",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-015_3-3__clay_5-15cm.tif": {
+    "sha256": "8c5ac25f69de1e1394a3e8f0300064ff0fc66760c5772306cceea526e88b60d8",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-015_1-2__clay_5-15cm.tif": {
+    "sha256": "5b40a162a60db331c5dc4a0be4b6b28ef4ade75495eae09a3a7be98a8bf3b65f",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-015_2-3__clay_5-15cm.tif": {
+    "sha256": "d094aa592ae5fcdfa0f11de36b7f7a8357c9780ed56561dde93c2442c4a9d816",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-015_1-4__clay_5-15cm.tif": {
+    "sha256": "ea3c2f3d14dd4310390d888a21fb1150914665129bd13a68ee0cfa0e885f4921",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-015_2-1__clay_5-15cm.tif": {
+    "sha256": "4789df449a62608407cc3538531271279b356ce985721ca878155090022cfdcb",
+    "size_bytes": 28505
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-015_4-2__clay_5-15cm.tif": {
+    "sha256": "2c01fe58283239308d2c653b84c515c44179084b85093fd7a06b9af729d90f46",
+    "size_bytes": 208329
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-015_2-2__clay_5-15cm.tif": {
+    "sha256": "72e3c4b92c9ae4d94d89b1380b4739431c3bf40d50510ab659a17bd84e534c08",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-015_1-3__clay_5-15cm.tif": {
+    "sha256": "8796dd17361e1ce30724aa46031d52ef2451ed84bd0b765386a7220a95d62adf",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-015_1-1__clay_5-15cm.tif": {
+    "sha256": "a859dc89a476b12228f3ffb3143d6e0ce0eb28b74f41ded3ded7a40a0e90e581",
+    "size_bytes": 80153
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-015_3-2__clay_5-15cm.tif": {
+    "sha256": "93d01686757fcb2f77cc9232d9dd8d6208064576a9ea4c44ded9ff6a46671f11",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-015_4-4__clay_5-15cm.tif": {
+    "sha256": "3107b88ea680a5f86078e96c12ef6dbac6235ed70977877557ab56eb322c73e8",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-009-015_3-4__clay_5-15cm.tif": {
+    "sha256": "d6fa71039a5c8a13dc4de0e042cf822fbb7c4ab9b8a6b2c87b905721fb0e16d5",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-010-016_3-2__clay_5-15cm.tif": {
+    "sha256": "068965e3f31f3bfbb75d8401f31a56f66aed7342a91ee232dcd9e375b6f476cc",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-010-016_3-3__clay_5-15cm.tif": {
+    "sha256": "8e9645eb3622dc59bd8cd95d0804601501f6aafa95ae7adc2571d2738421ff22",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-010-016_2-1__clay_5-15cm.tif": {
+    "sha256": "e09a9a3f9379982e46f928ab1712066c0bee33a841ae684fa68050fb26caeab0",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-010-016_2-2__clay_5-15cm.tif": {
+    "sha256": "f06c53bda1bc6950e655077bc8e959b8227578f9e4bb394b3aeed43272441ef7",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-010-016_2-3__clay_5-15cm.tif": {
+    "sha256": "3995c159806ef8b2cde8ec2384d9ccc3fd5e781280682634fd2880afc432f70c",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/5-15cm/tileSG-010-016_3-1__clay_5-15cm.tif": {
+    "sha256": "ce4ae17d2a76b31bd3a7434feabbf703171514eeed2fe57c3872792a66c5e7fb",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-010-016_4-1__clay_5-15cm.tif": {
+    "sha256": "ab82d73dfb6550e9702949d848d43543b8eb3f2a3151d7c02dd74d18b259266e",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-010-016_4-2__clay_5-15cm.tif": {
+    "sha256": "fae19433880fd988b7bc9715388ae93b077dd273ad0b7a81c0b05d3709be830b",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-010-016_4-3__clay_5-15cm.tif": {
+    "sha256": "bf04260a9444c7e4e6f8adbdad5f52bf08c666fed2540447e38b41d41ce15f37",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-011-016_1-1__clay_5-15cm.tif": {
+    "sha256": "cd5c288af19e23fb2235878553b96c26f6c9042ab92ba7a97ab82e91f5445cb6",
+    "size_bytes": 61881
+   },
+   "soilgrids/clay/5-15cm/tileSG-011-016_1-2__clay_5-15cm.tif": {
+    "sha256": "9fbb9d83a1416ce1c7252b66d7622541bb7f7cd162a5f55c36d19aee9a6b4b92",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/5-15cm/tileSG-011-016_1-3__clay_5-15cm.tif": {
+    "sha256": "e8c1a07fd142206e3630b5ed3b5b8692431296ad89ec719fff81252137f2013c",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/5-15cm/tileSG-010-015_2-4__clay_5-15cm.tif": {
+    "sha256": "5a3b238ba73ecc050867b8f961ace78d7e51b3851bacef2365cf09c8083d4589",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/5-15cm/tileSG-010-015_4-4__clay_5-15cm.tif": {
+    "sha256": "9465da98ce5c686e51bcf5812310c45577b9a1857be863c8ab103de5a12b80b4",
+    "size_bytes": 267777
+   },
+   "soilgrids/clay/5-15cm/tileSG-010-015_3-4__clay_5-15cm.tif": {
+    "sha256": "276e76d8c171b943df9daf007ee27f204b0f3070e6b21ada07cd401fd1d51302",
+    "size_bytes": 338949
+   },
+   "soilgrids/clay/15-30cm/tileSG-007-015_4-3__clay_15-30cm.tif": {
+    "sha256": "5daa08c43318a4743ca1aa79b4d14fce31a5335884a1da330bbe4dbdb0181098",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-007-015_4-2__clay_15-30cm.tif": {
+    "sha256": "1c756a6847790e8c53f2313bb8483c08d786e6da00ad22a2b5a87e56ac95bfea",
+    "size_bytes": 9553
+   },
+   "soilgrids/clay/15-30cm/tileSG-007-015_3-3__clay_15-30cm.tif": {
+    "sha256": "f62f75fe3171e3e3c781ce43f9e51422f31a5c41dd3c0ed0dc94663f60effa94",
+    "size_bytes": 357873
+   },
+   "soilgrids/clay/15-30cm/tileSG-007-015_2-4__clay_15-30cm.tif": {
+    "sha256": "fb48e1d28e688a9a09e830d9e537809603e3b99d7039631d61402fa0fa8fbb88",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-007-015_2-3__clay_15-30cm.tif": {
+    "sha256": "df72a54dd35134956f6d575c2c1dda45890c076c5f7615b860db63083872bb06",
+    "size_bytes": 388513
+   },
+   "soilgrids/clay/15-30cm/tileSG-007-015_3-4__clay_15-30cm.tif": {
+    "sha256": "d687651844337c9209ecb6f7165d4cee7d1b5fd78256471785a3195bb59642a5",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-007-015_4-4__clay_15-30cm.tif": {
+    "sha256": "5cccdc857440da59fede98f866b2d480924f2a4c4654db156e88270785784aab",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-007-016_4-1__clay_15-30cm.tif": {
+    "sha256": "8daf2254d0dfec6b8c82b392be7e3281ae9f3aee3e91629accb6126aa482dead",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-007-016_2-1__clay_15-30cm.tif": {
+    "sha256": "86947eb22c810ff557436b14cf09e0a10d9cefcacc42428208ff45b5c10e5de7",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-007-016_3-1__clay_15-30cm.tif": {
+    "sha256": "b4dfaa3a45f64d87fbb0fdb7a55ca0c33e98bba56a9ae58f90467637b2cb8c61",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-016_1-1__clay_15-30cm.tif": {
+    "sha256": "688a7cf4dad40965ddeca565f6a1e16b5f18211e6fa253906748095cd9872735",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-016_3-1__clay_15-30cm.tif": {
+    "sha256": "09bfebc3ae946f19fa69034e815c678d4df54fd62dfce7e406ca10c5d3e03a9b",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-016_2-1__clay_15-30cm.tif": {
+    "sha256": "80404ab3fb468c84101eb057f3ab85f176df9623f5ffa30f2ee482497338d939",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-016_4-1__clay_15-30cm.tif": {
+    "sha256": "187a7cb568e69bbd8c482eeb77e1537b0eeb81b738c29dbcfcdeb353028390dd",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-015_3-1__clay_15-30cm.tif": {
+    "sha256": "5d83eb4b7af36e00dab146e425a8031044667a33e3e841d04e5b6d4ac1af841a",
+    "size_bytes": 3129
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-015_2-4__clay_15-30cm.tif": {
+    "sha256": "13e7c1c63295f550863ec153daf62e1d1487e24348a348932b2b67444fa54f91",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-015_4-3__clay_15-30cm.tif": {
+    "sha256": "6cc01dcb22ff1dbba00bf217a1c113a666a2897c03cef2ec4080ca85630141f3",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-015_3-3__clay_15-30cm.tif": {
+    "sha256": "6e43f67000708802fb8ce9310d64a63ec3a454e8b42ec5a2d20638d0919a5ccf",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-015_1-2__clay_15-30cm.tif": {
+    "sha256": "015bae5fa7354b78ad7cf330641d8799a5a4d245fa8f8d1b85bbbd47f0061300",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-015_2-3__clay_15-30cm.tif": {
+    "sha256": "7b1fd11c3876f0d5d096a07b80ada122cc63cbcc0ecdc9ce1c56e98227233a5c",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-015_1-4__clay_15-30cm.tif": {
+    "sha256": "372647d67c39081e740bc9dc117ce8e0b28cb274c2832de35c9e033c7abf30dc",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-015_2-1__clay_15-30cm.tif": {
+    "sha256": "439ddc1e83387cc29a64abad4add8e2debfb2fcda9393267530db34c6087bc12",
+    "size_bytes": 28503
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-015_4-2__clay_15-30cm.tif": {
+    "sha256": "d81d9bfb1fc7c76b4059c739d39ca01375a1d41eef9a5e7deca05637d68fc4dd",
+    "size_bytes": 208329
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-015_2-2__clay_15-30cm.tif": {
+    "sha256": "3028bb0552af1c5883ab37e016c30cfea458ba7e52002e799dd34cd6812a0b01",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-015_1-3__clay_15-30cm.tif": {
+    "sha256": "3614837980c3e4ec926db80d540ae900f168a7f751b55618e79478be79508646",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-015_1-1__clay_15-30cm.tif": {
+    "sha256": "e09b03be8a0f7ea7d3b8dff515406eb34b6231710da10538d33269cf116b88fe",
+    "size_bytes": 80153
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-015_3-2__clay_15-30cm.tif": {
+    "sha256": "f38b91edbfbc9e691a7c16bb4f58f048882c878874cf6aa93dce38df7de0cc5d",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-015_4-4__clay_15-30cm.tif": {
+    "sha256": "f8750cfe9459d8c5b7cb336e3a43fe84b5a153f816281d599d5045fb740247da",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/15-30cm/tileSG-009-015_3-4__clay_15-30cm.tif": {
+    "sha256": "a75c2357d84c6d4ad663de2e574974b894fcd3a54039c931a62e48f28e0ce2d3",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-010-016_3-2__clay_15-30cm.tif": {
+    "sha256": "21175932712900613e36abb328ac61cbbe75c676d1f829de4b38070e9f18e5f7",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-010-016_3-3__clay_15-30cm.tif": {
+    "sha256": "4a72b49f608253e90a4fd200231ad15fb96c6538db2cc741710055a17ca39216",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-010-016_2-1__clay_15-30cm.tif": {
+    "sha256": "2eab390ec1f829751280a20fdf3a68a417584e988fcd0ce89af3c09122075f43",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-010-016_2-2__clay_15-30cm.tif": {
+    "sha256": "188053acd41d8d5afff38ea5e0ad979199f09614f1d099daa61872b712fe2289",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-010-016_2-3__clay_15-30cm.tif": {
+    "sha256": "fbee9a3272c9ddc6cb1e12d99347c6960b71e28503c9dc04bb860850e5269326",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/15-30cm/tileSG-010-016_3-1__clay_15-30cm.tif": {
+    "sha256": "1f68c637eecb172671642d664aaf5f7df10fab87629d3cc5fef79c162497ef17",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-010-016_4-1__clay_15-30cm.tif": {
+    "sha256": "c1d25c25e55c553604a1773881944548ae8ca5361a79088fa3119bf566c6db1b",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-010-016_4-2__clay_15-30cm.tif": {
+    "sha256": "6562b5e79a7173a83b955a15204d10ed3e13e1c0a7f8536baf691c40e7faf7ab",
+    "size_bytes": 406511
+   },
+   "soilgrids/clay/15-30cm/tileSG-010-016_4-3__clay_15-30cm.tif": {
+    "sha256": "59a52e49befa48453921b2a232b55ee51f925354ce61fdc3cf21e1b1491d729c",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-011-016_1-1__clay_15-30cm.tif": {
+    "sha256": "aeb6c1100ab7bedf28a72a96affd178f8adcc2d05d327b77ecd2cbb3640adc3a",
+    "size_bytes": 61881
+   },
+   "soilgrids/clay/15-30cm/tileSG-011-016_1-2__clay_15-30cm.tif": {
+    "sha256": "b1300b27d1afa5ba0a3c3a42e7aeccfe4ad39ebae81411d7c742f5fc40a8954f",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-011-016_1-3__clay_15-30cm.tif": {
+    "sha256": "2008a298fe177455f061adb58ec5edddbd5e9791d1fadaef451db4ee917698e9",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-010-015_2-4__clay_15-30cm.tif": {
+    "sha256": "a8e6714769bf8ffd05d4feea2ec710753135a591d7bbab4a8d4cd44cafdc8d92",
+    "size_bytes": 406513
+   },
+   "soilgrids/clay/15-30cm/tileSG-010-015_4-4__clay_15-30cm.tif": {
+    "sha256": "60506874fcb63d4a48a259c30a24140e1b38e7c3a9ec8dcd1417920d663746ab",
+    "size_bytes": 267777
+   },
+   "soilgrids/clay/15-30cm/tileSG-010-015_3-4__clay_15-30cm.tif": {
+    "sha256": "5fa3db450050e936e11d88aec377b6553cc551e4890a7c67a135bb5abcd80855",
+    "size_bytes": 338947
+   },
+   "soilgrids/sand/0-5cm/tileSG-007-015_4-3__sand_0-5cm.tif": {
+    "sha256": "4ab80360b9402d9536b1829c0cc4bd1bb3ac032b75e9a96b35f958b522d80f37",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-007-015_4-2__sand_0-5cm.tif": {
+    "sha256": "30ea2dd7b30d310c7ddce2c14e4f5b9962b8733e2b1c2993c02e8582cc4e0c66",
+    "size_bytes": 9553
+   },
+   "soilgrids/sand/0-5cm/tileSG-007-015_3-3__sand_0-5cm.tif": {
+    "sha256": "14641c48048d8671c068291cc0e6aa780e6d650c599edaa16755e940bfdf7408",
+    "size_bytes": 357873
+   },
+   "soilgrids/sand/0-5cm/tileSG-007-015_2-4__sand_0-5cm.tif": {
+    "sha256": "aa8608d1cd8682dbced260d65a441bb4c6a37aedce0875a71460d3939930eef3",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-007-015_2-3__sand_0-5cm.tif": {
+    "sha256": "010bf523d34a9e4d1ccb4e74fd8de845624de0251a7f215e89a436e9789bfbbc",
+    "size_bytes": 388513
+   },
+   "soilgrids/sand/0-5cm/tileSG-007-015_3-4__sand_0-5cm.tif": {
+    "sha256": "033c27cbdaf9b2ca35944be9b8499265f975e7c764be856e02f4dd66479bdff4",
+    "size_bytes": 406511
+   },
+   "soilgrids/sand/0-5cm/tileSG-007-015_4-4__sand_0-5cm.tif": {
+    "sha256": "94a41c2b59a26f8584ecb8ebc052c3b068cd05a61cb2d1d99ab972fb51c2ab21",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-007-016_4-1__sand_0-5cm.tif": {
+    "sha256": "5b3c3936cea5306f9893e6d67637b0800475bf5c07bcd1cfbbfda38073316a12",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-007-016_2-1__sand_0-5cm.tif": {
+    "sha256": "1735608259eacd660170a23391b601df44e967403727b1463b3f2bcff9b1654e",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-007-016_3-1__sand_0-5cm.tif": {
+    "sha256": "f37d3108b18513f2881388ac203f6f1cf8d7d30bb891730e75e2b9f4d57ce7ec",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-016_1-1__sand_0-5cm.tif": {
+    "sha256": "7f37316b3ca89d805043d77f2ddcb417f840ddba95b9936046a17e6be89337e6",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-016_3-1__sand_0-5cm.tif": {
+    "sha256": "32b59c7744f0328d1bb5e9f559b091be096964ffcd86d483f74659b11725e267",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-016_2-1__sand_0-5cm.tif": {
+    "sha256": "716f9f0ca69c7b90a0dd47a26a254838e2d28ca7a3cd69ec869858bd23561d43",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-016_4-1__sand_0-5cm.tif": {
+    "sha256": "d9b0267b01941018a465d0d2d51bdc62891b9bc0b46be707d0d80be7943f7c74",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-015_3-1__sand_0-5cm.tif": {
+    "sha256": "8ae50f51ad60bd407709c6a1dee6c6a7bee1f85c4708fe82deae6d67b8ea7a81",
+    "size_bytes": 3129
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-015_2-4__sand_0-5cm.tif": {
+    "sha256": "7f8b332b76359f361ae224f9e47d628cce2be7a2a56a63bb4d4ed61ed4d14d21",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-015_4-3__sand_0-5cm.tif": {
+    "sha256": "48e2074b3bc8e1678036c1d240fffbe38b6d8f1a215eb462c92aab3855e1fae2",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-015_3-3__sand_0-5cm.tif": {
+    "sha256": "66f3894c1a45bd65b8c9fdf60eec3442ecc77dd6afbc171114b2e9c09d66e2e3",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-015_1-2__sand_0-5cm.tif": {
+    "sha256": "cfc9ef2547e1f3cd6c289cea4805f6d735ac63b5c475c39a73af701e60a5e64a",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-015_2-3__sand_0-5cm.tif": {
+    "sha256": "8bd90d35cabdf4c88818ec9bc415a7db81f5af86b5bae49299ff5b136b968c6c",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-015_1-4__sand_0-5cm.tif": {
+    "sha256": "3e0117e1d2139874c26886c7db20f8969d70d2c911287fc0c0b1b341a096b1bd",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-015_2-1__sand_0-5cm.tif": {
+    "sha256": "a44fd73da65577d6e06e9ded08f53e6881382707f9c077512421f966bfd9ea47",
+    "size_bytes": 28505
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-015_4-2__sand_0-5cm.tif": {
+    "sha256": "5892cb6e14700b1616921dcae8e75cfa53be9ce378adb0f358e30dd4175b6aba",
+    "size_bytes": 208327
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-015_2-2__sand_0-5cm.tif": {
+    "sha256": "98a441448b7857d2ad8acaa60cf46c8eb99ba9175baf4cc4b99a4e9683ef379d",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-015_1-3__sand_0-5cm.tif": {
+    "sha256": "db8cb585e5e39c0516601c4332b752d4fcbb92bdc9d2baf27334045d509a3633",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-015_1-1__sand_0-5cm.tif": {
+    "sha256": "8850dbefd590d7c3fa88c626cefe40b0ded2aa0fef40e4434269de85ace62311",
+    "size_bytes": 80153
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-015_3-2__sand_0-5cm.tif": {
+    "sha256": "495cb3a793a2824ede357300d33ce7779bca0530c8b469bd987533f52430bd9e",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-015_4-4__sand_0-5cm.tif": {
+    "sha256": "5911619163c465ce179b7ddbfc8d424f7a7a29ba76e7cd847d90e817cf35bce8",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-009-015_3-4__sand_0-5cm.tif": {
+    "sha256": "c63a79ea0a40c8e6fe93f1edd96cce335235e2c9db792f80900d590f47ac6458",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-010-016_3-2__sand_0-5cm.tif": {
+    "sha256": "38bbf0deeaacb495fd0ec75eba3efb69e4bd6c250341c828bf6f1614d8047ded",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-010-016_3-3__sand_0-5cm.tif": {
+    "sha256": "225ee845544b46c832dae437108da1bb7fd4e228d7e2bacc2c07ad2d4f76f402",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-010-016_2-1__sand_0-5cm.tif": {
+    "sha256": "33f1148e535344c35c812d0c708bb222b2251ae34108d8527c8bb5763b437ec7",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-010-016_2-2__sand_0-5cm.tif": {
+    "sha256": "5d933df0d1b23147b2a223191376086ddca1193c0281cb066e989b7f20e845c6",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-010-016_2-3__sand_0-5cm.tif": {
+    "sha256": "abd44d417c07b45adeb7241257c181d37e3a417e46736f4aee845a9ae4671f27",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-010-016_3-1__sand_0-5cm.tif": {
+    "sha256": "d693eb026dc430f738f2cbed38a0dd19f344ae0281bba318bd2d79a2c0789f54",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-010-016_4-1__sand_0-5cm.tif": {
+    "sha256": "1ad54c7c5c84670b212390e1a0b9b324fd424b2198bf9983bdf9442ce8c6ee1f",
+    "size_bytes": 406511
+   },
+   "soilgrids/sand/0-5cm/tileSG-010-016_4-2__sand_0-5cm.tif": {
+    "sha256": "231311111645b6e24ddedceece304fc990d94a707e4e97e25c5f8f897cb74775",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-010-016_4-3__sand_0-5cm.tif": {
+    "sha256": "6d764896386a7f980fed744a0d36a0ccc36e33900b3dfb99c4877676a0239bc6",
+    "size_bytes": 406511
+   },
+   "soilgrids/sand/0-5cm/tileSG-011-016_1-1__sand_0-5cm.tif": {
+    "sha256": "9a81005e5303abe971875f10c7e6f03d7e667036b27fe1cc4856ad650743487f",
+    "size_bytes": 61881
+   },
+   "soilgrids/sand/0-5cm/tileSG-011-016_1-2__sand_0-5cm.tif": {
+    "sha256": "d8b6246a9268f7aae9b7c972a2289bdfe5ee52a1277dc2a9ab0a93aee3d1e02f",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-011-016_1-3__sand_0-5cm.tif": {
+    "sha256": "2882be5d8eaaf7b9e6a052596ff8dd0ac2d698b41c95c47b9d16a661474e87ba",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/0-5cm/tileSG-010-015_2-4__sand_0-5cm.tif": {
+    "sha256": "b4ea6da25d1bf9357aeeaa7d35f88a789836dc3521bbdb2634e1346a44d8881d",
+    "size_bytes": 406511
+   },
+   "soilgrids/sand/0-5cm/tileSG-010-015_4-4__sand_0-5cm.tif": {
+    "sha256": "1dde3cfbe3c3bcfbd1a56c82a344db7564915ad4126a5021e951dc8a73b80c61",
+    "size_bytes": 267777
+   },
+   "soilgrids/sand/0-5cm/tileSG-010-015_3-4__sand_0-5cm.tif": {
+    "sha256": "7232a98b9d55a1dbe75bee5b1137cd0101f66541874f89d348d6074fdaed4d21",
+    "size_bytes": 338947
+   },
+   "soilgrids/sand/5-15cm/tileSG-007-015_4-3__sand_5-15cm.tif": {
+    "sha256": "6490ff0039809d0673485efb3462db9adb06b0f5b7f5685a4f02f5050ffb5b6c",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-007-015_4-2__sand_5-15cm.tif": {
+    "sha256": "beb8a8de12c081e9f3de03b638fdd5a5cca925b375be52b94487cc4bb02dfd3d",
+    "size_bytes": 9553
+   },
+   "soilgrids/sand/5-15cm/tileSG-007-015_3-3__sand_5-15cm.tif": {
+    "sha256": "31bce9eb89b8401da27781bc559c8d92675fde693039f960f2c76dbeea0505b8",
+    "size_bytes": 357873
+   },
+   "soilgrids/sand/5-15cm/tileSG-007-015_2-4__sand_5-15cm.tif": {
+    "sha256": "48be39594f7e2d1bfa5b9a0b12daab057dc40d9580c3e096753e61f1459361e3",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-007-015_2-3__sand_5-15cm.tif": {
+    "sha256": "86c4c561dee4a7209f26e5b98cf95cb8bc3434fd9db00ac420a4d8995104c8ac",
+    "size_bytes": 388513
+   },
+   "soilgrids/sand/5-15cm/tileSG-007-015_3-4__sand_5-15cm.tif": {
+    "sha256": "d5d7a83a1e1820813c7401e2eb3d76baa4f27b180153448af7cc4f3cdd00a32b",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-007-015_4-4__sand_5-15cm.tif": {
+    "sha256": "ef0dbb55f2556c7d0b4a943d10a14854f8b608635a78f712751f3f977cf8c4d2",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-007-016_4-1__sand_5-15cm.tif": {
+    "sha256": "f60f9fd7ddd7e651fbd5761c0e4a750c989177556984c4f1dc953dda1ad69244",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-007-016_2-1__sand_5-15cm.tif": {
+    "sha256": "9fa2a831e6b30752f00ac64aae9a85a96c299ee6620ecad0fe6140e59db6e20d",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-007-016_3-1__sand_5-15cm.tif": {
+    "sha256": "99a26c49b29936919dccc4fe47e0e2ebef0bebf218e7a97bcf83ee025d365449",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-016_1-1__sand_5-15cm.tif": {
+    "sha256": "c09319484dd1920dbbb2063bab7b2b4180f58f0ed4d596ebb73ee0e42eae5050",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-016_3-1__sand_5-15cm.tif": {
+    "sha256": "16566f881a8c761ba1586ec26cc40fa8ae235012f4ef2644ccd558ba2d6728a6",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-016_2-1__sand_5-15cm.tif": {
+    "sha256": "c8824b0312a099a7763d743a93b9379fd2b407f02ccad29842d6e4458bc7806a",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-016_4-1__sand_5-15cm.tif": {
+    "sha256": "1991dd6863b65ec4d64e0ed205043f6cd863ab1e21c15f686523ee74d0ddb1c8",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-015_3-1__sand_5-15cm.tif": {
+    "sha256": "e83b9b397e6bfd09a59c0b272734a032aba0db7c0902748c2baac3f7ed3815b8",
+    "size_bytes": 3129
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-015_2-4__sand_5-15cm.tif": {
+    "sha256": "f7e6f044ab5422e8a0ab17f53a693ceefabacedc5eb4b464c85e96601ee128b3",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-015_4-3__sand_5-15cm.tif": {
+    "sha256": "30b3a905a3c442ce07489a6f2b47a4dbb87d49970aab9bb3adf201b41721253f",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-015_3-3__sand_5-15cm.tif": {
+    "sha256": "8681fde68d2e20d5611169fc9b3b500c7d4daee6f15df6986c639eaa58e0cb45",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-015_1-2__sand_5-15cm.tif": {
+    "sha256": "f8cee8088b5b01c61f642ece75a7920d02d3f1c856b4fa2d9a09f62b1ea1082f",
+    "size_bytes": 406511
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-015_2-3__sand_5-15cm.tif": {
+    "sha256": "eb0f7fef7c816af87a96ab39956c041a83f4da74c49556b02b8e2c7e9f55370a",
+    "size_bytes": 406511
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-015_1-4__sand_5-15cm.tif": {
+    "sha256": "7c9691502401bfe18a25a1872e2835d00e1b1345b046668a75cb08d4d9370e63",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-015_2-1__sand_5-15cm.tif": {
+    "sha256": "71f0fd1bebf0ecaadfbe20e5e341f8c486606325e79755a3c4eb32f5f82dd41c",
+    "size_bytes": 28505
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-015_4-2__sand_5-15cm.tif": {
+    "sha256": "390b1c4d41f619fa6d6fed08ea94b317692026a5a6c6b7d904ab05701e1fb2e2",
+    "size_bytes": 208327
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-015_2-2__sand_5-15cm.tif": {
+    "sha256": "504f6be02a57ee79181a23c69044f57641586ba53c479380bf2101ea5a4a0257",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-015_1-3__sand_5-15cm.tif": {
+    "sha256": "589541c430bfb3ff67ffba32867f8368c5fbab99ff4d664ddf81c2ada0125281",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-015_1-1__sand_5-15cm.tif": {
+    "sha256": "dff2b2abb1c946400df565f48c301002b2517f4c23c97797699a6cb3a0d0eea3",
+    "size_bytes": 80153
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-015_3-2__sand_5-15cm.tif": {
+    "sha256": "018d9e74acc5b98b275f6ad3567c5a55e4ccfbefbad00b91c89ffbabf935550a",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-015_4-4__sand_5-15cm.tif": {
+    "sha256": "d9d6ab68ddb5fc15a032292a3bfdf7afd0a81ecbf9786e474e973239c4d20e10",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-009-015_3-4__sand_5-15cm.tif": {
+    "sha256": "35d1d65466db7cc86c390ac7b48ae4bb05f31171afba8b12d4a533dfaef64857",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-010-016_3-2__sand_5-15cm.tif": {
+    "sha256": "45e42e08d4e22dd7ef21a0496a81aef0a3e4cf6316b1b83dbf26a8d5d7419009",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-010-016_3-3__sand_5-15cm.tif": {
+    "sha256": "81b3b9d1da1cdd751c5d6ce9a2d8362690b7bdf7976f4cc817f93294a7655621",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-010-016_2-1__sand_5-15cm.tif": {
+    "sha256": "c3843ca2694146d84a5cd9eeb12f39c0af3bc3b35aac2f9908573851863c3368",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-010-016_2-2__sand_5-15cm.tif": {
+    "sha256": "ec21ff59d81e6fd351683cd0704ccf9a833784e30d0ead900d2f9610e093f3cb",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-010-016_2-3__sand_5-15cm.tif": {
+    "sha256": "909c5bef8938c46c073849ea18d03a0429bb4ef70adddefaade79e0afaafa1ae",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-010-016_3-1__sand_5-15cm.tif": {
+    "sha256": "53aee6139461010acb096e0f049a1e6660d5b1c63fad73248e25569054850dac",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-010-016_4-1__sand_5-15cm.tif": {
+    "sha256": "689e52c03aac9112b3be3c3d44cfbe8969db40af5d1dce28feb7e0fb7fad0777",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-010-016_4-2__sand_5-15cm.tif": {
+    "sha256": "4d246c88a39c18a5a2c7ec07f6ba897b70b44b633bb5a67b35b60b317700bd20",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-010-016_4-3__sand_5-15cm.tif": {
+    "sha256": "ed64ea3fd09be0f48d51da6199806889175f10f87ee06acc535389dcc77f73cc",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-011-016_1-1__sand_5-15cm.tif": {
+    "sha256": "0ede23c6e0d867c4d3f6748101c925c06df2a234644e823c3532d7b3291b1eb2",
+    "size_bytes": 61879
+   },
+   "soilgrids/sand/5-15cm/tileSG-011-016_1-2__sand_5-15cm.tif": {
+    "sha256": "fea7cbd5df9b1a23b2cfce9ed7bd802e78cad117a522ef2665da7439b4c758a5",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-011-016_1-3__sand_5-15cm.tif": {
+    "sha256": "47540ef9c626312887ab6581c311660710b9f5e917aa317275b3c9174e2d630e",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-010-015_2-4__sand_5-15cm.tif": {
+    "sha256": "6de2317582f60ff2fd006949d81776c4078b9d8fdb967ae9570b18b683b7cc9c",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/5-15cm/tileSG-010-015_4-4__sand_5-15cm.tif": {
+    "sha256": "4a4d391788e24891080088656d909ed29a881ac6b8b92cfaeee0f18fb6866736",
+    "size_bytes": 267777
+   },
+   "soilgrids/sand/5-15cm/tileSG-010-015_3-4__sand_5-15cm.tif": {
+    "sha256": "d4b3e767065a19f5047406459f88c79380b272f94d43020ae4cd94b2de725a5f",
+    "size_bytes": 338947
+   },
+   "soilgrids/sand/15-30cm/tileSG-007-015_4-3__sand_15-30cm.tif": {
+    "sha256": "d58fb83dfecd31a9f6cd83ba01b8daaeee380494ce4c296e13deb14f9f1bd23f",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-007-015_4-2__sand_15-30cm.tif": {
+    "sha256": "73070bda0158031e02faef4eae18ef81ff411940e6f04ea624e9b8afc98b905c",
+    "size_bytes": 9553
+   },
+   "soilgrids/sand/15-30cm/tileSG-007-015_3-3__sand_15-30cm.tif": {
+    "sha256": "c8b989c4995c79d998201f220531b67d19262d0b4a572cfd3d373d7884863668",
+    "size_bytes": 357871
+   },
+   "soilgrids/sand/15-30cm/tileSG-007-015_2-4__sand_15-30cm.tif": {
+    "sha256": "45c7bf889bdb77f52c0c1bf1778a596cd2e3eecbd9fa9a4c73168f056ca33918",
+    "size_bytes": 406511
+   },
+   "soilgrids/sand/15-30cm/tileSG-007-015_2-3__sand_15-30cm.tif": {
+    "sha256": "f682a8058e44cb687ad0fd54cd7cbfc0a9aa9171a175999e6f740ab812c71c82",
+    "size_bytes": 388511
+   },
+   "soilgrids/sand/15-30cm/tileSG-007-015_3-4__sand_15-30cm.tif": {
+    "sha256": "e65a39fb35588ea08883a63934db65731a25b3f9ef4dcc427006bbf8a39d2940",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-007-015_4-4__sand_15-30cm.tif": {
+    "sha256": "7b4870554606ef9abd387576faf173c826a1762d0aa02a44605532a0b03f4a66",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-007-016_4-1__sand_15-30cm.tif": {
+    "sha256": "1f9de600c9f634521290c734dfc629a040d1551da5486959efad1b7867581f1b",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-007-016_2-1__sand_15-30cm.tif": {
+    "sha256": "4334a00a5060b4ddbd50e6dc9f919f9a2b381cdca7cf1c691a765528f05d474b",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-007-016_3-1__sand_15-30cm.tif": {
+    "sha256": "22a01b881e91c4345666319a1ef40d74f83d9232ac12be396dd807ba1280f80f",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-016_1-1__sand_15-30cm.tif": {
+    "sha256": "68a8a05ab72880a261eb6dcecd9237618d2cb1c1fee20ed49fb72950c30658cd",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-016_3-1__sand_15-30cm.tif": {
+    "sha256": "f3be69ad15f70855392f0202fef5e24c1f58e23de3040b0d2e9bcde96e2eb493",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-016_2-1__sand_15-30cm.tif": {
+    "sha256": "140764c91c85097e10fbc0b76ef975a91f3c7ee4b74f13dd1c6b2991d24dae96",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-016_4-1__sand_15-30cm.tif": {
+    "sha256": "a48eb991344194d35ff86a769b64d440d4fe59bbdf0e9f252c9ed963372cc7cc",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-015_3-1__sand_15-30cm.tif": {
+    "sha256": "a881f01982c0f3deb644e6c0451b98438f8317d3cf94a435c726746960f9d0e9",
+    "size_bytes": 3129
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-015_2-4__sand_15-30cm.tif": {
+    "sha256": "7eedb7665a36efb2bd341f435db69205bae2ef73a0ea89616ecad8d39283327b",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-015_4-3__sand_15-30cm.tif": {
+    "sha256": "38bf3a2bd676249a4615114f59b3b36a34941fd2f51220a6ca2646c71f3f0471",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-015_3-3__sand_15-30cm.tif": {
+    "sha256": "306b34abd5039bc4333920ba9ccc431ef12fd3b795b8d63b9b69a9f48244b9c2",
+    "size_bytes": 406511
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-015_1-2__sand_15-30cm.tif": {
+    "sha256": "74e07a33943c680cef1440caae4bc344d0c0b483490bff0a27eb12e546190442",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-015_2-3__sand_15-30cm.tif": {
+    "sha256": "5420642fb3486c81d0fd6ba33ce416d2db95a6eafbee78e4bdb8e1394ba3a019",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-015_1-4__sand_15-30cm.tif": {
+    "sha256": "e6d2ff59444c5b050f3aec9181ab6132509a1f32e10bf335a2404ea4a89a01c6",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-015_2-1__sand_15-30cm.tif": {
+    "sha256": "e8b57e8e58b538c11aeed7f0228ee513664897f0624fbc769a2c207a9579f33f",
+    "size_bytes": 28505
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-015_4-2__sand_15-30cm.tif": {
+    "sha256": "1f378d9d84ca226e369749a1b9ce70f40f894bd30936d44ece4ab1d31029ff56",
+    "size_bytes": 208327
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-015_2-2__sand_15-30cm.tif": {
+    "sha256": "96c2d7576177d687ac5db6afbdaaeb6ab865aa2c27333c266f674f59d497c572",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-015_1-3__sand_15-30cm.tif": {
+    "sha256": "8bf55f290f989955f5083ffd757988cfc4727fb8ca6f5713e9d5238d142a38b3",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-015_1-1__sand_15-30cm.tif": {
+    "sha256": "f66e0dc6484016f45f36ee9726a29df89eec72ae423424c4190059e6303044de",
+    "size_bytes": 80153
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-015_3-2__sand_15-30cm.tif": {
+    "sha256": "60e2ca68c29ef7fda2ab218a3956b5248eabf7da8021ccf3d2f7eda37a984794",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-015_4-4__sand_15-30cm.tif": {
+    "sha256": "2ff32c6fef6c643d7218c23d179a4dcc2f8939a99f8f2bbf9f145fa219b65a4f",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-009-015_3-4__sand_15-30cm.tif": {
+    "sha256": "b351a6d756415b57955a6ece3a67c03bb81c577c0afe54bd813095989d53c3ac",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-010-016_3-2__sand_15-30cm.tif": {
+    "sha256": "293e2dedeb8ffcd3eb9d8763be9d0839455e56120cda53210dbc332b725bd637",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-010-016_3-3__sand_15-30cm.tif": {
+    "sha256": "7020c383ba6f2200016cd8b708c7d483ad4cad6f69151f18ccffd890d44d70ec",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-010-016_2-1__sand_15-30cm.tif": {
+    "sha256": "555aaf55cc07e514b593780034a80c6d721ca64cd550238d3c64cba926399266",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-010-016_2-2__sand_15-30cm.tif": {
+    "sha256": "3a7cb94ab5b9cce8746bddb510bda5c672d4ff4c029239ea407fd553cb6c243e",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-010-016_2-3__sand_15-30cm.tif": {
+    "sha256": "c417a8bf963138fae0c7eff756926c60e16ccce5bc633a0f2c5e370b9dea0676",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-010-016_3-1__sand_15-30cm.tif": {
+    "sha256": "8817eadca1c7764403eb3a3c0d066998dc02f53e3c786abfb4a30c2eaede8cde",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-010-016_4-1__sand_15-30cm.tif": {
+    "sha256": "f27f19c2f2f5905f68a73f4ed569b5a0b564e40f297600c3199079bf91d3834f",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-010-016_4-2__sand_15-30cm.tif": {
+    "sha256": "23fc77327a656791c64ff57c95c07c76b689f6eba32cafac36dfc6fcf1153138",
+    "size_bytes": 406511
+   },
+   "soilgrids/sand/15-30cm/tileSG-010-016_4-3__sand_15-30cm.tif": {
+    "sha256": "e99868f266b3820fb0015b68476d343cc5da49c22057ea47fdb1d71073cb90e5",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-011-016_1-1__sand_15-30cm.tif": {
+    "sha256": "4a96f151d093f81c40d06d398494ff38a9208eb9ec380803328884f277d5f231",
+    "size_bytes": 61881
+   },
+   "soilgrids/sand/15-30cm/tileSG-011-016_1-2__sand_15-30cm.tif": {
+    "sha256": "93e6a96535b47f1b9852e36d9d3a9bfd52fcf701abe870dc76f9b39830bc4f61",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-011-016_1-3__sand_15-30cm.tif": {
+    "sha256": "d518cd97d27a4abcfde95f119e2a9db531dd1ae1f73ad732e50a2b9589ac58f8",
+    "size_bytes": 406513
+   },
+   "soilgrids/sand/15-30cm/tileSG-010-015_2-4__sand_15-30cm.tif": {
+    "sha256": "aa88ec8fc6900618857f94ebd70a4d049e379d7ab1d879afa41627b4d22dbb39",
+    "size_bytes": 406511
+   },
+   "soilgrids/sand/15-30cm/tileSG-010-015_4-4__sand_15-30cm.tif": {
+    "sha256": "cc38f2c468856b24e0697074ea062dd228c101ca3d30640c2d73e18880821638",
+    "size_bytes": 267777
+   },
+   "soilgrids/sand/15-30cm/tileSG-010-015_3-4__sand_15-30cm.tif": {
+    "sha256": "c7ad10c18490947c29730d5d80c1e14f0efe46432ef0efc8b72b13c20fd508ad",
+    "size_bytes": 338949
+   },
+   "soilgrids/silt/0-5cm/tileSG-007-015_4-3__silt_0-5cm.tif": {
+    "sha256": "54b0705811183d243e4a4c10ad9b61139bd96b9a601546ff27e6dcd662e0dbd0",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-007-015_4-2__silt_0-5cm.tif": {
+    "sha256": "2f0c651f490360d4bbbb62afac0cbc91449c56a7ffafafe8343d86bec5cd6984",
+    "size_bytes": 9551
+   },
+   "soilgrids/silt/0-5cm/tileSG-007-015_3-3__silt_0-5cm.tif": {
+    "sha256": "7d321fb62976ee9c9182f9ff190a08803003b68d5fd81d5ce631013c5e22a651",
+    "size_bytes": 357873
+   },
+   "soilgrids/silt/0-5cm/tileSG-007-015_2-4__silt_0-5cm.tif": {
+    "sha256": "6f7cfe56bae5687881c57afafdae7aa8a26022a3b0a54403cce383800310835b",
+    "size_bytes": 406511
+   },
+   "soilgrids/silt/0-5cm/tileSG-007-015_2-3__silt_0-5cm.tif": {
+    "sha256": "412b434395f67f7b962ce0f743fa23eba8a97a4a4d5fb10e6481cb7b67a18d39",
+    "size_bytes": 388513
+   },
+   "soilgrids/silt/0-5cm/tileSG-007-015_3-4__silt_0-5cm.tif": {
+    "sha256": "26a1d294576ba5224c83c47abf0a8a93515e8a5b38806aa62f991c7e09e729c9",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-007-015_4-4__silt_0-5cm.tif": {
+    "sha256": "afa91ce2268cb7b779591a2bf84566e3f3d387340df2ec27e9fcaa7a18ac606f",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-007-016_4-1__silt_0-5cm.tif": {
+    "sha256": "3d8e1d9209c62458958203c1dc11b8cae832a3d2370cafb26e9b14c8dd1b2914",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-007-016_2-1__silt_0-5cm.tif": {
+    "sha256": "b156bc01e0d9e6815f27bd46f27c439af1a56097a009d7728a61e54bd895d9f8",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-007-016_3-1__silt_0-5cm.tif": {
+    "sha256": "eae595d5a556ed3305b1e6108cf92089a48e88daed049d6a81380e5f237bbc14",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-016_1-1__silt_0-5cm.tif": {
+    "sha256": "c5b08bd896f71e5843a1fa850f3fe239b67706bd8cdcb53b5fa3c430a54528e3",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-016_3-1__silt_0-5cm.tif": {
+    "sha256": "04b19f06e4466cf98109dd4047104b7e6ee9671b88e3306fa0810c413b0df87a",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-016_2-1__silt_0-5cm.tif": {
+    "sha256": "fe995c0f17013cd3c25cc6a3c1f11399315782413bf14400eb3cfbfacde84b01",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-016_4-1__silt_0-5cm.tif": {
+    "sha256": "44f9d530d26b3093230648961440f00f6a700618138da200f8cc43f08d9d93dd",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-015_3-1__silt_0-5cm.tif": {
+    "sha256": "0137dcf18426e721077d0792c67c176add51dcd19e2c8becbe4e210ff89418bb",
+    "size_bytes": 3129
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-015_2-4__silt_0-5cm.tif": {
+    "sha256": "fc2c01d9808c5b3ac87a9306aa52f41ac7575abdd2fee83ea0bb15d0c8b433bb",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-015_4-3__silt_0-5cm.tif": {
+    "sha256": "72c4fa53214a9707fd1dc6ea28b9da0a41d81a27d07232995a5df63feb8d3e8b",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-015_3-3__silt_0-5cm.tif": {
+    "sha256": "83f4716719275dc4f16af671b7fa02824950855e5d4911188419ffb6df3bd3de",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-015_1-2__silt_0-5cm.tif": {
+    "sha256": "05ede98cf00bfbb9aee08083f6736d8fcd6a2df58972f7492d6364b26c5efaaa",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-015_2-3__silt_0-5cm.tif": {
+    "sha256": "751b8726baa94a276d178e97538a1c30ef9623be73149afdaaeb0cb73540dce4",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-015_1-4__silt_0-5cm.tif": {
+    "sha256": "d6007ed9c813dbca495de3de4295b3c5a852510df57f7448d738f4072f274146",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-015_2-1__silt_0-5cm.tif": {
+    "sha256": "378f0be61e2360e5809e72699687fde607fe3b1924f7dc1032042202535f8f3f",
+    "size_bytes": 28505
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-015_4-2__silt_0-5cm.tif": {
+    "sha256": "a6ad69aa75d202d1a0e7a1754a0049737ce2ea444fac0a7f32c376de4a9815cd",
+    "size_bytes": 208329
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-015_2-2__silt_0-5cm.tif": {
+    "sha256": "377c961fdb85b0d03eb1cdd1e32e016c1b3bbcc54be2b20b2ee2aa8f3d228085",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-015_1-3__silt_0-5cm.tif": {
+    "sha256": "79ee3942f79755b73977912f5c4677d08267768742217ccbaf93bc9daa2ac61f",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-015_1-1__silt_0-5cm.tif": {
+    "sha256": "dbd5e43fdc065bcf7b56f55250ca4ada283edc768d14f3d7e7d6dd2876cfb9d8",
+    "size_bytes": 80153
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-015_3-2__silt_0-5cm.tif": {
+    "sha256": "6fbce839739cc4dbde98c3f6c170568fa15bc1807a91382e011e6a93dd5fba54",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-015_4-4__silt_0-5cm.tif": {
+    "sha256": "e0ec191c7593f3998db39cf6b905e790ef96367f87443f34b3e4cdccbeb8da73",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-009-015_3-4__silt_0-5cm.tif": {
+    "sha256": "e906e9bbe9ab35fd831e9031ecbee91cd0c5a4e74d80668992e5337eb1aba089",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-010-016_3-2__silt_0-5cm.tif": {
+    "sha256": "21ed9695ffd357e3aa0b0123867b4523e67a1b53e4751030e620987cf0f98dc9",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-010-016_3-3__silt_0-5cm.tif": {
+    "sha256": "27b04acf3530de16b22b47456e4c289245830596bb591a7f119259527d29f614",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-010-016_2-1__silt_0-5cm.tif": {
+    "sha256": "7949725d491f8a19908b9cbfb10cc7b6fce74e4e5bbb5394b82e3c456a9b182c",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-010-016_2-2__silt_0-5cm.tif": {
+    "sha256": "1b0ab67952c99b91d0915c3e1754c8f26720920bb8cf7f2451f1e000eb2c6dc2",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-010-016_2-3__silt_0-5cm.tif": {
+    "sha256": "74dfa5cfe5998d98dc9287df293c44ff27dd7b359b1183a41883f572ed7b857e",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-010-016_3-1__silt_0-5cm.tif": {
+    "sha256": "34a7862675d465e05a23802e3a7f9fae4c2d8246226c11f1f3bacae59a0f0d28",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-010-016_4-1__silt_0-5cm.tif": {
+    "sha256": "ad5645c093ed73ff8d3f545f7431c9a102ab8cafb8a603dbf31ca259696ccab1",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-010-016_4-2__silt_0-5cm.tif": {
+    "sha256": "a25e08330d851da640a0171c6588c58b2b33772f28f2f318d09e917d070c8abc",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-010-016_4-3__silt_0-5cm.tif": {
+    "sha256": "65e7c4fe6874661b10387b9bfa77f90330a7eea1b9e2186b037137dbfcabaa3b",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-011-016_1-1__silt_0-5cm.tif": {
+    "sha256": "2212b073cab713b968c7666fff236952e7e5d27f54fbcfbd387fce2a229a909a",
+    "size_bytes": 61881
+   },
+   "soilgrids/silt/0-5cm/tileSG-011-016_1-2__silt_0-5cm.tif": {
+    "sha256": "26b775f7c9f9ba73f00ee0a7e43a231c4bf22fb206bd712c7f25846680732a7f",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-011-016_1-3__silt_0-5cm.tif": {
+    "sha256": "143c9402748db039d9c2877ee77492df65b6d0b08a69045488dde7c149df6f68",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-010-015_2-4__silt_0-5cm.tif": {
+    "sha256": "e654d0f8809d3bd3c5acf0fc12b38abc2267149b3bddcc2098bef4d3f211124e",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/0-5cm/tileSG-010-015_4-4__silt_0-5cm.tif": {
+    "sha256": "6f9e0c3dcd80db4b7bbd8adfa2f41f47bb9e8608298906921ccf865140d8f610",
+    "size_bytes": 267777
+   },
+   "soilgrids/silt/0-5cm/tileSG-010-015_3-4__silt_0-5cm.tif": {
+    "sha256": "d7c4638d4e7e1fa141ad7b591ff56b2171bbbc2eb3c106d4c92eb0bd1c253c60",
+    "size_bytes": 338947
+   },
+   "soilgrids/silt/5-15cm/tileSG-007-015_4-3__silt_5-15cm.tif": {
+    "sha256": "5bfba1010daab4a56f2053cee1d733efc64b11eb9be3f870bc92fa30af9720fe",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-007-015_4-2__silt_5-15cm.tif": {
+    "sha256": "73947a9fe51c1e43fb00c75d023ec9aaa37e4475bd18582586dfe24d53d890d7",
+    "size_bytes": 9553
+   },
+   "soilgrids/silt/5-15cm/tileSG-007-015_3-3__silt_5-15cm.tif": {
+    "sha256": "5a9a4ad927a98d23b2422666aa19b5b12950ad335ee1ee820c915e76fbceae74",
+    "size_bytes": 357873
+   },
+   "soilgrids/silt/5-15cm/tileSG-007-015_2-4__silt_5-15cm.tif": {
+    "sha256": "267a947ad9c09bc3d9fecc4946f612ff2d5675bf8127e5dd9bdbdb45063bc91c",
+    "size_bytes": 406511
+   },
+   "soilgrids/silt/5-15cm/tileSG-007-015_2-3__silt_5-15cm.tif": {
+    "sha256": "a0c1f701820b3a2cd85e633db6dcd28106f26055af34f19db574c55dfcb204cc",
+    "size_bytes": 388513
+   },
+   "soilgrids/silt/5-15cm/tileSG-007-015_3-4__silt_5-15cm.tif": {
+    "sha256": "7746f1f5e135fa1e01753eb8de924bfd29675a686d3353e61159e7d18042599b",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-007-015_4-4__silt_5-15cm.tif": {
+    "sha256": "71c0ada96d0d6e579a2c08ca9700f73c40a2b947820938e336f02492fe33a851",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-007-016_4-1__silt_5-15cm.tif": {
+    "sha256": "a5440ffc4d10bd51c301473cc4477d093ce8eb1f0adae98284c1d88186366a3a",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-007-016_2-1__silt_5-15cm.tif": {
+    "sha256": "5ab77ddc247d9956ed4e78589116a316a40141e6c6fbb460af387333a35cbe52",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-007-016_3-1__silt_5-15cm.tif": {
+    "sha256": "2c80f2246203c62a5b81d57b5b7c49ab884e582c8b2da15606c2b5cb7c1bf122",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-016_1-1__silt_5-15cm.tif": {
+    "sha256": "099e5ab7142469110674455d357d8a1f5ec731e989ff46d66f46c0cf58af6fbe",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-016_3-1__silt_5-15cm.tif": {
+    "sha256": "783224ff4e73dd7475c9eae678c7333b226acdfd1ed0f7973462537dc1e46760",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-016_2-1__silt_5-15cm.tif": {
+    "sha256": "0bd6f21f7ed622a8bd719e8f493917c821f2a4c02df196cfe1467200f71534aa",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-016_4-1__silt_5-15cm.tif": {
+    "sha256": "58add31f2e33c2e48ba7bbb86bb9a0f319c4fedb9caec3aa20b872a14b49891a",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-015_3-1__silt_5-15cm.tif": {
+    "sha256": "f7d2e58693f6091c197bc09b63a79aea1fd2902f7524c96240ba8fe718698113",
+    "size_bytes": 3129
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-015_2-4__silt_5-15cm.tif": {
+    "sha256": "cc774218d2b6b7304491ba430a8db98bfb908f3cbd036d388eb1e815b0394f0e",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-015_4-3__silt_5-15cm.tif": {
+    "sha256": "fa84428df6ae998df5e7f08bbce36b85f54ac3ce1c77ecb3d374913056e97f57",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-015_3-3__silt_5-15cm.tif": {
+    "sha256": "00568252c6a93dd465dab5883fe6a7a4404d3f702eebd974a345436970e88aed",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-015_1-2__silt_5-15cm.tif": {
+    "sha256": "ff3860363c471ea77fe6b0cb009db9d92f1cda3925195d6e8a190b4a635ce9db",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-015_2-3__silt_5-15cm.tif": {
+    "sha256": "d3603308451bdff4d77d77fe86498b60187c545cc28234413866024f988e8021",
+    "size_bytes": 406511
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-015_1-4__silt_5-15cm.tif": {
+    "sha256": "d77a321b184695b1e721f86b0b5d4341dba7e3d1b1a6fe863382f54dbabc229f",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-015_2-1__silt_5-15cm.tif": {
+    "sha256": "4655c29b37efb513c8ac4e2dfda2a4d29d1de98fca1065654d49fa626dd11a9f",
+    "size_bytes": 28505
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-015_4-2__silt_5-15cm.tif": {
+    "sha256": "4eb2557dda5e00c597b77eb0defb8b55d11f72c94487f732d6bc21cb3c778625",
+    "size_bytes": 208329
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-015_2-2__silt_5-15cm.tif": {
+    "sha256": "dee7279e35faf01f41d225c78e03210af502b3842b3c4d1a3ff122e506e85c00",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-015_1-3__silt_5-15cm.tif": {
+    "sha256": "fc421eb4ff6d0f13c152f58d900a2425d299d0abd6b5e4fdd53b6c0443e1e5d9",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-015_1-1__silt_5-15cm.tif": {
+    "sha256": "dac49d69266b2d3399ebe1c0ac62afe8b5dc4c814a9d42e92a9a6b5ccc9de517",
+    "size_bytes": 80153
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-015_3-2__silt_5-15cm.tif": {
+    "sha256": "02624ff1309a37997efbadccb95aaa655297b21ba6c80ac67162b2b5cd712616",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-015_4-4__silt_5-15cm.tif": {
+    "sha256": "c18bf8063a48c431648b7b65f153da704d2358eff31c15280ed380739ee6adec",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-009-015_3-4__silt_5-15cm.tif": {
+    "sha256": "5950657676c55bf39188006412d893ce9d7daa60b9d8c05ab0df663f7356a1c2",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-010-016_3-2__silt_5-15cm.tif": {
+    "sha256": "1749fc244347709ae8bf1f2c18778512333f5c79ae1854733113eeff99bf2cb9",
+    "size_bytes": 406511
+   },
+   "soilgrids/silt/5-15cm/tileSG-010-016_3-3__silt_5-15cm.tif": {
+    "sha256": "811a622af3fdbe9c63e251a70a6341076c89832abda45704facba6bb3de164d4",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-010-016_2-1__silt_5-15cm.tif": {
+    "sha256": "182597486a4d7bcc4c8c5c4e1c2ac8e8d381e732d7133332673618c77314354b",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-010-016_2-2__silt_5-15cm.tif": {
+    "sha256": "177306a52a4dbda7a058f74af9c60503bfde2e9d8a3cc431bef1b2a5cae884d2",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-010-016_2-3__silt_5-15cm.tif": {
+    "sha256": "018846e78651362a9dab9beade13856b9908c15a625489cf51243e107a25af95",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-010-016_3-1__silt_5-15cm.tif": {
+    "sha256": "f9bcdabdd0a070eef329f68b2febdb4655fbbcc79681eeff9b1cd4a4fa1529c7",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-010-016_4-1__silt_5-15cm.tif": {
+    "sha256": "4d8365ba788d58f3f5d8850c490db7b31ad1193805c98fa1059a2531b4aa2dae",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-010-016_4-2__silt_5-15cm.tif": {
+    "sha256": "7317b64e0c3d3255190225b0ed865dec446f3f2953ec131e277982f9fa8ad018",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-010-016_4-3__silt_5-15cm.tif": {
+    "sha256": "8f53a19dbe70055320aa88a0dfecb6a0c0edcaa6702da5552570a648982d7ac4",
+    "size_bytes": 406511
+   },
+   "soilgrids/silt/5-15cm/tileSG-011-016_1-1__silt_5-15cm.tif": {
+    "sha256": "7a9412d705f3b05721f609c85278a86f89e6f1b281374e87c0441675238d878d",
+    "size_bytes": 61881
+   },
+   "soilgrids/silt/5-15cm/tileSG-011-016_1-2__silt_5-15cm.tif": {
+    "sha256": "878ef51b8a3376f0416b779f036e3502e3dc40d02aa3c1e2f52dc36854e2dc36",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-011-016_1-3__silt_5-15cm.tif": {
+    "sha256": "eef2c7d851a7e4db0e1145b20defee5dcb0fea1f6c333db3ec818cf377a830de",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-010-015_2-4__silt_5-15cm.tif": {
+    "sha256": "b51a9589d4393aee85515dacfdc16a1056f74e2d696b8280565d2dfd90a9f335",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/5-15cm/tileSG-010-015_4-4__silt_5-15cm.tif": {
+    "sha256": "baa06331eb791b2dc586eef2d57c58236da806cd2cdc0a275ad8950b56da42b2",
+    "size_bytes": 267777
+   },
+   "soilgrids/silt/5-15cm/tileSG-010-015_3-4__silt_5-15cm.tif": {
+    "sha256": "481aa0c4ee959f37c0396d3bca8b658aeaf243458a660b35511939a62d25f8d3",
+    "size_bytes": 338949
+   },
+   "soilgrids/silt/15-30cm/tileSG-007-015_4-3__silt_15-30cm.tif": {
+    "sha256": "b4b2bb4d411508260184d832cf9cfbf8dc8d470ffab9cd637ab0c48255051eea",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-007-015_4-2__silt_15-30cm.tif": {
+    "sha256": "500eee8b01aadfd389fb2653d3a9cde78544553b5164cad81392b8eb29ee99b2",
+    "size_bytes": 9553
+   },
+   "soilgrids/silt/15-30cm/tileSG-007-015_3-3__silt_15-30cm.tif": {
+    "sha256": "ef51228ce5940905a163389b4d317558b03df858f3fd31fbd70c92ecbc3218d5",
+    "size_bytes": 357873
+   },
+   "soilgrids/silt/15-30cm/tileSG-007-015_2-4__silt_15-30cm.tif": {
+    "sha256": "1dff0046c3ef1216e2e46342857cf9a59a79ce51caa15dc8abeedd9d936765dd",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-007-015_2-3__silt_15-30cm.tif": {
+    "sha256": "c49d14ec4df6bb382da50fadb59fb068ce413913d6bfc98083c30e414d87ae0d",
+    "size_bytes": 388513
+   },
+   "soilgrids/silt/15-30cm/tileSG-007-015_3-4__silt_15-30cm.tif": {
+    "sha256": "160d26cf0ea1e3deaaa1248f601c2dca0f4a52bd6e9bdadc4aa81a4f0bfd4b66",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-007-015_4-4__silt_15-30cm.tif": {
+    "sha256": "e470d09b33ac703b6118398e72e8ece53f77c15799ccf34a2819be53c4ae9b3f",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-007-016_4-1__silt_15-30cm.tif": {
+    "sha256": "543dc6283f03ec369a393961e46e8b30d528fd34cc60a2f340bba95cda6074b4",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-007-016_2-1__silt_15-30cm.tif": {
+    "sha256": "999152f72633679b33fedee491389abf62732372fa7d22cce5259c3049e20fc7",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-007-016_3-1__silt_15-30cm.tif": {
+    "sha256": "ef1dc03246ccd2295a2fd11639856c34ae3c141e6392bbc053ed35d3311c8914",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-016_1-1__silt_15-30cm.tif": {
+    "sha256": "fa48fee9f3a92a234b86581b49e4a711b886379d5af60115fa5bfd2f8036a1bd",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-016_3-1__silt_15-30cm.tif": {
+    "sha256": "9d74dff11647efac9fac3f7282d65fd48667db74944a66d5b7ae5e4d4cb53d0e",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-016_2-1__silt_15-30cm.tif": {
+    "sha256": "2c84b076486386ddaedd8e19391bdb4d74e04d21454306a7be485e9affa3547e",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-016_4-1__silt_15-30cm.tif": {
+    "sha256": "46ebb48c3ff91f202db962debea84dbd6bb2a41b9ae5700bbb626d7f75252aaf",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-015_3-1__silt_15-30cm.tif": {
+    "sha256": "0046af2005ee16908a7f6c3203916160f74d2782c39ded84d687787fc9ca2443",
+    "size_bytes": 3129
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-015_2-4__silt_15-30cm.tif": {
+    "sha256": "bc2e8593a5fa848684d2480a6b9ce13af06509fbaa20fece9be68b71500a625b",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-015_4-3__silt_15-30cm.tif": {
+    "sha256": "3df4d8936ce031117a858437abd02c8b55dfe2bd1e071cf850ba0c1db10cdb92",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-015_3-3__silt_15-30cm.tif": {
+    "sha256": "a37b91d140e88aba426465b73df17a01a49b658532a800f9f771eabec90ee1bf",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-015_1-2__silt_15-30cm.tif": {
+    "sha256": "0c7dff83a6c831236f6e6bc55d37cfd73bb697ca4ffc5485b18b890d22b3e4f4",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-015_2-3__silt_15-30cm.tif": {
+    "sha256": "4a891812d99cce8fc5721c0ce751f470fd6c389c911fb7fe24906baf023dc399",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-015_1-4__silt_15-30cm.tif": {
+    "sha256": "d6d7e8d208d19e1e526293b77e83c4407bb440b38ca9ca9f2e78d3771aa9cf2a",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-015_2-1__silt_15-30cm.tif": {
+    "sha256": "776b5b488e1bd756725a9f30d2ce1c8cfebd4c65d337a7398e59dcd6473ea615",
+    "size_bytes": 28505
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-015_4-2__silt_15-30cm.tif": {
+    "sha256": "fada25a67b219cb0cda8a81c5e4075a8bd98490db27829f2ee0672e1d84e812f",
+    "size_bytes": 208329
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-015_2-2__silt_15-30cm.tif": {
+    "sha256": "5a0843a4bdb4d0201de49e83d15588d6c1a7bce851d7bc8cba7721f9cfdc8e4b",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-015_1-3__silt_15-30cm.tif": {
+    "sha256": "0eba3be4cc73a90658d1c6399dcddcd3f35caf93620325ce2c0c94fb28cceb87",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-015_1-1__silt_15-30cm.tif": {
+    "sha256": "5d97a13bbd7c486b87f10262d9c3b96091dde79b65498d96e22e9b8165dc3cf5",
+    "size_bytes": 80153
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-015_3-2__silt_15-30cm.tif": {
+    "sha256": "946dd35324023a69b674a2ff08a9dd0ea0ecea688dee84ed5544dfafb0d65679",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-015_4-4__silt_15-30cm.tif": {
+    "sha256": "5b1070313341496653d3ef6396b3f69c76bec7540ead0d11246775bda93da266",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-009-015_3-4__silt_15-30cm.tif": {
+    "sha256": "8af7d0fa431b20f2d4d8ade15165f08bf29c8e34addc186873afeecd689f230d",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-010-016_3-2__silt_15-30cm.tif": {
+    "sha256": "e047bc551f65ec83caaa530938ed92a659e5c9abbbda83061849a96aaed79e65",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-010-016_3-3__silt_15-30cm.tif": {
+    "sha256": "a52bd1fb9fb42fa958e53db0c02969b476958e02329d21f9f476234a0ec55c09",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-010-016_2-1__silt_15-30cm.tif": {
+    "sha256": "54a82f539bd5e0475d9d3758050c17b89ef8d71741ff438ddfbfa277386d7cff",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-010-016_2-2__silt_15-30cm.tif": {
+    "sha256": "048a76283dc3455755a40cf7f48fad1083f1a2c4e9b36ff71ef727d69550dc6a",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-010-016_2-3__silt_15-30cm.tif": {
+    "sha256": "7038aad9a39686def46a49b30be9a84dbcf8849b2624c8401dac921c1f9509a0",
+    "size_bytes": 406511
+   },
+   "soilgrids/silt/15-30cm/tileSG-010-016_3-1__silt_15-30cm.tif": {
+    "sha256": "1ab327129d8e1e7e23b462fcba387613549c96879ad9b1128ce6a401165d449b",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-010-016_4-1__silt_15-30cm.tif": {
+    "sha256": "83c1cba1bc849c9ae2704359236085ce247391a083c37ce92d8a584a4a8ec56c",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-010-016_4-2__silt_15-30cm.tif": {
+    "sha256": "a25bc1f43d028f960f0e02f2670551e3af7823f842b31566cde9656c085c935b",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-010-016_4-3__silt_15-30cm.tif": {
+    "sha256": "c6a5b63ca06e5eda809b967d652b550314606aa0a16b905310a75b5e8e4767e7",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-011-016_1-1__silt_15-30cm.tif": {
+    "sha256": "b9fa768d4b76f85b22d2d714a8a4a98e9cffef5b5707426fbe90805aaf46da14",
+    "size_bytes": 61881
+   },
+   "soilgrids/silt/15-30cm/tileSG-011-016_1-2__silt_15-30cm.tif": {
+    "sha256": "dad1b6fb4a5e72b9978352c648b556f66878234e4db4edd3bf5c950582cead97",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-011-016_1-3__silt_15-30cm.tif": {
+    "sha256": "35085389154f52564999b31abc2f5c2aeaed794544fd8584fee49fd80c59eea6",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-010-015_2-4__silt_15-30cm.tif": {
+    "sha256": "394b543a2ef79454829423a7cf77dc2ad83f6c29e56bde6d52b7da2de93fa354",
+    "size_bytes": 406513
+   },
+   "soilgrids/silt/15-30cm/tileSG-010-015_4-4__silt_15-30cm.tif": {
+    "sha256": "bbbfa32cc45cb6994a566b0bfed79519baeba180eb2b7c3703893d632f63c075",
+    "size_bytes": 267777
+   },
+   "soilgrids/silt/15-30cm/tileSG-010-015_3-4__silt_15-30cm.tif": {
+    "sha256": "53864341970ceee1cdb38f287b7d1254f486cc7c5e300359fe3eae44a3fc8bcb",
+    "size_bytes": 338949
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-007-015_4-3__cfvo_0-5cm.tif": {
+    "sha256": "76b40b6772741e292c76c775eb24764277e98ab824d04836263a488e29e99c6c",
+    "size_bytes": 406509
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-007-015_4-2__cfvo_0-5cm.tif": {
+    "sha256": "db469adaa8883b0ff36425e4a283a9a811c2c86f3d35e56186e6a0b738e64f47",
+    "size_bytes": 9553
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-007-015_3-3__cfvo_0-5cm.tif": {
+    "sha256": "237679f5dce27cfc6c89b93371f98bb6d0815a0e67846288d990c8ec6a53cb4b",
+    "size_bytes": 357871
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-007-015_2-4__cfvo_0-5cm.tif": {
+    "sha256": "7139b6909219e2b20faa72fa42e3d6e0072e809492fe9fa99d851472f4184b7a",
+    "size_bytes": 406513
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-007-015_2-3__cfvo_0-5cm.tif": {
+    "sha256": "643f8a49b111b67a9f641bfd23e2b80270adbee2331485ec81bea40e04cb013c",
+    "size_bytes": 388511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-007-015_3-4__cfvo_0-5cm.tif": {
+    "sha256": "056a6a3ba78e37647d2656483534a8ccb2eb30e5cad48ad99da6e7bdc92ccda4",
+    "size_bytes": 406513
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-007-015_4-4__cfvo_0-5cm.tif": {
+    "sha256": "7084372cf15c19939440b36c8fafd0a3fef00d69d0b2019cb371ec6fcfb63bd0",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-007-016_4-1__cfvo_0-5cm.tif": {
+    "sha256": "f528c662a9188b1b8fa9f0052d404d06c9281f6199b741671b7c26b055ee53d4",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-007-016_2-1__cfvo_0-5cm.tif": {
+    "sha256": "5edf39ef9b12631dd9bf1f4682595d7df34abb58a43be0841b15569fc44cae81",
+    "size_bytes": 406513
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-007-016_3-1__cfvo_0-5cm.tif": {
+    "sha256": "91a8d4dad81bc8db773bd25dcb076f2e5f6da06ec0ff0f1f2a006f9fd28e8294",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-016_1-1__cfvo_0-5cm.tif": {
+    "sha256": "fd7a05d4bbbdeec86bd257f5a1753b6841e5c1d014f2bec20ef0e5d3f2f6866a",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-016_3-1__cfvo_0-5cm.tif": {
+    "sha256": "324727b6b49fe80f79c9b64b34c225152d83b6877175ec40c5997362d3e52693",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-016_2-1__cfvo_0-5cm.tif": {
+    "sha256": "f7877ea9afb53f46d4dbb99fc7b3e45234abdf1fb7d841bbdd2bd5165a885e0a",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-016_4-1__cfvo_0-5cm.tif": {
+    "sha256": "6d439afdadf88fc5a08b13f89a15935adbf20c20233e2be486b233c5c13d181d",
+    "size_bytes": 406513
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-015_3-1__cfvo_0-5cm.tif": {
+    "sha256": "4f76255b52c6e2c5af4fdd37650aa2fb7a0cd871f4079abe6d3710e916af39f1",
+    "size_bytes": 3129
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-015_2-4__cfvo_0-5cm.tif": {
+    "sha256": "cc1fd8859f7cce807d2b90742e87c5492d08dec58d09a6a7a377cfc148226d19",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-015_4-3__cfvo_0-5cm.tif": {
+    "sha256": "777e7e5079251d9cbe32eb5a9e5d64100b4433733df4b0845e0a0e37d02f2372",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-015_3-3__cfvo_0-5cm.tif": {
+    "sha256": "94c4804286ac35d629ee5e64d9fbef77c28c38ecf3dd568b8c7358788a6bbcf0",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-015_1-2__cfvo_0-5cm.tif": {
+    "sha256": "76f8815e86758d822fff00d21386e424eca70e823c0e921698f52a89445b1ee2",
+    "size_bytes": 406513
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-015_2-3__cfvo_0-5cm.tif": {
+    "sha256": "1ee2ef58de62ed288135c50972ebfbbd155291ce7241b218924eb098bbbbe7a5",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-015_1-4__cfvo_0-5cm.tif": {
+    "sha256": "10f1d55785b2af14bb19a0aef4d5c150b2ce7595f7b788757f645f63771e2ddd",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-015_2-1__cfvo_0-5cm.tif": {
+    "sha256": "d0cb24e6e234cd2f459c4904063fe5032aad3c54303852294c8d4d23ea75616d",
+    "size_bytes": 28503
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-015_4-2__cfvo_0-5cm.tif": {
+    "sha256": "84408cd516529202063e4c274cf5bd968263a500d9c3f8cc3fb35e02e4797407",
+    "size_bytes": 208327
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-015_2-2__cfvo_0-5cm.tif": {
+    "sha256": "781dd20c3f26ea980ae339e7e5575e56a16a99322527a05b7979c91a86b32310",
+    "size_bytes": 406513
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-015_1-3__cfvo_0-5cm.tif": {
+    "sha256": "81af9a5431386f42316abdb22e09078c4a6612e4951fd2e8ce4c7db21ef1b019",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-015_1-1__cfvo_0-5cm.tif": {
+    "sha256": "939c6e33c06688af3dfb05f135d24292017e4f26ac28dca443b8aafe3975ee7a",
+    "size_bytes": 80151
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-015_3-2__cfvo_0-5cm.tif": {
+    "sha256": "7af9fbc49ac5816af03dcb6f9f76e33b5336b0b7ab50e99c6abd1692b1eba178",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-015_4-4__cfvo_0-5cm.tif": {
+    "sha256": "ac06a5a7287137b79ab87d4d768e66a10229ba984275062f430402a880e40095",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-009-015_3-4__cfvo_0-5cm.tif": {
+    "sha256": "ca9ff186f06cc84e6f5c4fafa5eb07afe8cb20c395935849d3ec32532ecfcf6c",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-010-016_3-2__cfvo_0-5cm.tif": {
+    "sha256": "0c7357be2ae9929db7e161b1087d756ea31389d672dc62581c2b8614b4f5ce9a",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-010-016_3-3__cfvo_0-5cm.tif": {
+    "sha256": "e74652e00d622ea802ea20956ce41b6d5deaa60f6410d33bfd3db5425c51e649",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-010-016_2-1__cfvo_0-5cm.tif": {
+    "sha256": "9dd72c90849cb7e8156e9925e31a32c23b58699760a4a427f24b7b075b4467e1",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-010-016_2-2__cfvo_0-5cm.tif": {
+    "sha256": "d3ab1c17c82eeecca73bfec02a9648a7d647579fb176980829b50d72a4334358",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-010-016_2-3__cfvo_0-5cm.tif": {
+    "sha256": "aad7b40b06b83152a5371c12e7644486acc5aa1c239acc8262b600b2cd559c04",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-010-016_3-1__cfvo_0-5cm.tif": {
+    "sha256": "0c55ea99f6642f4cb9418a7f6cc73582daa6a452f7501a9356a9bb3686f313be",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-010-016_4-1__cfvo_0-5cm.tif": {
+    "sha256": "1fb4b3e9b905ccd4fa3113deb2654068bf1e0d424ccba4370d3696604f04156a",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-010-016_4-2__cfvo_0-5cm.tif": {
+    "sha256": "8fe2a5db850ad5cb1ef037917e09d33733a9c3ad8e8926077b9f921e4bc36eed",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-010-016_4-3__cfvo_0-5cm.tif": {
+    "sha256": "8f79cc139a06b8271bc74eb531538982b58d2352948bada396a550693c8210ca",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-011-016_1-1__cfvo_0-5cm.tif": {
+    "sha256": "a4d1ab6dab901619ecab8789b7fa8d327d04ec6f00d51c8716890e488f3f5b61",
+    "size_bytes": 61881
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-011-016_1-2__cfvo_0-5cm.tif": {
+    "sha256": "56e0ce4735a4bc6cc1cec20a57bcf49b51079b9c936e34f075e8bd380802f0ab",
+    "size_bytes": 406513
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-011-016_1-3__cfvo_0-5cm.tif": {
+    "sha256": "80d6e2402089e3b6a24ab9488fad7e87bcd731f617e7070d3e52870c8b8ad581",
+    "size_bytes": 406509
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-010-015_2-4__cfvo_0-5cm.tif": {
+    "sha256": "b1607880c0bf3a45fdad2f7d9d432674ac0dafeba8d2c2d42f2a9d8f485ce912",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-010-015_4-4__cfvo_0-5cm.tif": {
+    "sha256": "1d8d610a8a341c8188e4317639b3e21c1e356c5591cf76e3c377fe124234fb0c",
+    "size_bytes": 267775
+   },
+   "soilgrids/cfvo/0-5cm/tileSG-010-015_3-4__cfvo_0-5cm.tif": {
+    "sha256": "b4c852cbdab88c15345a32c1dd2d2c6457289bde3dd81de7587238a97e696fbd",
+    "size_bytes": 338947
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-007-015_4-3__cfvo_5-15cm.tif": {
+    "sha256": "66d7c1fbb7c3624de0912954eb31570e54b6c6cd94a734297c17178a31bc34f3",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-007-015_4-2__cfvo_5-15cm.tif": {
+    "sha256": "a9ebcabe7b77077cffc0af2a2b24f0cd6e43e6e97e455bc50f42ece7be45a186",
+    "size_bytes": 9551
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-007-015_3-3__cfvo_5-15cm.tif": {
+    "sha256": "be1ace240f9c93096ffa67051e0d70b200036b76cc2af4ee64b06ec5d47a4ab6",
+    "size_bytes": 357871
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-007-015_2-4__cfvo_5-15cm.tif": {
+    "sha256": "ef4bfd6ce104d6c2dc64e7db350f79a40b29c6409e22ed6a019060e6489f311f",
+    "size_bytes": 406513
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-007-015_2-3__cfvo_5-15cm.tif": {
+    "sha256": "414195fe6a1a4a002f2604fc04fbfa6a2f7a8c01240a2936d683422981e0cca1",
+    "size_bytes": 388511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-007-015_3-4__cfvo_5-15cm.tif": {
+    "sha256": "d770fe147767bafb748d13b75276c48bb0ba4d147a4bce45caa90099fdffc64f",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-007-015_4-4__cfvo_5-15cm.tif": {
+    "sha256": "c96fd99821763d24e63220692c91f3b32de0998d4553b3272be29cd81b344738",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-007-016_4-1__cfvo_5-15cm.tif": {
+    "sha256": "e1d4a013fe69c8aab6b3e2f15a44b8a206aef62bf868c329f4c634cec4bc5a7c",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-007-016_2-1__cfvo_5-15cm.tif": {
+    "sha256": "60f71030eefda5e38406778e82ba16d65eef05927fc10ba4fdd943f3d37e86f5",
+    "size_bytes": 406513
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-007-016_3-1__cfvo_5-15cm.tif": {
+    "sha256": "45a4bd889bb6bd91405ede44a10f439eda4cdfa8610675f816ef90d3786fb68a",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-016_1-1__cfvo_5-15cm.tif": {
+    "sha256": "2416ec261d778fa2892db17f63f9bfbc19c73c260f3745d2ada83c94ef68d2ae",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-016_3-1__cfvo_5-15cm.tif": {
+    "sha256": "cf0efdb259e99ac2407059e2f56b4c6117144e981b1dcc3d04e30057b194582f",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-016_2-1__cfvo_5-15cm.tif": {
+    "sha256": "d62932a25993c2a8f67913f86a6d6c612c9275068256253dd8de1479bb2e5750",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-016_4-1__cfvo_5-15cm.tif": {
+    "sha256": "b824546df0f1bb16a540d85f4e032bbe24c7473ba9dce81f62dcb8dc0a3a1a87",
+    "size_bytes": 406513
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-015_3-1__cfvo_5-15cm.tif": {
+    "sha256": "fa5f16ec75df1aaf37dec723ddf08185c949135b821e238f2b0e33197956a7fd",
+    "size_bytes": 3129
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-015_2-4__cfvo_5-15cm.tif": {
+    "sha256": "da785f34465bde9077a73c2f24eeeff062951131217f47b1e4e0955e2adfab37",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-015_4-3__cfvo_5-15cm.tif": {
+    "sha256": "2833d72961549c515f2d071b5274dda1fb23bc62597b46647623c7612e78ae5a",
+    "size_bytes": 406507
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-015_3-3__cfvo_5-15cm.tif": {
+    "sha256": "6c355adb3119f7e86c8030277156decb6b64bf6d9abb7096fa45386a32838ceb",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-015_1-2__cfvo_5-15cm.tif": {
+    "sha256": "b79e3c95f25913906d851315449285c3a61dbe038cf2b9a572c126c0af2d4a90",
+    "size_bytes": 406513
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-015_2-3__cfvo_5-15cm.tif": {
+    "sha256": "c7e0705d4540572ec1c6ec21dc9a298853e7f66b46b0e0370dfd117be7f35d58",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-015_1-4__cfvo_5-15cm.tif": {
+    "sha256": "d78972d64ef4080024075b79938b38fe4d95767708f22b613ce11fe39aced1d8",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-015_2-1__cfvo_5-15cm.tif": {
+    "sha256": "4dac8ed1b3cc45a022b0ddff952b44f5f6931b8a3129ab859226e8d6a51160ea",
+    "size_bytes": 28505
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-015_4-2__cfvo_5-15cm.tif": {
+    "sha256": "ca362c057b3851d1dfc63a8ba53d324a2deab9097e15c19a7ee7b69da0651340",
+    "size_bytes": 208329
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-015_2-2__cfvo_5-15cm.tif": {
+    "sha256": "ace5ba96f5b7f2dc041206f1f3a7cfb5cbbe051d2360f444eaa082dcb8441c8d",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-015_1-3__cfvo_5-15cm.tif": {
+    "sha256": "e25729c1a16b30ff2b97edb8b0146d767800279bf796a57a226de61a99cd13d9",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-015_1-1__cfvo_5-15cm.tif": {
+    "sha256": "aaac7a558b8f7020f25a13b2dd29da3aa616020d5a0b5ddfe85087ef4c35e19c",
+    "size_bytes": 80151
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-015_3-2__cfvo_5-15cm.tif": {
+    "sha256": "6a77204fb9f5e9760a788d42ab3db58ca99842187754eb3ac451c4c0e24c4cd1",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-015_4-4__cfvo_5-15cm.tif": {
+    "sha256": "4ea2ff63203e27aecfe48dba064413d0c70dd4605361bf57ccc2413fe1a668c1",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-009-015_3-4__cfvo_5-15cm.tif": {
+    "sha256": "e1fabb4267f3de1b52361d84632f97e2356bf4fbb88e12b510cf7c6dd8b27ed9",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-010-016_3-2__cfvo_5-15cm.tif": {
+    "sha256": "3788dca3e5427d6974d342df9c791c577ace972504325060788ed15d050107e7",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-010-016_3-3__cfvo_5-15cm.tif": {
+    "sha256": "f50c0aecd6b887c3d670224a99a773c6b39d00fa3f83fbd4b1f1b8410bfd1f1d",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-010-016_2-1__cfvo_5-15cm.tif": {
+    "sha256": "d227d6fffbba960364bf3071cb15d7ac945492c2003a774235448f15b34a96d3",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-010-016_2-2__cfvo_5-15cm.tif": {
+    "sha256": "964a4b16cca7b218da7da9b9eaeaf5bc45bd6a226275e262bbc299a3c2b76fff",
+    "size_bytes": 406509
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-010-016_2-3__cfvo_5-15cm.tif": {
+    "sha256": "1469b7667936a9e9566266373dedef12fe46175c4b8a7dd305615e81652fb328",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-010-016_3-1__cfvo_5-15cm.tif": {
+    "sha256": "ee7fd88d4c201208f8b7e8d25bb93a241ca3bc905b1bcd8c0ede809fa78c4974",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-010-016_4-1__cfvo_5-15cm.tif": {
+    "sha256": "33d57977755ecd8b26b757a255176c905f6df035b2f3a853a5e33a476b705b12",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-010-016_4-2__cfvo_5-15cm.tif": {
+    "sha256": "45026a04c245d6e05ad2ba27fbb8c135892b6d8bbd506f144e4524f6fcd16f16",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-010-016_4-3__cfvo_5-15cm.tif": {
+    "sha256": "353867ea4a153477b6d2aa3bf36d717ee4e2f74cdcf4bbea00c8c119802f96e5",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-011-016_1-1__cfvo_5-15cm.tif": {
+    "sha256": "f0962a5e7157e8f55fb607e860f2383027f48434fb35fda24b9caca703bce0d3",
+    "size_bytes": 61881
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-011-016_1-2__cfvo_5-15cm.tif": {
+    "sha256": "63b515b0c029d0fda647b15fc9711beb6c44c863fc76bfdbced46bee74914176",
+    "size_bytes": 406513
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-011-016_1-3__cfvo_5-15cm.tif": {
+    "sha256": "788076b241ce3173c6c770f80589fa05140fc7c0f667701965024b61ad665b98",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-010-015_2-4__cfvo_5-15cm.tif": {
+    "sha256": "5ab0bf138a7ec5f195e2e8cff71047adc9c3847467a1640725e6d2e3d2e5d148",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-010-015_4-4__cfvo_5-15cm.tif": {
+    "sha256": "98ecd3c0e7d104d4f70157ff92035d1a9bee22e320f74eb83dc611c0683dc93a",
+    "size_bytes": 267777
+   },
+   "soilgrids/cfvo/5-15cm/tileSG-010-015_3-4__cfvo_5-15cm.tif": {
+    "sha256": "30b4876800501070a0b0e2b5ea3a5523924e46948b64be8ec47504bcad36a050",
+    "size_bytes": 338949
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-007-015_4-3__cfvo_15-30cm.tif": {
+    "sha256": "31cd7072f4bf63408acf8fb11339a947d7dce273470ced359fd3083d41d3531e",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-007-015_4-2__cfvo_15-30cm.tif": {
+    "sha256": "6a002e639a9869ce2478e9336ba2070dd8c51739b4ed9413ca37e943cabb6ea4",
+    "size_bytes": 9553
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-007-015_3-3__cfvo_15-30cm.tif": {
+    "sha256": "f2e071d1a49780af4afbb224f4c63cf7cb79d61702d26188227a6483183eade2",
+    "size_bytes": 357871
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-007-015_2-4__cfvo_15-30cm.tif": {
+    "sha256": "e08ab703aadea8ab128a31e1a4eec6c23d459c022b5de2a71a379f4d0382aea0",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-007-015_2-3__cfvo_15-30cm.tif": {
+    "sha256": "020e85a3013adfaadadebfd20ee7f78396e20373ce67f53533f08f2f84e5ad62",
+    "size_bytes": 388511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-007-015_3-4__cfvo_15-30cm.tif": {
+    "sha256": "cf10f560955308f9d6c31ea31f8c686ef8da77e26d9630365dd180fcfbbe7468",
+    "size_bytes": 406513
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-007-015_4-4__cfvo_15-30cm.tif": {
+    "sha256": "479546790f1a03efae55aedabcfcd69e8d543121012c93389d2c1d078abab73b",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-007-016_4-1__cfvo_15-30cm.tif": {
+    "sha256": "968317638a686a1729cd3aee37c6a478f1c914425adc32fb2d025b9400b0611d",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-007-016_2-1__cfvo_15-30cm.tif": {
+    "sha256": "8d7b99467a02eadc03ab9b380dcd45db4fc96d2e804ab301883a7d68affcda3b",
+    "size_bytes": 406513
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-007-016_3-1__cfvo_15-30cm.tif": {
+    "sha256": "46654e8a7eda3886dea65e34e31a485c8500b6cbc7f85544779eea69b5bfc35d",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-016_1-1__cfvo_15-30cm.tif": {
+    "sha256": "d8c511b827ea1c36138d6bee455dce78b174ae2fe63afeaa8cbf39e85358b9d7",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-016_3-1__cfvo_15-30cm.tif": {
+    "sha256": "c35facbbc4caa72a5ab840d1d9904b9e5bbfed2586b9b29beaf4897851ed136c",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-016_2-1__cfvo_15-30cm.tif": {
+    "sha256": "5d4d68637a086067e7c88ee1191af9c98bd846ff0dbc168236dbdf6b3b01b93a",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-016_4-1__cfvo_15-30cm.tif": {
+    "sha256": "2b642639c77a3ee8dff432b0c4e8b5973a2d4b605f33ed2e59eb99f483da1d39",
+    "size_bytes": 406513
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-015_3-1__cfvo_15-30cm.tif": {
+    "sha256": "7c68795257ebcc399006599b25ca7174926594d6c994c3173229793ab3737dad",
+    "size_bytes": 3129
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-015_2-4__cfvo_15-30cm.tif": {
+    "sha256": "bfa3da9b3db84475a0a2e48e274245498ddb172f6eaa08d055d6a38cf46e59e6",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-015_4-3__cfvo_15-30cm.tif": {
+    "sha256": "b9f11615d0007379fa69531c4048502f2ebd3e3d7216ee1967ba8de72c493929",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-015_3-3__cfvo_15-30cm.tif": {
+    "sha256": "d0c811988a0c8e88859135351f9910897e2d62d5bf829a254ee478e135b68837",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-015_1-2__cfvo_15-30cm.tif": {
+    "sha256": "a21e62aa9ebbf9e207eb43c37a4c747cb757a75a92936cf86046ebfec0a52f0b",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-015_2-3__cfvo_15-30cm.tif": {
+    "sha256": "53a7f4416eeffce68110f23c27d4fb32ff003085cb258f53bf59bef21da6fdbd",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-015_1-4__cfvo_15-30cm.tif": {
+    "sha256": "bc6af689c050f7b7ae5cd49829e8ecc287e06e72f66fb31fc284934144f8efbb",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-015_2-1__cfvo_15-30cm.tif": {
+    "sha256": "e700ab2b29a5d43e6146e0c0bf588d5fda07188f80054c6a17b96f9e17964be2",
+    "size_bytes": 28503
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-015_4-2__cfvo_15-30cm.tif": {
+    "sha256": "ce5a2fede3c860955edcbcbfd259e21238779404978ffdd0aa0205001191a4c2",
+    "size_bytes": 208327
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-015_2-2__cfvo_15-30cm.tif": {
+    "sha256": "2b74cccca12f59cfb2773768a61b1a8211d1255bf43625a0dd9acf5a3492fc91",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-015_1-3__cfvo_15-30cm.tif": {
+    "sha256": "49f1a8c5aae065847d37917b2c7cd2a53c57eb5d0de0f3238dc7a810605a625b",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-015_1-1__cfvo_15-30cm.tif": {
+    "sha256": "7a90dfd10f05b3b582de40569c39c1105237e7d2abc3edfc2668e90e1a3bf1c8",
+    "size_bytes": 80151
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-015_3-2__cfvo_15-30cm.tif": {
+    "sha256": "0e668f0aa4ad3c44035579f8f0bffad876f52cc0847e98141807427098979e25",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-015_4-4__cfvo_15-30cm.tif": {
+    "sha256": "0dc3442679175f2fecaa3146721820b7f109aff463c74e21776896182458e25d",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-009-015_3-4__cfvo_15-30cm.tif": {
+    "sha256": "e5a49e8a405ba3ff05549b130c2eac9f906b519698de45672cd6f66496d65df6",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-010-016_3-2__cfvo_15-30cm.tif": {
+    "sha256": "78e928f1c8f1a204b9f8004bf810abc5ba7307d8307fcc26543de977a9f16e57",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-010-016_3-3__cfvo_15-30cm.tif": {
+    "sha256": "ed5d21599046bba7ea2c381f11b1a82732de7122ed7ef27d4666ae468398b7ab",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-010-016_2-1__cfvo_15-30cm.tif": {
+    "sha256": "ede14a01ab1b6eeb68151600a4069edf932fe47de158f0b4c15526776ece9a8c",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-010-016_2-2__cfvo_15-30cm.tif": {
+    "sha256": "ee3baf74212cff383ec6e54985dd7795ae67a18f1c2c4bb046ef8f55eed9344f",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-010-016_2-3__cfvo_15-30cm.tif": {
+    "sha256": "277b717a1c61cee615eb364872c48d89f91b20bf35d7e74cd550fe17f1fe6cc0",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-010-016_3-1__cfvo_15-30cm.tif": {
+    "sha256": "9194b3c27df4318802a471e11c764b42d34c92a385287a3b8c42a60c3bb86697",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-010-016_4-1__cfvo_15-30cm.tif": {
+    "sha256": "c9a9ef12d596a8ab5279dca4d573f82593613ae205dc62ebf4c8c4a55d8e3307",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-010-016_4-2__cfvo_15-30cm.tif": {
+    "sha256": "456fc83e4383a26ab726aa1a3de1e68c87f7b7c9b1e9f377da8ed25efc4f2fcd",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-010-016_4-3__cfvo_15-30cm.tif": {
+    "sha256": "7a1c78b38cab1ccdf2723740590d32f7e95ea8661b705942f6f0b086b7eb04d9",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-011-016_1-1__cfvo_15-30cm.tif": {
+    "sha256": "3b45df076e5e44d84fe0cecce56e84c85dd111b3d8a6dfd669f0ec08c811dab9",
+    "size_bytes": 61881
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-011-016_1-2__cfvo_15-30cm.tif": {
+    "sha256": "2d8f427b07a5a528ac6b71fccf6d827eb363d4e8e709a3300952f1b79c15e09a",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-011-016_1-3__cfvo_15-30cm.tif": {
+    "sha256": "ac00485d490643d239a73733c484cbcf0782fe0e2455ba80867468bf647cd210",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-010-015_2-4__cfvo_15-30cm.tif": {
+    "sha256": "b818acac043f873375f32154e5c3cbdd50c2dc86edb5d75049400cee28336514",
+    "size_bytes": 406511
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-010-015_4-4__cfvo_15-30cm.tif": {
+    "sha256": "5f83dd5a99e67d378c9275b586907131132ce1b7984148bab9f373974b39797b",
+    "size_bytes": 267773
+   },
+   "soilgrids/cfvo/15-30cm/tileSG-010-015_3-4__cfvo_15-30cm.tif": {
+    "sha256": "4cf6252ca557b3ba04df6f33e4cd41934a953bba8f95a71bdd791a2bc2c89501",
+    "size_bytes": 338947
+   },
+   "ndvi_viirs/VNP13A3.A2013001.h07v05.002.2024094104801.h5": {
+    "sha256": "85163bd3e39fab68df0a72478c443b4a7df1c951e0acca38f1e7f379c0c6ecc0",
+    "size_bytes": 1500053
+   },
+   "ndvi_viirs/VNP13A3.A2013001.h08v04.002.2024094104803.h5": {
+    "sha256": "0b723151952933f32bb4a123e91919b4ec4057088a6efd260f4ad94b27b63bfb",
+    "size_bytes": 4693263
+   },
+   "ndvi_viirs/VNP13A3.A2013001.h08v05.002.2024094104759.h5": {
+    "sha256": "36b88a8de36bc48b31d2979ab7ee99430ce45c127571fdf5dcf431cf2be0f8c6",
+    "size_bytes": 25755614
+   },
+   "ndvi_viirs/VNP13A3.A2013001.h09v04.002.2024094104803.h5": {
+    "sha256": "65a2dc7a6a81037e1e938ec48d8c0ebfc1246cb646c2db1dbc4b4947dbee4702",
+    "size_bytes": 22955720
+   },
+   "ndvi_viirs/VNP13A3.A2013032.h07v05.002.2024094104929.h5": {
+    "sha256": "d1921b40042bf44e480e8745b0c885684d34572d7aad3afe883f8a705730447c",
+    "size_bytes": 1499881
+   },
+   "ndvi_viirs/VNP13A3.A2013032.h08v04.002.2024094104933.h5": {
+    "sha256": "c6a837c1eadca44bfa2226cf0e519a3f27cd8b0f4e58ed718bb060f8b70916e0",
+    "size_bytes": 4668629
+   },
+   "ndvi_viirs/VNP13A3.A2013032.h08v05.002.2024094104933.h5": {
+    "sha256": "6c9620212e1b64a75bee609da6c0597d19c08dc3d2c2ff9469fea45c01dcca0d",
+    "size_bytes": 25596067
+   },
+   "ndvi_viirs/VNP13A3.A2013032.h09v04.002.2024094104931.h5": {
+    "sha256": "1c4b9e0589262e2d558be66f5b8a4c76afefc03280043000d14710db917068bc",
+    "size_bytes": 23441754
+   },
+   "ndvi_viirs/VNP13A3.A2013060.h07v05.002.2024094105030.h5": {
+    "sha256": "ae73175d99833d596d2d599578b2aa72d69e9ae048751524baf3a1927f1f28c5",
+    "size_bytes": 1500020
+   },
+   "ndvi_viirs/VNP13A3.A2013060.h08v04.002.2024094105033.h5": {
+    "sha256": "7a28978d747006243885d92e39306b52667a72f261cc4b5e776339fca2b99e34",
+    "size_bytes": 4622980
+   },
+   "ndvi_viirs/VNP13A3.A2013060.h08v05.002.2024094105032.h5": {
+    "sha256": "4b53da476a3e2f44b9a4dfe32800e75e5439ffbe911945fdd180e2dc73ce6c28",
+    "size_bytes": 25824861
+   },
+   "ndvi_viirs/VNP13A3.A2013060.h09v04.002.2024094105030.h5": {
+    "sha256": "7fb8019da9a0003eceda019766184ceec5d77c43d2759c6b30b2033fa7c9c123",
+    "size_bytes": 23324916
+   },
+   "ndvi_viirs/VNP13A3.A2013091.h07v05.002.2024094105159.h5": {
+    "sha256": "bc407d31ce8d9ee263f5358c9085b4837155e000ea8adaf25c3325e223f6d42f",
+    "size_bytes": 1499984
+   },
+   "ndvi_viirs/VNP13A3.A2013091.h08v04.002.2024094105159.h5": {
+    "sha256": "d2ba3a778013554b425012e1a5980931380c4e2df762bdaef2b8d086fbb17529",
+    "size_bytes": 4593671
+   },
+   "ndvi_viirs/VNP13A3.A2013091.h08v05.002.2024094105201.h5": {
+    "sha256": "0125629b951b66bfa369673a382c68dc3421c8ee91e181a1a0bf384d691d368d",
+    "size_bytes": 25744756
+   },
+   "ndvi_viirs/VNP13A3.A2013091.h09v04.002.2024094105203.h5": {
+    "sha256": "735ad3a75ef8676e279fa15aab60bf2e1121200f31c2fb52b2f6971c1f2590e6",
+    "size_bytes": 23140425
+   },
+   "ndvi_viirs/VNP13A3.A2013121.h07v05.002.2024094105329.h5": {
+    "sha256": "c23a8b6d6c1cc91f9155fe4c9b380d33be65761a467846690e0b67d8be92e822",
+    "size_bytes": 1500390
+   },
+   "ndvi_viirs/VNP13A3.A2013121.h08v04.002.2024094105328.h5": {
+    "sha256": "17bf4e036a44354df7b3ec07e2f1f189e88cca072e6f436a23bf49dc29931dec",
+    "size_bytes": 4567130
+   },
+   "ndvi_viirs/VNP13A3.A2013121.h08v05.002.2024094105329.h5": {
+    "sha256": "6e922a2e7ab61f99e0dfc9bcbe9134e2683f19aba1f3479e3277cf154fec2656",
+    "size_bytes": 25929254
+   },
+   "ndvi_viirs/VNP13A3.A2013121.h09v04.002.2024094105331.h5": {
+    "sha256": "03101b21e2d1db99e1daf8fbba698f5c8a7b1baa566a48fc84e5ae9e5665e644",
+    "size_bytes": 23000494
+   },
+   "ndvi_viirs/VNP13A3.A2013152.h07v05.002.2024094105426.h5": {
+    "sha256": "af1248e45943e35b51a726bc2de26b349b067a60b91edc43d19a02bbabc305f1",
+    "size_bytes": 1500111
+   },
+   "ndvi_viirs/VNP13A3.A2013152.h08v04.002.2024094105425.h5": {
+    "sha256": "afc8da3a4297a5f51941e838d6ee4f940dc4ed0a72b94babe2d0fe5664f030cd",
+    "size_bytes": 4533465
+   },
+   "ndvi_viirs/VNP13A3.A2013152.h08v05.002.2024094105428.h5": {
+    "sha256": "b10eb09183fbfd9301a6a163041b7f5961ad60b798b2b934ba7640f5b28688b5",
+    "size_bytes": 25665993
+   },
+   "ndvi_viirs/VNP13A3.A2013152.h09v04.002.2024094105426.h5": {
+    "sha256": "478893e8ab73ff776337b1af9c9d129b0725de72822e8623b82f78efba4280cb",
+    "size_bytes": 22679475
+   },
+   "ndvi_viirs/VNP13A3.A2013182.h07v05.002.2024094105533.h5": {
+    "sha256": "de0928242679723b80386c6fd5395d6deb8a5677f2e93c21aba7b4e18c25c4dc",
+    "size_bytes": 1500458
+   },
+   "ndvi_viirs/VNP13A3.A2013182.h08v04.002.2024094105533.h5": {
+    "sha256": "c9a58407b36b612b1585e385e15cd2aabcc5347c087ccf621cf030ccb325ecda",
+    "size_bytes": 4569010
+   },
+   "ndvi_viirs/VNP13A3.A2013182.h09v04.002.2024094105531.h5": {
+    "sha256": "8a7e040a4b214fb21615ad74846ab1010cb7fe39720b26b2e8fbdd11f568f381",
+    "size_bytes": 22759711
+   },
+   "ndvi_viirs/VNP13A3.A2013213.h07v05.002.2024094105700.h5": {
+    "sha256": "128524afaf4730cbb6558ec9b08aa2bcf64fc9e6358c60e729b58d13f2a39111",
+    "size_bytes": 1500230
+   },
+   "ndvi_viirs/VNP13A3.A2013213.h08v04.002.2024094105702.h5": {
+    "sha256": "c6424f64046a025b2be7a53862828c315c74e9e0c24e4f4529251f8b81c55caa",
+    "size_bytes": 4599345
+   },
+   "ndvi_viirs/VNP13A3.A2013213.h08v05.002.2024094105703.h5": {
+    "sha256": "9dc5cf4ac79af3ec2df6670a5d83fa93b15103371aed04631349b5cf42161136",
+    "size_bytes": 26197265
+   },
+   "ndvi_viirs/VNP13A3.A2013213.h09v04.002.2024094105702.h5": {
+    "sha256": "9203b69af380a3ac05b357787d36f95160c2aeb2dea8286f5ad76773c0896a23",
+    "size_bytes": 22945044
+   },
+   "ndvi_viirs/VNP13A3.A2013244.h07v05.002.2024094105755.h5": {
+    "sha256": "9786007ce0faf57043430015a564a274f25eb26aca0a317dc00e3df8ee463a7d",
+    "size_bytes": 1500036
+   },
+   "ndvi_viirs/VNP13A3.A2013244.h08v04.002.2024094105757.h5": {
+    "sha256": "9ad23e338b50584c2ae21e9d7581733ae7a1ae30b32699913e407ec714988c4b",
+    "size_bytes": 4568138
+   },
+   "ndvi_viirs/VNP13A3.A2013244.h08v05.002.2024094105759.h5": {
+    "sha256": "d1185ba8ff07e288c46a6963b4f2d82acd04fcf339488630e432be16bea2f8ed",
+    "size_bytes": 26032872
+   },
+   "ndvi_viirs/VNP13A3.A2013244.h09v04.002.2024094105758.h5": {
+    "sha256": "502572940899a3cfeeb771826ef993bf82125850396f3da26069a37d2f5fdbfe",
+    "size_bytes": 22608520
+   },
+   "ndvi_viirs/VNP13A3.A2013274.h07v05.002.2024059210930.h5": {
+    "sha256": "e5fb14dad718ccc2f28e35394fc172392d7beeb518a74d29c0babaf61032479d",
+    "size_bytes": 1500043
+   },
+   "ndvi_viirs/VNP13A3.A2013274.h08v04.002.2024059212006.h5": {
+    "sha256": "c3e828312ca837ec747661da1339ab80277bf5f0c526f46038dcb947d3aff4c8",
+    "size_bytes": 4561417
+   },
+   "ndvi_viirs/VNP13A3.A2013274.h08v05.002.2024059211629.h5": {
+    "sha256": "39f560a6f943e24c8c04874a2a12417abb5801777505a612ac017d15b020898c",
+    "size_bytes": 25588337
+   },
+   "ndvi_viirs/VNP13A3.A2013274.h09v04.002.2024059212004.h5": {
+    "sha256": "92d0be45572b6f29652cae2da4ad8d9fc24a7a0baf70f2bbdb4ed5736ae9d470",
+    "size_bytes": 22625008
+   },
+   "ndvi_viirs/VNP13A3.A2013305.h07v05.002.2024059222505.h5": {
+    "sha256": "ebe97ebf1c52d2242ff4c45e5fd4cb1e180f957f088f3b5a757778b0e703dc61",
+    "size_bytes": 1500192
+   },
+   "ndvi_viirs/VNP13A3.A2013305.h08v04.002.2024059222506.h5": {
+    "sha256": "a4753061b95742896ae9ba43500f34db2870e6d576681de551bfcb7633a97e57",
+    "size_bytes": 4574944
+   },
+   "ndvi_viirs/VNP13A3.A2013305.h08v05.002.2024059222506.h5": {
+    "sha256": "511fe1d3eb008d21f9cd7c6064e5f217078e2b939a0d87b8e20f09165e6c89d4",
+    "size_bytes": 25490223
+   },
+   "ndvi_viirs/VNP13A3.A2013305.h09v04.002.2024059223141.h5": {
+    "sha256": "717970b0d60560856ac4aa3246e0cb9f33b27c8097193714b4cc9897d6eac05a",
+    "size_bytes": 22671900
+   },
+   "ndvi_viirs/VNP13A3.A2013335.h07v05.002.2024059234100.h5": {
+    "sha256": "d6ea0b5a95c161b5ec605b3f1535e214156fcbfee9c1a9dd99c8705bb4f10b24",
+    "size_bytes": 1500257
+   },
+   "ndvi_viirs/VNP13A3.A2013335.h08v04.002.2024059234102.h5": {
+    "sha256": "7d3d7fe1ae3eef938b7a7f9c6966b9792dacb876c0de57a5479316905fa2a0c0",
+    "size_bytes": 4563681
+   },
+   "ndvi_viirs/VNP13A3.A2013335.h08v05.002.2024059234101.h5": {
+    "sha256": "dd0378b5981d7b812836f6e05d442df1b4d0b443912bf53f7e3197e214edd314",
+    "size_bytes": 25416739
+   },
+   "ndvi_viirs/VNP13A3.A2013335.h09v04.002.2024059235308.h5": {
+    "sha256": "88008a2ccc74710fc63c0b0a6aa97306bdbdb5cce6c17cc0d097b36109f9eac2",
+    "size_bytes": 23075973
+   },
+   "ndvi_viirs/VNP13A3.A2014001.h07v05.002.2024060004409.h5": {
+    "sha256": "18f7d7cdc4435ed7e907d022a1bfbaa7f75f0463dfd034ce191ee09e9c52cc0a",
+    "size_bytes": 1500200
+   },
+   "ndvi_viirs/VNP13A3.A2014001.h08v04.002.2024060005106.h5": {
+    "sha256": "bd3dc1c531a015df8bb4508de1e2cfb9edcfeb030ae94e82e68496d81311c7d4",
+    "size_bytes": 4569744
+   },
+   "ndvi_viirs/VNP13A3.A2014001.h08v05.002.2024060004748.h5": {
+    "sha256": "53dc8fff361bc4214fdcbd48e10002ab4b1ffc95decf45f1118acd5fe38fa7ef",
+    "size_bytes": 25391204
+   },
+   "ndvi_viirs/VNP13A3.A2014001.h09v04.002.2024060005733.h5": {
+    "sha256": "53416b28ed7e797baf9f2b58b5e269a135db22a686151a89cc3bc1291e8737ee",
+    "size_bytes": 23215907
+   },
+   "ndvi_viirs/VNP13A3.A2014032.h07v05.002.2024060015700.h5": {
+    "sha256": "afdbda1ef8205d2451c33a7891c8c2adbec401b39f9ac689f52e68ed33b91398",
+    "size_bytes": 1500167
+   },
+   "ndvi_viirs/VNP13A3.A2014032.h08v04.002.2024060020037.h5": {
+    "sha256": "168e398cc7e42cdabdb2256da6bad4db93c0063be3add834e4323ae54da4c79e",
+    "size_bytes": 4513695
+   },
+   "ndvi_viirs/VNP13A3.A2014032.h08v05.002.2024060020101.h5": {
+    "sha256": "f3614135de6bcbd0150eb55e421ae0e88a80f22d594b0c3ca56d77f1f5b25d33",
+    "size_bytes": 25415676
+   },
+   "ndvi_viirs/VNP13A3.A2014032.h09v04.002.2024060021029.h5": {
+    "sha256": "f237374633e938428f9033c043154dff06408ee577ed89303df7fbbc5d93562c",
+    "size_bytes": 23141956
+   },
+   "ndvi_viirs/VNP13A3.A2014060.h07v05.002.2024060031630.h5": {
+    "sha256": "89011aa0fe645a3a8ddbb48cfd45b03caebaffffba7b0855305ea1233cb9f16a",
+    "size_bytes": 1500329
+   },
+   "ndvi_viirs/VNP13A3.A2014060.h08v04.002.2024060031936.h5": {
+    "sha256": "ccc55887f072c79c9c463213ae81492a93ec27abb1ee4da0206b6d4f0dc10f79",
+    "size_bytes": 4591365
+   },
+   "ndvi_viirs/VNP13A3.A2014060.h08v05.002.2024060031937.h5": {
+    "sha256": "ef7628a5e4dae84c508c000440395f964183fbd2f6bfc39c1835fa5d532f7742",
+    "size_bytes": 25727359
+   },
+   "ndvi_viirs/VNP13A3.A2014060.h09v04.002.2024060032600.h5": {
+    "sha256": "95dafcad15aa10148dcb4c8c95f6b77027d619c42e2962b2c48ff61a2939ba3c",
+    "size_bytes": 23123233
+   },
+   "ndvi_viirs/VNP13A3.A2014091.h07v05.002.2024060041906.h5": {
+    "sha256": "98131168b7650137287e1dc82d28171519f0cbe812cad96fc6e1d797d765564c",
+    "size_bytes": 1500226
+   },
+   "ndvi_viirs/VNP13A3.A2014091.h08v04.002.2024060042559.h5": {
+    "sha256": "242a414b66e8eed9fd7799f2b39bad9080b4499a473e6332d84800fb6a4787e7",
+    "size_bytes": 4563200
+   },
+   "ndvi_viirs/VNP13A3.A2014091.h08v05.002.2024060042236.h5": {
+    "sha256": "b404099569c7eeb79f17cb53d475232f217285719305cbcdb4a5ce9d331034a5",
+    "size_bytes": 25796428
+   },
+   "ndvi_viirs/VNP13A3.A2014091.h09v04.002.2024060042233.h5": {
+    "sha256": "106dc3d1df9a5a7d87f985a3a69b8022eda9fdae1a69e89f1ae150501c214620",
+    "size_bytes": 22966906
+   },
+   "ndvi_viirs/VNP13A3.A2014121.h07v05.002.2024060054701.h5": {
+    "sha256": "09efc06d4ccdaeefa531afdb86dc6a9805baf9ed9a06aa2f9c0eef5a42875bad",
+    "size_bytes": 1500299
+   },
+   "ndvi_viirs/VNP13A3.A2014121.h08v04.002.2024060055039.h5": {
+    "sha256": "bf2534fa2a368a7d79895b2615d8f19f4a8f95eefebd0316501a40a86853c396",
+    "size_bytes": 4586475
+   },
+   "ndvi_viirs/VNP13A3.A2014121.h08v05.002.2024060054658.h5": {
+    "sha256": "f92aeb2950b3ce8212fda9eb3d5d0d6194c88faa7c3e5ab46a791d5377587fb0",
+    "size_bytes": 25895965
+   },
+   "ndvi_viirs/VNP13A3.A2014121.h09v04.002.2024060055036.h5": {
+    "sha256": "634702616c855a1c55e8f2a0b9d92f1967c112815509beaf9e0fe1664e9ae05e",
+    "size_bytes": 22996330
+   },
+   "ndvi_viirs/VNP13A3.A2014152.h07v05.002.2024060071305.h5": {
+    "sha256": "a22a885092bcacd02c32f4e097e040c6b10b3f01e86a9d2309dcdc8c7dd3cbf9",
+    "size_bytes": 1500348
+   },
+   "ndvi_viirs/VNP13A3.A2014152.h08v04.002.2024060071702.h5": {
+    "sha256": "2a3b1ac439356dc144c59a547deb68dd9bd668ca094bccde7cf71a84d908dc6a",
+    "size_bytes": 4554510
+   },
+   "ndvi_viirs/VNP13A3.A2014152.h08v05.002.2024060071702.h5": {
+    "sha256": "e42006964dee636fda55ec3c3ed350887bd7a237a12dd78503d1386a799bc8f1",
+    "size_bytes": 25628891
+   },
+   "ndvi_viirs/VNP13A3.A2014152.h09v04.002.2024060071701.h5": {
+    "sha256": "3df2d841b74866970d6d99b44b3308cd5b639d1a1f6a9abe9a0009d1167549c3",
+    "size_bytes": 22685575
+   },
+   "ndvi_viirs/VNP13A3.A2014182.h07v05.002.2024060083831.h5": {
+    "sha256": "0229608bb00146f0c684e2c85773b3142e403358817d150f49be284e501860a9",
+    "size_bytes": 1500355
+   },
+   "ndvi_viirs/VNP13A3.A2014182.h08v04.002.2024060084158.h5": {
+    "sha256": "b342b192c46917f04aa2cf1ed3b34a58635d96bed6d01a2b2ae718ec5fe0a712",
+    "size_bytes": 4599126
+   },
+   "ndvi_viirs/VNP13A3.A2014182.h08v05.002.2024060084157.h5": {
+    "sha256": "a3a27b85aa30baf0fe8c51ae26b80b1ebd6d32d844defe35b5776ff225990f71",
+    "size_bytes": 26091645
+   },
+   "ndvi_viirs/VNP13A3.A2014182.h09v04.002.2024060084530.h5": {
+    "sha256": "57060a5ab4f5670f2f1bd606d4163dd73259e0683f1811726181e1a49653d5ec",
+    "size_bytes": 22684155
+   },
+   "ndvi_viirs/VNP13A3.A2014213.h07v05.002.2024060095727.h5": {
+    "sha256": "8383a65506898b55373b67e4c34584530d4aa5ba23003b3f6fe79b37bf2ffd67",
+    "size_bytes": 1500257
+   },
+   "ndvi_viirs/VNP13A3.A2014213.h08v04.002.2024060100406.h5": {
+    "sha256": "abed966f39e366ffa4922efa13a44f0dacca059aa9b33a23203cde091142cf31",
+    "size_bytes": 4591045
+   },
+   "ndvi_viirs/VNP13A3.A2014213.h08v05.002.2024060100038.h5": {
+    "sha256": "468ba63722be315cf9148616805960dae26a3460d1417e0427fc255e21905fbe",
+    "size_bytes": 26097190
+   },
+   "ndvi_viirs/VNP13A3.A2014213.h09v04.002.2024060100710.h5": {
+    "sha256": "2839ae74e57157187d3ce867a21a18e8baed1c23b839a7fa2faa570b135a7760",
+    "size_bytes": 22932145
+   },
+   "ndvi_viirs/VNP13A3.A2014244.h07v05.002.2024060112601.h5": {
+    "sha256": "e66f2ca35e4d123f6b1107efa7bfe2109c28147401ee0c6423f01519dfcb833d",
+    "size_bytes": 1500507
+   },
+   "ndvi_viirs/VNP13A3.A2014244.h08v04.002.2024060112934.h5": {
+    "sha256": "fa89ad827a33b0550b38ab99e121c9f1d5b4b32bcdb020f0e06b46fc48bd5a2e",
+    "size_bytes": 4586639
+   },
+   "ndvi_viirs/VNP13A3.A2014244.h08v05.002.2024060112606.h5": {
+    "sha256": "0aee5bfa81cc48b28ae041347525bd3572ae32b2ca9e9be4addfba8d178aacc4",
+    "size_bytes": 25853189
+   },
+   "ndvi_viirs/VNP13A3.A2014244.h09v04.002.2024060112930.h5": {
+    "sha256": "11e168a043bcbf09de94de2cd9ed240a5c84d53ed9f60f0d7d7bf0e5203ffdfc",
+    "size_bytes": 22686111
+   },
+   "ndvi_viirs/VNP13A3.A2014274.h07v05.002.2024060132432.h5": {
+    "sha256": "31c2a481106e560308ce810b6ed12d6def16b28e73cc6a5ed46b1af19895f202",
+    "size_bytes": 1500255
+   },
+   "ndvi_viirs/VNP13A3.A2014274.h08v04.002.2024060132813.h5": {
+    "sha256": "8c7cbad88f7b40f1e020d528f370ba00f419bf0143bb95fe09544521dbcb9a3a",
+    "size_bytes": 4568656
+   },
+   "ndvi_viirs/VNP13A3.A2014274.h08v05.002.2024060133102.h5": {
+    "sha256": "751de72ab6a407562621b12981e2f0de5f908ea3f7d286c78d4abdc6e5485568",
+    "size_bytes": 25715613
+   },
+   "ndvi_viirs/VNP13A3.A2014274.h09v04.002.2024060133715.h5": {
+    "sha256": "029f7524ee40280ef8ac9f2c2f8545ca09d008f9b825e0c86bf1793459011a0e",
+    "size_bytes": 22637226
+   },
+   "ndvi_viirs/VNP13A3.A2014305.h07v05.002.2024062072939.h5": {
+    "sha256": "6d9547912081a059fe47b590314723f70fa87e3792e5eaba7166f42f598dc67d",
+    "size_bytes": 1500179
+   },
+   "ndvi_viirs/VNP13A3.A2014305.h08v04.002.2024062072938.h5": {
+    "sha256": "a7b1aabd3a84973194eb13653be2047a9e4babec85b679abe8254239a2b79f1c",
+    "size_bytes": 4569264
+   },
+   "ndvi_viirs/VNP13A3.A2014305.h08v05.002.2024062072715.h5": {
+    "sha256": "6aa14f879a5e502412f61a7579fc98cc8652a29ee0b42eb1efdd317048b6f85a",
+    "size_bytes": 25449503
+   },
+   "ndvi_viirs/VNP13A3.A2014305.h09v04.002.2024062072942.h5": {
+    "sha256": "38d59f69d9210227c3d2e787a9da09be68e910e7cfb8450040852784b91d9137",
+    "size_bytes": 22640063
+   },
+   "ndvi_viirs/VNP13A3.A2014335.h07v05.002.2024063195420.h5": {
+    "sha256": "749284cb83ebda4e2d88f2c1acde03574206b10b9440c120d7b0bffb6316a659",
+    "size_bytes": 1499877
+   },
+   "ndvi_viirs/VNP13A3.A2014335.h08v04.002.2024063195932.h5": {
+    "sha256": "0b13365b0790cbaf7742f504315c95c611d3d1f647c9644c6011c581ea83fe0b",
+    "size_bytes": 4576014
+   },
+   "ndvi_viirs/VNP13A3.A2014335.h08v05.002.2024063200409.h5": {
+    "sha256": "ce5edd2135d97497327194318941047dbaad653d2e5a0a2f9d0964e04824ae1a",
+    "size_bytes": 25397930
+   },
+   "ndvi_viirs/VNP13A3.A2014335.h09v04.002.2024063200037.h5": {
+    "sha256": "73a96070eca62c72c52219279be0da5a54e8af16013b7dc4b1fbc3181af9256b",
+    "size_bytes": 22895500
+   },
+   "ndvi_viirs/VNP13A3.A2015001.h07v05.002.2024103220429.h5": {
+    "sha256": "35a01fa340e4138aa95b05214414baf7d4f8b5871ea00e13ffe408fed4ee38df",
+    "size_bytes": 1499971
+   },
+   "ndvi_viirs/VNP13A3.A2015001.h08v04.002.2024103220425.h5": {
+    "sha256": "ef4ae85469b3dd7ccb6ad4bb5bb78b49378741309a3481aa41d5d92d35e40123",
+    "size_bytes": 4576634
+   },
+   "ndvi_viirs/VNP13A3.A2015001.h08v05.002.2024103220428.h5": {
+    "sha256": "b954df34df535866005ef5b243b60a75096c46709ee78c0432e5e6411ba2f1a0",
+    "size_bytes": 25431571
+   },
+   "ndvi_viirs/VNP13A3.A2015001.h09v04.002.2024103220436.h5": {
+    "sha256": "f73e160b6181e6d8e14191992114dc82d9e05cb40d6bfe495102e024a36fe520",
+    "size_bytes": 23179652
+   },
+   "ndvi_viirs/VNP13A3.A2015032.h07v05.002.2023172173044.h5": {
+    "sha256": "dc754e69f0935eff5c2775a7dcb205199301e69a645683fcf1efd31ec19bce3e",
+    "size_bytes": 1499977
+   },
+   "ndvi_viirs/VNP13A3.A2015032.h08v04.002.2023172173038.h5": {
+    "sha256": "94e39228e2c3895550439cb8699252b045acd36a51dcdd9986ea2b3a398aa3d3",
+    "size_bytes": 4497389
+   },
+   "ndvi_viirs/VNP13A3.A2015032.h08v05.002.2023172173039.h5": {
+    "sha256": "b726ddd580d31121b80ebf658943c12dbab4cdbdbb87555db02956cc6e1ca320",
+    "size_bytes": 25497302
+   },
+   "ndvi_viirs/VNP13A3.A2015032.h09v04.002.2023172173613.h5": {
+    "sha256": "0f1f2d6061c78efddca3a9b9401eabf3a5d229d4e19ff3a4f8b7e3594973f20d",
+    "size_bytes": 22746965
+   },
+   "ndvi_viirs/VNP13A3.A2015060.h07v05.002.2023172194733.h5": {
+    "sha256": "524921064c0b517b99c525118c28e89aa0a2b24f17d3523b1bc9291fb07f0b03",
+    "size_bytes": 1500215
+   },
+   "ndvi_viirs/VNP13A3.A2015060.h08v04.002.2023172195331.h5": {
+    "sha256": "a1fa2fb8d1b89bb26ea43fc2120b1f33323adf90df18ce5ce8368bc665d3e2c3",
+    "size_bytes": 4527138
+   },
+   "ndvi_viirs/VNP13A3.A2015060.h08v05.002.2023172195313.h5": {
+    "sha256": "0ae950cdade78e3ea4ffa6d30e5e33ae118247213156220cc86b11ec8c6b53b4",
+    "size_bytes": 25660571
+   },
+   "ndvi_viirs/VNP13A3.A2015060.h09v04.002.2023172195322.h5": {
+    "sha256": "180b3e5bd18b7da84b4439d2c0f15873086acc9f7066f5d7b6361eadf779ab66",
+    "size_bytes": 22762395
+   },
+   "ndvi_viirs/VNP13A3.A2015091.h07v05.002.2023172212343.h5": {
+    "sha256": "1b98292236bd59ee27823ffd6d1e3ca67a0691181bd4d3db257a2fa1380be7fe",
+    "size_bytes": 1500023
+   },
+   "ndvi_viirs/VNP13A3.A2015091.h08v04.002.2023172212945.h5": {
+    "sha256": "9f9d92d8d9985f7bced9681b7a18b5aea6cb4473c7a1c4d6946a5675488cdb55",
+    "size_bytes": 4565107
+   },
+   "ndvi_viirs/VNP13A3.A2015091.h08v05.002.2023172212343.h5": {
+    "sha256": "143d58280e69383c5a0ebff5ef5b788ae04fee79332d940c3a7d3120003c3323",
+    "size_bytes": 25878227
+   },
+   "ndvi_viirs/VNP13A3.A2015091.h09v04.002.2023172213012.h5": {
+    "sha256": "8fba91ad176af10488a41e682d9520272b8dc4fcb920a849389451d8a17e3d28",
+    "size_bytes": 22917849
+   },
+   "ndvi_viirs/VNP13A3.A2015121.h07v05.002.2023172232349.h5": {
+    "sha256": "aea52feae84eed30909d95894471225ec33c21967a8d894b526723eaf619f431",
+    "size_bytes": 1500327
+   },
+   "ndvi_viirs/VNP13A3.A2015121.h08v04.002.2023172233336.h5": {
+    "sha256": "e095a5dca4c4f8c87ef368525a4c7444b36b7a276f792b7b6c8faed20a279b4f",
+    "size_bytes": 4583099
+   },
+   "ndvi_viirs/VNP13A3.A2015121.h08v05.002.2023172233341.h5": {
+    "sha256": "c2338bba56a3a6f1ec60a0dea7180b31d3698d5bf663e8d77efcd5a85eb6f855",
+    "size_bytes": 25983536
+   },
+   "ndvi_viirs/VNP13A3.A2015121.h09v04.002.2023172233340.h5": {
+    "sha256": "d71ef16d99c1ec52e78503faf586a0c510cecc040245d2a4b59ed4272d82ac61",
+    "size_bytes": 22981782
+   },
+   "ndvi_viirs/VNP13A3.A2015152.h07v05.002.2024100110027.h5": {
+    "sha256": "5ddee8948568ca8e2c8f85b656c1ace68fb10aced05b03df20f67e964987d742",
+    "size_bytes": 1500523
+   },
+   "ndvi_viirs/VNP13A3.A2015152.h08v04.002.2024100110030.h5": {
+    "sha256": "21af9f43a8b9c350f22325126852bf81bb8325c0415a9fad968f7fdf6eb12ee8",
+    "size_bytes": 4563247
+   },
+   "ndvi_viirs/VNP13A3.A2015152.h08v05.002.2024100110031.h5": {
+    "sha256": "e2605535c95a2053ae6279594ee30f34f6c2a94a3297e82595e318becc2d029e",
+    "size_bytes": 25850707
+   },
+   "ndvi_viirs/VNP13A3.A2015152.h09v04.002.2024100110028.h5": {
+    "sha256": "433d25289b9d1b749a64a41ba8f93e67eb11c84ca193ab44780c5fff60b2c11c",
+    "size_bytes": 22730542
+   },
+   "ndvi_viirs/VNP13A3.A2015182.h07v05.002.2024100110134.h5": {
+    "sha256": "bf917a826e9e7bfa5eeaafd94ada1bcf2b78d26396e839d07c87c11065d69b5d",
+    "size_bytes": 1500525
+   },
+   "ndvi_viirs/VNP13A3.A2015182.h08v04.002.2024100110131.h5": {
+    "sha256": "5d016c1d3efe4ee58644846cd68ac08d2eda11579adfa228a0dd483fe666fa83",
+    "size_bytes": 4594995
+   },
+   "ndvi_viirs/VNP13A3.A2015182.h08v05.002.2024100110134.h5": {
+    "sha256": "c5c0528816f49584bb119479bffd5d277d61cb7c4c1d94381e8711408bfe869d",
+    "size_bytes": 26188929
+   },
+   "ndvi_viirs/VNP13A3.A2015182.h09v04.002.2024100110133.h5": {
+    "sha256": "63bc8bc73cbf07a690afff66aea9d80f6b1c0fd190d2d963e3ae03b79056772c",
+    "size_bytes": 22910639
+   },
+   "ndvi_viirs/VNP13A3.A2015213.h07v05.002.2024100110333.h5": {
+    "sha256": "2ce5027934e2afb42761e4d5f851abfc89d2a31646a4ad9556f93193818fb4d3",
+    "size_bytes": 1500466
+   },
+   "ndvi_viirs/VNP13A3.A2015213.h08v04.002.2024100110336.h5": {
+    "sha256": "9464999f54bc951498fad3d4ef51a302537bed60b8ab72e3ac2e6722e8954e01",
+    "size_bytes": 4587590
+   },
+   "ndvi_viirs/VNP13A3.A2015213.h08v05.002.2024100110333.h5": {
+    "sha256": "c799d6739866abc06e019136acd3e8a6f62fdca8473c6ce9131632e13d434860",
+    "size_bytes": 26111041
+   },
+   "ndvi_viirs/VNP13A3.A2015213.h09v04.002.2024100110338.h5": {
+    "sha256": "1759f22684ee4de96dcdab5ae1e048c7e350d438e4e3830fe210dd0be4bf78f6",
+    "size_bytes": 22813197
+   },
+   "ndvi_viirs/VNP13A3.A2015244.h07v05.002.2024100110536.h5": {
+    "sha256": "a4dad1e6dea0203184523ca476a5fd80e93dfd9a3d32399d4b87c2835334baed",
+    "size_bytes": 1499987
+   },
+   "ndvi_viirs/VNP13A3.A2015244.h08v04.002.2024100110535.h5": {
+    "sha256": "aa95a04ef8aad7be6242faa9186dde22a700b87e2b01ff88fa96e8bd62f429e6",
+    "size_bytes": 4558552
+   },
+   "ndvi_viirs/VNP13A3.A2015244.h08v05.002.2024100110535.h5": {
+    "sha256": "4cfb6948d5f6a17de2fad608ec01d53417848ff53a653593c6abcaf5811bfdfa",
+    "size_bytes": 25827354
+   },
+   "ndvi_viirs/VNP13A3.A2015244.h09v04.002.2024100110534.h5": {
+    "sha256": "e7a144ee07527038d153348bc9b51d57f17537f4463e437db7bc66672a8a4b0c",
+    "size_bytes": 22519625
+   },
+   "ndvi_viirs/VNP13A3.A2015274.h07v05.002.2024100110933.h5": {
+    "sha256": "f339bce610664309661a172b589ee9bc53f2e7a7ac77307ebf7210a8a2a38e48",
+    "size_bytes": 1500346
+   },
+   "ndvi_viirs/VNP13A3.A2015274.h08v04.002.2024100110930.h5": {
+    "sha256": "eb5ae140661927ba2dfb21be3ac6cb92a3849abeafc83b4eeb89d6a4d9853637",
+    "size_bytes": 4546927
+   },
+   "ndvi_viirs/VNP13A3.A2015274.h08v05.002.2024100110931.h5": {
+    "sha256": "3e286ec51ddf71bc40b2c5d39b456cb8f77cffde54b03fcb7ba62bd5ae93db3b",
+    "size_bytes": 25672651
+   },
+   "ndvi_viirs/VNP13A3.A2015274.h09v04.002.2024100110931.h5": {
+    "sha256": "ac4fc78ba0283768c8b39721bd5afd37e221c64e5cb952cf11d4920e868d95cf",
+    "size_bytes": 22546306
+   },
+   "ndvi_viirs/VNP13A3.A2015305.h07v05.002.2024100111326.h5": {
+    "sha256": "698244109b5fe96fdb85246c95e9d2689ac765faf998195a9e76a8aca856e855",
+    "size_bytes": 1500364
+   },
+   "ndvi_viirs/VNP13A3.A2015305.h08v04.002.2024100111323.h5": {
+    "sha256": "22a0868492eeba309ae09fb1d4fb6b9564227889d17b701382fcf14d9a9d110a",
+    "size_bytes": 4586383
+   },
+   "ndvi_viirs/VNP13A3.A2015305.h08v05.002.2024100111324.h5": {
+    "sha256": "2a4522b6fa59564c108648e55825e76702b8ae7d9338091406645f5dd24f4530",
+    "size_bytes": 25616078
+   },
+   "ndvi_viirs/VNP13A3.A2015305.h09v04.002.2024100111324.h5": {
+    "sha256": "d69fee2968626dcde0d6b173dc9a1b4af6a1249b29ac94f5f06d259b9c2e1d32",
+    "size_bytes": 22861136
+   },
+   "ndvi_viirs/VNP13A3.A2015335.h07v05.002.2024100111800.h5": {
+    "sha256": "77b6013d1f7cde2baf0e60edfdb8460631f445d83d171bc10f306470615b410e",
+    "size_bytes": 1500272
+   },
+   "ndvi_viirs/VNP13A3.A2015335.h08v04.002.2024100111802.h5": {
+    "sha256": "eec0e66a3ef8bdbcedc1245946e8c5edb3fa5fe52580568dab854f2fe3346422",
+    "size_bytes": 4604084
+   },
+   "ndvi_viirs/VNP13A3.A2015335.h08v05.002.2024100111802.h5": {
+    "sha256": "35ceffd197b7b6e5e90815383b0f54e7cbccd5b30a39d2e4ad8385e0757770c9",
+    "size_bytes": 25560234
+   },
+   "ndvi_viirs/VNP13A3.A2015335.h09v04.002.2024100111801.h5": {
+    "sha256": "c1b8c16f7df80d146a2dcecfd42c63af6e535daa579fa9c9ae1f6fe0c7c55973",
+    "size_bytes": 23230347
+   },
+   "ndvi_viirs/VNP13A3.A2016001.h07v05.002.2024100112203.h5": {
+    "sha256": "52da6827641bd7059a8c704057c5ce0f86cdfd59d196c4c6e95999bd5853d4f8",
+    "size_bytes": 1500211
+   },
+   "ndvi_viirs/VNP13A3.A2016001.h08v04.002.2024100112207.h5": {
+    "sha256": "3ad1cc9b120d81761c1d8a5397d82dddabc7392323af61fb123e3c413cefab15",
+    "size_bytes": 4639206
+   },
+   "ndvi_viirs/VNP13A3.A2016001.h08v05.002.2024100112207.h5": {
+    "sha256": "e1c11cedf4ba4ae92ca608542bc3df0b0400587c9b6667e2033ebb4ad388f3b4",
+    "size_bytes": 25676304
+   },
+   "ndvi_viirs/VNP13A3.A2016001.h09v04.002.2024100112206.h5": {
+    "sha256": "89eff882473cc7ecfb4a42b5368af5d027c051b059b88e7beeef00c9fe3d280c",
+    "size_bytes": 23101383
+   },
+   "ndvi_viirs/VNP13A3.A2016032.h07v05.002.2024100112600.h5": {
+    "sha256": "3ae4b2b2d8733b327e29692e39a9de324b144a4afe0a9a1938075db126541832",
+    "size_bytes": 1500130
+   },
+   "ndvi_viirs/VNP13A3.A2016032.h08v04.002.2024100112602.h5": {
+    "sha256": "c814c23a621b8f8d6e577dbd28bc6f786ce17e858236a36acd28c619d7a8d5fc",
+    "size_bytes": 4581328
+   },
+   "ndvi_viirs/VNP13A3.A2016032.h08v05.002.2024100112600.h5": {
+    "sha256": "0406f2ba2d7a4675f7a261b489171799cf4f1efdcd2e90ca37e5ea9e7ddc7f84",
+    "size_bytes": 25690509
+   },
+   "ndvi_viirs/VNP13A3.A2016032.h09v04.002.2024100112600.h5": {
+    "sha256": "2277c3c25e2705f0d420a5289fb0ce43949d5b206e26a1f084aa028d5f999007",
+    "size_bytes": 23263081
+   },
+   "ndvi_viirs/VNP13A3.A2016061.h07v05.002.2024100112958.h5": {
+    "sha256": "cc3b5292e0b41465050d3eccc0ccb13d2d48bdd3aec747e478a82870b1ef8b93",
+    "size_bytes": 1499741
+   },
+   "ndvi_viirs/VNP13A3.A2016061.h08v04.002.2024100112955.h5": {
+    "sha256": "39f6a3d8caf1ae727286edaf3d4b172d93f6cdfa2850512effc14345ea7ff03f",
+    "size_bytes": 4639856
+   },
+   "ndvi_viirs/VNP13A3.A2016061.h08v05.002.2024100112956.h5": {
+    "sha256": "764c81ee367a2117c0ef088e9c2029c8ed032d1bbf06ef7784561a4aa0223000",
+    "size_bytes": 25797461
+   },
+   "ndvi_viirs/VNP13A3.A2016061.h09v04.002.2024100112956.h5": {
+    "sha256": "15e2b7676280337ec972b8296caf6b00e4bb75af5dfe72b8824d3d75e144a778",
+    "size_bytes": 23435671
+   },
+   "ndvi_viirs/VNP13A3.A2016092.h07v05.002.2024100113403.h5": {
+    "sha256": "63f6d17e05fb7d54334e4a28c8f097390a203c9eb5598d2964cc87368304a51d",
+    "size_bytes": 1499943
+   },
+   "ndvi_viirs/VNP13A3.A2016092.h08v04.002.2024100113403.h5": {
+    "sha256": "6c8017db01996ae69cbd1bcc1d226a10376b017be313d9cb87a58081436e6a41",
+    "size_bytes": 4599769
+   },
+   "ndvi_viirs/VNP13A3.A2016092.h08v05.002.2024100113407.h5": {
+    "sha256": "6013d68a40d125d0c7d0fb0c03579132704d48ab016bc3b4bb61064cf293a849",
+    "size_bytes": 25869637
+   },
+   "ndvi_viirs/VNP13A3.A2016092.h09v04.002.2024100113408.h5": {
+    "sha256": "3bfce6e44e886da49482f4d75f1ff1d439df1f516710b2654751b614f492898c",
+    "size_bytes": 22996275
+   },
+   "ndvi_viirs/VNP13A3.A2016122.h07v05.002.2024100113830.h5": {
+    "sha256": "18810714907c92076dd821bab6bf38fb388f8822fa59f10386abf0360f7237c1",
+    "size_bytes": 1500203
+   },
+   "ndvi_viirs/VNP13A3.A2016122.h08v04.002.2024100113833.h5": {
+    "sha256": "7d8217b42b98f5f3a58f99008ed50e59eba590d8a88775f21f52180cad4459d8",
+    "size_bytes": 4559863
+   },
+   "ndvi_viirs/VNP13A3.A2016122.h08v05.002.2024100113830.h5": {
+    "sha256": "5d0dd25c703840521c5d75da3d6a5c578be20450f72e1a5b8e5eebcd49835209",
+    "size_bytes": 25937440
+   },
+   "ndvi_viirs/VNP13A3.A2016122.h09v04.002.2024100113830.h5": {
+    "sha256": "4df1656955c02a886cef43deb3b1ed07251994d38b3e5b6623487baa45bb8a49",
+    "size_bytes": 22938347
+   },
+   "ndvi_viirs/VNP13A3.A2016153.h07v05.002.2024254152420.h5": {
+    "sha256": "2e69b2451791546d35d0eb191e29807f1184cf19e46f83f01a193a22f584eb80",
+    "size_bytes": 1500216
+   },
+   "ndvi_viirs/VNP13A3.A2016153.h08v04.002.2024254152429.h5": {
+    "sha256": "9025a653fa6ccb9947133b6478a1c73a3ee8d603c115ac01b42ffbd700b65de0",
+    "size_bytes": 4536078
+   },
+   "ndvi_viirs/VNP13A3.A2016153.h08v05.002.2024254152419.h5": {
+    "sha256": "8001f708650a92b69ed3a2cb2fb0cf4c7fe1b6db5a82b486bf35b926ead7c658",
+    "size_bytes": 25795272
+   },
+   "ndvi_viirs/VNP13A3.A2016153.h09v04.002.2024254152418.h5": {
+    "sha256": "89f820e72048aed5c8bc9df39e755dfb5bc5e88fc3741ce870bcd7a6d9eadd16",
+    "size_bytes": 22515947
+   },
+   "ndvi_viirs/VNP13A3.A2016183.h07v05.002.2024103233029.h5": {
+    "sha256": "a406eb95a0242da222a2907a8fd921c8935446f84c216fc40cb5eed410e8e336",
+    "size_bytes": 1500421
+   },
+   "ndvi_viirs/VNP13A3.A2016183.h08v04.002.2024103233033.h5": {
+    "sha256": "a77bf64b3a5a4e10991293f17d4ade077c71cadbf35ef6192e0436d51ff33038",
+    "size_bytes": 4573053
+   },
+   "ndvi_viirs/VNP13A3.A2016183.h08v05.002.2024103233034.h5": {
+    "sha256": "701a50966d8a21c709323423840899580d24d9df6a83059cedc4264a8e246097",
+    "size_bytes": 25979945
+   },
+   "ndvi_viirs/VNP13A3.A2016183.h09v04.002.2024103233033.h5": {
+    "sha256": "d5311ebd68d7acf143df2e304bf3ee8027d65c263d0fc2e28d3327a502752c70",
+    "size_bytes": 22639517
+   },
+   "ndvi_viirs/VNP13A3.A2016214.h07v05.002.2024103235031.h5": {
+    "sha256": "590477772fc46e23dcca12c4d09f53753150a4262ceded0bf48ed1a7e0edcf3f",
+    "size_bytes": 1500339
+   },
+   "ndvi_viirs/VNP13A3.A2016214.h08v04.002.2024103235033.h5": {
+    "sha256": "5f4015aef6000f2708f705cf5cb4802902b02bc1ba2eaf2028a0ce11ebb7e415",
+    "size_bytes": 4571867
+   },
+   "ndvi_viirs/VNP13A3.A2016214.h08v05.002.2024103235032.h5": {
+    "sha256": "3a2d413aa18137500b86aa76f9ae6bd34c45cf39120d66bd6d36cb354c558161",
+    "size_bytes": 26086606
+   },
+   "ndvi_viirs/VNP13A3.A2016214.h09v04.002.2024103235029.h5": {
+    "sha256": "67ff5bbdf8fbfac4d0780babfab784d3ef6209b78c4ddef8797967c026a3b794",
+    "size_bytes": 22707054
+   },
+   "ndvi_viirs/VNP13A3.A2016245.h07v05.002.2024104000033.h5": {
+    "sha256": "0c1507da39f7e236aedb41fa018fdb0f5679b2bba51a4f3119a28948ad9c407d",
+    "size_bytes": 1500036
+   },
+   "ndvi_viirs/VNP13A3.A2016245.h08v04.002.2024104000031.h5": {
+    "sha256": "95b14e1ea4a5e72e79a7e6dc8a21139879eecc45d49619959a537276193576c7",
+    "size_bytes": 4572687
+   },
+   "ndvi_viirs/VNP13A3.A2016245.h08v05.002.2024104000036.h5": {
+    "sha256": "af94a870d381011c59f1f5c07c605a96213f88f251d46dcab4242329de4db689",
+    "size_bytes": 25821710
+   },
+   "ndvi_viirs/VNP13A3.A2016245.h09v04.002.2024104000032.h5": {
+    "sha256": "d4e58266d34af8ea049e48ef94969c8a3f7fd94a0d5672ba601a23fa1ec12725",
+    "size_bytes": 22510835
+   },
+   "ndvi_viirs/VNP13A3.A2016275.h07v05.002.2024104001032.h5": {
+    "sha256": "44b049995e928490e17e48031b474532afd66d11eac5963ac39e08c117b89c0a",
+    "size_bytes": 1500212
+   },
+   "ndvi_viirs/VNP13A3.A2016275.h08v04.002.2024104001031.h5": {
+    "sha256": "9b4db31b5f2c53495b892cd26bbdc002055a58689bc287bba3bcfde964b67dfb",
+    "size_bytes": 4532294
+   },
+   "ndvi_viirs/VNP13A3.A2016275.h08v05.002.2024104001034.h5": {
+    "sha256": "bb02928c814dba16e8507b7219d2a86699e34b650afc6b83b4920ed4dd5bb37b",
+    "size_bytes": 25520594
+   },
+   "ndvi_viirs/VNP13A3.A2016275.h09v04.002.2024104001033.h5": {
+    "sha256": "0eddaf774e9d1f13a51a773bc717209e81cd311a8e8c5072a4b6fc56477c16b0",
+    "size_bytes": 22388887
+   },
+   "ndvi_viirs/VNP13A3.A2016306.h07v05.002.2024104002922.h5": {
+    "sha256": "e51839977f78d2dc0b46eea76d8178f88b6b7d37dad7d258b94f8d249db7cc09",
+    "size_bytes": 1499804
+   },
+   "ndvi_viirs/VNP13A3.A2016306.h08v04.002.2024104002927.h5": {
+    "sha256": "ec6cd75094069398cafd7c6d4c6d329990bb417318bd39b33b6b605c854020a3",
+    "size_bytes": 4594406
+   },
+   "ndvi_viirs/VNP13A3.A2016306.h08v05.002.2024104002926.h5": {
+    "sha256": "a079b47c7e5486dc85e29617b9b739a0640053e87373989d7da9bb422d5db2e2",
+    "size_bytes": 25544194
+   },
+   "ndvi_viirs/VNP13A3.A2016306.h09v04.002.2024104002926.h5": {
+    "sha256": "e16b2bf979c260ba43bb04453dfba8c6e765401bf71137d5a0eb2d6eb4d09130",
+    "size_bytes": 22493803
+   },
+   "ndvi_viirs/VNP13A3.A2016336.h07v05.002.2024104004326.h5": {
+    "sha256": "37d7c92e088161777049baa5b5d9ac17549eea92c2d58db82b1e978ca060fab9",
+    "size_bytes": 1499545
+   },
+   "ndvi_viirs/VNP13A3.A2016336.h08v04.002.2024104004333.h5": {
+    "sha256": "aa6da69f9d8ee6a481faa6d656f980765fb9ccf953e598e3601a35cc17c3c7d5",
+    "size_bytes": 4578241
+   },
+   "ndvi_viirs/VNP13A3.A2016336.h08v05.002.2024104004328.h5": {
+    "sha256": "f7fcffbc0ae8e86c2e34e506ffd85e735baaf57259e6c2bcf74d2ec68bff8076",
+    "size_bytes": 25416775
+   },
+   "ndvi_viirs/VNP13A3.A2016336.h09v04.002.2024104004331.h5": {
+    "sha256": "70b7bfd7a7a5cfc7f36075ee05cc582b233ae7283814e1d1877ccb690b7d2685",
+    "size_bytes": 23324979
+   },
+   "ndvi_viirs/VNP13A3.A2017001.h07v05.002.2024104005742.h5": {
+    "sha256": "fce0e018f3b5716da00ec5165c12204347a7acdc989dc6538a2ad6c4e8b960c2",
+    "size_bytes": 1499434
+   },
+   "ndvi_viirs/VNP13A3.A2017001.h08v04.002.2024104005733.h5": {
+    "sha256": "9939799e976c85b6407197d159d7756e307058d48bbf9f76a918b0974f3f15b2",
+    "size_bytes": 4664299
+   },
+   "ndvi_viirs/VNP13A3.A2017001.h08v05.002.2024104005733.h5": {
+    "sha256": "5870b9f6dcfb6cd9c7c16fd916582ba1076d826c86387bb34e7f5856ac2349ef",
+    "size_bytes": 25724246
+   },
+   "ndvi_viirs/VNP13A3.A2017001.h09v04.002.2024104005731.h5": {
+    "sha256": "449aec169a0100cd3f1fcd5178ec64a479a451692a23d4be52ff2b0502436dfa",
+    "size_bytes": 22899447
+   },
+   "ndvi_viirs/VNP13A3.A2017032.h07v05.002.2024104011028.h5": {
+    "sha256": "0b5df98241e7d9e272c207d41ebdc006197cc2377224dced9ee241574f3af743",
+    "size_bytes": 1499512
+   },
+   "ndvi_viirs/VNP13A3.A2017032.h08v04.002.2024104011027.h5": {
+    "sha256": "474cbaa8536c182bce72944d31abaff605d316bffbee8f372f2a2631bb69bbce",
+    "size_bytes": 4586392
+   },
+   "ndvi_viirs/VNP13A3.A2017032.h08v05.002.2024104011028.h5": {
+    "sha256": "00d0a48a2323f577ca85d7e412a0b3b44c9d02aedc70b65e420786064875c69c",
+    "size_bytes": 25630249
+   },
+   "ndvi_viirs/VNP13A3.A2017032.h09v04.002.2024104011027.h5": {
+    "sha256": "2df33b5fb9fe3022e5e92f38b48bfcd98b68bf961553d87c379a798fe5be1c1f",
+    "size_bytes": 23256748
+   },
+   "ndvi_viirs/VNP13A3.A2017060.h07v05.002.2024104012442.h5": {
+    "sha256": "c8da9306027aa1e18354611a4110684d1fe6a1349c8f2bbdb38cf7e7fd949d83",
+    "size_bytes": 1500382
+   },
+   "ndvi_viirs/VNP13A3.A2017060.h08v04.002.2024104012441.h5": {
+    "sha256": "77242c1a6285fb35d2f98c79c74b6d6c118a4183aebd147071853086e06c59af",
+    "size_bytes": 4624687
+   },
+   "ndvi_viirs/VNP13A3.A2017060.h08v05.002.2024104012444.h5": {
+    "sha256": "94fff61baf9abf2f1249dafe9c573622ef0cd5fbe683928e11ba9362802e1270",
+    "size_bytes": 25750994
+   },
+   "ndvi_viirs/VNP13A3.A2017060.h09v04.002.2024104012439.h5": {
+    "sha256": "1c592a55ebc8857360de6f11104b06462ab7e16f00867791b15e60410431f466",
+    "size_bytes": 23165524
+   },
+   "ndvi_viirs/VNP13A3.A2017091.h07v05.002.2024104013404.h5": {
+    "sha256": "48785e3af3f2f375c33c3f22fe9fceffbda4bab480ab728c448039ba3ed7d789",
+    "size_bytes": 1499846
+   },
+   "ndvi_viirs/VNP13A3.A2017091.h08v04.002.2024104013403.h5": {
+    "sha256": "456ca381b6f3c87f2862228febbccfbc77f1d6bc8da81f46a0e546cc840569c0",
+    "size_bytes": 4605249
+   },
+   "ndvi_viirs/VNP13A3.A2017091.h08v05.002.2024104013400.h5": {
+    "sha256": "19ba2e0a4b70588350bd5f5c067b2946e2e35e5655ede7ad9e2615e24c359577",
+    "size_bytes": 25783645
+   },
+   "ndvi_viirs/VNP13A3.A2017091.h09v04.002.2024104013402.h5": {
+    "sha256": "47de05de796efb71962510a0cbfbc113a893141db780cafcd8d77bace1d443f3",
+    "size_bytes": 23167110
+   },
+   "ndvi_viirs/VNP13A3.A2017121.h07v05.002.2024104014339.h5": {
+    "sha256": "956d7d478a21f88c210473386827715e71cc5614221676cb8e3f2fbc75e9022d",
+    "size_bytes": 1499947
+   },
+   "ndvi_viirs/VNP13A3.A2017121.h08v04.002.2024104014340.h5": {
+    "sha256": "133b61d91f41b78200e2b3437351b5cbff4b09bfe381f739ecf4ad4a5de40db2",
+    "size_bytes": 4577725
+   },
+   "ndvi_viirs/VNP13A3.A2017121.h08v05.002.2024104014339.h5": {
+    "sha256": "6f435b76d60d93243e6ff7e2894fe8b21b2c4a99dfc94162d6268223b359595e",
+    "size_bytes": 25817408
+   },
+   "ndvi_viirs/VNP13A3.A2017121.h09v04.002.2024104014338.h5": {
+    "sha256": "607cf5bbf2d68df1401259e8146aa4818d65d2ea84201a2bce376e6e1fb20bfe",
+    "size_bytes": 22981420
+   },
+   "ndvi_viirs/VNP13A3.A2017152.h07v05.002.2024104015239.h5": {
+    "sha256": "284a3a8d00e3b77370619c659e9bb6f41d3f0acbaa1c6f6d0532583333864b69",
+    "size_bytes": 1500192
+   },
+   "ndvi_viirs/VNP13A3.A2017152.h08v04.002.2024104015240.h5": {
+    "sha256": "1ec79370e36750d1797bffe001279405dd896eb93007aa793fab6f360ed768d5",
+    "size_bytes": 4551988
+   },
+   "ndvi_viirs/VNP13A3.A2017152.h08v05.002.2024104015239.h5": {
+    "sha256": "7a26705eca40364e97947f2df490b6d8aa27c1c6422196d33d2a6adffc1f311a",
+    "size_bytes": 25684247
+   },
+   "ndvi_viirs/VNP13A3.A2017152.h09v04.002.2024104015236.h5": {
+    "sha256": "bba2280a0f5b773dd6c70b8ce87bc1b03fc4cb25ead8257daecb05440a94adc4",
+    "size_bytes": 22543835
+   },
+   "ndvi_viirs/VNP13A3.A2017182.h07v05.002.2024104020305.h5": {
+    "sha256": "17bfe75c9047237055ccf9f146cbef8492058f3af612f1d7d2c4567515751219",
+    "size_bytes": 1500247
+   },
+   "ndvi_viirs/VNP13A3.A2017182.h08v04.002.2024104020303.h5": {
+    "sha256": "282f6459d21dc0574740803a183e6a87040ac38dd99d172b3e0387e5c43bc194",
+    "size_bytes": 4563421
+   },
+   "ndvi_viirs/VNP13A3.A2017182.h08v05.002.2024104020303.h5": {
+    "sha256": "21795010be1fb0b7ad75101d2c17f2be1b4627af664ab396d4bad3fbdd1cc9dc",
+    "size_bytes": 26127690
+   },
+   "ndvi_viirs/VNP13A3.A2017182.h09v04.002.2024104020302.h5": {
+    "sha256": "76a313413de49429ace7cdde5aa91757feebef85a20a49b23461c83afb41eb89",
+    "size_bytes": 22760253
+   },
+   "ndvi_viirs/VNP13A3.A2017213.h07v05.002.2024104021408.h5": {
+    "sha256": "8176f3d2e5dfbb85298fe11a05b634eb41c4977f29b870d9ddc86ab5cbaae3a4",
+    "size_bytes": 1500217
+   },
+   "ndvi_viirs/VNP13A3.A2017213.h08v04.002.2024104021408.h5": {
+    "sha256": "3da3c022c4cc80b835eb09c62634e9704f9cea06fd1ca070b7539f5be863ce67",
+    "size_bytes": 4607722
+   },
+   "ndvi_viirs/VNP13A3.A2017213.h08v05.002.2024104021410.h5": {
+    "sha256": "7c11c5c736281f18055333bfe0327a98ad7a471dbb7145cc4614f54124bae0da",
+    "size_bytes": 26155310
+   },
+   "ndvi_viirs/VNP13A3.A2017213.h09v04.002.2024104021411.h5": {
+    "sha256": "0e31234ae9f2bfedce462c946d33c4dd360760398b2605653a83a15d2633d672",
+    "size_bytes": 22810145
+   },
+   "ndvi_viirs/VNP13A3.A2017244.h07v05.002.2024104022241.h5": {
+    "sha256": "af69dfa4db52344d5a17d78adeab818723b10bc66f1f75703a62fc73fc770daa",
+    "size_bytes": 1500318
+   },
+   "ndvi_viirs/VNP13A3.A2017244.h08v04.002.2024104022238.h5": {
+    "sha256": "e94acd639b78328f03f24943ffd83cd703bf12c2072e4c4e4b06564b8e3fa62c",
+    "size_bytes": 4570363
+   },
+   "ndvi_viirs/VNP13A3.A2017244.h08v05.002.2024104022241.h5": {
+    "sha256": "29559788786ac718ffa60063bbd695d29c78ec0f30d878181a1b6e5ac306c70c",
+    "size_bytes": 25848976
+   },
+   "ndvi_viirs/VNP13A3.A2017244.h09v04.002.2024104022309.h5": {
+    "sha256": "dc49eed79e33f70ae2e61ce5c9f905cbe56994206e30dcf0567280abd1390fb3",
+    "size_bytes": 22555088
+   },
+   "ndvi_viirs/VNP13A3.A2017274.h07v05.002.2024104023139.h5": {
+    "sha256": "93240b1dd42f9cb12bdd7da2179aa5c12d9a0a6b9fad81af26806405653bc4e1",
+    "size_bytes": 1500251
+   },
+   "ndvi_viirs/VNP13A3.A2017274.h08v04.002.2024104023137.h5": {
+    "sha256": "239e1453d80e41cdde7b7649c29cfd6df2d154b6a207af972a97b44ee50e3c2b",
+    "size_bytes": 4551655
+   },
+   "ndvi_viirs/VNP13A3.A2017274.h08v05.002.2024104023138.h5": {
+    "sha256": "73ff849452b9261da951f608d0288a9a463569db52fe1a5b23406c05443e06dd",
+    "size_bytes": 25521907
+   },
+   "ndvi_viirs/VNP13A3.A2017274.h09v04.002.2024104023150.h5": {
+    "sha256": "a86cc99d1878d66daa2c6e8777555683a3b6efb9b7415fb12946d6194d030f24",
+    "size_bytes": 22505068
+   },
+   "ndvi_viirs/VNP13A3.A2017305.h07v05.002.2024104024115.h5": {
+    "sha256": "98605b05ac4515cc6b685dbdf57b11976a5cec4fe894a56b9e7f9f74aeb6a679",
+    "size_bytes": 1499663
+   },
+   "ndvi_viirs/VNP13A3.A2017305.h08v04.002.2024104024112.h5": {
+    "sha256": "06f6cb8aac775693930f4772e7c2557413ff275ab77a4bcfcb90379bc75d50f2",
+    "size_bytes": 4567768
+   },
+   "ndvi_viirs/VNP13A3.A2017305.h08v05.002.2024104024114.h5": {
+    "sha256": "62e1d8d54b44374fa6d953b35606784424bba129491a57ccb1e0f4855c6c5a4d",
+    "size_bytes": 25523914
+   },
+   "ndvi_viirs/VNP13A3.A2017305.h09v04.002.2024104024112.h5": {
+    "sha256": "fc8c46ee3e0940113ca2ffa15cc32a19d1a012aa472592b3cc9649b9e3adf0c1",
+    "size_bytes": 22689258
+   },
+   "ndvi_viirs/VNP13A3.A2017335.h07v05.002.2024104025036.h5": {
+    "sha256": "f105872d282dca0dbb75f5a58097585f6436afcc8661dd05ece1dd7cf8ef4b14",
+    "size_bytes": 1500519
+   },
+   "ndvi_viirs/VNP13A3.A2017335.h08v04.002.2024104025037.h5": {
+    "sha256": "f157b49f4b9bc880cdfc8301ce4666070a64c82a8c2d60905e6f038c25fdbe39",
+    "size_bytes": 4593822
+   },
+   "ndvi_viirs/VNP13A3.A2017335.h08v05.002.2024104025037.h5": {
+    "sha256": "464b2ff3ffcd3e001850eb4439ec54917a28b14ac21a688518a374d9cc3f5c8f",
+    "size_bytes": 25435754
+   },
+   "ndvi_viirs/VNP13A3.A2017335.h09v04.002.2024104025039.h5": {
+    "sha256": "3959469104eb0063af4a9088a030f98d126398f9eec1f6b432796163516c8191",
+    "size_bytes": 23014006
+   }
+  },
+  "m3_manifest_sha256": "075288e91f9545c5d63f71d12a30844daf00f96321d479b15acd598945931c1a"
+ },
+ "rules": {
+  "river_major_upland_skm_ge": 1000.0,
+  "fault_young_ages": [
+   "Late Quaternary",
+   "historic",
+   "late Quaternary",
+   "latest Quaternary"
+  ],
+  "distance_pixel_m": 250,
+  "distance_margin_m": 50000,
+  "ndvi_reliability": "0-2",
+  "ndvi_months": "2013-01..2017-12",
+  "ndvi_min_valid_months": 12,
+  "soil_depth_weights_cm": {
+   "0-5cm": 5.0,
+   "5-15cm": 10.0,
+   "15-30cm": 15.0
+  },
+  "faults_offshore_layer_used": false
+ },
+ "windows": {
+  "OR_WA": {
+   "outputs_sha256": {
+    "static_factors_r2.tif": "f65b06d1992fd17f6fdaca45dae4b33bb16a0e0352d1da9b269493f92e5cb5a2",
+    "cells_r2.parquet": "4a47a2d1011a02f749e07988909b41a5e4d57dbb1d09495c0bf443ee70fdd82c"
+   },
+   "line_counts_in_extent": {
+    "river_all": 17681,
+    "river_major": 1069,
+    "fault_all": 2447,
+    "fault_young": 1221
+   }
+  },
+  "CA_N": {
+   "outputs_sha256": {
+    "static_factors_r2.tif": "95edf504eae8a8653ae0cafa1035e0c018c945be306d03415e1823c2ec90fdb5",
+    "cells_r2.parquet": "0cc1eceb6e7b954619bcda9cc38308843a7c22865d4e2b1d2fa117d31756a572"
+   },
+   "line_counts_in_extent": {
+    "river_all": 9967,
+    "river_major": 1023,
+    "fault_all": 15281,
+    "fault_young": 9425
+   }
+  },
+  "CA_S": {
+   "outputs_sha256": {
+    "static_factors_r2.tif": "4aaf3ea73b1e066d1df8bd324eec8674a2b20237299bc93dcbf5a07dbe45da1d",
+    "cells_r2.parquet": "aa4b8ed680793ddacbdfd82211138486610de0d847d8d64abef2dd08d506f74c"
+   },
+   "line_counts_in_extent": {
+    "river_all": 6795,
+    "river_major": 608,
+    "fault_all": 31437,
+    "fault_young": 27635
+   }
+  }
+ },
+ "combined_outputs_sha256": {
+  "cells_all_full.parquet": "d6606ff0561eb5c75a1cd1d9120af11698dba699cb6c88c991eb7f0a628c15e2"
+ },
+ "caveats": {
+  "ndvi_period": "VIIRS NDVI covers 2013-2017; 345 of 667 strict events fall in that period (the rest precede it); land cover is 2021",
+  "bdod": "bulk density NOT acquired: 19 of 44 tiles return HTTP 404 for all three depths (MISSING_FACTOR until the user decides)",
+  "soil": "SoilGrids is modelled; 250 m; uncertain in mountains/forests",
+  "faults": "mapped traces are incomplete; offshore layer not used",
+  "rivers": "HydroRIVERS about 500 m positional accuracy",
+  "roads": "not approved: no road factor"
+ }
+}

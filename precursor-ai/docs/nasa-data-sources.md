@@ -67,7 +67,7 @@ Default `SPL3SMP_E` v006 (9 km, concept `C2938664763-NSIDC_CPRD`). Others exist 
 
 - Page: https://data.nasa.gov/dataset/global-landslide-catalog-export
 - CSV: https://data.nasa.gov/docs/legacy/Global_Landslide_Catalog_Export/Global_Landslide_Catalog_Export_rows.csv
-- A one-time export, current as of **2016-03-07**. **Not complete, not current; absence of an event proves nothing.** Use as historical reference only.
+- A one-time export, whose last event is dated **2017-09-28** (corrected 2026-11-15: the downloaded CSV was measured, see [M1 census](../ml/reports/M1_census_and_download_list.md); earlier text said 2016-03-07, which remains in the code identifier `export-2016-03-07`). **Not complete, not current; absence of an event proves nothing.** Use as historical reference only.
 - Columns: `source_name, source_link, event_id, event_date, event_time, event_title, event_description, location_description, location_accuracy, landslide_category, landslide_trigger, landslide_size, landslide_setting, fatality_count, injury_count, storm_name, photo_link, notes, ..., country_name, country_code, admin_division_name, ..., longitude, latitude`.
 - Required for import: `event_id`, `latitude`, `longitude`. Rows with missing/non-numeric/out-of-range coordinates, a duplicate `event_id`, or exactly (0, 0) are rejected as missing locations.
 - Dates observed as `MM/DD/YYYY hh:mm:ss AM`. **Day/month order is assumed MM/DD (read as UTC); confirm on the first real import.** Unparseable dates are stored as NULL and counted.

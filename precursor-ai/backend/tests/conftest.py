@@ -24,6 +24,16 @@ from app.main import app  # noqa: E402
 BACKEND_DIR = Path(__file__).resolve().parents[1]
 
 
+@pytest.fixture(autouse=True)
+def _no_real_earthdata_credentials(monkeypatch):
+    """Phase 2 issue 8: live credentials in the environment made CLI tests fail. Tests that need credentials pass them explicitly."""
+    monkeypatch.delenv("EARTHDATA_USERNAME", raising=False)
+    monkeypatch.delenv("EARTHDATA_PASSWORD", raising=False)
+    get_settings.cache_clear()
+    yield
+    get_settings.cache_clear()
+
+
 @pytest.fixture(scope="session")
 def engine():
     eng = create_engine(get_settings().database_url, pool_pre_ping=True)

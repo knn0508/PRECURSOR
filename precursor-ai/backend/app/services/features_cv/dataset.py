@@ -34,7 +34,7 @@ DYNAMIC_KINDS = ("rainfall", "smap_soil_moisture", "insar_velocity")
 DYNAMIC_REASON = "per-point dynamic features deferred to Phase 6"
 
 CAVEATS = [
-    "INVENTORY BIAS: the NASA Global Landslide Catalog is a one-time export (current to 2016-03-07), media/report-derived, incomplete and biased toward reported, accessible, populated places. Absence of an event proves nothing.",
+    "INVENTORY BIAS: the NASA Global Landslide Catalog is a one-time export (last event dated 2017-09-28), media/report-derived, incomplete and biased toward reported, accessible, populated places. Absence of an event proves nothing.",
     "BACKGROUND samples are unlabelled places, not proven stable ground; they must not be treated as confirmed non-landslide examples.",
     "Class balance is set by the chosen background ratio, not by nature; the real event rate is unknown.",
     "location_accuracy parsing rules are NOT_VERIFIED against a real catalog file (only the documented lookup is implemented).",

@@ -1,6 +1,6 @@
-# ML environment: dependency proposal (NOT INSTALLED, awaiting approval)
+# ML environment (APPROVED and installed 2026-11-15)
 
-Status: PROPOSED. Nothing below was installed. The ML environment is separate from the backend image and `backend/.venv`; it gets its own `ml/requirements.txt` (pinned) only after approval. Pins are chosen and verified at install time, not now.
+Status: APPROVED by the user 2026-11-15 and installed in `ml/.venv` (Python 3.13.9, uv). Separate from the backend image and `backend/.venv`. Pins: [requirements.txt](../../ml/requirements.txt) (direct) and [requirements.lock.txt](../../ml/requirements.lock.txt) (all). The original proposal table is kept below.
 
 ## What exists today (measured 2026-11-15)
 
@@ -21,12 +21,23 @@ Status: PROPOSED. Nothing below was installed. The ML environment is separate fr
 | rasterio, shapely, pyproj | raster/vector I/O (already installed) | M2+ |
 | optuna | hyperparameter search inside the inner CV only | M7 |
 | pyyaml | read configs | M1+ |
-| pytest | tests (installed) | now |
+| pytest | tests | now |
 
-## Decisions needed
+## Decisions (user, 2026-11-15)
 
-1. Approve this list (or strike items). Proposed to install only what each stage needs, starting with scikit-learn, matplotlib, geopandas, pyyaml at M1/M5.
-2. **PyTorch: not proposed now.** Only if M7 shows a deep model is justified (8 GB VRAM would limit patch-CNN batch sizes; deep models underperformed RF in some literature).
-3. **Experiment tracking:** plain files per [EXPERIMENT_LOG](EXPERIMENT_LOG.md) (recommended: no new dependency) vs MLflow (extra dependency and server/state).
-4. **Environment:** new venv `ml/.venv` (recommended; Python 3.13 matches the current dev machine but differs from the backend image's 3.12, so a package missing 3.13 wheels is a risk to check at install) vs reuse `backend/.venv` (rejected: mixes ML into backend deps).
-5. Optional `ml/requirements.txt` and a Windows install with `uv` or `pip`: your preference.
+1. Package list approved. 2. PyTorch deferred to M7 (not installed); when installed it must be the CUDA build and GPU use verified. 3. Tracking: plain files. 4. Environment: `ml/.venv`. The user has CUDA and asked that any GPU-capable library use its CUDA build, verified.
+
+## GPU verification (measured 2026-11-15)
+
+Driver: NVIDIA 621.14, CUDA UMD 13.5; toolkit `nvcc` 13.2.78; GPU RTX 4060 Laptop, 8188 MiB.
+
+| Library | Version | GPU result |
+|---|---|---|
+| xgboost | 3.4.1 | **CUDA build** (`USE_CUDA=True`); `device="cuda"` trained 2M x 40, 300 trees depth 8 in 5.6 s with peak GPU utilisation 88% (sampled with nvidia-smi) |
+| lightgbm | **4.6.0, local CUDA build** (user asked for CUDA, 2026-11-15) | `device_type="cuda"` trains on the GPU: 2M x 40, 200 trees, 6.1 s vs 11.5 s CPU, peak GPU util 78%. The PyPI wheel (4.7.0) is CPU only and 4.7.0's CUDA build needs NCCL (no Windows build), so 4.6.0 was built with MSVC + CUDA 13.2 for sm_89 with a 4-file compatibility patch. Unofficial; recipe and caveats in [ml/build/lightgbm_cuda_win](../../ml/build/lightgbm_cuda_win/README.md) |
+| scikit-learn, shap, optuna, geopandas | 1.9.1, 0.54.1, 5.0.0, 1.2.0 | CPU libraries (shap TreeExplainer GPU path via xgboost not tested) |
+| torch | not installed | deferred to M7; install the CUDA wheel then and verify `torch.cuda.is_available()` |
+
+Imports of all packages verified; `ml/tests` 3 passed in this venv.
+
+Caveat: GPU histogram training is not bit-identical to CPU or across devices. Log the device in `meta.json` and do not compare a GPU run to a CPU run as if the seed alone fixed the result. Reinstalling from `requirements.txt` replaces the CUDA build with the CPU wheel; rerun `ml/build/lightgbm_cuda_win/build.bat`.

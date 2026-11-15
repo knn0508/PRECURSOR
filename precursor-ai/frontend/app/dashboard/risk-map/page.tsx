@@ -1,14 +1,11 @@
-import { Map } from "lucide-react";
-import { PlaceholderPage } from "@/components/dashboard/placeholder-page";
+import { EarlyWarningPage } from "@/components/workspace/early-warning-page";
+import { SusceptibilityTrackStatus } from "@/components/workspace/susceptibility-track-status";
 
 export default function RiskMapPage() {
   return (
-    <PlaceholderPage
-      title="Risk Map"
-      icon={Map}
-      description="Geospatial view of deformation and risk layers."
-      emptyTitle="No risk layers available"
-      emptyDescription="Risk layers require processed InSAR deformation data and a validated model. Neither exists yet."
-    />
+    <div className="space-y-6">
+      <EarlyWarningPage title="Susceptibility map" heads={["susceptibility"]} />
+      <SusceptibilityTrackStatus />
+    </div>
   );
 }

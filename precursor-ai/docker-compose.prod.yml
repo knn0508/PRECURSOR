@@ -1,0 +1,33 @@
+# Production profile: docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+# Overrides only what differs from development. Set real values in .env (POSTGRES_PASSWORD, SECRET_KEY, CORS_ORIGINS,
+# NEXT_PUBLIC_API_URL) before building; NEXT_PUBLIC_API_URL is baked into the frontend bundle at build time.
+# This file has been validated with `docker compose config` only; it has NOT been run as a deployment (see docs/development/DEPLOYMENT_RUNBOOK.md).
+services:
+  postgres:
+    restart: unless-stopped
+    ports: !reset []  # the database is reachable only on the compose network
+    deploy:
+      resources:
+        limits: { memory: 2g }
+  backend:
+    restart: unless-stopped
+    environment:
+      APP_ENV: production
+      SECRET_KEY: ${SECRET_KEY:?set SECRET_KEY in .env for production}
+      CORS_ORIGINS: ${CORS_ORIGINS:?set CORS_ORIGINS in .env for production}
+    deploy:
+      resources:
+        limits: { memory: 6g }
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: [ALL]
+  frontend:
+    restart: unless-stopped
+    read_only: true
+    tmpfs: [/tmp, /app/.next/cache]
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: [ALL]
+    deploy:
+      resources:
+        limits: { memory: 512m }

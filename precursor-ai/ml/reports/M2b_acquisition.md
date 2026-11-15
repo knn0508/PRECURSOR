@@ -1,0 +1,24 @@
+# M2b round 2 acquisition report
+
+Date: 2026-11-15. Approved by the user (message of 2026-11-15): HydroRIVERS v10 NA, USGS Quaternary Faults, SoilGrids (clay, sand, silt, bulk density, coarse fragments; 0-5, 5-15, 15-30 cm; mean), VIIRS VNP13A3 NDVI 2013-2017 (Option A). OSM roads were NOT approved. No new dependency. Code: [m2b_acquire.py](../scripts/m2b_acquire.py) (Phase 2 `DownloadManager` and Earthdata authentication reused read-only; credentials never printed). Manifest: `data/ml/raw/manifest_round2.json`; per-file rows in [DATASET_LOG](../../docs/ml/DATASET_LOG.md). Logs: `ml/reports/m2b_probe/`.
+
+## What arrived
+| Item | Approved | Arrived | Status |
+|---|---|---|---|
+| HydroRIVERS v10 NA (shp zip) | 66.3 MB | 66,335,898 B | COMPLETE; zip test OK |
+| USGS Qfaults (zip) | 32.4 MB | 32,371,696 B | COMPLETE; zip test OK |
+| SoilGrids index VRT (clay_0-5cm_mean) | 5.9 MB | 5,929,079 B | COMPLETE (used to enumerate 44 tiles per layer) |
+| SoilGrids tiles | 15 layers, <= 0.29 GB | **12 layers x 44 tiles = 528 files, 186,792,914 B** (clay, sand, silt, cfvo; 3 depths each) | **PARTIAL: `bdod` (3 layers) NOT acquired** |
+| VIIRS VNP13A3 v002 NDVI | 240 granules, 3.28 GB | 240 granules, 3,282,768,311 B (3.28 GB) | COMPLETE |
+Round 2 total: **771 files, 3,574,197,898 B (3.57 GB)**; largest file 26.1 MB; no file deviates by more than 10% from the measured size (checked by a test); disk free after: 48 GB; project raw data about 8 GB (limit 30 GB).
+
+## Safety steps (all passed except the `bdod` paths)
+- **(a) NDVI, one granule first** (`VNP13A3.A2013182.h08v05`, 26.1 MB) before the bulk: GDAL (HDF5 driver, no new dependency) reads it. Layer names: `HDFEOS/GRIDS/VIIRS_Grid_monthly_VI_1km/Data_Fields/1_km_monthly_NDVI` (int16, 1200 x 1200, scale 0.0001, valid range -10000..10000, fill -15000/-13000) and quality layers `1_km_monthly_pixel_reliability` (int8, valid range 0..11, fill -4 water / -1 no data) and `1_km_monthly_VI_Quality` (uint16). **Georeferencing**: GDAL gives no CRS/transform for these subdatasets (identity). The file carries `HORIZONTALTILENUMBER=08`, `VERTICALTILENUMBER=05`, `WestBoundingCoord=-130.540726`, `NorthBoundingCoord=40`. The MODIS sinusoidal tile arithmetic (sphere R = 6371007.181 m, tile 1111950.5197 m, 1200 px) reproduces the upper-left corner exactly (lon -130.54073, lat 40.0). Independent check: water pixels (reliability -4) fall in the Pacific at (-124, 37) and off Los Angeles, and along 36.8 N the first land pixel is at lon -121.79 (Moss Landing). So georeferencing is applied by arithmetic and verified on this tile; it is assumed identical for the other tiles and months (not checked file by file).
+- **(b) HydroRIVERS and Qfaults opened**: HydroRIVERS: 986,463 LineStrings, EPSG:4326, fields `HYRIV_ID, NEXT_DOWN, MAIN_RIV, LENGTH_KM, DIST_DN_KM, DIST_UP_KM, CATCH_SKM, UPLAND_SKM, ENDORHEIC, DIS_AV_CMS, ORD_STRA, ORD_CLAS, ORD_FLOW, HYBAS_L12` (a sample of 2,000 reaches had UPLAND_SKM from 8.3 km2). Qfaults zip: shapefiles `Qfaults_US_Database` (112,809 LineStrings, EPSG:4326; fields `fault_name, section_na, fault_id, section_id, Location, linetype, age, dip_direct, slip_rate, slip_sense, scale, class, certainty, strike, fault_leng, cooperator, earthquake, review_dat, fault_url, symbology, ref_id, Shape_Leng`; `age` values: latest Quaternary 38,893, undifferentiated Quaternary 30,125, late Quaternary 18,631 (+282 "Late Quaternary"), historic 14,260, middle and late Quaternary 6,155, class B 4,396, unspecified 67; `class` A 106,043, B 4,674), `ca_offshore` (1,093 lines, different field names), `fault_areas`. Nothing unexpected.
+- **SoilGrids path check**: all 44 tiles of 12 layers exist (HEAD 200). **For `bdod` (all three depths) 19 of 44 tiles return HTTP 404** (for example `bdod/bdod_0-5cm_mean/tileSG-007-015/tileSG-007-015_2-4.tif`); the other 25 exist. The sweep is in `m2b_probe/soil_head_sweep.json`. Likely explanation (NOT_VERIFIED): the `bdod` tile set omits tiles without data, but its own VRT was not read, so I could not confirm that the 19 missing tiles are ocean-only. Following the instruction to stop on a path mismatch, no `bdod` file was downloaded and the other 12 verified layers were.
+
+## Not verified
+Licence texts (taken from provider policy); NDVI georeferencing of every file (verified on one tile by arithmetic and coastline checks); SoilGrids scale factors (mapped units / 10 applied from the Phase 4 documentation, not from file metadata); that the `bdod` gap is only ocean.
+
+## Decision needed from you
+`bdod` (bulk density): (a) fetch the `bdod` VRT (about 5.9 MB, one more index) to check whether the 19 missing tiles are in its tile set, then download the 25 existing tiles per depth (about 25 x 3 x 0.4 MB = 30 MB) if the missing ones are ocean-only; (b) drop bulk density; (c) leave it MISSING_FACTOR for M5 to assess.

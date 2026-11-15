@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="content" font-family='"Segoe UI", sans-serif'>
+  <rect id="bg" x="0" y="0" width="1280" height="720" fill="#0B1426"/>
+  <path id="wash" data-pptx-role="decoration" d="M0 690 C220 680 380 700 600 688 C780 678 940 698 1100 684 C1180 678 1240 682 1280 678 L1280 720 L0 720 Z" fill="#2DD4BF" fill-opacity="0.12"/>
+  <g id="kicker" data-pptx-bounds="64 76 500 30">
+    <rect x="64" y="84" width="10" height="10" fill="#F2994A"/>
+    <text x="86" y="96" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#9AA8C2">04 · HOW IT WORKS</text>
+  </g>
+  <g id="header" data-pptx-bounds="64 116 1152 106">
+    <text x="64" y="162" font-size="42" font-weight="bold" fill="#F4F6FA">NISAR sees the ground move.</text>
+    <text x="64" y="206" font-size="28" fill="#9AA8C2">Terrain and rain tell us where and when it matters.</text>
+  </g>
+  <g id="stage-acquire" data-pptx-bounds="64 246 368 196">
+<g id="p04-chev-1" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="64 250 368 64" fill="#2DD4BF" stroke="#2DD4BF" fill-opacity="0.16" stroke-width="1.5">
+<path d="M 64 250 L 400 250 L 432 282 L 400 314 L 64 314 L 96 282 Z"/>
+</g>
+    <text x="112" y="288" font-family="Consolas, monospace" font-size="16" fill="#2DD4BF">01</text>
+    <text x="150" y="290" font-size="24" font-weight="bold" fill="#F4F6FA">Acquire</text>
+    <text x="80" y="356" font-size="24" fill="#F4F6FA">NISAR, elevation, rainfall,<tspan x="80" dy="34">soil moisture, landslide</tspan><tspan x="80" dy="34">history</tspan></text>
+  </g>
+  <g id="stage-process" data-pptx-bounds="456 246 368 196">
+<g id="p04-chev-2" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="456 250 368 64" fill="#2DD4BF" stroke="#2DD4BF" fill-opacity="0.16" stroke-width="1.5">
+<path d="M 456 250 L 792 250 L 824 282 L 792 314 L 456 314 L 488 282 Z"/>
+</g>
+    <text x="504" y="288" font-family="Consolas, monospace" font-size="16" fill="#2DD4BF">02</text>
+    <text x="542" y="290" font-size="24" font-weight="bold" fill="#F4F6FA">Process (InSAR)</text>
+    <text x="472" y="356" font-size="24" fill="#F4F6FA">InSAR turns two radar passes<tspan x="472" dy="34">into ground displacement</tspan></text>
+  </g>
+  <g id="stage-integrate" data-pptx-bounds="848 246 368 196">
+<g id="p04-chev-3" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="848 250 368 64" fill="#2DD4BF" stroke="#2DD4BF" fill-opacity="0.16" stroke-width="1.5">
+<path d="M 848 250 L 1184 250 L 1216 282 L 1184 314 L 848 314 L 880 282 Z"/>
+</g>
+    <text x="896" y="288" font-family="Consolas, monospace" font-size="16" fill="#2DD4BF">03</text>
+    <text x="934" y="290" font-size="24" font-weight="bold" fill="#F4F6FA">Integrate</text>
+    <text x="864" y="356" font-size="24" fill="#F4F6FA">All layers aligned to one<tspan x="864" dy="34">common grid, sources</tspan><tspan x="864" dy="34">recorded</tspan></text>
+  </g>
+  <g id="stage-analyze" data-pptx-bounds="64 456 368 196">
+<g id="p04-chev-4" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="64 460 368 64" fill="#2DD4BF" stroke="#2DD4BF" fill-opacity="0.16" stroke-width="1.5">
+<path d="M 64 460 L 400 460 L 432 492 L 400 524 L 64 524 L 96 492 Z"/>
+</g>
+    <text x="112" y="498" font-family="Consolas, monospace" font-size="16" fill="#2DD4BF">04</text>
+    <text x="150" y="500" font-size="24" font-weight="bold" fill="#F4F6FA">Analyze</text>
+    <text x="80" y="566" font-size="24" fill="#F4F6FA">Movement over time, slope,<tspan x="80" dy="34">aspect, rainfall build-up</tspan></text>
+  </g>
+  <g id="stage-risk" data-pptx-bounds="456 456 368 196">
+<g id="p04-chev-5" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="456 460 368 64" fill="#F2994A" stroke="#F2994A" fill-opacity="0.16" stroke-width="1.5">
+<path d="M 456 460 L 792 460 L 824 492 L 792 524 L 456 524 L 488 492 Z"/>
+</g>
+    <text x="504" y="498" font-family="Consolas, monospace" font-size="16" fill="#F2994A">05</text>
+    <text x="542" y="500" font-size="24" font-weight="bold" fill="#F4F6FA">Risk and explain</text>
+    <text x="472" y="566" font-size="24" font-style="italic" fill="#9AA8C2">Lorem ipsum dolor sit amet,<tspan x="472" dy="34">sed do eiusmod tempor</tspan><tspan x="472" dy="34">incididunt ut labore.</tspan></text>
+  </g>
+  <g id="stage-dashboard" data-pptx-bounds="848 456 368 196">
+<g id="p04-chev-6" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="848 460 368 64" fill="#2DD4BF" stroke="#2DD4BF" fill-opacity="0.16" stroke-width="1.5">
+<path d="M 848 460 L 1184 460 L 1216 492 L 1184 524 L 848 524 L 880 492 Z"/>
+</g>
+    <text x="896" y="498" font-family="Consolas, monospace" font-size="16" fill="#2DD4BF">06</text>
+    <text x="934" y="500" font-size="24" font-weight="bold" fill="#F4F6FA">Dashboard</text>
+    <text x="864" y="566" font-size="24" fill="#F4F6FA">Interactive map and charts</text>
+  </g>
+</svg>

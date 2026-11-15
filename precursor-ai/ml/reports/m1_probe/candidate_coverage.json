@@ -1,0 +1,121 @@
+{
+ "mexico_oaxaca_coolr": {
+  "bbox": [
+   -97,
+   15,
+   -94,
+   18
+  ],
+  "nasadem_tiles": 9,
+  "s1_slc_granules_per_year": {
+   "2015": 108,
+   "2017": 432,
+   "2022": 374,
+   "2023": 369
+  },
+  "opera_disp_granules": 5580,
+  "nisar_gunw_provisional": 133
+ },
+ "philippines_luzon_coolr": {
+  "bbox": [
+   119,
+   16,
+   122,
+   19
+  ],
+  "nasadem_tiles": 9,
+  "s1_slc_granules_per_year": {
+   "2015": 182,
+   "2017": 264,
+   "2022": 165,
+   "2023": 180
+  },
+  "opera_disp_granules": 0,
+  "nisar_gunw_provisional": 124
+ },
+ "vietnam_north_coolr": {
+  "bbox": [
+   102,
+   21,
+   105,
+   24
+  ],
+  "nasadem_tiles": 9,
+  "s1_slc_granules_per_year": {
+   "2015": 263,
+   "2017": 502,
+   "2022": 429,
+   "2023": 436
+  },
+  "opera_disp_granules": 0,
+  "nisar_gunw_provisional": 183
+ },
+ "california_north_glc": {
+  "bbox": [
+   -123,
+   37,
+   -120,
+   40
+  ],
+  "nasadem_tiles": 9,
+  "s1_slc_granules_per_year": {
+   "2015": 247,
+   "2017": 614,
+   "2022": 556,
+   "2023": 558
+  },
+  "opera_disp_granules": 5980,
+  "nisar_gunw_provisional": 357
+ },
+ "oregon_washington_glc": {
+  "bbox": [
+   -124,
+   45,
+   -121,
+   48
+  ],
+  "nasadem_tiles": 9,
+  "s1_slc_granules_per_year": {
+   "2015": 239,
+   "2017": 442,
+   "2022": 386,
+   "2023": 470
+  },
+  "opera_disp_granules": 3115,
+  "nisar_gunw_provisional": 225
+ },
+ "california_south_glc": {
+  "bbox": [
+   -119,
+   32,
+   -116,
+   35
+  ],
+  "nasadem_tiles": 9,
+  "s1_slc_granules_per_year": {
+   "2015": 281,
+   "2017": 517,
+   "2022": 403,
+   "2023": 421
+  },
+  "opera_disp_granules": 6221,
+  "nisar_gunw_provisional": 273
+ },
+ "nepal_reference": {
+  "bbox": [
+   83,
+   27,
+   86,
+   30
+  ],
+  "nasadem_tiles": 9,
+  "s1_slc_granules_per_year": {
+   "2015": 292,
+   "2017": 522,
+   "2022": 504,
+   "2023": 495
+  },
+  "opera_disp_granules": 0,
+  "nisar_gunw_provisional": 167
+ }
+}

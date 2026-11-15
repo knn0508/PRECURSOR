@@ -4,12 +4,76 @@ Canonical changelog (one only). Meaningful changes; never lists planned work as 
 
 ## [Unreleased]
 
+### Added (displacement forecast, ADR-0011, 2026-11-15)
+- Map truth check: forecast grid georeferencing verified (99.8% of estimated pixels on land by DEM, POI on land with an estimate); overlay now uses the true UTM corners (grid is rotated ~0.75 deg vs lon/lat, ~70 m). Found and disclosed: forecast correlates -0.81 with the last observed 12-day change (noise reversal), shown on the page and map. OSM basemap + forecast layer in Workspace map; displacement card on Predictions; ML-track status on Susceptibility page; Portuguese Bend registered as a monitored area (API call, 2026-11-15). Landing team list: Intigham Shumalov, Frontend Developer.
+- Pulled Farid145678/NASA_SPACE_APPS 86c9d5c: processed OPERA F16940 stack (70 MB), IMERG csv, scaler, `export_scaler.py` into `data/displacement_forecast/`. `saved_model.py` reruns the author's saved weights without retraining on CUDA and reproduces his forecast.tif (20,184 pixels, identical no-estimate pattern, max diff 0.0016 mm); result in `artifacts/reproduction.json`, shown on the page. One user-approved public read: Copernicus GLO-30 tile N33_00_W119_00 window (tile 7.15 MB, AOI window only) cached as `processed/static_terrain.npz`. Training and benchmark metrics are still the author's, not re-run.
+- `ai_engine/time_series/displacement_forecast/`: Farid145678/NASA_SPACE_APPS models ported (MLP/LSTM/GRU/TCN/LSTM-TCN, causal dataset, Kalman/OLS trend baselines, QA masks, OPERA fetchers not run); v3 NISAR/geometry/state-space modules and `pipeline.py` (train, evaluate, forecast; CUDA) added; own CUDA-torch env `.venv-displacement`; 58 synthetic-mechanics tests pass.
+- Read-only `GET /api/v1/displacement-forecast/{status,metrics,forecast,images/*,docs/*}` over the copied result bundle `data/displacement_forecast/` (not re-run or reproduced here); 4 backend tests. Dashboard page `/dashboard/displacement` (heatmap, benchmark, figures, limitations) and 6 vitest tests. Labelled research / inferred / not a warning. `ml/` susceptibility track unchanged.
+- OPERA DISP-S1 CMR search provider (`ENABLE_OPERA`), 3 tests. Dashboard Satellite Data, Analytics, Alerts and Settings pages now show live API data instead of placeholders (Alerts states that none are issued and why); `system/info` registry lists time_series and displacement_forecast as available.
+
 ### Added
 - Landing page content: sticky nav with Lenis anchor scrolling, active-section tracking and hash/back-forward support; About, Services (status chips mirroring PROJECT_STATUS), Contact (mailto only; placeholder GitHub/email) and Footer sections; one scroll-reveal transition language; reduced-motion fallback. No new dependencies.
 
 ### Changed
 - Landing Earth now uses the supplied 59-earth textures (downsized, lazy, with procedural fallback); licence of the pack to be confirmed.
 - Hero and chapter copy no longer says AI forecasts risk; page metadata no longer claims risk intelligence. Early prediction is stated as a research goal.
+
+### Added (Phase 7, ML slot, no model)
+- `/api/v1/prediction/status|models|susceptibility|trigger` (always `MODEL_NOT_TRAINED` under the default `PREDICTION_BACKEND=none`), `services/prediction/` (`Predictor`, `NullPredictor`, `ModelRegistry`), prediction schemas wrapping the Phase 5 `ModelInputSpec`, `models/` template folder, `PREDICTION_DESIGN.md`, `ML_INTEGRATION.md`; 11 tests (2026-11-15). No dependency added.
+
+### Added / Fixed (Phase 10)
+- Fixed: landslide `file_path` import confined to the data root (Phase 2 #1); `POST /downloads` returns 412 `credentials_missing` before queuing (#2); `retry` resets attempts (#7); tests no longer see real Earthdata credentials (#8).
+- Added: validation, robustness and security/ops tests (+50 backend tests, 701 total, coverage 94.3 %), `docker-compose.prod.yml`, `.github/workflows/ci.yml`, `scripts/backup.sh`, deployment runbook, user guide, validation report, early-warning validation protocol; `pytest-cov` (dev only).
+
+### Added (Phase 9, frontend)
+- `/dashboard/workspace` early-warning workspace (reuses existing panels; AOI GeoJSON upload; series panel; source badges on layers), early-warning views against the Phase 7/8 contracts: N/A by default, labelled MOCK mode behind `NEXT_PUBLIC_USE_MOCK_PREDICTIONS` (default off, separate seeded module, neutral palette, no export), real-response path tested with TEST_FIXTURE; Predictions and Susceptibility Map pages now use it; 20 new vitest tests (107 total). No dependency added; no backend change.
+
+### Added (Phase 6, synthetic data only)
+- `/api/v1/timeseries/areas/{id}/series[/{zone}/{kind}/analysis]`, `services/timeseries/` (series store with mixed-geometry guard, limitations report, OLS/Theil-Sen/Mann-Kendall/velocity-change/acceleration, antecedent sums, API, wet spells, lagged correlation, `NotImplementedForecaster`), `TIME_SERIES_METHODOLOGY.md`, ADR-0010; 21 tests (2026-11-15). No dependency added (scipy already pinned); no forecast.
+
+### Fixed (Phases 7-8 review, 2026-11-15)
+- Prediction service rescans `models/` per request (a stale registry missed folders added at runtime); ledger skipped-layer message. Full backend suite 630 passed on a throwaway database.
+
+### Added (Phase 8, interfaces, no model)
+- `GET /api/v1/uncertainty/areas/{id}/report` (data-quality ledger; predictive uncertainty always `NOT_ESTIMATED`), `POST /api/v1/prediction/explain` (`MODEL_NOT_AVAILABLE` without an explainer), `services/uncertainty/` (masks, Cramer-Rao propagation, reliability rules), `Explainer` protocol and `explainer.json` registry support, `UNCERTAINTY_AND_RELIABILITY.md`; 16 tests (2026-11-15). No dependency added.
+
+### Added (ML track, M2)
+- `ml/scripts/m2_acquire.py`, `m2_verify.py`, `ml/tests/test_m2_acquisition.py`, `ml/reports/M2_acquisition.md`; 35 approved files (0.79 GB) in `data/ml/raw/` with SHA-256 manifest. IMERG (HTTP 403) and SGMC (size unmeasurable) pending user decisions.
+
+### Added (ML track, M5b)
+- `ml/reports/M5b_label_source_proposal.md`, `ml/scripts/m5b_inventory_probe.py` (count-only), M5 user decisions in `docs/ml/ML_STATUS.md` and `docs/ml/stages/M6.md`, candidates in `DATASET_LOG.md`. Proposal only: no download, no new dependency, no model.
+
+### Added (ML track, M5)
+- Sealed provisional spatial hold-out (`ml/src/precursor_ml/m5_split.py`, `ml/scripts/m5_seal.py`, `data/ml/splits/m5_provisional_holdout_v1/`), train-only data access (`m5_data.py`), EDA (`m5_eda.py`, `ml/scripts/m5_eda.py`, `ml/notebooks/M5_eda.ipynb`), `ml/tests/test_m5.py`, `ml/reports/M5_eda.md`, figures in `ml/reports/figures/m5/`; M4 dataset `m4-v2` (10 km-capped background buffers primary, imprecise-circle flag, unknown-trigger sensitivity set). No new dependency, no download, no model.
+
+### Added (ML track, M4)
+- Data cleaning and QC: `ml/src/precursor_ml/m4.py`, `ml/scripts/m4_clean.py`, `ml/configs/m4_cleaning.yaml`, `ml/tests/test_m4_cleaning.py`, `ml/reports/M4_cleaning.md`; hashed cleaned dataset `m4-v1` (5 km and 10 km) in `data/ml/processed/m4/`. No new dependency, no download.
+
+### Added (ML track, M2b/M3b)
+- Round 2 data (771 files, 3.57 GB: HydroRIVERS NA, USGS Qfaults, SoilGrids 12 layers, VIIRS NDVI 2013-2017) in `data/ml/raw/` with `manifest_round2.json`; `ml/scripts/m2b_acquire.py`, `ml/src/precursor_ml/m3b.py`, `ml/scripts/m3b_process.py`, `ml/tests/test_m3b.py`, `ml/reports/M2b_acquisition.md`; 30 new factor bands on the 5 km and 10 km grids. Bulk density not acquired (HTTP 404 tiles). No new dependency.
+
+### Added (ML track, M3 follow-up)
+- 10 km sensitivity grid (`m3_preprocess.py --cell-m`, `data/ml/interim/m3_10km/`, one test) and the round 2 download proposal `ml/reports/M3b_round2_proposal.md` (no download, no new dependency).
+
+### Added (ML track, M3)
+- `ml/src/precursor_ml/m3.py`, `ml/scripts/m3_preprocess.py`, `ml/configs/m3_study.yaml`, `ml/tests/test_m3_preprocessing.py`, `ml/reports/M3_preprocessing.md`; derived products in `data/ml/interim/m3/` (5 km UTM grid, 43 factor bands, GLC labels with accuracy radii). No new dependency, no download.
+
+### Added (ML track, M2 complete)
+- IMERG monthly Final V07 2001-06..2017-12 (199 files) added to `data/ml/raw/`; M2 totals 237 files / 4.58 GB, all checksummed. `m2_verify.py` now checks HDF5 signatures.
+
+### Changed (docs)
+- GLC end date corrected to 2017-09-28 in `docs/scientific/{LABELLED_DATASET,SCIENTIFIC_LIMITATIONS,ENVIRONMENTAL_DATA_SOURCES}.md`, `docs/phases/PHASE_07.md`, `docs/project/PROJECT_MEMORY.md` (`docs/data-storage.md` intentionally unchanged).
+
+### Changed (code text, tests)
+- Global Landslide Catalog end-date strings corrected to 2017-09-28 in backend code and tests (text only; version identifier `export-2016-03-07` unchanged); new regression test `backend/tests/test_glc_end_date.py`. Backend suite 601 passed / 4 skipped (2026-11-15, Earthdata credentials unset).
+- ML M2: USGS per-state geology (CA, OR, WA; 45.6 MB) added as the lithology source; IMERG monthly range extended to 2001-06..2017-12 (pending a GES DISC authorisation).
+
+### Changed (docs)
+- Global Landslide Catalog end date corrected to 2017-09-28 in `docs/nasa-data-sources.md`, `docs/phase-2-data-acquisition.md`, `.claude/rules/scientific-integrity.md` (evidence: `ml/reports/M1_census_and_download_list.md`); code constants and tests unchanged.
+
+### Added (ML track, M1)
+- M1 label census: `ml/scripts/m1_census.py`, `m1_candidate_coverage.py`, `ml/reports/M1_census_and_download_list.md`; two label files (10.1 MB) in `data/ml/raw/census/`. Download list awaits user approval.
+- `ml/reports/M1_problem_definition.md`, `M1_feasibility.md`, `M1_literature.md`, `ml/scripts/m1_catalog_probe.py` (catalog queries only; no download, no model). Study design awaiting user approval.
 
 ### Added (docs)
 - Project documentation and memory system: `CLAUDE.md`, `.claude/rules/*`, `.claude/skills/precursor-workflow`, `docs/project|architecture|adr|phases|scientific|development`.
@@ -123,3 +187,5 @@ Canonical changelog (one only). Meaningful changes; never lists planned work as 
 
 ## [ML track M0] - 2026-11-15 (governance and workspace only; no model, no data, no new dependency)
 - Added ADR-0009 (isolated ML development track), `.claude/rules/ml.md`, the `ml/` workspace skeleton and scope-guard script, `data/ml/` folders (gitignored), `docs/ml/*` logs and a dependency proposal (not installed). Roadmap phases unchanged and ML-free.
+- ML environment installed in `ml/.venv` (approved list, pinned in `ml/requirements.txt`); xgboost uses CUDA (verified), lightgbm is CPU-only; PyTorch deferred to M7. Backend dependencies unchanged.
+- `ml/.venv` LightGBM replaced by a local CUDA build of 4.6.0 (patch and recipe in `ml/build/lightgbm_cuda_win/`); GPU training verified. Backend dependencies unchanged.

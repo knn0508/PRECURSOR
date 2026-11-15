@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="content" font-family='"Segoe UI", sans-serif'>
+  <rect id="bg" x="0" y="0" width="1280" height="720" fill="#0B1426"/>
+  <path id="wash" data-pptx-role="decoration" d="M0 640 C180 610 340 660 540 628 C720 600 900 656 1080 622 C1160 608 1230 620 1280 606 L1280 720 L0 720 Z" fill="#2DD4BF" fill-opacity="0.12"/>
+  <path id="wash-line" data-pptx-role="decoration" d="M0 640 C180 610 340 660 540 628 C720 600 900 656 1080 622 C1160 608 1230 620 1280 606" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-opacity="0.55"/>
+  <g id="kicker" data-pptx-bounds="64 76 500 30">
+    <rect x="64" y="84" width="10" height="10" fill="#F2994A"/>
+    <text x="86" y="96" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#9AA8C2">08 · TEAM</text>
+  </g>
+  <g id="beat" data-pptx-bounds="64 130 1152 124">
+    <text x="64" y="180" font-size="42" font-weight="bold" fill="#F4F6FA">A small team covering engineering,<tspan x="64" dy="52">design and AI.</tspan></text>
+  </g>
+  <g id="member-kanan" data-pptx-bounds="64 310 270 200">
+    <line x1="64" y1="320" x2="334" y2="320" stroke="#2A3A5C" stroke-width="1"/>
+    <text x="64" y="396" font-size="56" font-weight="bold" fill="#2DD4BF">KS</text>
+    <use data-icon="phosphor-duotone/code" x="298" y="352" width="36" height="36" fill="#9AA8C2"/>
+    <text x="64" y="450" font-size="24" font-weight="bold" fill="#F4F6FA">Kanan Salmanli</text>
+    <text x="64" y="482" font-size="18" fill="#9AA8C2">Full Stack Developer</text>
+  </g>
+  <g id="member-sema" data-pptx-bounds="358 310 270 200">
+    <line x1="358" y1="320" x2="628" y2="320" stroke="#2A3A5C" stroke-width="1"/>
+    <text x="358" y="396" font-size="56" font-weight="bold" fill="#2DD4BF">SA</text>
+    <use data-icon="phosphor-duotone/paint-brush" x="592" y="352" width="36" height="36" fill="#9AA8C2"/>
+    <text x="358" y="450" font-size="24" font-weight="bold" fill="#F4F6FA">Sema Abdullazade</text>
+    <text x="358" y="482" font-size="18" fill="#9AA8C2">UI/UX Designer</text>
+  </g>
+  <g id="member-intiqam" data-pptx-bounds="652 310 270 200">
+    <line x1="652" y1="320" x2="922" y2="320" stroke="#2A3A5C" stroke-width="1"/>
+    <text x="652" y="396" font-size="56" font-weight="bold" fill="#2DD4BF">I</text>
+    <use data-icon="phosphor-duotone/layout" x="886" y="352" width="36" height="36" fill="#9AA8C2"/>
+    <text x="652" y="450" font-size="24" font-weight="bold" fill="#F4F6FA">Intiqam</text>
+    <text x="652" y="482" font-size="18" fill="#9AA8C2">Frontend Designer</text>
+  </g>
+  <g id="member-farid" data-pptx-bounds="946 310 270 200">
+    <line x1="946" y1="320" x2="1216" y2="320" stroke="#2A3A5C" stroke-width="1"/>
+    <text x="946" y="396" font-size="56" font-weight="bold" fill="#2DD4BF">FG</text>
+    <use data-icon="phosphor-duotone/brain" x="1180" y="352" width="36" height="36" fill="#9AA8C2"/>
+    <text x="946" y="450" font-size="24" font-weight="bold" fill="#F4F6FA">Farid Gahramanov</text>
+    <text x="946" y="482" font-size="18" fill="#9AA8C2">AI Engineer</text>
+  </g>
+</svg>

@@ -25,6 +25,8 @@ def provider_dir(root: Path, granule: GranuleRecord) -> Path:
             return raw / "gpm" / "imerg"
         case ProviderName.SMAP:
             return raw / "smap"
+        case ProviderName.OPERA:
+            return raw / "opera" / "disp_s1"
         case ProviderName.LANDSLIDE_CATALOG:
             return raw / "landslide_catalog"
     raise ValueError(f"unknown provider {granule.provider}")

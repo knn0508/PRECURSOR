@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="ending" font-family='"Segoe UI", sans-serif'>
+  <rect id="bg" x="0" y="0" width="1280" height="720" fill="#0B1426"/>
+  <path id="ridge-wash" data-pptx-role="decoration" d="M0 700 C240 680 420 690 620 650 C800 612 960 620 1100 560 C1180 525 1240 520 1280 500 L1280 720 L0 720 Z" fill="#2DD4BF" fill-opacity="0.13"/>
+  <path id="ridge-line" data-pptx-role="decoration" d="M0 700 C240 680 420 690 620 650 C800 612 960 620 1100 560 C1180 525 1240 520 1280 500" fill="none" stroke="#2DD4BF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.85"/>
+  <path id="pass-arc" data-pptx-role="decoration" d="M120 230 Q700 0 1240 150" fill="none" stroke="#5B8DEF" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line id="beam-left" data-pptx-role="decoration" x1="967.5" y1="98.8" x2="880" y2="220" stroke="#2DD4BF" stroke-width="1" stroke-opacity="0.45"/>
+  <line id="beam-right" data-pptx-role="decoration" x1="967.5" y1="98.8" x2="1140" y2="220" stroke="#2DD4BF" stroke-width="1" stroke-opacity="0.45"/>
+  <circle id="satellite" data-pptx-role="decoration" cx="967.5" cy="98.8" r="7" fill="#5B8DEF"/>
+  <g id="thanks" data-pptx-bounds="64 250 660 220">
+    <text x="64" y="330" font-size="84" font-weight="bold" fill="#F4F6FA">Thank you.</text>
+    <text x="64" y="392" font-size="28" fill="#2DD4BF">Scan to try the app.</text>
+    <text x="64" y="446" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#9AA8C2">PRECURSOR AI</text>
+  </g>
+  <g id="qr-frame" data-pptx-bounds="870 214 280 280">
+    <rect x="880" y="220" width="260" height="260" rx="4" fill="#14213D" fill-opacity="0.7" stroke="#F2994A" stroke-width="2" stroke-dasharray="2,2"/>
+    <use data-icon="phosphor-duotone/qr-code" x="950" y="254" width="120" height="120" fill="#F2994A"/>
+    <text x="1010" y="412" text-anchor="middle" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#F2994A">QR CODE</text>
+    <text x="1010" y="444" text-anchor="middle" font-size="18" fill="#9AA8C2">(add app URL)</text>
+  </g>
+</svg>

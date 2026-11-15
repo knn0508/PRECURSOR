@@ -1,14 +1,11 @@
-import { Activity } from "lucide-react";
-import { PlaceholderPage } from "@/components/dashboard/placeholder-page";
+import { DisplacementSummary } from "@/components/workspace/displacement-summary";
+import { EarlyWarningPage } from "@/components/workspace/early-warning-page";
 
 export default function PredictionsPage() {
   return (
-    <PlaceholderPage
-      title="Predictions"
-      icon={Activity}
-      description="Model-estimated landslide risk with uncertainty."
-      emptyTitle="No predictions available"
-      emptyDescription="No model has been trained or validated. Predictions will appear here with explicit uncertainty once they exist."
-    />
+    <div className="space-y-6">
+      <EarlyWarningPage title="Predictions" heads={["susceptibility", "trigger"]} />
+      <DisplacementSummary />
+    </div>
   );
 }

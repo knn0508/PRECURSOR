@@ -255,7 +255,7 @@ def add_events(db):
 def test_landslide_events_filters_and_limitations(client, db):
     add_events(db)
     r = client.get(f"{BASE}/landslide-events").json()
-    assert r["total"] == 2 and r["limitations"] == lc.LIMITATIONS and "2016-03-07" in r["limitations"]
+    assert r["total"] == 2 and r["limitations"] == lc.LIMITATIONS and "2017-09-28" in r["limitations"]
     get = lambda **p: [e["external_event_id"] for e in client.get(f"{BASE}/landslide-events", params=p).json()["items"]]  # noqa: E731
     assert get(bbox="9,19,11,21") == ["E1"]
     assert get(country="otherland") == ["E2"]

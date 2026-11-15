@@ -106,6 +106,7 @@ class AcquisitionOrchestrator:
             if job.status != J.FAILED.value:
                 raise ValueError(f"only FAILED jobs can be retried (job is {job.status})")
             job.status, job.error_message, job.completed_at = J.QUEUED.value, None, None
+            job.attempts, job.progress, job.bytes_downloaded = 0, 0.0, 0  # a retry is a fresh attempt series
             job.acquisition.status, job.acquisition.error_message = A.QUEUED.value, None
             s.commit()
         self.executor.submit(self.run_job, job_id)

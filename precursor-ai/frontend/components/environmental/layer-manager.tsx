@@ -11,11 +11,16 @@ import { Notice } from "@/components/data/badges";
 import type { MapRaster, MapVector } from "@/components/environmental/layer-map";
 import { OriginBadge, OriginBanner, ToneBadge, layerStatusTone } from "@/components/environmental/shared";
 import { Card, CardContent } from "@/components/ui/card";
+import { SourceBadge } from "@/components/workspace/source-badge";
+import { sourceKindForLayer } from "@/lib/source-badges";
 import { useApi } from "@/hooks/use-api";
 import {
   GRADIENT_STOPS, INSAR_LAYER_NOTE, eventFeatures, footprintCorners, isDrawableRaster, isInsarLayer, isVectorLayer,
   layerDisplayName, layerKind, layerTypeLabel, legendClasses, legendGradient,
 } from "@/lib/environmental-helpers";
+import { colorLimit, gridToDataUrl, smoothGrid } from "@/lib/displacement-helpers";
+import { bboxOf } from "@/lib/environmental-helpers";
+import { getDisplacementForecast } from "@/services/displacement";
 import { getLandslides, getLayers, getLegend, getSeismic, layerPreviewUrl } from "@/services/environmental";
 import type { MonitoredArea } from "@/types/api";
 import type { EventFeature, LayerRead } from "@/types/environmental";
@@ -74,6 +79,7 @@ function LayerCard({ layer, st, set }: { layer: LayerRead; st: LayerState; set: 
       <div className="flex flex-wrap items-center gap-2">
         <input id={id} type="checkbox" checked={st.on} disabled={!drawable} onChange={(e) => set({ ...st, on: e.target.checked })} />
         <label htmlFor={id} className="font-medium">{layerDisplayName(layer)}</label>
+        <SourceBadge kind={sourceKindForLayer(layer)} />
         <OriginBadge origin={layer.data_origin} />
         <ToneBadge tone={layerStatusTone(layer.status)}>{layer.status.replaceAll("_", " ")}</ToneBadge>
       </div>
@@ -95,6 +101,9 @@ function LayerCard({ layer, st, set }: { layer: LayerRead; st: LayerState; set: 
         Source: {layer.source_provider} / {layer.dataset_name}{layer.dataset_version ? ` ${layer.dataset_version}` : ""} · Period: {period(layer)}
       </p>
       <p className="text-xs text-ink-muted">
+        CRS {layer.crs ?? "unknown"} · resolution {layer.processing_resolution ? JSON.stringify(layer.processing_resolution) : "unknown"} · units {layer.units ?? "n/a"}
+      </p>
+      <p className="text-xs text-ink-muted">
         Provenance: {layer.measurement_kind.replaceAll("_", " ").toLowerCase()} · validation {layer.validation_status.replaceAll("_", " ").toLowerCase()}
         {layer.label ? ` · ${layer.label}` : ""}
       </p>
@@ -107,6 +116,18 @@ export function LayerManager({ area }: { area: MonitoredArea }) {
   const ls = useApi((s) => getLandslides(area.id, s).catch(() => null));
   const eq = useApi((s) => getSeismic(area.id, s).catch(() => null));
   const [state, setState] = useState<Record<string, LayerState>>({});
+  const fc0 = useApi((s) => getDisplacementForecast(s).catch(() => null));
+  const [showFc, setShowFc] = useState(false);
+  const [fcOpacity, setFcOpacity] = useState(0.7);
+  // Research displacement forecast, offered only when this area overlaps the forecast grid (never drawn for areas it does not cover).
+  const fcRaster = useMemo<MapRaster | null>(() => {
+    const g = fc0.data, b = bboxOf(area.geometry);
+    if (!g || !b || b[0] > g.bounds.east || b[2] < g.bounds.west || b[1] > g.bounds.north || b[3] < g.bounds.south) return null;
+    const sm = smoothGrid(g.bands.q50_mm);
+    const url = gridToDataUrl(sm, colorLimit(sm));
+    const c = g.corners;
+    return url ? { id: "displacement-forecast", url, corners: [c[0], c[1], c[2], c[3]], opacity: fcOpacity, smooth: true } : null;
+  }, [fc0.data, area.geometry, fcOpacity]);
   const get = (id: string): LayerState => state[id] ?? { on: false, opacity: 0.8 };
 
   const items = layers.data?.items ?? [];
@@ -123,9 +144,10 @@ export function LayerManager({ area }: { area: MonitoredArea }) {
         rs.push({ id: l.id, url: layerPreviewUrl(l.id), corners: footprintCorners(l.footprint)!, opacity: st.opacity });
       }
     }
+    if (showFc && fcRaster) rs.push(fcRaster);
     return { rasters: rs, vectors: vs };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [items, state, ls.data, eq.data]);
+  }, [items, state, ls.data, eq.data, showFc, fcRaster]);
 
   if (layers.isLoading && !layers.data) return <LoadingState label="Loading layers" />;
   if (layers.error) return <ErrorState title="Could not load layers" message={layers.error.message} onRetry={layers.refetch} />;
@@ -136,11 +158,30 @@ export function LayerManager({ area }: { area: MonitoredArea }) {
         <div className="relative h-[28rem] overflow-hidden rounded-lg border border-line">
           <LayerMap aoi={area.geometry} rasters={rasters} vectors={vectors} />
         </div>
-        <p className="text-xs text-ink-muted">Blue outline: area of interest. No basemap is loaded. Layers are measurements or summaries of source data, not risk.</p>
+        <p className="text-xs text-ink-muted">Blue outline: area of interest. Basemap: OpenStreetMap. Layers are measurements or summaries of source data, not risk.</p>
       </div>
       <div className="space-y-2">
+        {fcRaster && (
+          <Card><CardContent className="space-y-2 p-3 text-sm">
+            <div className="flex flex-wrap items-center gap-2">
+              <input id="fc-toggle" type="checkbox" checked={showFc} onChange={(e) => setShowFc(e.target.checked)} />
+              <label htmlFor="fc-toggle" className="font-medium">Displacement forecast (12-day LOS, q50)</label>
+              <span className="rounded-md border border-warn/40 bg-warn/10 px-2 py-0.5 text-[11px] uppercase tracking-wider text-warn">Research / inferred</span>
+            </div>
+            {showFc && (
+              <>
+                <label className="flex items-center gap-2 text-xs">Opacity
+                  <input type="range" min={0.1} max={1} step={0.05} value={fcOpacity} aria-label="Displacement forecast opacity" onChange={(e) => setFcOpacity(Number(e.target.value))} />
+                  {Math.round(fcOpacity * 100)}%</label>
+                <div className="h-2 w-full rounded" style={{ background: "linear-gradient(90deg,#5a6cf5,#f5f5f5,#f55a5a)" }} aria-hidden />
+                <div className="flex justify-between text-xs text-ink-muted"><span>away</span><span>0</span><span>toward satellite</span></div>
+              </>
+            )}
+            <p className="text-xs text-ink-muted">OPERA Sentinel-1, issued {fc0.data?.issue_time.slice(0, 10)}, smoothed 3x3 for display. It mostly reverses the last observed change, so it is not predicted slope motion. Not a warning.</p>
+          </CardContent></Card>
+        )}
         {items.length === 0 ? (
-          <EmptyState icon={Layers} title="No layers yet" description="No environmental layers exist for this area. Process it from the Overview tab; nothing is drawn until real or labelled data exists." />
+          <EmptyState icon={Layers} title="No layers yet" description="No environmental layers exist for this area. Process it from the Overview tab of the Environmental page (needs approved downloads); nothing is drawn until real or labelled data exists." />
         ) : (
           <>
             <Notice>Toggle a layer to draw it. Synthetic or unverified layers are always flagged.</Notice>

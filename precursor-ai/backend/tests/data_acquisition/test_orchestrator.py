@@ -93,7 +93,7 @@ def test_download_error_then_retry(factory, acq_id, tmp_path):
     prov.download_error = None
     orch.retry_job(job.id)
     acq, j = _state(factory, acq_id, job.id)
-    assert acq.status == "VALIDATED" and j.status == "COMPLETED" and j.attempts == 2
+    assert acq.status == "VALIDATED" and j.status == "COMPLETED" and j.attempts == 1  # a retry starts a fresh attempt series (Phase 2 issue 7, fixed in Phase 10)
     with pytest.raises(ValueError):
         orch.retry_job(job.id)  # only FAILED jobs
 

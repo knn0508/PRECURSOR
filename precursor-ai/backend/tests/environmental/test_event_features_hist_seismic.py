@@ -31,7 +31,7 @@ def test_historical_inclusion_edges_skipped_and_limitation():
     assert f["count"] == 3 and f["skipped"] == 5
     assert f["counts_by_year"] == {2010: 2, 2012: 1} and f["date_min"].startswith("2010-05-01") and f["date_max"].startswith("2012")
     assert f["nearest_event_distance_km"] == pytest.approx(0.0, abs=1e-6)  # "in" sits on the centroid (116.5, 5.5)
-    assert f["limitation"] == LIMITATION and "2016-03-07" in LIMITATION and "not ground truth" in LIMITATION
+    assert f["limitation"] == LIMITATION and "2017-09-28" in LIMITATION and "not ground truth" in LIMITATION
 
 
 def test_historical_empty_has_null_distance_and_still_limitation():

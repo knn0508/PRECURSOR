@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="content" font-family="&quot;Segoe UI&quot;, sans-serif">
+  <rect id="bg" x="0" y="0" width="1280" height="720" fill="#0B1426" />
+  <path id="wash" data-pptx-role="decoration" d="M0 672 C160 656 320 684 500 668 C700 650 880 684 1060 664 C1150 654 1230 662 1280 654 L1280 720 L0 720 Z" fill="#2DD4BF" fill-opacity="0.12" />
+  <path id="wash-line" data-pptx-role="decoration" d="M0 672 C160 656 320 684 500 668 C700 650 880 684 1060 664 C1150 654 1230 662 1280 654" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-opacity="0.55" />
+  <g id="kicker" data-pptx-bounds="64 76 500 30">
+    <rect x="64" y="84" width="10" height="10" fill="#F2994A" />
+    <text x="86" y="96" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#9AA8C2">05 · SPACE DATA</text>
+  </g>
+  <g id="claim" data-pptx-bounds="64 150 320 170">
+    
+  <g transform="translate(64, 156) scale(0.171875)" fill="#2DD4BF">
+    <path d="M216,128a88,88,0,1,1-88-88A88,88,0,0,1,216,128Z" opacity="0.2" />
+    <path d="M245.11,60.68c-7.65-13.19-27.84-16.16-58.5-8.66A95.93,95.93,0,0,0,32,128a98,98,0,0,0,.78,12.31C5.09,169,5.49,186,10.9,195.32,16,204.16,26.64,208,40.64,208a124.11,124.11,0,0,0,28.79-4A95.93,95.93,0,0,0,224,128a97.08,97.08,0,0,0-.77-12.25c12.5-13,20.82-25.35,23.65-35.92C248.83,72.51,248.24,66.07,245.11,60.68ZM128,48a80.11,80.11,0,0,1,78,62.2c-17.06,16.06-40.15,32.53-62.07,45.13C116.38,171.14,92.48,181,73.42,186.4A79.94,79.94,0,0,1,128,48ZM24.74,187.29c-1.46-2.51-.65-7.24,2.22-13a79.05,79.05,0,0,1,10.29-15.05,96,96,0,0,0,18,31.32C38,193.46,27.24,191.61,24.74,187.29ZM128,208a79.45,79.45,0,0,1-38.56-9.94,370,370,0,0,0,62.43-28.86c21.58-12.39,40.68-25.82,56.07-39.08A80.07,80.07,0,0,1,128,208ZM231.42,75.69c-1.7,6.31-6.19,13.53-12.63,21.13a95.69,95.69,0,0,0-18-31.35c14.21-2.35,27.37-2.17,30.5,3.24C232.19,70.28,232.24,72.63,231.42,75.69Z" />
+  </g>
+    <text font-weight="bold" font-size="42" fill="#F4F6FA" x="64" y="252">Built on</text><text font-weight="bold" font-size="42" fill="#F4F6FA" x="64" y="304">NASA data.</text></g>
+  <g id="to-fill" data-pptx-bounds="64 390 320 110">
+    <text x="64" y="414" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#F2994A">TO FILL · REAL FIGURES</text>
+    <text font-style="italic" font-size="18" fill="#9AA8C2" x="64" y="450">Lorem ipsum: area covered,</text><text font-style="italic" font-size="18" fill="#9AA8C2" x="64" y="478">number of scenes, date range.</text></g>
+  <g id="nasa-sources" data-pptx-replace-with="table" data-pptx-bounds="400 160 816 416" data-pptx-fallback-sha256="a65c62769991807b2f8c1aef2cde04ee878c8608fb03da034cf86241954642fc">
+    <metadata type="application/json">
+      {
+        "schema": "ppt-master.semantic-table.v2",
+        "name": "nasa-sources",
+        "x": 400, "y": 160, "width": 816, "height": 416,
+        "column_widths": [380, 436],
+        "row_heights": [56, 72, 72, 72, 72, 72],
+        "style": {
+          "font_family": "Segoe UI", "font_size": 24, "header_font_size": 18,
+          "header_fill": "#14213D", "header_text": "#9AA8C2", "body_text": "#F4F6FA",
+          "band_row": false, "valign": "middle", "padding": 16
+        },
+        "defaults": {
+          "cell": {
+            "align": "l",
+            "borders": {
+              "left": {"style": "none"}, "right": {"style": "none"}, "top": {"style": "none"},
+              "bottom": {"style": "solid", "color": "#2A3A5C", "width": 1}
+            }
+          }
+        },
+        "columns": [
+          {"text": "Source", "align": "l", "borders": {"left": {"style": "none"}, "right": {"style": "none"}, "top": {"style": "none"}, "bottom": {"style": "solid", "color": "#2DD4BF", "width": 1.5}}},
+          {"text": "What it gives us", "align": "l", "borders": {"left": {"style": "none"}, "right": {"style": "none"}, "top": {"style": "none"}, "bottom": {"style": "solid", "color": "#2DD4BF", "width": 1.5}}}
+        ],
+        "rows": [
+          [{"text": "NISAR (L-band radar)", "color": "#2DD4BF"}, "Ground displacement; 12-day repeat"],
+          [{"text": "NASADEM", "color": "#2DD4BF"}, "Elevation, slope, aspect"],
+          [{"text": "GPM IMERG", "color": "#2DD4BF"}, "Rainfall"],
+          [{"text": "SMAP", "color": "#2DD4BF"}, "Soil moisture"],
+          [{"text": "NASA Global Landslide Catalog", "color": "#2DD4BF"}, "Past landslides"]
+        ]
+      }
+    </metadata>
+    <rect x="400" y="160" width="816" height="56" fill="#14213D" />
+    <g id="table-header" font-size="18" fill="#9AA8C2">
+      <text x="416" y="194">Source</text>
+      <text x="796" y="194">What it gives us</text>
+    </g>
+    <line x1="400" y1="216" x2="1216" y2="216" stroke="#2DD4BF" stroke-width="1.5" />
+    <g id="table-sources" font-size="24" fill="#2DD4BF">
+      <text x="416" y="260">NISAR (L-band radar)</text>
+      <text x="416" y="332">NASADEM</text>
+      <text x="416" y="404">GPM IMERG</text>
+      <text x="416" y="476">SMAP</text>
+      <text x="416" y="548">NASA Global Landslide Catalog</text>
+    </g>
+    <g id="table-gives" font-size="24" fill="#F4F6FA">
+      <text x="796" y="260">Ground displacement; 12-day repeat</text>
+      <text x="796" y="332">Elevation, slope, aspect</text>
+      <text x="796" y="404">Rainfall</text>
+      <text x="796" y="476">Soil moisture</text>
+      <text x="796" y="548">Past landslides</text>
+    </g>
+    <path id="table-rules" d="M400 288H1216 M400 360H1216 M400 432H1216 M400 504H1216 M400 576H1216" fill="none" stroke="#2A3A5C" stroke-width="1" />
+  </g>
+</svg>

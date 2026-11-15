@@ -32,6 +32,31 @@ ALLOWED_GOVERNANCE = (
     "docs/adr/",
     "docs/project/",
 )
+# ADR-0011 (2026-11-15): the displacement-forecast module and its read-only wiring were authorised by the user; not susceptibility-track work.
+ADR_0011_PATHS = (
+    "ai_engine/time_series/",
+    "data/displacement_forecast/",
+    "backend/app/api/v1/displacement_forecast.py",
+    "backend/app/services/displacement_forecast/",
+    "backend/tests/displacement_forecast/",
+    "backend/app/services/data_acquisition/providers/opera.py",
+    "backend/tests/data_acquisition/test_opera_provider.py",
+    "frontend/components/displacement/",
+    "frontend/components/pages/",
+    "frontend/app/dashboard/displacement/",
+    "frontend/services/displacement.ts",
+    "frontend/types/displacement.ts",
+    "frontend/lib/displacement-helpers.ts",
+    "frontend/tests/displacement-helpers.test.ts",
+    ".venv-displacement/",
+    # edited (not new) files, ADR-0011 wiring: router/system registry, OPERA provider enum/storage/registry/config/schema, nav, data types
+    "backend/app/api/v1/router.py", "backend/app/api/v1/system.py", "backend/app/core/config.py", "backend/app/schemas/data_acquisition.py",
+    "backend/app/services/data_acquisition/types.py", "backend/app/services/data_acquisition/storage.py",
+    "backend/app/services/data_acquisition/registry.py", "docker-compose.yml", ".env.example",
+    "frontend/lib/navigation.ts", "frontend/types/data.ts", "frontend/components/data/data-overview.tsx",
+    "frontend/app/dashboard/alerts/", "frontend/app/dashboard/analytics/", "frontend/app/dashboard/settings/",
+    "frontend/app/dashboard/satellite-data/", "frontend/components/dashboard/placeholder-page.tsx",
+)
 # Heavy or generated trees that are not part of the comparison.
 SKIP_DIRS = {".venv", "node_modules", ".next", "__pycache__", ".pytest_cache", ".git"}
 
@@ -50,7 +75,7 @@ def _scan() -> dict[str, list[int]]:
 
 
 def _allowed(rel: str) -> bool:
-    return rel.startswith(ALLOWED_GOVERNANCE)
+    return rel.startswith(ALLOWED_GOVERNANCE + ADR_0011_PATHS)
 
 
 def violations(baseline: dict[str, list[int]], current: dict[str, list[int]]) -> list[str]:

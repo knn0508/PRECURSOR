@@ -1,5 +1,6 @@
 from functools import lru_cache
 from pathlib import Path
+from typing import Literal
 
 from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -42,6 +43,7 @@ class Settings(BaseSettings):
     enable_nasadem: bool = True
     enable_gpm: bool = True
     enable_smap: bool = False  # optional provider
+    enable_opera: bool = True  # OPERA DISP-S1 search (no login); downloads still need approval
     enable_landslide_catalog: bool = True
 
     # --- Phase 3: InSAR processing -------------------------------------------------
@@ -53,6 +55,10 @@ class Settings(BaseSettings):
 
     gpm_resolution: str = "daily"  # daily | half_hourly | monthly
     smap_collection: str = "SPL3SMP_E"  # 9 km enhanced L3 radiometer soil moisture
+
+    # --- Phase 7: ML slot (ADR-0008). `none` = no model; every prediction endpoint returns MODEL_NOT_TRAINED. ---
+    prediction_backend: Literal["none", "registered_model"] = "none"
+    models_dir: Path = Path("./models")
 
     @property
     def cors_origin_list(self) -> list[str]:

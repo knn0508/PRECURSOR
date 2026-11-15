@@ -1,0 +1,1 @@
+Here is the problem. The signal exists, but almost nobody can reach it. Landslides often show weak warning signs first: slow ground creep, and heavy rain on saturated soil. Most hillsides have no ground sensors, so that movement goes unseen. And radar satellite data does exist, but it is huge and technical, so decision makers rarely use it.

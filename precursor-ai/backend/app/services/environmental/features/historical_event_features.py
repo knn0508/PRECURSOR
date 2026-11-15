@@ -10,7 +10,7 @@ from shapely.geometry import Point
 
 EARTH_RADIUS_KM = 6371.0088  # WGS84 mean radius (IUGG)
 
-LIMITATION = ("The NASA Global Landslide Catalog is a one-time historical export current to 2016-03-07. It is incomplete and "
+LIMITATION = ("The NASA Global Landslide Catalog is a one-time historical export whose last event is dated 2017-09-28. It is incomplete and "
               "reporting-biased; the absence of events proves nothing, and the catalog is not ground truth.")
 
 

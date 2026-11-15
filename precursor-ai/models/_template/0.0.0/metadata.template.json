@@ -1,0 +1,11 @@
+{
+  "metadata_schema_version": "1",
+  "model_id": "<model_id, equals the parent folder name>",
+  "version": "<equals this folder name>",
+  "heads": ["susceptibility"],
+  "model_card": "MODEL_CARD.md",
+  "training_data_provenance": {"inventory": "<dated inventory id>", "features_schema_version": "<Phase 5 FEATURE_SCHEMA_VERSION>", "dataset_manifest_sha256": "<sha256>"},
+  "valid_region": {"type": "Polygon", "coordinates": []},
+  "valid_time": {"start": "<ISO-8601>", "end": null},
+  "input_spec": {"feature_names": ["<Phase 5 feature names>"], "feature_schema_version": "<x.y.z>", "grid_crs": "<EPSG:xxxxx>", "grid_resolution_m": 30.0}
+}

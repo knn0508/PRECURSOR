@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="content" font-family='"Segoe UI", sans-serif'>
+  <defs>
+    <marker id="arrowTeal" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <polygon points="0,0 8,4 0,8" fill="#2DD4BF"/>
+    </marker>
+  </defs>
+  <rect id="bg" x="0" y="0" width="1280" height="720" fill="#0B1426"/>
+  <path id="wash" data-pptx-role="decoration" d="M0 682 C200 670 360 694 560 678 C740 664 900 690 1080 674 C1170 666 1230 672 1280 666 L1280 720 L0 720 Z" fill="#2DD4BF" fill-opacity="0.12"/>
+  <path id="wash-line" data-pptx-role="decoration" d="M0 682 C200 670 360 694 560 678 C740 664 900 690 1080 674 C1170 666 1230 672 1280 666" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-opacity="0.55"/>
+  <g id="kicker" data-pptx-bounds="64 76 500 30">
+    <rect x="64" y="84" width="10" height="10" fill="#F2994A"/>
+    <text x="86" y="96" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#9AA8C2">03 · SOLUTION</text>
+  </g>
+  <g id="claim" data-pptx-bounds="64 190 500 200">
+    <text x="64" y="230" font-size="32" fill="#F4F6FA">One platform that turns NASA<tspan x="64" dy="44">radar and environmental data</tspan><tspan x="64" dy="44">into a <tspan fill="#2DD4BF" font-weight="bold">landslide early-warning</tspan></tspan><tspan x="64" dy="44"><tspan fill="#2DD4BF" font-weight="bold">map</tspan> for any area.</tspan></text>
+  </g>
+  <g id="steps" data-pptx-bounds="610 130 606 500" font-size="24" fill="#F4F6FA">
+    <line x1="632" y1="170" x2="632" y2="520" stroke="#2DD4BF" stroke-width="1.5" marker-end="url(#arrowTeal)"/>
+    <g id="step-1">
+      <circle cx="632" cy="170" r="7" fill="#2DD4BF"/>
+      <text x="660" y="176" font-family="Consolas, monospace" font-size="16" fill="#2DD4BF">01</text>
+      <text x="708" y="178">Pick an area on the map.</text>
+    </g>
+    <g id="step-2">
+      <circle cx="632" cy="262" r="7" fill="#2DD4BF"/>
+      <text x="660" y="268" font-family="Consolas, monospace" font-size="16" fill="#2DD4BF">02</text>
+      <text x="708" y="270">The platform finds, downloads and checks<tspan x="708" dy="34">the NASA data.</tspan></text>
+    </g>
+    <g id="step-3">
+      <circle cx="632" cy="354" r="7" fill="#2DD4BF"/>
+      <text x="660" y="360" font-family="Consolas, monospace" font-size="16" fill="#2DD4BF">03</text>
+      <text x="708" y="362">It measures ground movement with <tspan fill="#2DD4BF" font-weight="bold">InSAR</tspan>.</text>
+    </g>
+    <g id="step-4">
+      <circle cx="632" cy="446" r="7" fill="#2DD4BF"/>
+      <text x="660" y="452" font-family="Consolas, monospace" font-size="16" fill="#2DD4BF">04</text>
+      <text x="708" y="454">It combines movement with terrain, rain,<tspan x="708" dy="34">soil moisture and landslide history.</tspan></text>
+    </g>
+    <g id="step-5">
+      <rect x="624" y="530" width="16" height="16" rx="2" fill="#F2994A"/>
+      <text x="660" y="544" font-family="Consolas, monospace" font-size="16" fill="#F2994A">05</text>
+      <text x="708" y="546"><tspan x="708" dy="0"><tspan font-weight="bold">Risk estimate:</tspan> <tspan font-style="italic" fill="#9AA8C2">Lorem ipsum dolor sit</tspan></tspan><tspan x="708" dy="34" font-style="italic" fill="#9AA8C2">amet, consectetur adipiscing elit.</tspan></text>
+      <text x="708" y="612" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#F2994A">TO FILL</text>
+    </g>
+  </g>
+</svg>

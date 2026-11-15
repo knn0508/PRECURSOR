@@ -1,0 +1,49 @@
+# CI for PRECURSOR AI: lint/types, tests, build and migration check. Written in Phase 10 and NOT yet run on GitHub
+# (the project has no git remote); each step mirrors a command that was run locally (see docs/phases/PHASE_10.md).
+name: ci
+on: [push, pull_request]
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgis/postgis:16-3.4
+        env: { POSTGRES_USER: precursor, POSTGRES_PASSWORD: ci-only-password, POSTGRES_DB: precursor_t_ci }
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U precursor -d precursor_t_ci" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      DATABASE_URL: postgresql+psycopg://precursor:ci-only-password@localhost:5432/precursor_t_ci
+      TEST_DATABASE_URL: postgresql+psycopg://precursor:ci-only-password@localhost:5432/precursor_t_ci
+    defaults: { run: { working-directory: backend } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libexpat1
+      - run: pip install -r requirements-dev.txt
+      - run: python -m alembic upgrade head
+      - run: python -m alembic check          # fails on model/migration drift
+      - run: python -m alembic downgrade base && python -m alembic upgrade head
+      - run: python -m pytest -q --cov=app --cov-report=term
+      - run: pip install pip-audit && pip-audit -r requirements.txt --no-deps
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: frontend } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22", cache: npm, cache-dependency-path: frontend/package-lock.json }
+      - run: npm ci
+      - run: npx tsc --noEmit
+      - run: npm test
+      - run: npm run build
+      - run: npm audit --omit=dev
+
+  compose-config:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: POSTGRES_PASSWORD=x SECRET_KEY=x CORS_ORIGINS=http://localhost:3000 docker compose -f docker-compose.yml -f docker-compose.prod.yml config --quiet

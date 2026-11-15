@@ -73,7 +73,7 @@ Step A (no network, no credentials):
 2. Confirm the provider set covers early-prediction inputs: NISAR GUNW/GCOV/GSLC/GOFF, Sentinel-1 fallback, NASADEM, GPM IMERG (daily AND half-hourly for storm-scale triggers), SMAP soil moisture, NASA Global Landslide Catalog. Add NO new provider unless a gap is proven; propose in writing instead (e.g. USGS, SoilGrids and WorldCover belong to Phase 4).
 3. Verify assumptions flagged UNVERIFIED (NISAR HDF5 keys, GPM mapping, catalog date order MM/DD) only against official documentation; cite the URL; otherwise leave UNKNOWN.
 
-Step B (STOP and ask me first): present a download proposal: dataset, exact file names, size, AOI (bbox, <= 5 degrees), date range, disk/time estimate. Suggested minimum: landslide catalog CSV, 1-2 NASADEM tiles, a few IMERG daily files, one SMAP granule, one NISAR GUNW (1.2-2 GB). Wait for my explicit approval and AOI.
+Step B (STOP and ask me first): present a download proposal: dataset, exact file names, size, AOI (bbox, <= 5 degrees), date range, disk/time estimate. Suggested minimum: landslide catalog CSV, 1-2 NASADEM tiles, a few IMERG daily files, one SMAP granule, one NISAR GUNW (1.2-2 GB). STOP: present this to me in chat and wait for my explicit answer. Do nothing past this point. Step C runs only after my approval, and only for the files I approve.
 
 Step C (after approval only): run `python -m app.cli status`, dry-run discover, download approved files only, validate (VALIDATED = file integrity only), review manifests. Never print credentials.
 
@@ -305,7 +305,7 @@ This track builds the landslide early-prediction ML models **outside** the 10 ro
 - **Reproducibility:** fixed seeds, pinned dependency versions, dataset hashes, code version and config logged for every run; one command re-runs each stage.
 - **Dependencies:** list and justify every new package before installing; keep the ML environment separate from the backend image (own `ml/requirements.txt` or env) so Docker backend/frontend are not affected.
 - **Docs:** each stage ends with a report in `ml/reports/` and updates `docs/ml/ML_STATUS.md` (created in M0), `docs/project/TASK_LOG.md` and `CHANGELOG.md`; `PROJECT_STATUS.md` gets one separate "ML track" line, never changing roadmap phase statuses. Record real outputs only; unverified = `NOT_VERIFIED`.
-- **Stop points:** M1 (dataset approval), M5 (EDA review), M7 (compute/model-family approval) and M9 (handoff) wait for my explicit answer. Do not start the next M-stage on your own.
+- **Stop points:** M1 (design + label census, then region and exact download list), M5 (EDA review), M7 (compute/model-family approval, then frozen candidates) and M9 (handoff) wait for my explicit answer in this session. Do not start the next stage on your own.
 - Each stage's report ends with: what was done, real results, what was not verified, risks, and the decision needed from me.
 
 ---
@@ -351,14 +351,14 @@ DOCS: update ML_STATUS, TASK_LOG, CHANGELOG, ADR index, one ML line in PROJECT_S
 
 ---
 
-## M1: Problem definition, dataset discovery and feasibility (STOP for approval)
+## M1: Problem definition, dataset discovery and feasibility (STOPS: design + label census, then region and download list)
 
 ```text
 You are working on the PRECURSOR AI ML track, stage M1. Apply the Track rules from Prompts.md. Prerequisite: M0 done.
 
 GOAL: define exactly what the models predict and find out, with evidence, which datasets can really support it. The user wants datasets brought from the NISAR API. Test whether that is feasible BEFORE any download.
 
-Session start: read the "Literature-informed model guidance" section in Prompts.md (then verify it against the full papers, write ml/reports/M1_literature.md with DOI, data, metrics, validation method and limits for at least 10 relevant papers incl. NISAR/L-band landslide work), ml/README.md, docs/ml/ML_STATUS.md, ADR-0009, docs/nasa-data-sources.md, docs/phase-2-data-acquisition.md, docs/scientific/ENVIRONMENTAL_DATA_SOURCES.md, docs/scientific/INSAR_METHODOLOGY.md, docs/phases/PHASE_02.md and PHASE_03.md.
+Session start: read the "Literature-informed model guidance" section in Prompts.md (then verify it against the full papers, write ml/reports/M1_literature.md with DOI, data, metrics, validation method and limits for at least 10 relevant papers incl. NISAR/L-band landslide work); if a full text is paywalled or unreachable, mark that paper ABSTRACT_ONLY and do not quote metrics as verified; never invent citations or DOIs; use only papers you actually opened or found in search results, ml/README.md, docs/ml/ML_STATUS.md, ADR-0009, docs/nasa-data-sources.md, docs/phase-2-data-acquisition.md, docs/scientific/ENVIRONMENTAL_DATA_SOURCES.md, docs/scientific/INSAR_METHODOLOGY.md, docs/phases/PHASE_02.md and PHASE_03.md.
 
 Do:
 1. PROBLEM DEFINITION (write ml/reports/M1_problem_definition.md): two tasks. (a) SUSCEPTIBILITY: static, per cell, "where are slopes prone to fail"; binary target (landslide event occurred in the cell during the study window vs background). (b) TRIGGER / EARLY WARNING: dynamic, per cell and time step, "will a landslide occur within H days"; define time step, horizon H, lead times, spatial unit. Define label construction, label noise, the metrics for rare events (PR-AUC, recall at fixed false-alarm rate, Brier, calibration), splits (spatial-block CV + temporal hold-out), and baselines (prior, rainfall-threshold, logistic regression). State what each task needs from data.
@@ -370,7 +370,7 @@ Do:
 3. PROPOSE 2-3 candidate study designs ranked, for example: (A) NISAR-only trigger model (probably infeasible if labels do not overlap); (B) multi-source susceptibility model with long-history labels and static + rainfall factors, InSAR from Sentinel-1/NISAR as an auxiliary where available; (C) hybrid. For each: target region(s) (any AOI, not hardcoded), expected number of positive events, class balance, total download size, disk, compute, time, risks, and your recommendation with reasoning.
 4. Present a DOWNLOAD PROPOSAL for the recommended design: exact dataset names, file counts, sizes, AOI bbox, date range, total GB, disk and time estimate. Do NOT download anything.
 
-STOP. Wait for my explicit approval of the study design, region(s) and download list. Update docs/ml/DATASET_LOG.md with candidates (status PROPOSED), ML_STATUS, TASK_LOG, CHANGELOG. List every doc updated.
+STOP: present this to me in chat and wait for my explicit answer. Do nothing past this point. PART 1 asks for my approval of the study design and of a small LABEL CENSUS: first measure the sizes of the candidate label files (GLC CSV, COOLR Figshare inventories) with HTTP HEAD requests only (no download) and put the real sizes in the cost summary; propose the census download only if the measured total is small (stop and ask if above 100 MB). PART 2 (after I approve PART 1 and tell you to continue): download only the approved census files, count dated and accurately located events per region and year, select the region(s) (any AOI, not hardcoded) with the most usable events where the static and rainfall factors are available, build the EXACT download list (names, counts, sizes, AOI, date range, total GB, time), then present it and STOP again for my explicit approval of the list (second stop). Update docs/ml/DATASET_LOG.md with candidates (status PROPOSED), ML_STATUS, TASK_LOG, CHANGELOG. List every doc updated.
 ```
 
 ---
@@ -378,7 +378,7 @@ STOP. Wait for my explicit approval of the study design, region(s) and download 
 ## M2: Data acquisition (approved files only)
 
 ```text
-You are working on the PRECURSOR AI ML track, stage M2. Apply the Track rules. Prerequisite: M1 approved by me in writing (study design, regions, exact file list).
+You are working on the PRECURSOR AI ML track, stage M2. Apply the Track rules. Prerequisite: my written approval of the regions and the exact file list (second M1 stop). If I have not given it, do nothing and tell me.
 
 Session start: read ml/reports/M1_*.md, docs/ml/DATASET_LOG.md, docs/earthdata-authentication.md, docs/phase-2-data-acquisition.md.
 
@@ -389,7 +389,7 @@ Do:
 4. Produce ml/reports/M2_acquisition.md: what arrived, what failed, what is missing vs the approved list, real totals. Do not silently substitute missing files.
 5. Tests: manifest completeness check, checksum verification, idempotent re-run.
 
-Constraints: no preprocessing, no modelling. If a file is larger than approved or auth fails, stop and ask.
+Constraints: no preprocessing, no modelling. If a file is larger than approved, a file is unavailable, or auth fails, stop and ask me; do not substitute or continue past the deviation.
 DOCS: ML_STATUS, DATASET_LOG, TASK_LOG, CHANGELOG, one ML line in PROJECT_STATUS. List every doc updated.
 ```
 
@@ -457,7 +457,7 @@ Do (notebooks in ml/notebooks/, figures and report in ml/reports/M5_eda.md; use 
 8. Recommendation: which tasks (susceptibility, trigger) are feasible with this data, which model families are justified (and which are not), which features to keep, and the risks.
 
 Constraints: no model fitting except trivial diagnostic fits (e.g. univariate), none reported as performance. No test-set peeking.
-STOP. Present findings and wait for my decision on tasks, model families and compute budget.
+STOP: present this to me in chat and wait for my explicit answer. Do nothing past this point. The question asks for the decision on tasks, model families, features and compute budget (state GPU/CPU hour estimates). Include the data-sufficiency verdict and which options the evidence does NOT support.
 DOCS: ML_STATUS, TASK_LOG, CHANGELOG. List every doc updated.
 ```
 
@@ -466,7 +466,7 @@ DOCS: ML_STATUS, TASK_LOG, CHANGELOG. List every doc updated.
 ## M6: Feature engineering, selection and final splits
 
 ```text
-You are working on the PRECURSOR AI ML track, stage M6. Apply the Track rules. Prerequisite: M5 reviewed and approved by me.
+You are working on the PRECURSOR AI ML track, stage M6. Apply the Track rules. Prerequisite: M5 reviewed and my decision on tasks, model families and features. If I have not given it, stop and ask.
 
 Session start: read ml/reports/M5_eda.md and my decisions, docs/scientific/FEATURE_EXTRACTION.md, docs/scientific/LABELLED_DATASET.md, services/features_cv/schema.py (ModelInputSpec).
 
@@ -484,10 +484,10 @@ DOCS: ML_STATUS, DATASET_LOG, TASK_LOG, CHANGELOG. List every doc updated.
 
 ---
 
-## M7: Baselines and model training (STOP for compute/model-family approval)
+## M7: Baselines and model training (STOPS: compute/model-family approval, then frozen candidates)
 
 ```text
-You are working on the PRECURSOR AI ML track, stage M7. Apply the Track rules. Prerequisite: M6 complete and my approval of tasks, model families and compute budget.
+You are working on the PRECURSOR AI ML track, stage M7. Apply the Track rules. Prerequisite: M6 complete and my decision from M5. Before any training STOP and ask me to approve the compute budget, deep-model dependency and families to train (give estimated GPU/CPU hours and new dependencies); proceed only within my answer.
 
 Session start: read ml/reports/M1_literature.md, M5_eda.md, M6_features_splits.md, docs/ml/EXPERIMENT_LOG.md, ml/README.md. Prior literature (Prompts.md guidance section) suggests RF/XGBoost/LightGBM as strong tabular baselines; deep models only on evidence.
 
@@ -500,7 +500,7 @@ Do:
 
 Constraints: no peeking at the final hold-out until the model choice is frozen; do not report tuned CV scores as final performance. If the data is too small for a family, say so and skip it with a reason.
 Output: ml/reports/M7_training.md with the experiment table (all runs, including failures), compute used, and the frozen candidate list.
-DOCS: ML_STATUS, EXPERIMENT_LOG, TASK_LOG, CHANGELOG. List every doc updated. STOP before M8 and wait for my OK on the frozen candidates.
+DOCS: ML_STATUS, EXPERIMENT_LOG, TASK_LOG, CHANGELOG. List every doc updated. Then STOP and wait for my OK on the frozen candidates. Do not start M8.
 ```
 
 ---
@@ -536,12 +536,12 @@ You are working on the PRECURSOR AI ML track, stage M9. Apply the Track rules. P
 Session start: read ml/reports/M8_evaluation.md, docs/phases/PHASE_07.md (if Phase 7 exists in code, also backend/app/services/prediction/), ADR-0008, docs/architecture/ML_INTEGRATION.md if present.
 
 Do:
-1. For each model I choose to keep, create the artifact package at ml/export/<model_id>/<version>/ laid out exactly as the ADR-0008 ML slot expects (it will be copied to models/<model_id>/<version>/ only later, by my decision): model file(s), metadata.json, model_card.md, feature spec built with the existing ModelInputSpec, training_data_provenance.json (datasets, versions, licences, hashes, date ranges, regions), calibration artifacts, explainer config and background-dataset reference, valid region and valid time window, known failure modes, intended and non-intended use, evaluation summary with CIs, code version and seed.
+1. For each model I choose to keep (not clearly worse than the baselines in M8), create the artifact package at ml/export/<model_id>/<version>/ laid out exactly as the ADR-0008 ML slot expects (it will be copied to models/<model_id>/<version>/ only later, by my decision): model file(s), metadata.json, model_card.md, feature spec built with the existing ModelInputSpec, training_data_provenance.json (datasets, versions, licences, hashes, date ranges, regions), calibration artifacts, explainer config and background-dataset reference, valid region and valid time window, known failure modes, intended and non-intended use, evaluation summary with CIs, code version and seed.
 2. Write a standalone, tested inference function inside ml/ that loads the package, validates the input against ModelInputSpec, and refuses out-of-region/out-of-time/low-quality inputs. It stays inside ml/; do not register it in the backend.
 3. Check compatibility with the ML slot contract (Predictor/ModelRegistry from Phase 7 if built; otherwise with the documented contract): list gaps and what Phase 7 would need. Do not modify Phase 7.
 4. Final ML report ml/reports/M9_final.md: data used, methods, results, limitations, biases, reproducibility instructions (one command per stage), and the clearly stated intended use: research prototype, not an operational warning system.
 5. Reproducibility test: rebuild a package from the logged config and verify metrics match within tolerance.
 
-Constraints: no integration into backend/frontend/DB; PREDICTION_BACKEND stays none; no mock-to-real switch. Integration is a separate step that needs my explicit instruction and will update Phase 7/9.
+Constraints: no integration into backend/frontend/DB; PREDICTION_BACKEND stays none; no mock-to-real switch. Integration into the roadmap needs my explicit instruction and will update Phase 7/9. At the end STOP and wait for my decision.
 DOCS: ML_STATUS, TASK_LOG, CHANGELOG, docs/ml/*, ML line in PROJECT_STATUS; docs/architecture/ML_INTEGRATION.md gets a "first candidate model" gap list only if that file exists. List every doc updated.
 ```

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="cover" font-family='"Segoe UI", sans-serif'>
+  <rect id="bg" x="0" y="0" width="1280" height="720" fill="#0B1426"/>
+  <path id="ridge-wash" data-pptx-role="decoration" d="M0 650 C200 610 340 630 520 570 C700 510 840 520 1000 420 C1100 360 1200 370 1280 330 L1280 720 L0 720 Z" fill="#2DD4BF" fill-opacity="0.13"/>
+  <path id="ridge-wash-deep" data-pptx-role="decoration" d="M0 700 C260 660 420 690 640 640 C820 600 960 610 1110 540 C1190 505 1240 500 1280 480 L1280 720 L0 720 Z" fill="#2DD4BF" fill-opacity="0.10"/>
+  <path id="ridge-line" data-pptx-role="decoration" d="M0 650 C200 610 340 630 520 570 C700 510 840 520 1000 420 C1100 360 1200 370 1280 330" fill="none" stroke="#2DD4BF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.85"/>
+  <path id="pass-arc" data-pptx-role="decoration" d="M80 250 Q640 40 1220 170" fill="none" stroke="#5B8DEF" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <line id="beam-left" data-pptx-role="decoration" x1="931" y1="126" x2="872" y2="486" stroke="#2DD4BF" stroke-width="1" stroke-opacity="0.45"/>
+  <line id="beam-right" data-pptx-role="decoration" x1="931" y1="126" x2="1048" y2="392" stroke="#2DD4BF" stroke-width="1" stroke-opacity="0.45"/>
+  <circle id="satellite" data-pptx-role="decoration" cx="931" cy="126" r="7" fill="#5B8DEF"/>
+  <rect id="seal" data-pptx-role="decoration" x="950" y="436" width="18" height="18" rx="2" fill="#F2994A"/>
+  <g id="cover-title" data-pptx-bounds="64 250 760 260">
+    <text x="64" y="330" font-size="84" font-weight="bold" fill="#F4F6FA">PRECURSOR AI</text>
+    <text x="64" y="395" font-size="32" fill="#2DD4BF">Seeing landslides before they happen,<tspan x="64" dy="42">from space.</tspan></text>
+    <text x="64" y="492" font-size="18" fill="#9AA8C2">NASA Space Apps Challenge: "Dancing with the SARs"</text>
+  </g>
+</svg>

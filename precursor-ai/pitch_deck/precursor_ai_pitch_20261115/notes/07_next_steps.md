@@ -1,0 +1,1 @@
+Our plan is to prove it where the data is lighter. Phase A is the United States, with lighter data and a well-documented landslide history. Phase B is Azerbaijan. That means terabytes of raw radar data, so it comes after the pipeline is proven. The third step is a placeholder for now: a live public dashboard and the later model upgrades.

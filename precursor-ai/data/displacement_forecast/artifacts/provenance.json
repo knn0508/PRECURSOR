@@ -1,0 +1,32 @@
+{
+ "model": "E3:lstm_tcn",
+ "model_version": "0.1.0",
+ "issue_time": "2026-03-11T00:00:00",
+ "horizon_days": 12.0,
+ "target": "LOS displacement increment (mm), Sentinel-1 C-band geometry",
+ "training_data": "OPERA_L3_DISP-S1_V1",
+ "frame": "16940",
+ "track": "64",
+ "orbit": "ASCENDING",
+ "train_period": [
+  "2016-10-11",
+  "2023-01-01"
+ ],
+ "test_period": [
+  "2024-01-01",
+  "2026-02-27"
+ ],
+ "resolution_m": 30.0,
+ "pixels_with_estimate": 20184,
+ "pixels_total": 28050,
+ "nisar_observation": {
+  "granule": "NISAR_L2_PR_GUNW_031_034_A_019_033_4000_SH_20260920T130823_20260920T130857_20261014T130823_20261014T130857_P05023_N_F_J_001",
+  "maturity": "PROVISIONAL",
+  "pair": [
+   "2026-09-20T13:08:23.000000Z",
+   "2026-10-14T13:08:57.999342Z"
+  ],
+  "used_for_training": false
+ },
+ "caveat": "Research demonstrator. Not an operational warning. Not a landslide probability. NaN = No reliable estimate."
+}

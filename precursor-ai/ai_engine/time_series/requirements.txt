@@ -1,0 +1,16 @@
+# displacement_forecast env (ADR-0011). Install torch first from the CPU index (see README).
+numpy
+pandas
+scipy
+scikit-learn
+xarray
+pyproj
+requests
+h5netcdf
+h5py
+netCDF4
+rasterio
+earthaccess
+fsspec
+aiohttp
+pytest

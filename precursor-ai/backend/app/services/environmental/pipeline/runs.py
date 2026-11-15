@@ -79,7 +79,7 @@ LIMITATIONS = [
     "Environmental measurements and summaries of source data are not landslide risk, probability or prediction.",
     "No dataset has been scientifically validated: file integrity and processing success are not validation.",
     "Resampling and AOI statistics never increase the native information resolution of a source.",
-    "The NASA Global Landslide Catalog is a one-time export current to 2016-03-07: incomplete, reporting-biased, not ground truth.",
+    "The NASA Global Landslide Catalog is a one-time export whose last event is dated 2017-09-28: incomplete, reporting-biased, not ground truth.",
     "Earthquakes are independent observations; no causal link to landslides is implied.",
 ]
 
@@ -806,7 +806,7 @@ class EnvironmentalRunService:
         prov = Provenance(provider="NASA_GLC", dataset_name="NASA Global Landslide Catalog", dataset_version=(rows[0].dataset_version if rows else None),
                           origin=DataOrigin.REAL_SATELLITE if rows else DataOrigin.LOCAL_UNVERIFIED,
                           measurement_kind=MeasurementKind.SOURCE_OBSERVATION, method="spatial intersection with the AOI polygon",
-                          notes=["one-time export current to 2016-03-07; incomplete and reporting-biased"])
+                          notes=["one-time export whose last event is dated 2017-09-28; incomplete and reporting-biased"])
         # catalog rows are reference records, not satellite measurements: label them unverified rather than REAL_SATELLITE
         prov.origin = DataOrigin.LOCAL_UNVERIFIED
         q = LayerQuality(total_pixels=None, warnings=["cataloged events only; not a complete inventory"])

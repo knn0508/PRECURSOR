@@ -10,8 +10,10 @@
 | Live NASA | pytest manual | `backend/tests/manual/test_live_earthdata.py` | skipped unless `RUN_LIVE_EARTHDATA=1` + credentials; user-run |
 | Frontend | vitest | `frontend/tests/` | api-client, data helpers, cinematic math |
 | Types/lint/build | tsc, eslint, next build | `frontend/` | |
-| Browser e2e | none | - | Playwright not set up (NOT_VERIFIED) |
-| CI | none | - | UNKNOWN / not present |
+| Validation and robustness | pytest | `backend/tests/validation/`, `backend/tests/test_phase10_security_ops.py` | geometry vs geodesic references, corrupt files, concurrency, DB load, weights/secrets/non-root/CORS checks (Phase 10) |
+| Coverage | pytest-cov | `pytest --cov=app` | 94.3 % line coverage on 2026-11-15 (a measure of executed lines, not of scientific correctness) |
+| Browser e2e | none | - | Playwright not installed; only the Phase 9 headless-Chrome checks exist |
+| CI | GitHub Actions | `.github/workflows/ci.yml` | written in Phase 10, never run (no remote) |
 
 ## Rules
 - **Tests truncate tables:** always use a throwaway DB via `TEST_DATABASE_URL`, never the dev database. `backend/tests/conftest.py` fails with "refusing to run DB tests" for any database whose name does not start with `precursor_t` (override only with `ALLOW_TESTS_ON_ANY_DATABASE=1`).

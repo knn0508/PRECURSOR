@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="content" font-family='"Segoe UI", sans-serif'>
+  <rect id="bg" x="0" y="0" width="1280" height="720" fill="#0B1426"/>
+  <path id="wash" data-pptx-role="decoration" d="M0 676 C180 662 330 690 520 672 C720 654 900 688 1080 668 C1160 660 1230 668 1280 660 L1280 720 L0 720 Z" fill="#2DD4BF" fill-opacity="0.12"/>
+  <path id="wash-line" data-pptx-role="decoration" d="M0 676 C180 662 330 690 520 672 C720 654 900 688 1080 668 C1160 660 1230 668 1280 660" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-opacity="0.55"/>
+  <g id="kicker" data-pptx-bounds="64 76 500 30">
+    <rect x="64" y="84" width="10" height="10" fill="#F2994A"/>
+    <text x="86" y="96" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#9AA8C2">02 · CHALLENGE</text>
+  </g>
+  <g id="beat" data-pptx-bounds="64 200 480 190">
+    <text x="64" y="250" font-size="42" font-weight="bold" fill="#F4F6FA">The signal exists.<tspan x="64" dy="54">Almost nobody</tspan><tspan x="64" dy="54">can reach it.</tspan></text>
+  </g>
+  <g id="causes" data-pptx-bounds="590 150 626 400" font-size="24" fill="#F4F6FA">
+    <line x1="600" y1="170" x2="600" y2="530" stroke="#2A3A5C" stroke-width="2"/>
+    <g id="cause-signs">
+      <use data-icon="phosphor-duotone/wave-sine" x="632" y="172" width="40" height="40" fill="#2DD4BF"/>
+      <text x="700" y="200"><tspan x="700" dy="0">Landslides often show <tspan fill="#2DD4BF" font-weight="bold">weak warning signs</tspan></tspan><tspan x="700" dy="36">first: slow ground creep and heavy rain</tspan><tspan x="700" dy="36">on saturated soil.</tspan></text>
+    </g>
+    <g id="cause-sensors">
+      <use data-icon="phosphor-duotone/cell-signal-slash" x="632" y="322" width="40" height="40" fill="#2DD4BF"/>
+      <text x="700" y="350"><tspan x="700" dy="0">Most hillsides have <tspan fill="#2DD4BF" font-weight="bold">no ground sensors</tspan>.</tspan></text>
+    </g>
+    <g id="cause-data">
+      <use data-icon="phosphor-duotone/hard-drives" x="632" y="412" width="40" height="40" fill="#2DD4BF"/>
+      <text x="700" y="440"><tspan x="700" dy="0">Radar satellite data exists, but it is <tspan fill="#2DD4BF" font-weight="bold">huge</tspan></tspan><tspan x="700" dy="36"><tspan fill="#2DD4BF" font-weight="bold">and technical</tspan>, so decision makers rarely</tspan><tspan x="700" dy="36">use it.</tspan></text>
+    </g>
+  </g>
+</svg>

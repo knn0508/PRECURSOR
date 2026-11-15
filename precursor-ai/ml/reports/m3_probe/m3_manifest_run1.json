@@ -1,0 +1,1127 @@
+{
+ "stage": "M3",
+ "built_utc": "2026-11-14T23:14:30Z",
+ "code_version": {
+  "git_commit": "ef35054a17928eab4b1c62960c097c17e45ac8d7",
+  "dirty": true
+ },
+ "config_sha256": "249058502aa63f1f2f21e59aad953ccd113acd3db347ace4d4f74822943cfa3d",
+ "config": {
+  "study": "B1_us_west_coast",
+  "windows": {
+   "OR_WA": [
+    -124.0,
+    45.0,
+    -121.0,
+    48.0
+   ],
+   "CA_N": [
+    -123.0,
+    37.0,
+    -120.0,
+    40.0
+   ],
+   "CA_S": [
+    -119.0,
+    32.0,
+    -116.0,
+    35.0
+   ]
+  },
+  "grid": {
+   "cell_m": 5000,
+   "crs": "auto"
+  },
+  "fine_grid_deg_per_block": 0.000833333333333,
+  "terrain": {
+   "slope_thresholds_deg": [
+    15,
+    30
+   ]
+  },
+  "rainfall": {
+   "climatology_years": [
+    2002,
+    2017
+   ]
+  },
+  "labels": {
+   "accuracy_radius_m": {
+    "exact": 0,
+    "1km": 1000,
+    "5km": 5000,
+    "10km": 10000,
+    "25km": 25000,
+    "50km": 50000,
+    "100km": 100000,
+    "250km": 250000
+   },
+   "strict_classes": [
+    "exact",
+    "1km",
+    "5km"
+   ],
+   "in_period": [
+    "2014-10-03",
+    "2025-09-30"
+   ]
+  }
+ },
+ "seed": "none (deterministic; no randomness in M3)",
+ "software": {
+  "python": "3.13.9",
+  "numpy": "2.5.4",
+  "pandas": "3.1.1",
+  "rasterio": "1.5.2",
+  "geopandas": "1.2.0",
+  "pyproj": "3.8.0",
+  "shapely": "2.2.0"
+ },
+ "inputs": {
+  "raw_manifest_sha256": "d218120c0804736ab71c03fc625d6a3e104becd9f1c74e363abebcd7e964e3ca",
+  "files": {
+   "nasadem/NASADEM_HGT_n47w124.zip": {
+    "sha256": "718a36ba5cd5dddea2ce3b0eda4f105ff2a02df185c14d49f82cd0d100ff6fcf",
+    "size_bytes": 14438092
+   },
+   "nasadem/NASADEM_HGT_n46w123.zip": {
+    "sha256": "639d6fc2e9cc03fdc3f4e8af73f23861cba0a6a2eb7df1c0a5c01f0f920ba52c",
+    "size_bytes": 13044029
+   },
+   "nasadem/NASADEM_HGT_n45w123.zip": {
+    "sha256": "57d705dfb19308b7f510b617abc951bed0e2272569086c69de43cd203449271d",
+    "size_bytes": 11673798
+   },
+   "nasadem/NASADEM_HGT_n46w124.zip": {
+    "sha256": "b50a3a361856e89baa94ac4ea8a6566139a2210c0cb838ab0be27db5c4acbba1",
+    "size_bytes": 11052976
+   },
+   "nasadem/NASADEM_HGT_n46w122.zip": {
+    "sha256": "f271c28c85bb45fd01609c116b0665ca92f9f43551ce1e3df78d52e0b3cadd1b",
+    "size_bytes": 15147529
+   },
+   "nasadem/NASADEM_HGT_n45w124.zip": {
+    "sha256": "e08ed2168cce915af178628fa7eb940235c75e41154ec69b2c927110be515c87",
+    "size_bytes": 12516279
+   },
+   "nasadem/NASADEM_HGT_n47w123.zip": {
+    "sha256": "59538df03be780aee154bac337e91958707328f00cc97ae804b1aa84697a8503",
+    "size_bytes": 7931243
+   },
+   "nasadem/NASADEM_HGT_n45w122.zip": {
+    "sha256": "5ec0bab905c6b7cf846178a393e03ef7f137ad5f37136366d6417bb766a306f9",
+    "size_bytes": 13397882
+   },
+   "nasadem/NASADEM_HGT_n47w122.zip": {
+    "sha256": "6f94c60f6e9620c6d921c7e7e1ba1365572842cf43a49ce3f45848edfefe8782",
+    "size_bytes": 15983154
+   },
+   "nasadem/NASADEM_HGT_n38w121.zip": {
+    "sha256": "45214ab481c91a6fc1cd5cbcd272e098dec1d1958ec0be6c21f72fb4bffac6cf",
+    "size_bytes": 15016492
+   },
+   "nasadem/NASADEM_HGT_n37w123.zip": {
+    "sha256": "25cc60293cfaa41ffac4ea0259b611378c3fed5dd7889a6f7cc812a69bb3330b",
+    "size_bytes": 5494891
+   },
+   "nasadem/NASADEM_HGT_n39w122.zip": {
+    "sha256": "e0bd7fff95ba64fa1d37af7730d4ca10f13a4c563c89c72b60f1e4198957f2dc",
+    "size_bytes": 11579683
+   },
+   "nasadem/NASADEM_HGT_n37w121.zip": {
+    "sha256": "c33fafbdb9d7c7ec4b356f1074e2716a1d6e595a41e6acc4aadd1dbb4a62a078",
+    "size_bytes": 9767047
+   },
+   "nasadem/NASADEM_HGT_n38w122.zip": {
+    "sha256": "e59cff1bda5f5d3439fdc8243240991e7947ece5094a8c799cf9f4acd3b28d67",
+    "size_bytes": 6794347
+   },
+   "nasadem/NASADEM_HGT_n37w122.zip": {
+    "sha256": "667fbb2c16a5d5589307380cb00f0b2b62f98911dd1014c630f057147e4d2346",
+    "size_bytes": 11859682
+   },
+   "nasadem/NASADEM_HGT_n38w123.zip": {
+    "sha256": "9d05d74293bfbb6352f45e98d36482256c6ecf4bbf6a506470040872c6f9f581",
+    "size_bytes": 11785327
+   },
+   "nasadem/NASADEM_HGT_n39w123.zip": {
+    "sha256": "00ec05b09699f3f58d584fc69b943be861ac720066b16888dc4a6ba0a915ca0f",
+    "size_bytes": 12491805
+   },
+   "nasadem/NASADEM_HGT_n39w121.zip": {
+    "sha256": "8bb4183fe1f84b7a414d2171b49b064405d3752e5111d4675ac4ebcdb042b96d",
+    "size_bytes": 14301805
+   },
+   "nasadem/NASADEM_HGT_n34w118.zip": {
+    "sha256": "027432c66c45d8397ec68f3930f0b03f1a61607c66bf2c3b57dcd789ba4ed188",
+    "size_bytes": 11178044
+   },
+   "nasadem/NASADEM_HGT_n32w117.zip": {
+    "sha256": "03a4face483315f0f44fb1a170e0665a2f1adc9fadf776d390cec5f0c3267d5f",
+    "size_bytes": 13719767
+   },
+   "nasadem/NASADEM_HGT_n34w119.zip": {
+    "sha256": "c12a8286ce1cb0b052eca7e1811efadc5f207917cb8fa38b423deb37067abc87",
+    "size_bytes": 12974041
+   },
+   "nasadem/NASADEM_HGT_n32w119.zip": {
+    "sha256": "be275a3a2afbc17338884381ef4d452b7f3751804598dcc6120200cdca41ec20",
+    "size_bytes": 277372
+   },
+   "nasadem/NASADEM_HGT_n33w119.zip": {
+    "sha256": "def68b7309a29ffc7c8cbe71ba24c82a2b87bd5ae0b4eb88a0676763e47cd0aa",
+    "size_bytes": 1365777
+   },
+   "nasadem/NASADEM_HGT_n33w118.zip": {
+    "sha256": "d6d3a056042b3e74e09897629bbf2c58dec99cf607b1c5f729491bbd07e47730",
+    "size_bytes": 8825568
+   },
+   "nasadem/NASADEM_HGT_n33w117.zip": {
+    "sha256": "51c4fe0bfc5a8a81b38f4eda365f5db71ef3ad97d4eb6de96a82331dcf13aff5",
+    "size_bytes": 14160500
+   },
+   "nasadem/NASADEM_HGT_n34w117.zip": {
+    "sha256": "2fa5a18d2384372d55fba7ea776900f7e9f0b2c0e4b8735c1aafb7fc2dfc5360",
+    "size_bytes": 11983389
+   },
+   "nasadem/NASADEM_HGT_n32w118.zip": {
+    "sha256": "360218633be01b6a2636c0b3d0d240311c2b65acb7e6db6cfdaea3d538c6ea2a",
+    "size_bytes": 1605406
+   },
+   "worldcover/ESA_WorldCover_10m_2021_v200_N45W126_Map.tif": {
+    "sha256": "329f47d119e12c49ecaa86729695ced339a9cc92eb6318f92cfcdc0c08a8940b",
+    "size_bytes": 18472488
+   },
+   "worldcover/ESA_WorldCover_10m_2021_v200_N45W123_Map.tif": {
+    "sha256": "e1ecd731f19477ea9951c6d3ee18e31c4c381381ec05be84f2a4c3a30f3e56d4",
+    "size_bytes": 64998919
+   },
+   "worldcover/ESA_WorldCover_10m_2021_v200_N36W123_Map.tif": {
+    "sha256": "cd255268fb81c7073bf10e5325e1d11c601dde5dc5ccd9c1f0b40a8bcb8a9b29",
+    "size_bytes": 87597650
+   },
+   "worldcover/ESA_WorldCover_10m_2021_v200_N39W123_Map.tif": {
+    "sha256": "e5b42c591b58da45ed253e13ea4b365678882a9ada0af1c8d4e8cfc1be5751ff",
+    "size_bytes": 69661638
+   },
+   "worldcover/ESA_WorldCover_10m_2021_v200_N30W120_Map.tif": {
+    "sha256": "3242f339a2a0c06d2d7a5612f4702d01d24333273571cb12f7d09faa9228f916",
+    "size_bytes": 4773432
+   },
+   "worldcover/ESA_WorldCover_10m_2021_v200_N30W117_Map.tif": {
+    "sha256": "97c3059ad1ed1937e1cc0a4978e907ccf4e1f9e7ad6d58a70279e15b16969e0a",
+    "size_bytes": 60220002
+   },
+   "worldcover/ESA_WorldCover_10m_2021_v200_N33W120_Map.tif": {
+    "sha256": "61e0909a51e2e76a6f153599316753370be937d0ce150261d023006a80613385",
+    "size_bytes": 101202142
+   },
+   "worldcover/ESA_WorldCover_10m_2021_v200_N33W117_Map.tif": {
+    "sha256": "e0da12cba97b3bf9480fd7d88efb4e4518aed6448e4a5d8a83a40d4fbe12545b",
+    "size_bytes": 90187464
+   },
+   "geology_state/CA.zip": {
+    "sha256": "78765ba4428df9f25a84f86e0b2529bd0508fc8a2cf65d2f41a830e82bccfd58",
+    "size_bytes": 24977406
+   },
+   "geology_state/OR.zip": {
+    "sha256": "021319f626b26f8efdef9daa09100eaaa067e8026df6f55eace1a880ca8c404b",
+    "size_bytes": 14909096
+   },
+   "geology_state/WA.zip": {
+    "sha256": "6cb29b201385ae5760a1fdd8b80b0e9c8735039dc5602ba5c0b292831b1a2cd9",
+    "size_bytes": 5675255
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20010601-S000000-E235959.06.V07B.HDF5": {
+    "sha256": "1de71edc22b2fcf57c31b360fb434f400c75244f1bfb1fa7d9e38f4ab0978656",
+    "size_bytes": 19067697
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20010701-S000000-E235959.07.V07B.HDF5": {
+    "sha256": "2b4f2d042600a4e16657515c158720a8f297038fc281f97d528349ce3e17d0dc",
+    "size_bytes": 18946658
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20010801-S000000-E235959.08.V07B.HDF5": {
+    "sha256": "986494367ed9d0e4fee88c4a2649c900076f723bd9d4dcfd8d52777b54721b9e",
+    "size_bytes": 18859667
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20010901-S000000-E235959.09.V07B.HDF5": {
+    "sha256": "67e0150b66300c0faca01c15759cf93605308e28262ac18114d25f6a97425b5d",
+    "size_bytes": 18870031
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20011001-S000000-E235959.10.V07B.HDF5": {
+    "sha256": "223c990af495e6cf87449169bf6a3f1d7b24eb65932f9d92cfa0853f40f4ca95",
+    "size_bytes": 18425440
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20011101-S000000-E235959.11.V07B.HDF5": {
+    "sha256": "7522283ae959a924b4d96e98665b62f43147c4fb165095459776921f4945d64f",
+    "size_bytes": 18661456
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20011201-S000000-E235959.12.V07B.HDF5": {
+    "sha256": "4e8120f750a5c381ad7dc501ea7c613b8437829f3334c53b1154cccbb2f041e5",
+    "size_bytes": 18635252
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20020101-S000000-E235959.01.V07B.HDF5": {
+    "sha256": "83b3370c6f3b376724a86366923c3638a6c1bc32b0ac345ce01a9ca8c462520d",
+    "size_bytes": 17919426
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20020201-S000000-E235959.02.V07B.HDF5": {
+    "sha256": "b57bdfa94df742bf2b79e0d5a4ac4789c51ff49559a852c651c9e599bbcb39a4",
+    "size_bytes": 18044561
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20020301-S000000-E235959.03.V07B.HDF5": {
+    "sha256": "896c182fccab8d801900407e7fc2b5e080eefe635a3bdf765c0678e8d2516341",
+    "size_bytes": 18735932
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20020401-S000000-E235959.04.V07B.HDF5": {
+    "sha256": "91aa5919b66aee282f36e4c546c1ee27c63a0772337c2bed6c53c84efc9bd942",
+    "size_bytes": 18723954
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20020501-S000000-E235959.05.V07B.HDF5": {
+    "sha256": "fc4ca6514827d765cc5b246441dcd57ded63a42f08978cee269c9a85a565f437",
+    "size_bytes": 19170321
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20020601-S000000-E235959.06.V07B.HDF5": {
+    "sha256": "febc205e5f20697adc6f78b118da2980615b4836738f76e6d84159de006b8e14",
+    "size_bytes": 18946879
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20020701-S000000-E235959.07.V07B.HDF5": {
+    "sha256": "a340d8b9fc2c547027dfddb5a1132ac417805d8fae144a9068b536fce78e7b95",
+    "size_bytes": 18850792
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20020801-S000000-E235959.08.V07B.HDF5": {
+    "sha256": "b7d621fc7e283064bc1fbd849a8b2ec7a61016e622dc6560fc2cb36777bad9e8",
+    "size_bytes": 18953243
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20020901-S000000-E235959.09.V07B.HDF5": {
+    "sha256": "accd8420677bb39b68a54373f70f1c35c46d18776c363bfa55c24f8187135707",
+    "size_bytes": 19112197
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20021001-S000000-E235959.10.V07B.HDF5": {
+    "sha256": "9d926718f5d9ffe6356b8d137df5b2cc78f699ac6117b01114eab126b683bacc",
+    "size_bytes": 18863530
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20021101-S000000-E235959.11.V07B.HDF5": {
+    "sha256": "0531d0deb7a0233706eae3e63bccbaff6f4ef25e486c0a0fe762da36415bf16d",
+    "size_bytes": 18727198
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20021201-S000000-E235959.12.V07B.HDF5": {
+    "sha256": "992a742a23cb113124aeb953620a03dbac2566fd6955bb85fccae09a1e8bbb77",
+    "size_bytes": 18513859
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20030101-S000000-E235959.01.V07B.HDF5": {
+    "sha256": "1a81e18ae4eb8598fe62878a9040093d96864b7978ac82aba6f2f44706f32403",
+    "size_bytes": 17644542
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20030201-S000000-E235959.02.V07B.HDF5": {
+    "sha256": "14e86328cd233003a77afde7bcfddbbcb62b35e3555517c2301598b3dec203b5",
+    "size_bytes": 18141553
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20030301-S000000-E235959.03.V07B.HDF5": {
+    "sha256": "4af8f5f82bf69c5779698eb02bdab93688e525e2ddf57baaaee20aad01799f71",
+    "size_bytes": 18462884
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20030401-S000000-E235959.04.V07B.HDF5": {
+    "sha256": "a8884233a420ffb58870646cd40f40597652d9ba509890f5dad2a93c8a452581",
+    "size_bytes": 18824914
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20030501-S000000-E235959.05.V07B.HDF5": {
+    "sha256": "965780b1e6526fd566cc94880b553b15f2cbeda411b3a5efd4dc0c14b308e42a",
+    "size_bytes": 18955683
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20030601-S000000-E235959.06.V07B.HDF5": {
+    "sha256": "e6ae2d48538ac4e720da9e5672df55c9ba8ad5b2e870da521b2cab12585997c8",
+    "size_bytes": 19180627
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20030701-S000000-E235959.07.V07B.HDF5": {
+    "sha256": "d0b92d3e2ec146c7240e89052e70276ebed81323076ed974a59740141a3f6c07",
+    "size_bytes": 18883618
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20030801-S000000-E235959.08.V07B.HDF5": {
+    "sha256": "489a5830c607cf6dd674894e140ab4cc668129fe3bb3a136e56f48f024de6d96",
+    "size_bytes": 18996784
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20030901-S000000-E235959.09.V07B.HDF5": {
+    "sha256": "057635c785259ad93df2a68f77e37f4938477f938d36363a796b7bbd34a6dc45",
+    "size_bytes": 18997256
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20031001-S000000-E235959.10.V07B.HDF5": {
+    "sha256": "7f58ebce745c853ad10d9ecb7a164343e9010f51ecf1c9c2d95b85d70afec101",
+    "size_bytes": 18701520
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20031101-S000000-E235959.11.V07B.HDF5": {
+    "sha256": "6313a3240491bdde102f8cf824baf3af72ad61575be3ed2b8b3be4b973140dfa",
+    "size_bytes": 18556720
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20031201-S000000-E235959.12.V07B.HDF5": {
+    "sha256": "2fdb90fca8fcca5816db24de7cb1a2175e1f066e4e4f7e21292a1a308576574a",
+    "size_bytes": 18199025
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20040101-S000000-E235959.01.V07B.HDF5": {
+    "sha256": "82741a03ea94a76fc7488d908bf87e533a741075e7cba3ecc08355c8dd68f510",
+    "size_bytes": 17783010
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20040201-S000000-E235959.02.V07B.HDF5": {
+    "sha256": "ef4781c0961842d16d08e77f540bc3f4bd49b52a15c20d9ce9e08e23421fc266",
+    "size_bytes": 17943909
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20040301-S000000-E235959.03.V07B.HDF5": {
+    "sha256": "7c55b87421787c9c4716d8353d622ac637730ed62ae82e5c01d4bd5dcdcb79ff",
+    "size_bytes": 18458199
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20040401-S000000-E235959.04.V07B.HDF5": {
+    "sha256": "00ac2aeaafa926111874e04fd7036b608817902a0b6f1218e7738db7f177e048",
+    "size_bytes": 18837930
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20040501-S000000-E235959.05.V07B.HDF5": {
+    "sha256": "b7345a6dd25124cc8b3352a2297e19c8d4e2bff3dbd88c463b59231451076909",
+    "size_bytes": 18895968
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20040601-S000000-E235959.06.V07B.HDF5": {
+    "sha256": "560bfa4394725d831b1a3708eb9a9e840a454240bd8d421cd29d828ede8461db",
+    "size_bytes": 18985408
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20040701-S000000-E235959.07.V07B.HDF5": {
+    "sha256": "c1ed5de8c0449555127aab544816b798a38ed32637e199b4dcf8a764258b4690",
+    "size_bytes": 19079578
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20040801-S000000-E235959.08.V07B.HDF5": {
+    "sha256": "6768f928701296fbe9e751238b84aa4bd86eb578661ba83f5575ed8d41e81419",
+    "size_bytes": 18980339
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20040901-S000000-E235959.09.V07B.HDF5": {
+    "sha256": "129d46add74ddce0b1c221577f449c06d129109c9074aa9f23ea80358f1a4323",
+    "size_bytes": 19090441
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20041001-S000000-E235959.10.V07B.HDF5": {
+    "sha256": "9bb8907c8aea31953830fd92331d582bd475fee8db6ab21edf838d2e6606b8c5",
+    "size_bytes": 18688924
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20041101-S000000-E235959.11.V07B.HDF5": {
+    "sha256": "8f638bbc2abf675e22baa08dc49e7d9248459dcab3e3a93585daed49d173ceb1",
+    "size_bytes": 18425326
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20041201-S000000-E235959.12.V07B.HDF5": {
+    "sha256": "1703fe2432ee8b88c04099b620c00c4ffc511701f39510feba9df1884c4ed72f",
+    "size_bytes": 18084110
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20050101-S000000-E235959.01.V07B.HDF5": {
+    "sha256": "bac3b9bc5ee8cc3eb1e5fe844778d54fd86e2b722813055b37f3872e6e4c73d5",
+    "size_bytes": 18028945
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20050201-S000000-E235959.02.V07B.HDF5": {
+    "sha256": "fe0aa14ac528459d485ca5a8685f2d4e4019992b976379ca2880a3422bc85e24",
+    "size_bytes": 18706618
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20050301-S000000-E235959.03.V07B.HDF5": {
+    "sha256": "ddc2aa593acf426ba0314a2deea1ab67292936deae7dbfa7a2450a528bc76e38",
+    "size_bytes": 18870125
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20050401-S000000-E235959.04.V07B.HDF5": {
+    "sha256": "7cc4510027369ac01919d8e3eb37dba1b38f5947e8d66fff37092ae4d78e415f",
+    "size_bytes": 18937100
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20050501-S000000-E235959.05.V07B.HDF5": {
+    "sha256": "18968b856e22a83a783807cdc7f6dcf55fed8399bc4ba7abfca0bcea583373fd",
+    "size_bytes": 19223538
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20050601-S000000-E235959.06.V07B.HDF5": {
+    "sha256": "f5bf5b041a941de0274e86851f3d3a32265c9dc314b8626e728ae1e4896ca92c",
+    "size_bytes": 19297239
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20050701-S000000-E235959.07.V07B.HDF5": {
+    "sha256": "6bdc0ab9dcc8844adcd997f3ad48b21491c2bc03f8aab30ef75167c68c877e0d",
+    "size_bytes": 18919255
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20050801-S000000-E235959.08.V07B.HDF5": {
+    "sha256": "02fb3b1fde299ec18d4855a7cbfa3a291bbf1536da508a158db04f7291b507e6",
+    "size_bytes": 18895129
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20050901-S000000-E235959.09.V07B.HDF5": {
+    "sha256": "a11525d4772209293adcff54209d0e83d405ce593e89a6767e567088673fc126",
+    "size_bytes": 18958777
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20051001-S000000-E235959.10.V07B.HDF5": {
+    "sha256": "2010f5adf42e99ceec0c968399360944e13ed2c06ba5e68f65984ed4b21c6529",
+    "size_bytes": 18659588
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20051101-S000000-E235959.11.V07B.HDF5": {
+    "sha256": "378adc0ff8210c10354f694301f2536444cea73ca557838240ebc71cdc93daf8",
+    "size_bytes": 18941510
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20051201-S000000-E235959.12.V07B.HDF5": {
+    "sha256": "6566b1594efc9163cc4952767df58d9396cd2db206c4baa1f6540b04077661c3",
+    "size_bytes": 18525166
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20060101-S000000-E235959.01.V07B.HDF5": {
+    "sha256": "6d09d3ebb900f3baa7ae57618c08e2f7dac8a8602445b22dd671e14fdb201f17",
+    "size_bytes": 18068892
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20060201-S000000-E235959.02.V07B.HDF5": {
+    "sha256": "b001069dca853080bc41ed60322017255dd42055f65b107d477800c152fda3d4",
+    "size_bytes": 18677612
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20060301-S000000-E235959.03.V07B.HDF5": {
+    "sha256": "88abefca1a1e89f27a8a2565f02e77f558f1f43ec8b6bb30256449e5320b8e63",
+    "size_bytes": 18561389
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20060401-S000000-E235959.04.V07B.HDF5": {
+    "sha256": "c4e42725c533a6503553629a81ffa82492f3ad875277fda85853807c87fe5c8d",
+    "size_bytes": 18907817
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20060501-S000000-E235959.05.V07B.HDF5": {
+    "sha256": "71f17acfe5b273b847a769974d9aef720d567d6a51ec7d2249d0569d4c1bcf9c",
+    "size_bytes": 19444038
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20060601-S000000-E235959.06.V07B.HDF5": {
+    "sha256": "72b12babffc6e71f964d4a129a4d8ddcacf70f6c1882bcaeccdc9b1da3af3af1",
+    "size_bytes": 19432255
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20060701-S000000-E235959.07.V07B.HDF5": {
+    "sha256": "4d0f3077dee49a696e93ee5151bd08dc3d5cae2c70915b7280491d2760118a38",
+    "size_bytes": 19387913
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20060801-S000000-E235959.08.V07B.HDF5": {
+    "sha256": "fbaf70099fa69473e53b57ad882dab149afd0e5ac7216ec3e7a7f07962f8b580",
+    "size_bytes": 19182969
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20060901-S000000-E235959.09.V07B.HDF5": {
+    "sha256": "318bed1c30e74541fb9d835c73feaaa673744d292e69b8650f11739a347f31ef",
+    "size_bytes": 19399272
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20061001-S000000-E235959.10.V07B.HDF5": {
+    "sha256": "a09d004c64d87a1acadb246c9a0d8614698c439563e13a942697f6a057b7d425",
+    "size_bytes": 19337981
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20061101-S000000-E235959.11.V07B.HDF5": {
+    "sha256": "6032e94abeb7766ec3d8b8ecd7bfd2f14fa74600cd44dc0cc0558cb15c4c0f89",
+    "size_bytes": 19305785
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20061201-S000000-E235959.12.V07B.HDF5": {
+    "sha256": "18b316871433d0f08e8bef8730a8b27aaa78e708bdfb48ad3a737ab596d6ee5d",
+    "size_bytes": 18599003
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20070101-S000000-E235959.01.V07B.HDF5": {
+    "sha256": "f8095eb471c65bb9f3a2fa5e9d522c6aa091f6a41fcee30340b865882cdde1f2",
+    "size_bytes": 17748441
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20070201-S000000-E235959.02.V07B.HDF5": {
+    "sha256": "fe2f401c2e5a47d3ae2e223366b3418f07450dc97ee4ca7463804444c88809c1",
+    "size_bytes": 18378333
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20070301-S000000-E235959.03.V07B.HDF5": {
+    "sha256": "47812fd906e9649072bdb1d0868ac8a551ba1e776ce129433ac7034f69a1b138",
+    "size_bytes": 19005064
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20070401-S000000-E235959.04.V07B.HDF5": {
+    "sha256": "188e9a75ad83534c2391eca6100e2da57ee3e9bab3ed13e0a6cc646d1f53891f",
+    "size_bytes": 18894866
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20070501-S000000-E235959.05.V07B.HDF5": {
+    "sha256": "03eef918ea933f9191f17df24f593461651e0412ca3b9e1889e4dcab69e92bc6",
+    "size_bytes": 19111813
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20070601-S000000-E235959.06.V07B.HDF5": {
+    "sha256": "40cf1c89339571ecbe3ec7f125ea25a7a2dbec653a4bd1a4daf62b09dc5d71d5",
+    "size_bytes": 19539223
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20070701-S000000-E235959.07.V07B.HDF5": {
+    "sha256": "ff3d207ae97394efa31a10280cbf5cd13bc9482cc07dafbbd87ef3bc3c93f6be",
+    "size_bytes": 19082574
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20070801-S000000-E235959.08.V07B.HDF5": {
+    "sha256": "67bd28430ed50f9830fdd5320bfd24fbef1684f85683030c6835cc085478aace",
+    "size_bytes": 19032428
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20070901-S000000-E235959.09.V07B.HDF5": {
+    "sha256": "c6fca1d5cb428f4d3946340615098c0bbfe84721e9ba8c0abe1d7d866b467e91",
+    "size_bytes": 19018808
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20071001-S000000-E235959.10.V07B.HDF5": {
+    "sha256": "5e49d816f888f178e6f6e0328fa98081c27eabaf7d8ae1ebd97512594b265f18",
+    "size_bytes": 18807505
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20071101-S000000-E235959.11.V07B.HDF5": {
+    "sha256": "9f66f052aade23ecf45cc745b11ff2bdbf8421a7eb6b0a760950bd00b3d99d18",
+    "size_bytes": 18902189
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20071201-S000000-E235959.12.V07B.HDF5": {
+    "sha256": "5a2204dce5884c8f6ad148d3da130ae57fa4916f6107933969f42a82e4bdd613",
+    "size_bytes": 18821241
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20080101-S000000-E235959.01.V07B.HDF5": {
+    "sha256": "503d8348614473fa69eed3d624bc184b3b54cb61bcc92de597be390eeeabe8fb",
+    "size_bytes": 17693235
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20080201-S000000-E235959.02.V07B.HDF5": {
+    "sha256": "3131fe21cf38d9b04eda699666a46e9ba4d7b76253e34e04725a705d58b6891f",
+    "size_bytes": 18350631
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20080301-S000000-E235959.03.V07B.HDF5": {
+    "sha256": "3bdb00044d70636ac027e69ca203004454e30d63bb00e1d1a60916da4b729b23",
+    "size_bytes": 18265402
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20080401-S000000-E235959.04.V07B.HDF5": {
+    "sha256": "8793315a8d42749c850ebb640b73ea27415e54a21e1e0c45ceab3dda6b3d65a7",
+    "size_bytes": 18937161
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20080501-S000000-E235959.05.V07B.HDF5": {
+    "sha256": "5d581555438cb907ece2ff46cd54f2a72f86af91b2333edc0df76f84ece0d3af",
+    "size_bytes": 19249388
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20080601-S000000-E235959.06.V07B.HDF5": {
+    "sha256": "f30c795cd63967047a0520d2895a8ba18080cac3645968eff07eed42395b6193",
+    "size_bytes": 19289823
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20080701-S000000-E235959.07.V07B.HDF5": {
+    "sha256": "45ee39c8fdeaf5073902da6d1f4ccce9e12dd218690b859af9ba35d2622f0be0",
+    "size_bytes": 19218053
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20080801-S000000-E235959.08.V07B.HDF5": {
+    "sha256": "8f59283fbe75b6eb9dd60282a6a289d09356221730eb0cf3266f3d7e83b12c76",
+    "size_bytes": 19054943
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20080901-S000000-E235959.09.V07B.HDF5": {
+    "sha256": "c07cbfb06e905678572c7b3027143c7c8608538808adbe72dad7c8b99871fe57",
+    "size_bytes": 19370066
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20081001-S000000-E235959.10.V07B.HDF5": {
+    "sha256": "5dbab09ebc66e83c85fb12888dfa87cc576706dcfc3776aadc36337c71e64c89",
+    "size_bytes": 18983487
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20081101-S000000-E235959.11.V07B.HDF5": {
+    "sha256": "9c1facef303ea5d968604f769b32f24ec9f4899aa2389a3445919ec70760bcb0",
+    "size_bytes": 19052463
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20081201-S000000-E235959.12.V07B.HDF5": {
+    "sha256": "72b4ae3479cbbe8d32188cdd89898043b628e1db31d22c2d906c2820b4248796",
+    "size_bytes": 18465369
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20090101-S000000-E235959.01.V07B.HDF5": {
+    "sha256": "dd293698553034b0c01b72341f4cf44faa8803bd3f497c464f11aea505e827b7",
+    "size_bytes": 17911371
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20090201-S000000-E235959.02.V07B.HDF5": {
+    "sha256": "d16c17bb5ec1d53da9259513f5f27d8bd6b0633a325a737eafcb98909870b233",
+    "size_bytes": 18066075
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20090301-S000000-E235959.03.V07B.HDF5": {
+    "sha256": "f1793507ba3a23675636924365e9a3098606442c6033e09e04086634eb25745d",
+    "size_bytes": 18431894
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20090401-S000000-E235959.04.V07B.HDF5": {
+    "sha256": "2c706708f3e260bbd1a7f08cb18fc2b385af63e048b5141669223521c641841f",
+    "size_bytes": 18770768
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20090501-S000000-E235959.05.V07B.HDF5": {
+    "sha256": "2ea331fca9382b6186a2cad09841c8f15c7a357ad89bf226e4c7fb0b7b06d2ce",
+    "size_bytes": 19241546
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20090601-S000000-E235959.06.V07B.HDF5": {
+    "sha256": "3cb6894b5bc61874f835aaa055919edf8334c6340853fa40b92922cfd9b77db1",
+    "size_bytes": 19434113
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20090701-S000000-E235959.07.V07B.HDF5": {
+    "sha256": "17df2b2662ee5f3af2a6fd53cb8e1299e8afcb504d78898851ee5b8ed80476b6",
+    "size_bytes": 19270299
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20090801-S000000-E235959.08.V07B.HDF5": {
+    "sha256": "9b070862a183097c3bf93ba9c059f00f54a2ca4aa4a75de0fcf6ed958ae73716",
+    "size_bytes": 18884744
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20090901-S000000-E235959.09.V07B.HDF5": {
+    "sha256": "4677c37846946fdd995bad0fc1bba2c462f5379d15af1229078f4634d054496c",
+    "size_bytes": 19345638
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20091001-S000000-E235959.10.V07B.HDF5": {
+    "sha256": "6dec11754ea775bdad767476b7defcbe78a57ae6494be32cc70ec4fd342cddfc",
+    "size_bytes": 19251173
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20091101-S000000-E235959.11.V07B.HDF5": {
+    "sha256": "6e0db8484c7f6a55faedfe11134abd4ae8f2bb2b8a8de062981dcd3cd275c3b9",
+    "size_bytes": 19319606
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20091201-S000000-E235959.12.V07B.HDF5": {
+    "sha256": "38bcd24ac50967d94fd4e48689b6e6fa8f0381be8d45360f9c59edc10104712a",
+    "size_bytes": 18809870
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20100101-S000000-E235959.01.V07B.HDF5": {
+    "sha256": "59d477ca483062e697e5d6e2c4a4947399ef3a1c008df16ed5494a52fb03007b",
+    "size_bytes": 17865117
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20100201-S000000-E235959.02.V07B.HDF5": {
+    "sha256": "271ca862caedd04f54bceff608e5918f37e141d7c2412a42f23cdd1c8f44c57c",
+    "size_bytes": 18622008
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20100301-S000000-E235959.03.V07B.HDF5": {
+    "sha256": "45eb7a69c4e61f2d805c9b3229711a9c7c2becd5a74387fdf426807d3262ad02",
+    "size_bytes": 18657414
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20100401-S000000-E235959.04.V07B.HDF5": {
+    "sha256": "a593af99e6aca862f150179deb3a1a266d71ae51c19d777ff8c26fad22c30a39",
+    "size_bytes": 19074960
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20100501-S000000-E235959.05.V07B.HDF5": {
+    "sha256": "38080137c19461fdadbca91f8b70d4caafcefce3d5f453fac7101d602b38d988",
+    "size_bytes": 19388705
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20100601-S000000-E235959.06.V07B.HDF5": {
+    "sha256": "05d53f3c7df80b5a715d15b06d44dabf06203aba311622a0a75e703079fd711f",
+    "size_bytes": 19232739
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20100701-S000000-E235959.07.V07B.HDF5": {
+    "sha256": "137178b59cb41d957116c55b535699a2e1cc64a04db71706e37065b433fc0e52",
+    "size_bytes": 19074543
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20100801-S000000-E235959.08.V07B.HDF5": {
+    "sha256": "c3bc4a7feb81ed23b317595fcfdde18e21731cc824c2f3fafd2dc5467c8966a7",
+    "size_bytes": 19020290
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20100901-S000000-E235959.09.V07B.HDF5": {
+    "sha256": "3151d9ac53d8a9c4a83232406381b22b4e2b5c6df3bdfa8dbc1f87beb7e7a149",
+    "size_bytes": 19333926
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20101001-S000000-E235959.10.V07B.HDF5": {
+    "sha256": "6358e5a6144cfc857a0ff88f96aca525fbc422bceaff214b151fbac6b94b71d7",
+    "size_bytes": 19150133
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20101101-S000000-E235959.11.V07B.HDF5": {
+    "sha256": "9e652ad626d623a43d7190aedb8a4a9a1f5a449f9e2aa7d0def9ece4ea6854b1",
+    "size_bytes": 19215224
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20101201-S000000-E235959.12.V07B.HDF5": {
+    "sha256": "7405d87ff40d308a6cdb03eb864273f8648205719076300754ca71cfda3cc292",
+    "size_bytes": 18763604
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20110101-S000000-E235959.01.V07B.HDF5": {
+    "sha256": "f909cd3e8aeb5127b7c704d2ead9de5a2fbb0a90f5c00fa2c8b69d6db69d4654",
+    "size_bytes": 17733762
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20110201-S000000-E235959.02.V07B.HDF5": {
+    "sha256": "879540223293fe06152462521c6bcd8c7b81b328508648fbdb99ce44890df8b6",
+    "size_bytes": 18327322
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20110301-S000000-E235959.03.V07B.HDF5": {
+    "sha256": "0f765dd14b950a89254ff6780ad7ccefb918a0e9d0d6a568698b9a62990bc34f",
+    "size_bytes": 18732787
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20110401-S000000-E235959.04.V07B.HDF5": {
+    "sha256": "98fd27dad744b4c922fefc9da433cc7cb3f426928b4471fde09b835892c0e9fb",
+    "size_bytes": 18814142
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20110501-S000000-E235959.05.V07B.HDF5": {
+    "sha256": "ea1a294a2210c28e5d73147939c6b6b564e20afd8674ceb3292321f79afabe11",
+    "size_bytes": 19385943
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20110601-S000000-E235959.06.V07B.HDF5": {
+    "sha256": "3051fc77573aceaf61c620d883f2d15ceab465c48dbadd86fd78c99ff4729d70",
+    "size_bytes": 19251461
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20110701-S000000-E235959.07.V07B.HDF5": {
+    "sha256": "65c18370fe8ea2e05bdc4370d33164a2814e7606b36b079308d487342aa723a0",
+    "size_bytes": 19032980
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20110801-S000000-E235959.08.V07B.HDF5": {
+    "sha256": "3602d685a118d73b4754c24adb630dc051eca2701e0a8c2c675702e8bd3668b7",
+    "size_bytes": 18968957
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20110901-S000000-E235959.09.V07B.HDF5": {
+    "sha256": "aeca4790467b98dba8ec04d4e18e327980c9cd00254966d503466d5824f5ced4",
+    "size_bytes": 19062599
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20111001-S000000-E235959.10.V07B.HDF5": {
+    "sha256": "59d7d2bef9385f83c93efca4443654a607ff1a31f4d88de0f8174d8d41f81f9d",
+    "size_bytes": 19162102
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20111101-S000000-E235959.11.V07B.HDF5": {
+    "sha256": "c4bc8452995ebd4de4636a7976318830792fc9d74b0309ff54bbd821fb8a86e5",
+    "size_bytes": 18997407
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20111201-S000000-E235959.12.V07B.HDF5": {
+    "sha256": "6371ac0641586e8aab5c29853dfdf8354c4ab5fefaaaa872e7067511d1bfb0d0",
+    "size_bytes": 18471539
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20120101-S000000-E235959.01.V07B.HDF5": {
+    "sha256": "37d50a55c97cb2ebb681fbb024fc70d288aa5c9ee4c334a754587505581e217b",
+    "size_bytes": 17728634
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20120201-S000000-E235959.02.V07B.HDF5": {
+    "sha256": "98a50ee81e3190993d70f63e1f6579f9036fc92107fe25d2d44296a5a253079a",
+    "size_bytes": 18578224
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20120301-S000000-E235959.03.V07B.HDF5": {
+    "sha256": "cc0009bde16777a412dcb07ccbbbf9ea5e709d0f05e5ba09aaeee2a4a13a7fa0",
+    "size_bytes": 18597962
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20120401-S000000-E235959.04.V07B.HDF5": {
+    "sha256": "5346c985a5fe99fb5428fef2b29be2386d44e2d011b20533de0e808b21be8b8f",
+    "size_bytes": 18804434
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20120501-S000000-E235959.05.V07B.HDF5": {
+    "sha256": "c8986bbea0074c5a367e12e8cd20c9d0dca5beb5d8411520aa5d462479b8187e",
+    "size_bytes": 19105741
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20120601-S000000-E235959.06.V07B.HDF5": {
+    "sha256": "741790265c9df28535d95e78dde16ba36e2c286af64a51467d1bace0e245f834",
+    "size_bytes": 19226162
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20120701-S000000-E235959.07.V07B.HDF5": {
+    "sha256": "e5bd113d1576a7c339bce18eca0dc455219909f0b0bb6c5381df99a62d003fba",
+    "size_bytes": 18953282
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20120801-S000000-E235959.08.V07B.HDF5": {
+    "sha256": "65170266b21fb34c20d8eed68e5c3005272866e4e1c91c7fb57463ca23de0afa",
+    "size_bytes": 18939005
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20120901-S000000-E235959.09.V07B.HDF5": {
+    "sha256": "da4c0640583ad74d0203c0f83ffafaaf8e9ede4c1baf555cc0dab5d788127941",
+    "size_bytes": 19169061
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20121001-S000000-E235959.10.V07B.HDF5": {
+    "sha256": "cb8d5b43bfc71d6ceab80780fa55912896df41dcc1c4d493a55ec12b9af61973",
+    "size_bytes": 19098774
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20121101-S000000-E235959.11.V07B.HDF5": {
+    "sha256": "ce37d85d1cd502dbfd04c5a1679234e44cc6c8b081312359efc5904175479274",
+    "size_bytes": 19236396
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20121201-S000000-E235959.12.V07B.HDF5": {
+    "sha256": "9244b1428de1033e7afc2441e2d992aa068004db38f66e4020a0848d0fb1a894",
+    "size_bytes": 18509838
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20130101-S000000-E235959.01.V07B.HDF5": {
+    "sha256": "3ee6c2fa35bbbd841d5a6056392b14467a1aa9f624164bd3d2c128e9600299ef",
+    "size_bytes": 17571009
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20130201-S000000-E235959.02.V07B.HDF5": {
+    "sha256": "a6fc6a3653d4666eca9b414d1aed09218f7f7d429155ae69ee9c230ebeef2f15",
+    "size_bytes": 18004760
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20130301-S000000-E235959.03.V07B.HDF5": {
+    "sha256": "23fab77ee8874522c9d326ac602c4ff1d22c39448947ee61d40e084c9f0890f5",
+    "size_bytes": 18815726
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20130401-S000000-E235959.04.V07B.HDF5": {
+    "sha256": "cc4afc367d5bd9dd7ba2aff8b801d69952ec1668c9acda096b7714aa415573c6",
+    "size_bytes": 18897752
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20130501-S000000-E235959.05.V07B.HDF5": {
+    "sha256": "f94eb98507c3949ae67f6fdf617f0d367722e423ffa2c23d6569f9185efaa0a1",
+    "size_bytes": 19070344
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20130601-S000000-E235959.06.V07B.HDF5": {
+    "sha256": "5ceeaa9c621fec90193dc7aa261a756ef5e82e2fde3d699de5b91804ab63f25f",
+    "size_bytes": 19137991
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20130701-S000000-E235959.07.V07B.HDF5": {
+    "sha256": "d74ff3150959eb772031d73ff7dd67d95a3a5ce8f5a9e3c7252db18d9cada84e",
+    "size_bytes": 19019068
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20130801-S000000-E235959.08.V07B.HDF5": {
+    "sha256": "21e90a68d6d019add8fa7d133711f87f7d6bde291c939b90afcdbd8bb99db57c",
+    "size_bytes": 18969453
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20130901-S000000-E235959.09.V07B.HDF5": {
+    "sha256": "00a13e022e1069f07cd689c9c90e3d6080634626d19429821f741dd8eaac580e",
+    "size_bytes": 19246660
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20131001-S000000-E235959.10.V07B.HDF5": {
+    "sha256": "c11285b5ab6b9b8df5ac49732e845ad1e67829525b73731c3de56b711018a79a",
+    "size_bytes": 18967700
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20131101-S000000-E235959.11.V07B.HDF5": {
+    "sha256": "7aad7e335aa569d7862e74ffc1fa3821d096b17f7d0335cc89b64594422d11a7",
+    "size_bytes": 18924044
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20131201-S000000-E235959.12.V07B.HDF5": {
+    "sha256": "42c180c6a72897ae14997cb5ec4a606de62fb43114a91463a98b2501e3ebbb2a",
+    "size_bytes": 18526208
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20140101-S000000-E235959.01.V07B.HDF5": {
+    "sha256": "9b15776187afcefefb6432b45657fb5986f03b1c97650c36bbf82ada5e583ce4",
+    "size_bytes": 17510822
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20140201-S000000-E235959.02.V07B.HDF5": {
+    "sha256": "39fb5dcc40e1489552362caa9e14126b8bac55390aee5c3b3ccad87ff94b7dba",
+    "size_bytes": 18363387
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20140301-S000000-E235959.03.V07B.HDF5": {
+    "sha256": "24815bc86c60cf5090c23bb5b317897143015b63e05d22ab832e8f0dc1aac55b",
+    "size_bytes": 18846821
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20140401-S000000-E235959.04.V07B.HDF5": {
+    "sha256": "6be539348a27ae9a86064522decaab9ef5106e30fe2419ef374c50ddc4c82d2c",
+    "size_bytes": 18838939
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20140501-S000000-E235959.05.V07B.HDF5": {
+    "sha256": "b4e734fbf5138572024478a6e71b604bb28d65451031407e7d55a5f6f714e04e",
+    "size_bytes": 19276297
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20140601-S000000-E235959.06.V07B.HDF5": {
+    "sha256": "e35a5790ad2e1af8ebceb0d173dfad7f28d6a161b97c4ddbaf098f8828ab0bfe",
+    "size_bytes": 19077657
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20140701-S000000-E235959.07.V07B.HDF5": {
+    "sha256": "d542c3054dd7a19552c93ed664e2510583039d7652a7c4c71545f2ac931bd8ed",
+    "size_bytes": 19045124
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20140801-S000000-E235959.08.V07B.HDF5": {
+    "sha256": "b31087c85d91640464f2ec56d318c2a4b82e72f533d4e2cf375adfdfa66fe198",
+    "size_bytes": 19079483
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20140901-S000000-E235959.09.V07B.HDF5": {
+    "sha256": "f2ce84b9c04ad7b5fe5a294a590c8632b7112c7c6b6ed7e435952354a887e970",
+    "size_bytes": 19127383
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20141001-S000000-E235959.10.V07B.HDF5": {
+    "sha256": "849ae1dba64d8b6ddf02d007708c7ff75d0827fbf5ee098cc4f1faee0aa5095d",
+    "size_bytes": 19131039
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20141101-S000000-E235959.11.V07B.HDF5": {
+    "sha256": "2db365eda9d3954182e7320a0138ef5c65daf13c40ffe54af2d31cbae2677459",
+    "size_bytes": 18669958
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20141201-S000000-E235959.12.V07B.HDF5": {
+    "sha256": "d73927033542c9ca65ce5730d482bf0743261478792f6ae93c55033c2de03d99",
+    "size_bytes": 18303383
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20150101-S000000-E235959.01.V07B.HDF5": {
+    "sha256": "47b369fd5b61c0e810661814103ec0ccf13b888a70b39dbe1114e8b5eef0550b",
+    "size_bytes": 18194042
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20150201-S000000-E235959.02.V07B.HDF5": {
+    "sha256": "cfba822f978b9a6f06352d0118cc1251278b187917f1a7d30385cc5a0e6e68d7",
+    "size_bytes": 18248910
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20150301-S000000-E235959.03.V07B.HDF5": {
+    "sha256": "f3d210f1d186e1a5c4cdde986548dde722bcf2abed656a6a4a8f23a4d8885b9f",
+    "size_bytes": 18473022
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20150401-S000000-E235959.04.V07B.HDF5": {
+    "sha256": "6ca0788d8a45f6fb740e0b5177352f1a94c30c004176b39991cf7f2fcec959bf",
+    "size_bytes": 18882363
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20150501-S000000-E235959.05.V07B.HDF5": {
+    "sha256": "8b1f6afc628a68bd5d81ea1ff73bcf209a36ed39a8e9a0fe67701fbdc1892a29",
+    "size_bytes": 19364680
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20150601-S000000-E235959.06.V07B.HDF5": {
+    "sha256": "6b18bff72501f8ec63aa31f93cf0b4e37f2f6c8a15b4aa1dd829924c4851bdb7",
+    "size_bytes": 19370196
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20150701-S000000-E235959.07.V07B.HDF5": {
+    "sha256": "05d89506393744197451d8e5f6f2d4c947f2b93eaaea177bb9557fa3c76f4d2f",
+    "size_bytes": 19253426
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20150801-S000000-E235959.08.V07B.HDF5": {
+    "sha256": "49f5372a418dc8427b7b1c6488408497c4d939dfb310c6f8f6a2aa18a174b489",
+    "size_bytes": 19439766
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20150901-S000000-E235959.09.V07B.HDF5": {
+    "sha256": "fd103e03ab1558d0bf1c9fd18285a68a4dc1129b31048b66beb8148f207d71d6",
+    "size_bytes": 19367594
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20151001-S000000-E235959.10.V07B.HDF5": {
+    "sha256": "e2200ce98f33cc721c0d166d192a8c48de350d18ebaf85e1d4e87d034a2f3a24",
+    "size_bytes": 19085634
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20151101-S000000-E235959.11.V07B.HDF5": {
+    "sha256": "7956ed324d5c01f414cde0cd75ee13bc10752112e785507b6df6f7aa5837e4a3",
+    "size_bytes": 18646024
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20151201-S000000-E235959.12.V07B.HDF5": {
+    "sha256": "139991b9b9d7ba2139e7a3c9c39f273f6e237a6331a69135d9ff1deaed035215",
+    "size_bytes": 18667200
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20160101-S000000-E235959.01.V07B.HDF5": {
+    "sha256": "2790fb697627c0d28aeb5d1e7c245c0108060af1cfaed86c5e8255d0a62f8717",
+    "size_bytes": 18878181
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20160201-S000000-E235959.02.V07B.HDF5": {
+    "sha256": "2c06c53a5ffbd5a12590a8ce1cbb8f7b3b33585cb0c7b8e99100bd6388450570",
+    "size_bytes": 18411377
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20160301-S000000-E235959.03.V07B.HDF5": {
+    "sha256": "e9f91cbeb7b67018a3c011b6aa6600f7792141f6d778c9fa45027ac64ed5bb3c",
+    "size_bytes": 18451112
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20160401-S000000-E235959.04.V07B.HDF5": {
+    "sha256": "861e2168fda3daa305ad58eaf6534b569896ddbbf7073d02ccfefa10f710f457",
+    "size_bytes": 19013023
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20160501-S000000-E235959.05.V07B.HDF5": {
+    "sha256": "eb8d4d2be2eedfabca7d50752fd73173e6f821bfbc45db1143a65cba64cf37cc",
+    "size_bytes": 19573535
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20160601-S000000-E235959.06.V07B.HDF5": {
+    "sha256": "6fa36bdea98e40f8792ebe48ba75ec147eeefcf83545938565748304faddb968",
+    "size_bytes": 19362444
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20160701-S000000-E235959.07.V07B.HDF5": {
+    "sha256": "8c4fd27a3721053580e3f839179efd623eb9f7551cbd4fb74140c1b5064cf2f6",
+    "size_bytes": 19164031
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20160801-S000000-E235959.08.V07B.HDF5": {
+    "sha256": "ab87be6c2c5f4d088b00e4efe42b355e755928e7832ae0b9cb3ba7a81d88edd8",
+    "size_bytes": 19154259
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20160901-S000000-E235959.09.V07B.HDF5": {
+    "sha256": "a45ce211b66b67d9c98a2d7ca4f6917e0afe7533a092ae96875623b3a63e3a3f",
+    "size_bytes": 19286620
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20161001-S000000-E235959.10.V07B.HDF5": {
+    "sha256": "2602f51da80c7aad4b5f239c0bbaa5ed700056f4fc620e66570e3b08dba64e46",
+    "size_bytes": 19257334
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20161101-S000000-E235959.11.V07B.HDF5": {
+    "sha256": "9f787e36ccd68fca6f8aeca8e6b3cc4a0a9cca4f0df20189daa9cde5ca6a6eae",
+    "size_bytes": 18883074
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20161201-S000000-E235959.12.V07B.HDF5": {
+    "sha256": "e2afcb73bd8f88d0c69b4e36703bfce31e5a1d742a6bc0705edd9a9de1bfca33",
+    "size_bytes": 18493755
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20170101-S000000-E235959.01.V07B.HDF5": {
+    "sha256": "a573db3edd8e636c554693c643ced6dfb28a65de91e78339342973bdddd05be2",
+    "size_bytes": 18336381
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20170201-S000000-E235959.02.V07B.HDF5": {
+    "sha256": "1d6af7a6efb5ddfb61fba2504a2805d0c9a014e3b12de5978821c0ae420939e4",
+    "size_bytes": 18391024
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20170301-S000000-E235959.03.V07B.HDF5": {
+    "sha256": "0ab376b53e98c5888fc970a40d06e65ed2b3ed85ee35591fb97f1a38e66c3bec",
+    "size_bytes": 18552592
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20170401-S000000-E235959.04.V07B.HDF5": {
+    "sha256": "c107025325aef0a234aef44f1574b761413ab08a865bd86f62df50985e2d9ed4",
+    "size_bytes": 18754846
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20170501-S000000-E235959.05.V07B.HDF5": {
+    "sha256": "f4ba7e0922bf10600edc15aa22a0626b0c94ba47a506b93eecb4f608524482b8",
+    "size_bytes": 19374687
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20170601-S000000-E235959.06.V07B.HDF5": {
+    "sha256": "ee47be614be1cf887b1d0d8213f26125699a77b4b8b147233764d6ad9420ba6e",
+    "size_bytes": 19250389
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20170701-S000000-E235959.07.V07B.HDF5": {
+    "sha256": "6ea6cc9338db028ac7ef4d6cdb77eaf469d8f05da8cda970ac1fbb21e6576f81",
+    "size_bytes": 19090398
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20170801-S000000-E235959.08.V07B.HDF5": {
+    "sha256": "a484fde24ebdb4bef055ac8fd2c97adb48f51576fde07daaac0d5ebd114ef985",
+    "size_bytes": 18954643
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20170901-S000000-E235959.09.V07B.HDF5": {
+    "sha256": "1e3fafcc7d643f6c7132cd34e6ca7e601a0647887577d69ba66b65dd43f677c7",
+    "size_bytes": 19072303
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20171001-S000000-E235959.10.V07B.HDF5": {
+    "sha256": "c8d3441d4bd1c6e8f200e767c4015f30bce20509d75f57ef482426e084766659",
+    "size_bytes": 18881095
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20171101-S000000-E235959.11.V07B.HDF5": {
+    "sha256": "bd043f1fd42d9f61acffe74bca94127399fd940b713a18beda086ae15163108e",
+    "size_bytes": 18764027
+   },
+   "imerg_monthly/3B-MO.MS.MRG.3IMERG.20171201-S000000-E235959.12.V07B.HDF5": {
+    "sha256": "2b1ba4efaa0377dc593fe0b6885aee6d3dffbc99f49d220b0c129ada0048a52e",
+    "size_bytes": 18401451
+   }
+  },
+  "census_labels": {
+   "glc.csv": "2c4898899dd4f373c4320e121c5b655ebb5394d431fa42e57ec4828d07d48b04",
+   "nasa_coolr_new_events.zip": "2a019c6a955a4e9ae8da9b8740c1f64c3cd9a162e90972bb03509a5f119dfd38"
+  }
+ },
+ "windows": {
+  "OR_WA": {
+   "bbox_wsen": [
+    -124.0,
+    45.0,
+    -121.0,
+    48.0
+   ],
+   "epsg": 32610,
+   "grid": [
+    48,
+    68
+   ],
+   "cells_inside": 3040,
+   "outputs_sha256": {
+    "static_factors.tif": "fcfe88afce979ebecf1ed75c0835fedfb81ef1fe5d005ecce3641e1296c2d766",
+    "labels_grid.tif": "dbf39aabb50b20fcb6cfd5b6da1df6d232efe378551d530c7b572004cbaf4c6a",
+    "events.parquet": "4f2078f4f37857c20013f97e0c5db15e6beb061935e6c31a402a9a938a588b0c",
+    "cells.parquet": "fd9336c9e7087f1b0d7aee8630c613ff9803f47cfa41ceb07c87e27cc921894a",
+    "imerg_monthly.npz": "51da12dd95606fdde53f0cb2e96a22191358130bdae032bd27c99b852b5b44fa"
+   },
+   "events_strict_all_years": 327,
+   "events_strict_in_period": 111
+  },
+  "CA_N": {
+   "bbox_wsen": [
+    -123.0,
+    37.0,
+    -120.0,
+    40.0
+   ],
+   "epsg": 32610,
+   "grid": [
+    54,
+    69
+   ],
+   "cells_inside": 3494,
+   "outputs_sha256": {
+    "static_factors.tif": "2c3c7d132ffeca8499943ee54d2f957f31629095e0716e4537bff5956782b247",
+    "labels_grid.tif": "585c8e52b680e888a74e589af8552eb6157176c8b4f6dd03d386feaac3c7a026",
+    "events.parquet": "676369e69ba17540d6466960b1336f3a29b12eefc88a59a862316b8a47149b37",
+    "cells.parquet": "9a0f5e292f5cc6dd5162d45e07688b9228074bdfb9607f7408086f4a3d3e7618",
+    "imerg_monthly.npz": "30dd13b360200e589a46c7e5472adf69b802b1c331544c70b21b39f64865677f"
+   },
+   "events_strict_all_years": 173,
+   "events_strict_in_period": 115
+  },
+  "CA_S": {
+   "bbox_wsen": [
+    -119.0,
+    32.0,
+    -116.0,
+    35.0
+   ],
+   "epsg": 32611,
+   "grid": [
+    57,
+    67
+   ],
+   "cells_inside": 3742,
+   "outputs_sha256": {
+    "static_factors.tif": "8f2bc7f05adfced7c8d537274bd066722a17f49f2b492e094097d1e6ae5d078f",
+    "labels_grid.tif": "13b226a44499552d4c6879b2925a6f845411c88691f42cd0db2eae951873e169",
+    "events.parquet": "13fd5a5cc27a897dcef831aeaac1e33478bf96ae536e010da938bbb214f494a0",
+    "cells.parquet": "8980f3e56c2586d91c9a22f68948a1578e8048985f05783df9593b2ae75ee634",
+    "imerg_monthly.npz": "021976650622a9318827f64b3c22982aeee98380331e2339b5deb2363f04f8c0"
+   },
+   "events_strict_all_years": 167,
+   "events_strict_in_period": 78
+  }
+ },
+ "combined_outputs_sha256": {
+  "events_all.parquet": "c950ac6035c77cb7d97308ec61878ebcc6f048ff01e4415a2fb2d98a41d0f7fb",
+  "cells_all.parquet": "455e5de314fc6cea7c967759887a72ce234e43d512bb568a83824fdeca7ec351",
+  "lithology_mapping.json": "ffbc349d491658e36b8f08e834ebe4428bf2d0b939fa009fe76baa42985b4718"
+ },
+ "coolr_new_events_inside_windows": {
+  "OR_WA": 0,
+  "CA_N": 0,
+  "CA_S": 0
+ },
+ "not_available_factors": {
+  "soil (SoilGrids)": "not approved/downloaded",
+  "NDVI": "not approved/downloaded",
+  "distance to rivers/faults/roads": "not approved/downloaded",
+  "SMAP soil moisture": "not approved/downloaded",
+  "daily IMERG accumulations 1/3/7/14/30 d and antecedent indices": "only monthly IMERG approved (design C item)",
+  "InSAR/SAR (LOS displacement, coherence, velocity, time series windows)": "no SAR files approved or downloaded; NISAR not used for training",
+  "curvature, TWI, flow accumulation": "not computed: not justified at a 5 km analysis cell (M5/M6 may revisit)"
+ }
+}

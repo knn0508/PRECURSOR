@@ -1,0 +1,88 @@
+diff -ru --strip-trailing-cr orig/lightgbm-4.6.0/CMakeLists.txt x4.6.0/lightgbm-4.6.0/CMakeLists.txt
+--- CMakeLists.txt	2022-11-09 16:37:21.000000000 +0400
++++ CMakeLists.txt	2026-11-15 01:09:50.529222900 +0400
+@@ -223,23 +223,23 @@
+ 
+     # reference for mapping of CUDA toolkit component versions to supported architectures ("compute capabilities"):
+     # https://en.wikipedia.org/wiki/CUDA#GPUs_supported
+-    set(CUDA_ARCHS "60" "61" "62" "70" "75")
++    set(CUDA_ARCHS "89")  # local patch: RTX 4060 (sm_89) only; CUDA 13 dropped sm_60-72
+     if(CUDAToolkit_VERSION VERSION_GREATER_EQUAL "11.0")
+-        list(APPEND CUDA_ARCHS "80")
++        list(APPEND CUDA_ARCHS_UNUSED "80")
+     endif()
+     if(CUDAToolkit_VERSION VERSION_GREATER_EQUAL "11.1")
+-        list(APPEND CUDA_ARCHS "86")
++        list(APPEND CUDA_ARCHS_UNUSED "86")
+     endif()
+     if(CUDAToolkit_VERSION VERSION_GREATER_EQUAL "11.5")
+-        list(APPEND CUDA_ARCHS "87")
++        list(APPEND CUDA_ARCHS_UNUSED "87")
+     endif()
+     if(CUDAToolkit_VERSION VERSION_GREATER_EQUAL "11.8")
+-        list(APPEND CUDA_ARCHS "89")
+-        list(APPEND CUDA_ARCHS "90")
++        list(APPEND CUDA_ARCHS_UNUSED "89")
++        list(APPEND CUDA_ARCHS_UNUSED "90")
+     endif()
+     if(CUDAToolkit_VERSION VERSION_GREATER_EQUAL "12.8")
+-        list(APPEND CUDA_ARCHS "100")
+-        list(APPEND CUDA_ARCHS "120")
++        list(APPEND CUDA_ARCHS_UNUSED "100")
++        list(APPEND CUDA_ARCHS_UNUSED "120")
+     endif()
+     # Generate PTX for the most recent architecture for forwards compatibility
+     list(POP_BACK CUDA_ARCHS CUDA_LAST_SUPPORTED_ARCH)
+diff -ru --strip-trailing-cr orig/lightgbm-4.6.0/external_libs/fmt/include/fmt/format.h x4.6.0/lightgbm-4.6.0/external_libs/fmt/include/fmt/format.h
+--- external_libs/fmt/include/fmt/format.h	2022-11-09 16:37:21.000000000 +0400
++++ external_libs/fmt/include/fmt/format.h	2026-11-15 01:14:57.015439900 +0400
+@@ -2983,8 +2983,7 @@
+   // It is equal to ceil(2^31 + 2^32/10^(k + 1)).
+   // These are stored in a string literal because we cannot have static arrays
+   // in constexpr functions and non-static ones are poorly optimized.
+-  return U"\x9999999a\x828f5c29\x80418938\x80068db9\x8000a7c6\x800010c7"
+-         U"\x800001ae\x8000002b"[index];
++  return static_cast<uint32_t>(index == 0 ? 0x9999999au : index == 1 ? 0x828f5c29u : index == 2 ? 0x80418938u : index == 3 ? 0x80068db9u : index == 4 ? 0x8000a7c6u : index == 5 ? 0x800010c7u : index == 6 ? 0x800001aeu : 0x8000002bu); /* local nvcc patch */
+ }
+ 
+ template <typename Float>
+diff -ru --strip-trailing-cr orig/lightgbm-4.6.0/include/LightGBM/meta.h x4.6.0/lightgbm-4.6.0/include/LightGBM/meta.h
+--- include/LightGBM/meta.h	2022-11-09 16:37:21.000000000 +0400
++++ include/LightGBM/meta.h	2026-11-15 01:16:11.400228000 +0400
+@@ -47,13 +47,13 @@
+ typedef float label_t;
+ #endif
+ 
+-const score_t kMinScore = -std::numeric_limits<score_t>::infinity();
++constexpr score_t kMinScore = -std::numeric_limits<score_t>::infinity();
+ 
+-const score_t kMaxScore = std::numeric_limits<score_t>::infinity();
++constexpr score_t kMaxScore = std::numeric_limits<score_t>::infinity();
+ 
+-const score_t kEpsilon = 1e-15f;
++constexpr score_t kEpsilon = 1e-15f;
+ 
+-const double kZeroThreshold = 1e-35f;
++constexpr double kZeroThreshold = 1e-35f;
+ 
+ 
+ typedef int32_t comm_size_t;
+Only in x4.6.0/lightgbm-4.6.0: lib_lightgbm.dll
+Only in x4.6.0/lightgbm-4.6.0: lib_lightgbm.exp
+Only in x4.6.0/lightgbm-4.6.0: lib_lightgbm.lib
+diff -ru --strip-trailing-cr orig/lightgbm-4.6.0/src/treelearner/cuda/cuda_single_gpu_tree_learner.cpp x4.6.0/lightgbm-4.6.0/src/treelearner/cuda/cuda_single_gpu_tree_learner.cpp
+--- src/treelearner/cuda/cuda_single_gpu_tree_learner.cpp	2022-11-09 16:37:21.000000000 +0400
++++ src/treelearner/cuda/cuda_single_gpu_tree_learner.cpp	2026-11-15 01:10:52.838869500 +0400
+@@ -505,9 +505,9 @@
+         max_cat_num_bin = std::max(bin_mapper->num_bin(), max_cat_num_bin);
+       }
+     }
+-    // std::max(..., 1UL) to avoid error in the case when there are NaN's in the categorical values
+-    const size_t cuda_bitset_max_size = std::max(static_cast<size_t>((max_cat_value + 31) / 32), 1UL);
+-    const size_t cuda_bitset_inner_max_size = std::max(static_cast<size_t>((max_cat_num_bin + 31) / 32), 1UL);
++    // std::max(..., static_cast<size_t>(1)) to avoid error in the case when there are NaN's in the categorical values
++    const size_t cuda_bitset_max_size = std::max(static_cast<size_t>((max_cat_value + 31) / 32), static_cast<size_t>(1));
++    const size_t cuda_bitset_inner_max_size = std::max(static_cast<size_t>((max_cat_num_bin + 31) / 32), static_cast<size_t>(1));
+     AllocateCUDAMemory<uint32_t>(&cuda_bitset_, cuda_bitset_max_size, __FILE__, __LINE__);
+     AllocateCUDAMemory<uint32_t>(&cuda_bitset_inner_, cuda_bitset_inner_max_size, __FILE__, __LINE__);
+     const int max_cat_in_split = std::min(config_->max_cat_threshold, max_cat_num_bin / 2);

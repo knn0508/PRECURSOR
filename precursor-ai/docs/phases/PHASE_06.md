@@ -1,6 +1,6 @@
 # Phase 6: Time Series Analysis & Deformation Forecasting
 
-Status: **NOT_STARTED** (scope defined 2026-11-14; no code). Roadmap: [ROADMAP](../project/ROADMAP.md). Executable brief: [Prompts.md](../../Prompts.md) (Phase 6).
+Status: **PARTIALLY_COMPLETED** (built 2026-11-15 on SYNTHETIC data; `REAL_DATA_VALIDATION: NOT_PERFORMED`). Roadmap: [ROADMAP](../project/ROADMAP.md). Executable brief: [Prompts.md](../../Prompts.md) (Phase 6).
 
 ## Objective
 Turn dynamic observations (InSAR deformation, coherence, rainfall, SMAP soil moisture) into analysis-ready time series and **deterministic** trigger indicators for landslide early prediction. Statistical description only.
@@ -27,7 +27,21 @@ Time-series store and service, indicator functions with analytic tests, forecast
 Known-trend recovery within a stated tolerance, gap/irregular sampling handled, short series refused, mixed-geometry refused, no score-like fields, `REAL_DATA_VALIDATION` recorded honestly.
 
 ## Implementation status
-Nothing implemented. Tests: none.
+**PARTIALLY_COMPLETED (2026-11-15).** Implemented in `backend/app/services/timeseries/` and verified on synthetic/hand-made data only; no real multi-date product exists. Methods and caveats: [TIME_SERIES_METHODOLOGY](../scientific/TIME_SERIES_METHODOLOGY.md); library choice: [ADR-0010](../adr/ADR-0010-time-series-with-scipy-no-statsmodels.md) (scipy, no statsmodels).
+
+| Deliverable | Evidence |
+|---|---|
+| Chronological series store (kind, zone; source, sensor, geometry, quality, synthetic flag per point) | `types.py`, `store.py` (JSON files, no DB), `adapters.py` (Phase 4 rainfall, generic AOI series, Phase 3 pair velocities) |
+| Gap/irregular-interval analysis, no interpolation, limitations report (n, span, median interval, gaps, missing fraction, aliasing) | `limitations.py`; tests `test_gaps_reported_not_filled`, `test_limitations_stats_and_aliasing` |
+| Linear trend + CI, Theil-Sen, Mann-Kendall, velocity change, acceleration (N = 8), antecedent sums 1/3/7/14/30, API, wet-spell statistics, lagged correlation | `indicators.py`; hand-computed Mann-Kendall, antecedent, API and storm values; trend recovered exactly (noiseless) and within 3 SE / 95% CI (20 seeds) |
+| Mixed-geometry guard | `MixedGeometryError` at construction (orbit direction, track, look direction, sensor) |
+| Forecasting interface only | `forecast.py` (`Forecaster`, `NotImplementedForecaster` -> `NOT_IMPLEMENTED`) |
+| Read-only API | `GET /api/v1/timeseries/areas/{id}/series` and `.../series/{zone}/{kind}/analysis` |
+| Lead-time building blocks | `lead_features.py` (AOI-level only) |
+
+Tests (2026-11-15, Earthdata unset, throwaway database `precursor_t_p78`): `tests/timeseries` **21 passed**; whole backend suite **651 passed, 4 skipped, 0 errors** (630 before Phase 6).
+
+Not done (and why): the Phase 5 reserved `dyn__*` columns are NOT filled because Phase 4 holds AOI-level series only and per-point filling needs gridded series; no cumulative displacement series (Phase 3 has independent pairs, no inversion); no seasonality/autocorrelation-robust statistics (ADR-0010); no gap-filling option; no Recharts test page (optional in the brief, skipped: no frontend change); no real data processed. Indicator minimum N values are working choices.
 
 ## Constraints
 ML policy: [ADR-0002](../adr/ADR-0002-ml-deferral.md). Scientific rules: [scientific-integrity.md](../../.claude/rules/scientific-integrity.md). Geospatial rules: [geospatial.md](../../.claude/rules/geospatial.md).

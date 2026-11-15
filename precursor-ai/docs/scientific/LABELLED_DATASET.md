@@ -3,7 +3,7 @@
 Code: `backend/app/services/features_cv/{dataset,dataset_run,events,export}.py` ([ADR-0007](../adr/ADR-0007-feature-extraction-and-labelled-dataset.md)). This is a DATA PRODUCT for a future model. No model is trained, run or scored here. Verified on SYNTHETIC events and rasters only (`REAL_DATA_VALIDATION: NOT_PERFORMED`).
 
 ## Inventory bias (read first)
-The NASA Global Landslide Catalog is a one-time export (current to 2016-03-07), media/report-derived, incomplete and biased toward reported, accessible, populated places. Absence of an event proves nothing. Consequences carried into every dataset manifest as `caveats`:
+The NASA Global Landslide Catalog is a one-time export (last event dated 2017-09-28, corrected 2026-11-15: [M1 census](../../ml/reports/M1_census_and_download_list.md)), media/report-derived, incomplete and biased toward reported, accessible, populated places. Absence of an event proves nothing. Consequences carried into every dataset manifest as `caveats`:
 - EVENT samples over-represent places where landslides get reported.
 - BACKGROUND samples are unlabelled places, NOT proven stable ground. They are never called "negatives".
 - The class balance is set by the chosen background ratio, not by nature; the true event rate is unknown.

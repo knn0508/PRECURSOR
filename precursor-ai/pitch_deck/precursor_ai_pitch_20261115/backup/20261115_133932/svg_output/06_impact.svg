@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="content" font-family='"Segoe UI", sans-serif'>
+  <rect id="bg" x="0" y="0" width="1280" height="720" fill="#0B1426"/>
+  <path id="wash" data-pptx-role="decoration" d="M0 660 C200 640 380 676 580 652 C760 630 920 672 1090 650 C1170 640 1230 648 1280 640 L1280 720 L0 720 Z" fill="#2DD4BF" fill-opacity="0.12"/>
+  <path id="wash-line" data-pptx-role="decoration" d="M0 660 C200 640 380 676 580 652 C760 630 920 672 1090 650 C1170 640 1230 648 1280 640" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-opacity="0.55"/>
+  <g id="kicker" data-pptx-bounds="64 76 500 30">
+    <rect x="64" y="84" width="10" height="10" fill="#F2994A"/>
+    <text x="86" y="96" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#9AA8C2">06 · IMPACT</text>
+  </g>
+  <g id="takeaway" data-pptx-bounds="64 150 1152 80">
+    <text x="64" y="200" font-size="42" font-weight="bold" fill="#F4F6FA">Open NASA data in, <tspan fill="#2DD4BF">one usable map out.</tspan></text>
+  </g>
+  <g id="result" data-pptx-bounds="64 280 352 270">
+    <use data-icon="phosphor-duotone/chart-line-up" x="64" y="290" width="40" height="40" fill="#9AA8C2"/>
+    <text x="64" y="366" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#9AA8C2">RESULT · TEST AREA</text>
+    <text x="64" y="408" font-size="24" font-style="italic" fill="#9AA8C2">Lorem ipsum dolor sit<tspan x="64" dy="34">amet, consectetur</tspan><tspan x="64" dy="34">adipiscing elit.</tspan></text>
+    <text x="64" y="524" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#F2994A">TO FILL</text>
+  </g>
+  <g id="validation" data-pptx-bounds="438 280 378 270">
+    <line x1="440" y1="290" x2="440" y2="530" stroke="#2A3A5C" stroke-width="1"/>
+    <use data-icon="phosphor-duotone/seal-check" x="464" y="290" width="40" height="40" fill="#9AA8C2"/>
+    <text x="464" y="366" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#9AA8C2">ACCURACY OR VALIDATION</text>
+    <text x="464" y="408" font-size="24" font-style="italic" fill="#9AA8C2">Ut enim ad minim veniam,<tspan x="464" dy="34">quis nostrud exercitation.</tspan></text>
+    <text x="464" y="524" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#F2994A">TO FILL</text>
+  </g>
+  <g id="reusable" data-pptx-bounds="838 280 378 270">
+    <line x1="840" y1="290" x2="840" y2="530" stroke="#2A3A5C" stroke-width="1"/>
+    <use data-icon="phosphor-duotone/globe-hemisphere-east" x="864" y="290" width="40" height="40" fill="#2DD4BF"/>
+    <text x="864" y="366" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#2DD4BF">OPEN AND REUSABLE</text>
+    <text x="864" y="408" font-size="24" fill="#F4F6FA">Any region NISAR covers<tspan x="864" dy="34">can <tspan fill="#2DD4BF" font-weight="bold">reuse it</tspan>.</tspan></text>
+  </g>
+</svg>

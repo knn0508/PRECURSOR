@@ -29,7 +29,7 @@ def _imports(path: Path) -> list[str]:
 def test_ml_does_not_import_api_or_db():
     bad = []
     for py in ML_ROOT.rglob("*.py"):
-        if py.name == "test_smoke.py":
+        if py.name == "test_smoke.py" or ".venv" in py.parts:
             continue
         bad += [f"{py.relative_to(ROOT)}: {n}" for n in _imports(py) if n.startswith(FORBIDDEN_PREFIXES)]
     assert not bad, bad

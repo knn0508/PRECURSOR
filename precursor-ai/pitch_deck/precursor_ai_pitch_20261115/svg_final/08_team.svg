@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="content" font-family="&quot;Segoe UI&quot;, sans-serif">
+  <rect id="bg" x="0" y="0" width="1280" height="720" fill="#0B1426" />
+  <path id="wash" data-pptx-role="decoration" d="M0 640 C180 610 340 660 540 628 C720 600 900 656 1080 622 C1160 608 1230 620 1280 606 L1280 720 L0 720 Z" fill="#2DD4BF" fill-opacity="0.12" />
+  <path id="wash-line" data-pptx-role="decoration" d="M0 640 C180 610 340 660 540 628 C720 600 900 656 1080 622 C1160 608 1230 620 1280 606" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-opacity="0.55" />
+  <g id="kicker" data-pptx-bounds="64 76 500 30">
+    <rect x="64" y="84" width="10" height="10" fill="#F2994A" />
+    <text x="86" y="96" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#9AA8C2">08 · TEAM</text>
+  </g>
+  <g id="beat" data-pptx-bounds="64 130 1152 124">
+    <text font-weight="bold" font-size="42" fill="#F4F6FA" x="64" y="180">A small team covering engineering,</text><text font-weight="bold" font-size="42" fill="#F4F6FA" x="64" y="232">design and AI.</text></g>
+  <g id="member-kanan" data-pptx-bounds="64 310 270 200">
+    <line x1="64" y1="320" x2="334" y2="320" stroke="#2A3A5C" stroke-width="1" />
+    <text x="64" y="396" font-size="56" font-weight="bold" fill="#2DD4BF">KS</text>
+    
+  <g transform="translate(298, 352) scale(0.140625)" fill="#9AA8C2">
+    <path d="M240,128l-48,40H64L16,128,64,88H192Z" opacity="0.2" />
+    <path d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z" />
+  </g>
+    <text x="64" y="450" font-size="24" font-weight="bold" fill="#F4F6FA">Kanan Salmanli</text>
+    <text x="64" y="482" font-size="18" fill="#9AA8C2">Full Stack Developer</text>
+  </g>
+  <g id="member-sema" data-pptx-bounds="358 310 270 200">
+    <line x1="358" y1="320" x2="628" y2="320" stroke="#2A3A5C" stroke-width="1" />
+    <text x="358" y="396" font-size="56" font-weight="bold" fill="#2DD4BF">SA</text>
+    
+  <g transform="translate(592, 352) scale(0.140625)" fill="#9AA8C2">
+    <path d="M224,32c0,32.81-31.64,67.43-58.64,91.05A84.39,84.39,0,0,0,133,90.64C156.57,63.64,191.19,32,224,32Z" opacity="0.2" />
+    <path d="M232,32a8,8,0,0,0-8-8c-44.08,0-89.31,49.71-114.43,82.63A60,60,0,0,0,32,164c0,30.88-19.54,44.73-20.47,45.37A8,8,0,0,0,16,224H92a60,60,0,0,0,57.37-77.57C182.3,121.31,232,76.08,232,32ZM92,208H34.63C41.38,198.41,48,183.92,48,164a44,44,0,1,1,44,44Zm32.42-94.45q5.14-6.66,10.09-12.55A76.23,76.23,0,0,1,155,121.49q-5.9,4.94-12.55,10.09A60.54,60.54,0,0,0,124.42,113.55Zm42.7-2.68a92.57,92.57,0,0,0-22-22c31.78-34.53,55.75-45,69.9-47.91C212.17,55.12,201.65,79.09,167.12,110.87Z" />
+  </g>
+    <text x="358" y="450" font-size="24" font-weight="bold" fill="#F4F6FA">Sema Abdullazade</text>
+    <text x="358" y="482" font-size="18" fill="#9AA8C2">UI/UX Designer</text>
+  </g>
+  <g id="member-intiqam" data-pptx-bounds="652 310 270 200">
+    <line x1="652" y1="320" x2="922" y2="320" stroke="#2A3A5C" stroke-width="1" />
+    <text x="652" y="396" font-size="56" font-weight="bold" fill="#2DD4BF">I</text>
+    
+  <g transform="translate(886, 352) scale(0.140625)" fill="#9AA8C2">
+    <path d="M104,104V208H40a8,8,0,0,1-8-8V104Z" opacity="0.2" />
+    <path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V96H40V56ZM40,112H96v88H40Zm176,88H112V112H216v88Z" />
+  </g>
+    <text x="652" y="450" font-size="24" font-weight="bold" fill="#F4F6FA">Intiqam</text>
+    <text x="652" y="482" font-size="18" fill="#9AA8C2">Frontend Designer</text>
+  </g>
+  <g id="member-farid" data-pptx-bounds="946 310 270 200">
+    <line x1="946" y1="320" x2="1216" y2="320" stroke="#2A3A5C" stroke-width="1" />
+    <text x="946" y="396" font-size="56" font-weight="bold" fill="#2DD4BF">FG</text>
+    
+  <g transform="translate(1180, 352) scale(0.140625)" fill="#9AA8C2">
+    <path d="M240,124a48,48,0,0,1-32,45.27h0V176a40,40,0,0,1-80,0,40,40,0,0,1-80,0v-6.73h0a48,48,0,0,1,0-90.54V72a40,40,0,0,1,80,0,40,40,0,0,1,80,0v6.73A48,48,0,0,1,240,124Z" opacity="0.2" />
+    <path d="M248,124a56.11,56.11,0,0,0-32-50.61V72a48,48,0,0,0-88-26.49A48,48,0,0,0,40,72v1.39a56,56,0,0,0,0,101.2V176a48,48,0,0,0,88,26.49A48,48,0,0,0,216,176v-1.41A56.09,56.09,0,0,0,248,124ZM88,208a32,32,0,0,1-31.81-28.56A55.87,55.87,0,0,0,64,180h8a8,8,0,0,0,0-16H64A40,40,0,0,1,50.67,86.27,8,8,0,0,0,56,78.73V72a32,32,0,0,1,64,0v68.26A47.8,47.8,0,0,0,88,128a8,8,0,0,0,0,16,32,32,0,0,1,0,64Zm104-44h-8a8,8,0,0,0,0,16h8a55.87,55.87,0,0,0,7.81-.56A32,32,0,1,1,168,144a8,8,0,0,0,0-16,47.8,47.8,0,0,0-32,12.26V72a32,32,0,0,1,64,0v6.73a8,8,0,0,0,5.33,7.54A40,40,0,0,1,192,164Zm16-52a8,8,0,0,1-8,8h-4a36,36,0,0,1-36-36V80a8,8,0,0,1,16,0v4a20,20,0,0,0,20,20h4A8,8,0,0,1,208,112ZM60,120H56a8,8,0,0,1,0-16h4A20,20,0,0,0,80,84V80a8,8,0,0,1,16,0v4A36,36,0,0,1,60,120Z" />
+  </g>
+    <text x="946" y="450" font-size="24" font-weight="bold" fill="#F4F6FA">Farid Gahramanov</text>
+    <text x="946" y="482" font-size="18" fill="#9AA8C2">AI Engineer</text>
+  </g>
+</svg>

@@ -9,7 +9,7 @@ Every run writes `ml/runs/<run_id>/` (gitignored) containing:
 | File | Content |
 |---|---|
 | `config.yaml` | the full resolved config used |
-| `meta.json` | `run_id`, `config_hash`, `seed`, `dataset_hash`, `code_version`, `started_utc`, `command`, package versions |
+| `meta.json` | `run_id`, `config_hash`, `seed`, `dataset_hash`, `code_version`, `started_utc`, `command`, package versions, `device` (`cpu`/`cuda`) per GPU-capable library |
 | `metrics.json` | held-out metrics only, each tagged with its split (`spatial_block_cv`, `temporal_holdout`) |
 | `artifacts/` | models, plots, predictions, SHAP outputs |
 

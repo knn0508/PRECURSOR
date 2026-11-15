@@ -1,0 +1,6 @@
+{
+ "seal_sha256": "1d4a67417d5e58db056e939a75497010abc8e0f12023d28346bfe5c113f31102",
+ "name": "m5_provisional_holdout_v1",
+ "sealed_utc": "2026-11-15T09:29:52.319061+00:00",
+ "note": "Pinned outside the seal folder (git-tracked config): verify_seal compares the manifest against this value, so editing split files AND rewriting the manifest is detected. Changing the seal requires an explicit, recorded supersede (ML_STATUS) and a new pin."
+}

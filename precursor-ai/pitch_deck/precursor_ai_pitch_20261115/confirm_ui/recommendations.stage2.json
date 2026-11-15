@@ -1,0 +1,109 @@
+{
+  "stage": "stage2",
+  "selection_sha256": "63eb2a80b7a6e9b4a05c514e1d2cb5ce24e6f9386165d3371796230aa0892425",
+  "lang": "en",
+  "recommend": {
+    "delivery_purpose": "balanced",
+    "mode": "custom",
+    "visual_style": "custom",
+    "image_strategy": "custom",
+    "image_usage": ["none"],
+    "generation_mode": "continuous"
+  },
+  "page_count": { "value": "9" },
+  "image_notes": { "value": "No photos or AI images. All visuals are native editable shapes: radar-fringe rings, a satellite pass over a slope, the six-step pipeline, the data table. The QR code on the last slide is a labelled native frame to be replaced with the real QR once the app URL exists." },
+  "proactive_speaker_notes": { "value": true },
+  "proactive_custom_animations": { "value": false },
+  "proactive_narration_audio": { "value": false },
+  "refine_spec": { "value": false },
+  "design_spec_depth": { "value": "brief" },
+  "design_directions": {
+    "selected": 0,
+    "candidates": [
+      {
+        "id": "orbital-night",
+        "name": "Orbital night",
+        "note": "Deep-space navy field with glowing teal radar fringes and one warm amber warning accent. Reads as a satellite console: strongest on a projector, most on-theme for a SAR challenge.",
+        "mode": "custom",
+        "mode_behavior": "Narrative arc over the user's fixed nine-slide order: the unseen warning sign (situation), data nobody can reach (tension), one platform and its pipeline (resolution), NASA data and impact (proof), phased roadmap, team and a scan-the-QR close. Slide titles stay the plan's labels as kickers; one short beat line per page advances the story. Lorem ipsum placeholders stay visible and are marked as to-fill.",
+        "visual_style": "custom",
+        "visual_style_behavior": "Dark-tech system: near-black navy field, thin luminous teal rules, concentric interferogram fringe rings as the recurring motif (large and cropped on cover and closing, a small corner arc on content pages), monospace small-caps kickers with slide numbers, bracket frames around key units, slightly rounded panels one step lighter than the field, soft outer glow only on the focal element. Amber marks risk and placeholders. Dark negative space is left open; no drop shadows.",
+        "icons": "phosphor-duotone",
+        "color": { "name": "Night radar", "palette": {
+          "background": "#0B1426", "secondary_bg": "#14213D",
+          "primary": "#2DD4BF", "accent": "#F2994A",
+          "secondary_accent": "#5B8DEF", "body_text": "#F4F6FA"
+        } },
+        "typography": {
+          "name": "Segoe UI + Consolas labels",
+          "heading": { "primary": "Segoe UI", "css": "sans-serif" },
+          "body": { "primary": "Segoe UI", "css": "sans-serif" },
+          "body_size": 24
+        },
+        "image_strategy": {
+          "name": "Schematic radar",
+          "rendering": "custom",
+          "visual": "Thin-line technical schematic of satellites, radar beams and hillsides on a dark field",
+          "mood": "Precise and calm, like a mission-control display at night",
+          "behavior": "Single-weight luminous line work on a dark navy field, no texture, depth only through layered translucent fringe rings and a faint grid. Materials are light and glass-like; teal carries the signal, amber carries risk. Mood is precise and quiet, like a mission-control screen."
+        }
+      },
+      {
+        "id": "field-report",
+        "name": "Field report",
+        "note": "Light paper field, serif headlines, hairline rules and terrain contour lines. Reads like a science magazine feature: best when the deck is mostly read by judges on their own.",
+        "mode": "custom",
+        "mode_behavior": "Narrative arc over the user's fixed nine-slide order, told as a short feature story: a standfirst sentence under each headline carries the beat (warning signs, out-of-reach data, the platform, the pipeline, the data, the impact, the roadmap, the team, the invitation to try it). Plan wording is kept; placeholders stay visible as editor's notes.",
+        "visual_style": "custom",
+        "visual_style_behavior": "Editorial system: warm off-white field, kicker, serif headline, standfirst and sans body in a strict vertical hierarchy, hairline rules and an asymmetric column split instead of cards, oversized serif numerals for steps and phases, thin topographic contour lines as the one recurring motif. Flat, no shadows; one deep green structural color and a rust accent for risk and placeholders.",
+        "icons": "tabler-outline",
+        "color": { "name": "Terrain paper", "palette": {
+          "background": "#FAF7F2", "secondary_bg": "#EFE9DF",
+          "primary": "#1F4D45", "accent": "#C2542D",
+          "secondary_accent": "#6B8F71", "body_text": "#1F2A2E"
+        } },
+        "typography": {
+          "name": "Georgia + Calibri",
+          "heading": { "primary": "Georgia", "css": "serif" },
+          "body": { "primary": "Calibri", "css": "sans-serif" },
+          "body_size": 24
+        },
+        "image_strategy": {
+          "name": "Survey engraving",
+          "rendering": "custom",
+          "visual": "Fine contour-line and cross-section drawings of slopes, as in a geological survey plate",
+          "mood": "Measured and trustworthy, like a printed field atlas",
+          "behavior": "Fine ink line work with even weight on warm paper, light hatching for slope shading, no gradients and no depth beyond overlapping contour lines. Material is matte print. Mood is measured and factual, like a geological survey plate."
+        }
+      },
+      {
+        "id": "signal-grid",
+        "name": "Signal grid",
+        "note": "White field, strict grid, one large blue plane per page and a red alert accent. The plainest and fastest to read; least atmospheric.",
+        "mode": "custom",
+        "mode_behavior": "Narrative arc over the user's fixed nine-slide order with minimal copy: each page states one line, then the plan's points in a flush-left grid. The tension is carried by scale, with the problem pages sparse and the pipeline and data pages structured. Placeholders stay visible in the alert color.",
+        "visual_style": "custom",
+        "visual_style_behavior": "Swiss-minimal system: near-white field, modular grid with flush-left type, one oversized geometric plane per page (a full-height blue column, a giant disc standing for the radar footprint, a heavy bar), square corners, single-weight rules, architectural-scale numerals for steps and phases. Strictly flat, no gradients or shadows; red is used only as punctuation for risk and placeholders.",
+        "icons": "tabler-filled",
+        "color": { "name": "Signal blue", "palette": {
+          "background": "#FFFFFF", "secondary_bg": "#F2F4F7",
+          "primary": "#0B3D91", "accent": "#FC3D21",
+          "secondary_accent": "#5C6B80", "body_text": "#111827"
+        } },
+        "typography": {
+          "name": "Arial throughout",
+          "heading": { "primary": "Arial", "css": "sans-serif" },
+          "body": { "primary": "Arial", "css": "sans-serif" },
+          "body_size": 24
+        },
+        "image_strategy": {
+          "name": "Flat geometry",
+          "rendering": "custom",
+          "visual": "Large flat geometric planes and single-weight lines reducing satellite, beam and slope to basic shapes",
+          "mood": "Clear and direct, like transport signage",
+          "behavior": "Exact flat shapes with single-weight lines, no texture, no depth, no material. Two or three flat colors on white with wide empty space. Mood is clear and direct, like wayfinding signage."
+        }
+      }
+    ]
+  }
+}

@@ -47,6 +47,7 @@ const errMsg = (e: unknown) => (e instanceof ApiError ? e.message : "Unexpected 
 
 function SearchPanel() {
   const [aoi, setAoi] = useState<AoiState>(EMPTY_AOI);
+  const [providers, setProviders] = useState<string[]>(["NISAR"]);
   const [products, setProducts] = useState(["GUNW", "GCOV", "GSLC"]);
   const [maturities, setMaturities] = useState<Maturity[]>(["VALIDATED"]);
   const [maxResults, setMaxResults] = useState(10);
@@ -66,7 +67,8 @@ function SearchPanel() {
     const d = buildDateRange(aoi.start, aoi.end);
     if (!a.ok) return setFormError(a.error);
     if (!d.ok) return setFormError(d.error);
-    if (products.length === 0 || maturities.length === 0) return setFormError("Select at least one product and one maturity.");
+    if (providers.length === 0) return setFormError("Select at least one catalog.");
+    if (providers.includes("NISAR") && (products.length === 0 || maturities.length === 0)) return setFormError("Select at least one NISAR product and one maturity.");
     if (!Number.isInteger(maxResults) || maxResults < 1 || maxResults > 100) return setFormError("Max results must be 1 to 100.");
     setFormError(null);
     setBusy(true);
@@ -76,7 +78,7 @@ function SearchPanel() {
     try {
       setRes(await searchData({
         aoi: a.aoi, start_date: d.start_date, end_date: d.end_date,
-        products, maturities, max_results: maxResults, dry_run: dryRun,
+        providers: providers as ("NISAR" | "OPERA" | "NASADEM" | "GPM")[], products, maturities, max_results: maxResults, dry_run: dryRun,
       }));
     } catch (err) {
       setRes(null);
@@ -107,6 +109,10 @@ function SearchPanel() {
         <form onSubmit={submit} className="space-y-5">
           <AoiFields idp="s" value={aoi} onChange={setAoi} />
           <div className="grid gap-4 md:grid-cols-2">
+            <div className="space-y-1.5 md:col-span-2">
+              <CheckGroup legend="Catalogs" options={["NISAR", "OPERA", "NASADEM", "GPM"]} value={providers} onChange={setProviders} />
+              <p className="text-xs text-ink-muted">Search reads metadata only (no login, nothing is downloaded). Products and maturity below apply to NISAR.</p>
+            </div>
             <div className="space-y-1.5">
               <CheckGroup legend="Products" options={PRODUCTS} value={products} onChange={setProducts} />
               <p className="text-xs text-ink-muted">SME2 has no VALIDATED collection: only PROVISIONAL/BETA results can exist.</p>

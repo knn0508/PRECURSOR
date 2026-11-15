@@ -1,0 +1,439 @@
+{
+  "schema": "ppt-master.svg-quality-report.v1",
+  "stage": "early",
+  "target": "C:\\Users\\Kanan\\OneDrive - Ministry of Education SABAH Groups\\Documents\\NASA\\precursor-ai\\pitch_deck\\precursor_ai_pitch_20261115",
+  "source_fingerprint": {
+    "algorithm": "sha256",
+    "digest": "f9f1e10f2293eff2592fc32303dfa1d6be385858b30bbe189833d0b34a449284",
+    "file_count": 5,
+    "files": [
+      {
+        "file": "01_title.svg",
+        "sha256": "4c0f3d341f4b0b935b31d445c790a733bb1bfb4a56acdd8e08980f34689c8171"
+      },
+      {
+        "file": "02_challenge.svg",
+        "sha256": "5fdaebb50f7cf3cf057b6fb8b2c9a3f8e30d1f75dec6de0088c4e466c601e3b0"
+      },
+      {
+        "file": "03_solution.svg",
+        "sha256": "447908bfa4a4d2a8e615c09bdef80b38c927c2c0c1ede26109e8ba50a2cbd99a"
+      },
+      {
+        "file": "04_how_it_works.svg",
+        "sha256": "ab71c1ad49fc2b29b6e10793c67a5ac470343599fee0cfb92f60ee9f9f9497d5"
+      },
+      {
+        "file": "05_space_data.svg",
+        "sha256": "3abafdfe6ca4460cda8eae5981aee2c9d5ac6eb3e6472c33013204bd050da1ae"
+      }
+    ]
+  },
+  "summary": {
+    "total": 5,
+    "passed": 2,
+    "warnings": 3,
+    "errors": 0
+  },
+  "issue_types": {},
+  "categories": {
+    "blocking": {
+      "count": 0,
+      "issues": []
+    },
+    "introduced": {
+      "count": 3,
+      "issues": [
+        {
+          "file": "03_solution.svg",
+          "message": "<text> (x=708, y=546; text='Risk estimate: Lorem…') exceeds <g id=\"steps\"> data-pptx-bounds on the horizontal axis: content (708.0, 525.6)-(1231.1, 588.4), container (610.0, 130.0)-(1216.0, 630.0), overflow horizontal 2.5%, vertical 0.0% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text; ≈14.5 px per Latin char at 24px incl. headroom; ≈41 chars fit in 606 px"
+        },
+        {
+          "file": "04_how_it_works.svg",
+          "message": "<text> (x=864, y=356; text='All layers aligned t…') exceeds <g id=\"stage-integrate\"> data-pptx-bounds on the horizontal axis: content (864.0, 335.6)-(1220.9, 398.4), container (848.0, 246.0)-(1216.0, 442.0), overflow horizontal 1.3%, vertical 0.0% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text; ≈13.7 px per Latin char at 24px incl. headroom; ≈26 chars fit in 368 px"
+        },
+        {
+          "file": "05_space_data.svg",
+          "message": "<text> (x=64, y=450; text='Lorem ipsum: area co…') exceeds <g id=\"to-fill\"> data-pptx-bounds on the horizontal axis: content (64.0, 434.7)-(398.6, 484.3), container (64.0, 390.0)-(384.0, 500.0), overflow horizontal 4.6%, vertical 0.0% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text; ≈11.5 px per Latin char at 18px incl. headroom; ≈27 chars fit in 320 px"
+        }
+      ]
+    },
+    "inherited": {
+      "count": 0,
+      "issues": []
+    },
+    "source-import": {
+      "count": 0,
+      "summary": {
+        "warning_count": 0,
+        "by_code": {}
+      }
+    }
+  },
+  "drift": {
+    "colors": {},
+    "fonts": {},
+    "sizes": {}
+  },
+  "carrier_receipt": {
+    "scope": "informational-not-a-quota",
+    "pages": 5,
+    "totals": {
+      "text_elements": 58,
+      "image_placements": 0,
+      "icons": 4,
+      "svg_geometry_elements": 34,
+      "preset_shapes": 6,
+      "page_frame_elements": 15,
+      "marker_uses": 1,
+      "inline_emphasis_runs": 9,
+      "gradient_uses": 0,
+      "filter_uses": 0,
+      "text_effects": 0
+    },
+    "pages_with": {
+      "images": 0,
+      "icons": 2,
+      "presets": 1,
+      "charts": 0,
+      "tables": 1,
+      "formulas": 0,
+      "inline_emphasis_runs": 2,
+      "gradient_uses": 0,
+      "filter_uses": 0,
+      "text_effects": 0
+    },
+    "relationship_pages": 5,
+    "geometry_elements": {
+      "circle": 5,
+      "ellipse": 0,
+      "line": 5,
+      "path": 12,
+      "polygon": 0,
+      "polyline": 0,
+      "rect": 12
+    },
+    "preset_names": {
+      "chevron": 6
+    },
+    "native_objects": {
+      "chart": 0,
+      "formula_block": 0,
+      "formula_inline": 0,
+      "other": 0,
+      "table": 1
+    },
+    "image_page_max_frame_share_range": []
+  },
+  "project_issues": {
+    "template": [],
+    "animation": [],
+    "illustration": [],
+    "communication_trace": [],
+    "pptx_structure": []
+  },
+  "files": [
+    {
+      "file": "01_title.svg",
+      "path": "precursor-ai\\pitch_deck\\precursor_ai_pitch_20261115\\svg_output\\01_title.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 3,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 1,
+              "ellipse": 0,
+              "line": 2,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 4
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 8,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "\"Segoe UI\", sans-serif"
+        ],
+        "text_elements": 3,
+        "tspan_elements": 1
+      },
+      "passed": true,
+      "source_sha256": "4c0f3d341f4b0b935b31d445c790a733bb1bfb4a56acdd8e08980f34689c8171"
+    },
+    {
+      "file": "02_challenge.svg",
+      "path": "precursor-ai\\pitch_deck\\precursor_ai_pitch_20261115\\svg_output\\02_challenge.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 5,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 3,
+          "effects": {
+            "inline_emphasis_runs": 4,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 1,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 2
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 2,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "\"Segoe UI\", sans-serif",
+          "Consolas, monospace"
+        ],
+        "text_elements": 5,
+        "tspan_elements": 13
+      },
+      "passed": true,
+      "source_sha256": "5fdaebb50f7cf3cf057b6fb8b2c9a3f8e30d1f75dec6de0088c4e466c601e3b0"
+    },
+    {
+      "file": "03_solution.svg",
+      "path": "precursor-ai\\pitch_deck\\precursor_ai_pitch_20261115\\svg_output\\03_solution.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "<text> (x=708, y=546; text='Risk estimate: Lorem…') exceeds <g id=\"steps\"> data-pptx-bounds on the horizontal axis: content (708.0, 525.6)-(1231.1, 588.4), container (610.0, 130.0)-(1216.0, 630.0), overflow horizontal 2.5%, vertical 0.0% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text; ≈14.5 px per Latin char at 24px incl. headroom; ≈41 chars fit in 606 px"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 13,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 5,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 4,
+              "ellipse": 0,
+              "line": 1,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 2
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 2,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 1
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "\"Segoe UI\", sans-serif",
+          "Consolas, monospace"
+        ],
+        "text_elements": 13,
+        "tspan_elements": 12
+      },
+      "passed": true,
+      "source_sha256": "447908bfa4a4d2a8e615c09bdef80b38c927c2c0c1ede26109e8ba50a2cbd99a"
+    },
+    {
+      "file": "04_how_it_works.svg",
+      "path": "precursor-ai\\pitch_deck\\precursor_ai_pitch_20261115\\svg_output\\04_how_it_works.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "<text> (x=864, y=356; text='All layers aligned t…') exceeds <g id=\"stage-integrate\"> data-pptx-bounds on the horizontal axis: content (864.0, 335.6)-(1220.9, 398.4), container (848.0, 246.0)-(1216.0, 442.0), overflow horizontal 1.3%, vertical 0.0% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text; ≈13.7 px per Latin char at 24px incl. headroom; ≈26 chars fit in 368 px"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 21,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 1
+            },
+            "preset_shapes": 6,
+            "preset_names": {
+              "chevron": 6
+            },
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "\"Segoe UI\", sans-serif",
+          "Consolas, monospace"
+        ],
+        "text_elements": 21,
+        "tspan_elements": 7
+      },
+      "passed": true,
+      "source_sha256": "ab71c1ad49fc2b29b6e10793c67a5ac470343599fee0cfb92f60ee9f9f9497d5"
+    },
+    {
+      "file": "05_space_data.svg",
+      "path": "precursor-ai\\pitch_deck\\precursor_ai_pitch_20261115\\svg_output\\05_space_data.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "<text> (x=64, y=450; text='Lorem ipsum: area co…') exceeds <g id=\"to-fill\"> data-pptx-bounds on the horizontal axis: content (64.0, 434.7)-(398.6, 484.3), container (64.0, 390.0)-(384.0, 500.0), overflow horizontal 4.6%, vertical 0.0% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text; ≈11.5 px per Latin char at 18px incl. headroom; ≈27 chars fit in 320 px"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 16,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 1,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 1,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 3
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 2,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 1,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "\"Segoe UI\", sans-serif",
+          "Consolas, monospace"
+        ],
+        "text_elements": 16,
+        "tspan_elements": 2
+      },
+      "passed": true,
+      "source_sha256": "3abafdfe6ca4460cda8eae5981aee2c9d5ac6eb3e6472c33013204bd050da1ae"
+    }
+  ]
+}

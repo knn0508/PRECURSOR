@@ -40,4 +40,4 @@ No provider in this phase downloads datasets. Providers produce a PROPOSAL, list
 
 ## Pointers (documented elsewhere)
 - NASADEM, GPM IMERG: documented by the DEM/rainfall owners (see RAINFALL_METHODOLOGY.md); not covered here.
-- NASA Global Landslide Catalog: Phase 2 (`landslide_catalog.py`); a one-time export current to 2016-03-07, incomplete, reporting-biased, not ground truth. `historical_event_features` always attaches this limitation, counts events with invalid coordinates/dates in `skipped`, and measures distance from the AOI centroid by haversine (mean Earth radius 6371.0088 km; error up to ~0.5% versus the ellipsoid).
+- NASA Global Landslide Catalog: Phase 2 (`landslide_catalog.py`); a one-time export, last event dated 2017-09-28 (corrected 2026-11-15, [M1 census](../../ml/reports/M1_census_and_download_list.md)), incomplete, reporting-biased, not ground truth. `historical_event_features` always attaches this limitation, counts events with invalid coordinates/dates in `skipped`, and measures distance from the AOI centroid by haversine (mean Earth radius 6371.0088 km; error up to ~0.5% versus the ellipsoid).

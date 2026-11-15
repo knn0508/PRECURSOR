@@ -1,0 +1,1227 @@
+{
+ "seal_sha256": "1d4a67417d5e58db056e939a75497010abc8e0f12023d28346bfe5c113f31102",
+ "seed": 20261117,
+ "grid": "5km",
+ "data": "TRAINING part only",
+ "overview": {
+  "per_window": {
+   "CA_N": {
+    "train_cells": 2136,
+    "train_cells_nonexcluded": 1985,
+    "train_cells_excluded": 151,
+    "positive_cells": 75,
+    "positive_cell_rate_vs_nonexcluded": 0.0378,
+    "events_primary": 99,
+    "events_sensitivity_incl_unknown_trigger": 106,
+    "events_in_excluded_cells": 1,
+    "background_candidates": 1301,
+    "background_flagged_imprecise_circle": 250
+   },
+   "CA_S": {
+    "train_cells": 2624,
+    "train_cells_nonexcluded": 1532,
+    "train_cells_excluded": 1092,
+    "positive_cells": 82,
+    "positive_cell_rate_vs_nonexcluded": 0.0535,
+    "events_primary": 126,
+    "events_sensitivity_incl_unknown_trigger": 136,
+    "events_in_excluded_cells": 2,
+    "background_candidates": 845,
+    "background_flagged_imprecise_circle": 278
+   },
+   "OR_WA": {
+    "train_cells": 1953,
+    "train_cells_nonexcluded": 1870,
+    "train_cells_excluded": 83,
+    "positive_cells": 113,
+    "positive_cell_rate_vs_nonexcluded": 0.0604,
+    "events_primary": 235,
+    "events_sensitivity_incl_unknown_trigger": 475,
+    "events_in_excluded_cells": 31,
+    "background_candidates": 725,
+    "background_flagged_imprecise_circle": 423
+   }
+  },
+  "events_per_year_by_window": {
+   "1997": {
+    "CA_N": 0,
+    "CA_S": 0,
+    "OR_WA": 7
+   },
+   "1998": {
+    "CA_N": 0,
+    "CA_S": 0,
+    "OR_WA": 2
+   },
+   "2006": {
+    "CA_N": 0,
+    "CA_S": 0,
+    "OR_WA": 7
+   },
+   "2007": {
+    "CA_N": 1,
+    "CA_S": 2,
+    "OR_WA": 9
+   },
+   "2008": {
+    "CA_N": 1,
+    "CA_S": 6,
+    "OR_WA": 5
+   },
+   "2009": {
+    "CA_N": 1,
+    "CA_S": 3,
+    "OR_WA": 10
+   },
+   "2010": {
+    "CA_N": 3,
+    "CA_S": 41,
+    "OR_WA": 38
+   },
+   "2011": {
+    "CA_N": 17,
+    "CA_S": 6,
+    "OR_WA": 46
+   },
+   "2012": {
+    "CA_N": 6,
+    "CA_S": 1,
+    "OR_WA": 19
+   },
+   "2013": {
+    "CA_N": 0,
+    "CA_S": 4,
+    "OR_WA": 3
+   },
+   "2014": {
+    "CA_N": 2,
+    "CA_S": 27,
+    "OR_WA": 13
+   },
+   "2015": {
+    "CA_N": 3,
+    "CA_S": 6,
+    "OR_WA": 24
+   },
+   "2016": {
+    "CA_N": 14,
+    "CA_S": 5,
+    "OR_WA": 5
+   },
+   "2017": {
+    "CA_N": 51,
+    "CA_S": 25,
+    "OR_WA": 47
+   }
+  },
+  "missing_share_by_group_window_nonexcluded": {
+   "CA_N": {
+    "distance": 0.0,
+    "land_cover": 0.0,
+    "lithology": 0.0,
+    "ndvi": 0.001,
+    "rainfall_climatology": 0.0,
+    "soil": 0.003,
+    "terrain": 0.0
+   },
+   "CA_S": {
+    "distance": 0.0,
+    "land_cover": 0.0,
+    "lithology": 0.115,
+    "ndvi": 0.0,
+    "rainfall_climatology": 0.0,
+    "soil": 0.031,
+    "terrain": 0.0
+   },
+   "OR_WA": {
+    "distance": 0.0,
+    "land_cover": 0.0,
+    "lithology": 0.0,
+    "ndvi": 0.076,
+    "rainfall_climatology": 0.0,
+    "soil": 0.0,
+    "terrain": 0.0
+   }
+  },
+  "totals": {
+   "train_cells": 6713,
+   "train_positive_cells": 270,
+   "train_events_primary": 460,
+   "train_events_sensitivity": 717,
+   "train_background_candidates": 2871
+  }
+ },
+ "inventory_date_structure": {
+  "M3_strict_667": {
+   "events": 667,
+   "distinct_dates": 321,
+   "events_in_2017": 185,
+   "events_in_2010_2011": 212,
+   "top5_dates": {
+    "2010-12-12": 25,
+    "2011-03-24": 19,
+    "2010-12-22": 17,
+    "2017-01-09": 15,
+    "2017-02-16": 13
+   },
+   "share_on_top10_dates": 0.198,
+   "dates_with_5_or_more_events": 30,
+   "events_on_dates_with_5_or_more": 250,
+   "events_by_year": {
+    "1997": 9,
+    "1998": 9,
+    "2006": 8,
+    "2007": 17,
+    "2008": 16,
+    "2009": 22,
+    "2010": 112,
+    "2011": 100,
+    "2012": 29,
+    "2013": 10,
+    "2014": 61,
+    "2015": 51,
+    "2016": 38,
+    "2017": 185
+   }
+  },
+  "M4_clean_strict_647": {
+   "events": 647,
+   "distinct_dates": 321,
+   "events_in_2017": 184,
+   "events_in_2010_2011": 202,
+   "top5_dates": {
+    "2010-12-12": 22,
+    "2011-03-24": 18,
+    "2010-12-22": 16,
+    "2017-01-09": 15,
+    "2017-02-16": 13
+   },
+   "share_on_top10_dates": 0.193,
+   "dates_with_5_or_more_events": 28,
+   "events_on_dates_with_5_or_more": 229,
+   "events_by_year": {
+    "1997": 8,
+    "1998": 6,
+    "2006": 8,
+    "2007": 17,
+    "2008": 16,
+    "2009": 21,
+    "2010": 103,
+    "2011": 99,
+    "2012": 29,
+    "2013": 10,
+    "2014": 60,
+    "2015": 48,
+    "2016": 38,
+    "2017": 184
+   }
+  },
+  "M4_sensitivity_976_incl_unknown_trigger": {
+   "events": 976,
+   "distinct_dates": 505,
+   "events_in_2017": 193,
+   "events_in_2010_2011": 242,
+   "top5_dates": {
+    "2010-12-12": 22,
+    "2015-12-08": 18,
+    "2011-03-24": 18,
+    "2010-12-22": 16,
+    "2017-01-09": 15
+   },
+   "share_on_top10_dates": 0.142,
+   "dates_with_5_or_more_events": 37,
+   "events_on_dates_with_5_or_more": 304,
+   "events_by_year": {
+    "1997": 8,
+    "1998": 6,
+    "2005": 1,
+    "2006": 9,
+    "2007": 20,
+    "2008": 16,
+    "2009": 23,
+    "2010": 104,
+    "2011": 138,
+    "2012": 91,
+    "2013": 30,
+    "2014": 134,
+    "2015": 130,
+    "2016": 73,
+    "2017": 193
+   }
+  },
+  "train_part_primary": {
+   "events": 460,
+   "distinct_dates": 254,
+   "events_in_2017": 123,
+   "events_in_2010_2011": 151,
+   "top5_dates": {
+    "2010-12-12": 16,
+    "2010-12-22": 16,
+    "2017-02-16": 12,
+    "2017-01-09": 11,
+    "2011-03-13": 7
+   },
+   "share_on_top10_dates": 0.204,
+   "dates_with_5_or_more_events": 13,
+   "events_on_dates_with_5_or_more": 109,
+   "events_by_year": {
+    "1997": 7,
+    "1998": 2,
+    "2006": 7,
+    "2007": 12,
+    "2008": 12,
+    "2009": 14,
+    "2010": 82,
+    "2011": 69,
+    "2012": 26,
+    "2013": 7,
+    "2014": 42,
+    "2015": 33,
+    "2016": 24,
+    "2017": 123
+   }
+  }
+ },
+ "univariate_top20": [
+  {
+   "feature": "lc_built_up",
+   "group": "land_cover",
+   "auc": 0.8195,
+   "auc_ci_lo": 0.7669,
+   "auc_ci_hi": 0.8683,
+   "cliffs_delta": 0.639,
+   "ks": 0.4935,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.6729,
+   "auc_CA_S": 0.8135,
+   "auc_OR_WA": 0.9682,
+   "sign_agree_windows": true
+  },
+  {
+   "feature": "soil_cover",
+   "group": "soil",
+   "auc": 0.2156,
+   "auc_ci_lo": 0.1552,
+   "auc_ci_hi": 0.2788,
+   "cliffs_delta": -0.5688,
+   "ks": 0.5024,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.3954,
+   "auc_CA_S": 0.2043,
+   "auc_OR_WA": 0.0907,
+   "sign_agree_windows": true
+  },
+  {
+   "feature": "dist_fault_all_mean_m",
+   "group": "distance",
+   "auc": 0.2577,
+   "auc_ci_lo": 0.1898,
+   "auc_ci_hi": 0.3453,
+   "cliffs_delta": -0.4846,
+   "ks": 0.3649,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.2303,
+   "auc_CA_S": 0.3045,
+   "auc_OR_WA": 0.1877,
+   "sign_agree_windows": true
+  },
+  {
+   "feature": "dist_fault_all_min_m",
+   "group": "distance",
+   "auc": 0.2761,
+   "auc_ci_lo": 0.2117,
+   "auc_ci_hi": 0.3615,
+   "cliffs_delta": -0.4477,
+   "ks": 0.3584,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.2536,
+   "auc_CA_S": 0.3232,
+   "auc_OR_WA": 0.1984,
+   "sign_agree_windows": true
+  },
+  {
+   "feature": "dist_fault_young_mean_m",
+   "group": "distance",
+   "auc": 0.2789,
+   "auc_ci_lo": 0.2017,
+   "auc_ci_hi": 0.3703,
+   "cliffs_delta": -0.4421,
+   "ks": 0.3554,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.2537,
+   "auc_CA_S": 0.2618,
+   "auc_OR_WA": 0.2344,
+   "sign_agree_windows": true
+  },
+  {
+   "feature": "dist_fault_young_min_m",
+   "group": "distance",
+   "auc": 0.2854,
+   "auc_ci_lo": 0.2064,
+   "auc_ci_hi": 0.3727,
+   "cliffs_delta": -0.4292,
+   "ks": 0.3546,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.2559,
+   "auc_CA_S": 0.2725,
+   "auc_OR_WA": 0.2371,
+   "sign_agree_windows": true
+  },
+  {
+   "feature": "elev_min",
+   "group": "terrain",
+   "auc": 0.2876,
+   "auc_ci_lo": 0.1978,
+   "auc_ci_hi": 0.3838,
+   "cliffs_delta": -0.4249,
+   "ks": 0.3727,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.4687,
+   "auc_CA_S": 0.3049,
+   "auc_OR_WA": 0.0849,
+   "sign_agree_windows": true
+  },
+  {
+   "feature": "lc_water",
+   "group": "land_cover",
+   "auc": 0.6991,
+   "auc_ci_lo": 0.6228,
+   "auc_ci_hi": 0.7753,
+   "cliffs_delta": 0.3981,
+   "ks": 0.2923,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.5058,
+   "auc_CA_S": 0.7383,
+   "auc_OR_WA": 0.8689,
+   "sign_agree_windows": true
+  },
+  {
+   "feature": "elev_mean",
+   "group": "terrain",
+   "auc": 0.343,
+   "auc_ci_lo": 0.2482,
+   "auc_ci_hi": 0.4475,
+   "cliffs_delta": -0.314,
+   "ks": 0.3692,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.5275,
+   "auc_CA_S": 0.3512,
+   "auc_OR_WA": 0.1104,
+   "sign_agree_windows": false
+  },
+  {
+   "feature": "lith_WATER_ICE",
+   "group": "lithology",
+   "auc": 0.6381,
+   "auc_ci_lo": 0.5781,
+   "auc_ci_hi": 0.696,
+   "cliffs_delta": 0.2763,
+   "ks": 0.2717,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.5348,
+   "auc_CA_S": 0.5631,
+   "auc_OR_WA": 0.7713,
+   "sign_agree_windows": true
+  },
+  {
+   "feature": "elev_max",
+   "group": "terrain",
+   "auc": 0.3745,
+   "auc_ci_lo": 0.2705,
+   "auc_ci_hi": 0.4744,
+   "cliffs_delta": -0.251,
+   "ks": 0.3149,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.5477,
+   "auc_CA_S": 0.4174,
+   "auc_OR_WA": 0.1316,
+   "sign_agree_windows": false
+  },
+  {
+   "feature": "lith_SED_CLASTIC",
+   "group": "lithology",
+   "auc": 0.616,
+   "auc_ci_lo": 0.5252,
+   "auc_ci_hi": 0.7039,
+   "cliffs_delta": 0.232,
+   "ks": 0.2527,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.7279,
+   "auc_CA_S": 0.6344,
+   "auc_OR_WA": 0.5571,
+   "sign_agree_windows": true
+  },
+  {
+   "feature": "dist_river_major_min_m",
+   "group": "distance",
+   "auc": 0.4032,
+   "auc_ci_lo": 0.313,
+   "auc_ci_hi": 0.5095,
+   "cliffs_delta": -0.1935,
+   "ks": 0.1709,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.577,
+   "auc_CA_S": 0.4225,
+   "auc_OR_WA": 0.2038,
+   "sign_agree_windows": false
+  },
+  {
+   "feature": "dist_river_major_mean_m",
+   "group": "distance",
+   "auc": 0.4037,
+   "auc_ci_lo": 0.3122,
+   "auc_ci_hi": 0.5119,
+   "cliffs_delta": -0.1925,
+   "ks": 0.164,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.579,
+   "auc_CA_S": 0.4247,
+   "auc_OR_WA": 0.201,
+   "sign_agree_windows": false
+  },
+  {
+   "feature": "lc_tree_cover",
+   "group": "land_cover",
+   "auc": 0.5918,
+   "auc_ci_lo": 0.4891,
+   "auc_ci_hi": 0.6891,
+   "cliffs_delta": 0.1837,
+   "ks": 0.3153,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.7143,
+   "auc_CA_S": 0.871,
+   "auc_OR_WA": 0.1876,
+   "sign_agree_windows": false
+  },
+  {
+   "feature": "ndvi_mean",
+   "group": "ndvi",
+   "auc": 0.587,
+   "auc_ci_lo": 0.4907,
+   "auc_ci_hi": 0.6766,
+   "cliffs_delta": 0.174,
+   "ks": 0.1798,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.7579,
+   "auc_CA_S": 0.8151,
+   "auc_OR_WA": 0.2601,
+   "sign_agree_windows": false
+  },
+  {
+   "feature": "lc_grassland",
+   "group": "land_cover",
+   "auc": 0.4143,
+   "auc_ci_lo": 0.3498,
+   "auc_ci_hi": 0.4877,
+   "cliffs_delta": -0.1715,
+   "ks": 0.1763,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.3747,
+   "auc_CA_S": 0.4027,
+   "auc_OR_WA": 0.5937,
+   "sign_agree_windows": false
+  },
+  {
+   "feature": "slope_max",
+   "group": "terrain",
+   "auc": 0.5818,
+   "auc_ci_lo": 0.5029,
+   "auc_ci_hi": 0.6619,
+   "cliffs_delta": 0.1635,
+   "ks": 0.208,
+   "q_bh": 0.0,
+   "auc_CA_N": 0.7161,
+   "auc_CA_S": 0.6716,
+   "auc_OR_WA": 0.2927,
+   "sign_agree_windows": false
+  },
+  {
+   "feature": "soil_silt_0_5",
+   "group": "soil",
+   "auc": 0.5793,
+   "auc_ci_lo": 0.4811,
+   "auc_ci_hi": 0.6711,
+   "cliffs_delta": 0.1586,
+   "ks": 0.1728,
+   "q_bh": 0.0001,
+   "auc_CA_N": 0.5607,
+   "auc_CA_S": 0.7961,
+   "auc_OR_WA": 0.555,
+   "sign_agree_windows": true
+  },
+  {
+   "feature": "rain_map_mm",
+   "group": "rainfall_climatology",
+   "auc": 0.5791,
+   "auc_ci_lo": 0.4532,
+   "auc_ci_hi": 0.7029,
+   "cliffs_delta": 0.1582,
+   "ks": 0.2169,
+   "q_bh": 0.0001,
+   "auc_CA_N": 0.5514,
+   "auc_CA_S": 0.7312,
+   "auc_OR_WA": 0.4467,
+   "sign_agree_windows": false
+  }
+ ],
+ "univariate_summary": {
+  "features_tested": 68,
+  "q_bh_lt_0.05": 46,
+  "ci_excludes_half": 18,
+  "sign_agree_all_windows": 21,
+  "max_abs_auc_minus_half": 0.32,
+  "n_auc_above_0.8_or_below_0.2": 1
+ },
+ "physical_sanity": [
+  {
+   "feature": "slope_mean",
+   "expected": "+",
+   "auc": 0.525,
+   "ci": [
+    0.426,
+    0.618
+   ],
+   "as_expected_pooled": true,
+   "as_expected_by_window": {
+    "CA_N": true,
+    "CA_S": true,
+    "OR_WA": false
+   },
+   "flag": "SURPRISE: check for artifact, confounding or reporting bias"
+  },
+  {
+   "feature": "slope_q3",
+   "expected": "+",
+   "auc": 0.534,
+   "ci": [
+    0.441,
+    0.624
+   ],
+   "as_expected_pooled": true,
+   "as_expected_by_window": {
+    "CA_N": true,
+    "CA_S": true,
+    "OR_WA": false
+   },
+   "flag": "SURPRISE: check for artifact, confounding or reporting bias"
+  },
+  {
+   "feature": "slope_max",
+   "expected": "+",
+   "auc": 0.582,
+   "ci": [
+    0.503,
+    0.662
+   ],
+   "as_expected_pooled": true,
+   "as_expected_by_window": {
+    "CA_N": true,
+    "CA_S": true,
+    "OR_WA": false
+   },
+   "flag": "SURPRISE: check for artifact, confounding or reporting bias"
+  },
+  {
+   "feature": "slope_frac_gt15",
+   "expected": "+",
+   "auc": 0.535,
+   "ci": [
+    0.442,
+    0.629
+   ],
+   "as_expected_pooled": true,
+   "as_expected_by_window": {
+    "CA_N": true,
+    "CA_S": true,
+    "OR_WA": false
+   },
+   "flag": "SURPRISE: check for artifact, confounding or reporting bias"
+  },
+  {
+   "feature": "slope_frac_gt30",
+   "expected": "+",
+   "auc": 0.551,
+   "ci": [
+    0.47,
+    0.639
+   ],
+   "as_expected_pooled": true,
+   "as_expected_by_window": {
+    "CA_N": true,
+    "CA_S": true,
+    "OR_WA": false
+   },
+   "flag": "SURPRISE: check for artifact, confounding or reporting bias"
+  },
+  {
+   "feature": "relief",
+   "expected": "+",
+   "auc": 0.508,
+   "ci": [
+    0.42,
+    0.599
+   ],
+   "as_expected_pooled": true,
+   "as_expected_by_window": {
+    "CA_N": true,
+    "CA_S": true,
+    "OR_WA": false
+   },
+   "flag": "SURPRISE: check for artifact, confounding or reporting bias"
+  },
+  {
+   "feature": "elev_std",
+   "expected": "+",
+   "auc": 0.532,
+   "ci": [
+    0.45,
+    0.623
+   ],
+   "as_expected_pooled": true,
+   "as_expected_by_window": {
+    "CA_N": true,
+    "CA_S": true,
+    "OR_WA": false
+   },
+   "flag": "SURPRISE: check for artifact, confounding or reporting bias"
+  },
+  {
+   "feature": "rain_map_mm",
+   "expected": "+",
+   "auc": 0.579,
+   "ci": [
+    0.453,
+    0.703
+   ],
+   "as_expected_pooled": true,
+   "as_expected_by_window": {
+    "CA_N": true,
+    "CA_S": true,
+    "OR_WA": false
+   },
+   "flag": "SURPRISE: check for artifact, confounding or reporting bias"
+  },
+  {
+   "feature": "rain_djf_mm",
+   "expected": "+",
+   "auc": 0.576,
+   "ci": [
+    0.455,
+    0.693
+   ],
+   "as_expected_pooled": true,
+   "as_expected_by_window": {
+    "CA_N": true,
+    "CA_S": true,
+    "OR_WA": false
+   },
+   "flag": "SURPRISE: check for artifact, confounding or reporting bias"
+  },
+  {
+   "feature": "rain_max_month_clim_mm",
+   "expected": "+",
+   "auc": 0.571,
+   "ci": [
+    0.447,
+    0.689
+   ],
+   "as_expected_pooled": true,
+   "as_expected_by_window": {
+    "CA_N": true,
+    "CA_S": true,
+    "OR_WA": false
+   },
+   "flag": "SURPRISE: check for artifact, confounding or reporting bias"
+  },
+  {
+   "feature": "dist_river_all_mean_m",
+   "expected": "-",
+   "auc": 0.483,
+   "ci": [
+    0.4,
+    0.559
+   ],
+   "as_expected_pooled": true,
+   "as_expected_by_window": {
+    "CA_N": false,
+    "CA_S": true,
+    "OR_WA": false
+   },
+   "flag": "SURPRISE: check for artifact, confounding or reporting bias"
+  },
+  {
+   "feature": "dist_river_major_mean_m",
+   "expected": "-",
+   "auc": 0.404,
+   "ci": [
+    0.312,
+    0.512
+   ],
+   "as_expected_pooled": true,
+   "as_expected_by_window": {
+    "CA_N": false,
+    "CA_S": true,
+    "OR_WA": true
+   },
+   "flag": "SURPRISE: check for artifact, confounding or reporting bias"
+  },
+  {
+   "feature": "soil_clay_0_30",
+   "expected": "+",
+   "auc": 0.536,
+   "ci": [
+    0.412,
+    0.66
+   ],
+   "as_expected_pooled": true,
+   "as_expected_by_window": {
+    "CA_N": false,
+    "CA_S": true,
+    "OR_WA": true
+   },
+   "flag": "SURPRISE: check for artifact, confounding or reporting bias"
+  },
+  {
+   "feature": "lc_built_up",
+   "expected": "+",
+   "auc": 0.82,
+   "ci": [
+    0.767,
+    0.868
+   ],
+   "as_expected_pooled": true,
+   "as_expected_by_window": {
+    "CA_N": true,
+    "CA_S": true,
+    "OR_WA": true
+   },
+   "flag": ""
+  }
+ ],
+ "spatial": {
+  "morans_I_5km": {
+   "CA_N": {
+    "pos": {
+     "I": 0.1911,
+     "expected_I": -0.0005,
+     "p_perm": 0.001,
+     "n": 1985
+    },
+    "slope_mean": {
+     "I": 0.8042,
+     "expected_I": -0.0005,
+     "p_perm": 0.001,
+     "n": 1985
+    },
+    "rain_map_mm": {
+     "I": 0.996,
+     "expected_I": -0.0005,
+     "p_perm": 0.001,
+     "n": 1985
+    },
+    "ndvi_mean": {
+     "I": 0.8047,
+     "expected_I": -0.0005,
+     "p_perm": 0.001,
+     "n": 1985
+    }
+   },
+   "CA_S": {
+    "pos": {
+     "I": 0.1265,
+     "expected_I": -0.0007,
+     "p_perm": 0.001,
+     "n": 1532
+    },
+    "slope_mean": {
+     "I": 0.7513,
+     "expected_I": -0.0007,
+     "p_perm": 0.001,
+     "n": 1532
+    },
+    "rain_map_mm": {
+     "I": 0.9904,
+     "expected_I": -0.0007,
+     "p_perm": 0.001,
+     "n": 1532
+    },
+    "ndvi_mean": {
+     "I": 0.8718,
+     "expected_I": -0.0007,
+     "p_perm": 0.001,
+     "n": 1532
+    }
+   },
+   "OR_WA": {
+    "pos": {
+     "I": 0.2822,
+     "expected_I": -0.0005,
+     "p_perm": 0.001,
+     "n": 1870
+    },
+    "slope_mean": {
+     "I": 0.8611,
+     "expected_I": -0.0005,
+     "p_perm": 0.001,
+     "n": 1870
+    },
+    "rain_map_mm": {
+     "I": 0.9931,
+     "expected_I": -0.0005,
+     "p_perm": 0.001,
+     "n": 1870
+    },
+    "ndvi_mean": {
+     "I": 0.7566,
+     "expected_I": -0.0005,
+     "p_perm": 0.001,
+     "n": 1870
+    }
+   }
+  },
+  "event_clustering": {
+   "CA_N": {
+    "events": 99,
+    "distinct_points": 98,
+    "mean_nn_m": 6878.0,
+    "clark_evans_R": 0.589,
+    "share_within_5km_of_another": 0.643,
+    "share_within_10km": 0.776,
+    "share_within_20km": 0.918
+   },
+   "CA_S": {
+    "events": 126,
+    "distinct_points": 122,
+    "mean_nn_m": 3960.4,
+    "clark_evans_R": 0.342,
+    "share_within_5km_of_another": 0.705,
+    "share_within_10km": 0.91,
+    "share_within_20km": 0.992
+   },
+   "OR_WA": {
+    "events": 235,
+    "distinct_points": 226,
+    "mean_nn_m": 3657.5,
+    "clark_evans_R": 0.498,
+    "share_within_5km_of_another": 0.832,
+    "share_within_10km": 0.92,
+    "share_within_20km": 0.969
+   }
+  },
+  "reporting_bias_proxies": {
+   "lc_built_up": {
+    "rate_by_quintile": [
+     0.0009,
+     0.0046,
+     0.0529,
+     0.0659,
+     0.1262
+    ],
+    "median_by_quintile": [
+     0.0,
+     0.0001,
+     0.0024,
+     0.0164,
+     0.2527
+    ]
+   },
+   "dist_river_all_mean_m": {
+    "rate_by_quintile": [
+     0.0473,
+     0.0539,
+     0.0464,
+     0.052,
+     0.051
+    ],
+    "median_by_quintile": [
+     571.0065,
+     741.3516,
+     927.6631,
+     1203.4744,
+     1839.3481
+    ]
+   }
+  }
+ },
+ "temporal": {
+  "seasonality": {
+   "events_by_month": {
+    "1": 104,
+    "2": 86,
+    "3": 87,
+    "4": 13,
+    "5": 7,
+    "6": 3,
+    "7": 10,
+    "8": 7,
+    "9": 5,
+    "10": 9,
+    "11": 20,
+    "12": 109
+   },
+   "share_DJF": 0.65,
+   "share_Nov_to_Mar": 0.883
+  },
+  "temporal_holdout_feasibility_train_part_only": {
+   "criteria": ">= 150 events and >= 40 distinct dates on EACH side",
+   "by_cutoff_year_end": {
+    "2009": {
+     "train_events": 54,
+     "train_dates": 45,
+     "test_events": 406,
+     "test_dates": 209,
+     "meets_criteria": false
+    },
+    "2010": {
+     "train_events": 136,
+     "train_dates": 79,
+     "test_events": 324,
+     "test_dates": 175,
+     "meets_criteria": false
+    },
+    "2011": {
+     "train_events": 205,
+     "train_dates": 112,
+     "test_events": 255,
+     "test_dates": 142,
+     "meets_criteria": true
+    },
+    "2012": {
+     "train_events": 231,
+     "train_dates": 133,
+     "test_events": 229,
+     "test_dates": 121,
+     "meets_criteria": true
+    },
+    "2013": {
+     "train_events": 238,
+     "train_dates": 140,
+     "test_events": 222,
+     "test_dates": 114,
+     "meets_criteria": true
+    },
+    "2014": {
+     "train_events": 280,
+     "train_dates": 166,
+     "test_events": 180,
+     "test_dates": 88,
+     "meets_criteria": true
+    },
+    "2015": {
+     "train_events": 313,
+     "train_dates": 189,
+     "test_events": 147,
+     "test_dates": 65,
+     "meets_criteria": false
+    },
+    "2016": {
+     "train_events": 337,
+     "train_dates": 207,
+     "test_events": 123,
+     "test_dates": 47,
+     "meets_criteria": false
+    }
+   }
+  },
+  "events_by_year": {
+   "1997": 7,
+   "1998": 2,
+   "2006": 7,
+   "2007": 12,
+   "2008": 12,
+   "2009": 14,
+   "2010": 82,
+   "2011": 69,
+   "2012": 26,
+   "2013": 7,
+   "2014": 42,
+   "2015": 33,
+   "2016": 24,
+   "2017": 123
+  },
+  "trend_events_per_year_slope": 3.11,
+  "note": "the GLC compiles news reports starting in 2007: a rise in counts reflects reporting effort and storms as much as landslide frequency (non-stationarity)"
+ },
+ "rainfall_percentiles": {
+  "events": 451,
+  "median_percentile_of_prior_month_rain": 0.625,
+  "share_above_75th": 0.333,
+  "share_above_90th": 0.16,
+  "wilcoxon_p_vs_median_0.5": 0.0,
+  "by_window_median": {
+   "CA_N": 0.625,
+   "CA_S": 0.688,
+   "OR_WA": 0.562
+  },
+  "null": "uniform percentiles (median 0.5); events are clustered in few storms, so the p-value is descriptive only"
+ },
+ "collinearity": {
+  "n_features": 68,
+  "abs_spearman_threshold": 0.9,
+  "redundancy_clusters_gt1": [
+   [
+    "elev_mean",
+    "elev_min",
+    "elev_max"
+   ],
+   [
+    "relief",
+    "elev_std",
+    "slope_mean",
+    "slope_q3",
+    "slope_frac_gt15"
+   ],
+   [
+    "slope_max",
+    "slope_frac_gt30"
+   ],
+   [
+    "lc_tree_cover",
+    "ndvi_mean",
+    "ndvi_julaug"
+   ],
+   [
+    "rain_map_mm",
+    "rain_djf_mm",
+    "rain_max_month_clim_mm"
+   ],
+   [
+    "dist_river_major_mean_m",
+    "dist_river_major_min_m"
+   ],
+   [
+    "dist_fault_all_mean_m",
+    "dist_fault_all_min_m"
+   ],
+   [
+    "dist_fault_young_mean_m",
+    "dist_fault_young_min_m"
+   ],
+   [
+    "soil_cfvo_0_5",
+    "soil_cfvo_15_30",
+    "soil_cfvo_5_15",
+    "soil_cfvo_0_30"
+   ],
+   [
+    "soil_clay_0_5",
+    "soil_clay_15_30",
+    "soil_clay_5_15",
+    "soil_clay_0_30"
+   ],
+   [
+    "soil_sand_0_5",
+    "soil_sand_15_30",
+    "soil_sand_5_15",
+    "soil_sand_0_30"
+   ],
+   [
+    "soil_silt_0_5",
+    "soil_silt_15_30",
+    "soil_silt_5_15",
+    "soil_silt_0_30"
+   ]
+  ],
+  "n_clusters": 42,
+  "vif_complete_cases": 4603,
+  "vif_features": 49,
+  "vif_dropped_for_composition_or_definition": [
+   "lc_tree_cover",
+   "lith_UNCONSOLIDATED",
+   "lith_cover",
+   "ndvi_valid_month_share",
+   "relief",
+   "soil_cfvo_0_5",
+   "soil_cfvo_15_30",
+   "soil_cfvo_5_15",
+   "soil_clay_0_5",
+   "soil_clay_15_30",
+   "soil_clay_5_15",
+   "soil_cover",
+   "soil_sand_0_5",
+   "soil_sand_15_30",
+   "soil_sand_5_15",
+   "soil_silt_0_30",
+   "soil_silt_0_5",
+   "soil_silt_15_30",
+   "soil_silt_5_15"
+  ],
+  "vif_top": {
+   "rain_djf_mm": 1657.3,
+   "dist_fault_young_mean_m": 1273.9,
+   "rain_map_mm": 1246.2,
+   "dist_fault_young_min_m": 1245.2,
+   "rain_max_month_clim_mm": 661.3,
+   "dist_river_major_mean_m": 511.4,
+   "dist_river_major_min_m": 508.1,
+   "dist_fault_all_mean_m": 422.6,
+   "dist_fault_all_min_m": 402.6,
+   "slope_mean": 240.4,
+   "rain_jja_mm": 231.9,
+   "elev_max": 124.9,
+   "ndvi_mean": 115.1,
+   "elev_mean": 107.4,
+   "elev_min": 89.6
+  },
+  "features_vif_gt10": 26,
+  "features_vif_gt100": 14
+ },
+ "sufficiency": {
+  "train_events": 460,
+  "train_positive_cells": 270,
+  "occupied_50km_blocks_with_positives": 53,
+  "occupied_50km_blocks_with_events": 53,
+  "distinct_event_dates": 254,
+  "events_per_variable_if_72_features": 6.4,
+  "events_per_variable_if_15_features": 30.7,
+  "positive_cells_per_variable_if_15_features": 18.0,
+  "univariate_auc_ci_width_vs_positive_cells": {
+   "0.1": {
+    "positive_cells_in_subsample_approx": 27,
+    "median_ci_width_top5": 0.26
+   },
+   "0.25": {
+    "positive_cells_in_subsample_approx": 67,
+    "median_ci_width_top5": 0.268
+   },
+   "0.5": {
+    "positive_cells_in_subsample_approx": 135,
+    "median_ci_width_top5": 0.173
+   },
+   "0.75": {
+    "positive_cells_in_subsample_approx": 202,
+    "median_ci_width_top5": 0.137
+   },
+   "1.0": {
+    "positive_cells_in_subsample_approx": 270,
+    "median_ci_width_top5": 0.12
+   }
+  },
+  "width_fit_k_over_sqrt_n": 1.87,
+  "positive_cells_for_ci_width_0.10": 349
+ },
+ "grid_sensitivity_10km": {
+  "features": 68,
+  "train_positive_cells_10km": 189,
+  "background_candidates_10km": 534,
+  "spearman_of_auc_5km_vs_10km": 0.977,
+  "top10_overlap": 10
+ },
+ "sensitivity_unknown_trigger_and_unflagged_background": {
+  "positive_cells": 349,
+  "background": 1920,
+  "spearman_of_auc_vs_primary": 0.883,
+  "top10_overlap": 4,
+  "unknown_trigger_labels_only": {
+   "spearman_of_auc_vs_primary": 0.96,
+   "top10_overlap": 9,
+   "built_up_auc": 0.783
+  },
+  "unflagged_background_only": {
+   "spearman_of_auc_vs_primary": 0.88,
+   "top10_overlap": 7,
+   "built_up_auc": 0.806
+  },
+  "built_up_auc_combined": 0.766
+ }
+}

@@ -20,8 +20,9 @@ const TITLES: Record<ProviderName, string> = {
   GPM: "GPM IMERG",
   LANDSLIDE_CATALOG: "Global Landslide Catalog",
   SMAP: "SMAP",
+  OPERA: "OPERA DISP-S1",
 };
-const ORDER: ProviderName[] = ["NISAR", "NASADEM", "GPM", "LANDSLIDE_CATALOG", "SMAP"];
+const ORDER: ProviderName[] = ["NISAR", "NASADEM", "GPM", "OPERA", "LANDSLIDE_CATALOG", "SMAP"];
 const AUTH_LABEL = {
   not_required: "Not required",
   configured: "Configured",

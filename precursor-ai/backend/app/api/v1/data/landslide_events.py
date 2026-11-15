@@ -45,7 +45,7 @@ def import_events(
     try:
         with invalid_as_422():
             return lc.LandslideCatalogProvider(settings, db).run_import(
-                force_download=body.force, file_path=body.file_path)
+                force_download=body.force, file_path=body.file_path, allowed_root=settings.data_root)
     except OSError as exc:  # unreadable local file_path
         raise ValidationFailed(f"cannot read file: {exc}") from None
     except RuntimeError as exc:  # fetch() raises this after exhausting retries

@@ -1,0 +1,20 @@
+{
+  "stage": "stage1",
+  "lang": "en",
+  "primary_language": "en",
+  "template_options": {
+    "schema_version": 1,
+    "phase": "template",
+    "lang": "en",
+    "default_mode": "free_design",
+    "explicit_workspace_roots": []
+  },
+  "recommend": { "canvas": "ppt169" },
+  "audience": { "value": "NASA Space Apps Challenge judges and attendees: technically literate, short on time, not necessarily InSAR or landslide specialists." },
+  "communication_intent": { "value": "Explain the problem and how the platform works first; then persuade the judges that PRECURSOR AI is a credible, reusable use of NASA radar data for the \"Dancing with the SARs\" challenge." },
+  "audience_outcome": { "value": "Judges can say in one sentence what PRECURSOR AI does, which NASA datasets it uses and why it matters, and they scan the QR code to try the app." },
+  "core_message": { "value": "Open NASA data in, one usable landslide early-warning map out: PRECURSOR AI sees landslides before they happen, from space." },
+  "delivery_context": { "value": "Primary: presenter-led live pitch of a few minutes on a projected screen. Secondary: the deck is shared with judges as part of the submission and read without a presenter." },
+  "artifact_afterlife": { "value": "Submission artifact for the challenge; reused as the base deck once the Lorem ipsum placeholders are replaced with real results." },
+  "content_divergence": { "value": "Follow the supplied 9-slide plan: same slide order and titles, plan wording kept, Lorem ipsum placeholders kept as written. Steps 1-4 and Dashboard text on the How-it-works slide reuse the previous deck." }
+}

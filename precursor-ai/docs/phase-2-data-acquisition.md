@@ -317,7 +317,7 @@ cd backend && RUN_LIVE_EARTHDATA=1 pytest tests/manual/test_live_earthdata.py -s
 - No scheduler, no external queue: jobs live in an in-process thread pool and are lost on restart (recoverable via retry).
 - Progress is committed from the worker session; many concurrent large downloads are untested.
 - IMERG files are global; AOI subsetting is a later step. IMERG is Final Run (~3.5 month latency), ~0.1 degree grid.
-- Landslide Catalog is a 2016 export: incomplete, not current.
+- Landslide Catalog is a one-time export (last event 2017-09-28, corrected 2026-11-15 per [M1 census](../ml/reports/M1_census_and_download_list.md); the code constant/version tag still says 2016-03-07): incomplete, not current.
 - Search returns at most `MAX_GRANULES_PER_REQUEST` granules; there is no pagination beyond that.
 - Orchestrator passes the provider directory as `dest_dir`, so on-disk names are the provider's original filename; the `<YYYYMMDD>__` prefix is applied only by `storage.target_path` (used when `dest_dir` is not given). See [data-storage.md](data-storage.md).
 - `UNAVAILABLE` status is never set.

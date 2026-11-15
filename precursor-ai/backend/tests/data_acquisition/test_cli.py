@@ -172,7 +172,7 @@ def test_import_landslides_from_file(make, tmp_path):
 
     svc = make()
     code, text = run(svc, "import-landslides", "--file", str(write_csv(tmp_path)))
-    assert code == 0 and "inserted 3" in text and "2016-03-07" in text
+    assert code == 0 and "inserted 3" in text and "2017-09-28" in text
     assert run(svc, "import-landslides", "--file", str(tmp_path / "nope.csv"))[0] == 2
 
 

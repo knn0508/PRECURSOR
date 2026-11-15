@@ -1,0 +1,15 @@
+{
+ "recorded": "2026-11-15 (v3 start; files not modified by v3)",
+ "sha256": {
+  "results_v2/b0_predictions.npz": "8a9bb833dfc67ee00ffd645e151a33c66e517a66bf74b66e8165d0dc3c71f793",
+  "artifacts/model.pt": "1d1fe0498981c9f98e34d5346c674d98193dd58b54078c810fde8524f5d5e446",
+  "artifacts/metrics.json": "6e5420b73a05e463dfa5713fbbab16c67b2970d46ec116b2fa51fb47afe6db83",
+  "src/precursor/models.py": "c29e198bb80f61e662aa324d5eae7245f28e4a79b1e42e98fe10191f04d5d51e",
+  "src/precursor/train.py": "211baea8d41db666cba99d0fb2064f9f0106ecdbd51f24131932f3b2eb336285",
+  "src/precursor/dataset.py": "049505b337eb2dfe48aa079f5efaa4e169e4e457a8cee880249ada55a8f0421b",
+  "src/precursor/kalman_trend.py": "526e2f2aa5db5165f807be4abeddb14841773a40dbb188b417c1491efb93490b",
+  "src/precursor/v2common.py": "546a524fb2c81ed23de403e500ec1778099547aaf24533dab28a6daa40cddc28",
+  "results_v2/experiments.csv": "5cf373b64a5fa674aa14787bab211a68d67a3856e4b723d5905ab32dd3724d45",
+  "results_v2/baseline_reproduction.csv": "76cc8f52df823d78d53f095dd3e62c31cf896a79dbb83f30076c9889b5e16cff"
+ }
+}

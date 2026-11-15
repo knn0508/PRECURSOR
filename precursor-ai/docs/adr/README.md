@@ -13,3 +13,5 @@ One file per important technical decision: ID, title, date, status (PROPOSED / A
 | [0007](ADR-0007-feature-extraction-and-labelled-dataset.md) | Feature extraction, labelled sample dataset and their dependencies (revises the scipy rejection in 0005) | ACCEPTED |
 | [0008](ADR-0008-ml-slot-and-labelled-mock-frontend.md) | ML slot and labelled frontend mock predictions, no ML (clarifies 0002) | ACCEPTED |
 | [0009](ADR-0009-ml-development-track.md) | ML development track authorized, isolated from the 10 phases (supplements 0002, 0008) | ACCEPTED |
+| [0010](ADR-0010-time-series-with-scipy-no-statsmodels.md) | Phase 6 time-series statistics with scipy, no statsmodels | ACCEPTED |
+| [0011](ADR-0011-displacement-forecast-module.md) | Displacement-forecast module (second ML area), read-only serving (amends 0009) | ACCEPTED |

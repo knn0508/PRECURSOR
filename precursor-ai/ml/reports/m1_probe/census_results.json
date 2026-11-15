@@ -1,0 +1,431 @@
+{
+ "inputs": {
+  "glc_rows": 11033,
+  "coolr_new_rows": 15274
+ },
+ "date_range": {
+  "GLC": [
+   "1988-11-07 00:00:00",
+   "2017-09-28 19:36:00"
+  ],
+  "COOLR_NEW": [
+   "2019-04-23 00:00:00",
+   "2023-08-06 00:00:00"
+  ]
+ },
+ "usable_period": [
+  "2014-10-03",
+  "2025-09-30"
+ ],
+ "funnel": {
+  "GLC": {
+   "rows": 11033,
+   "coords_ok": 11033,
+   "dated": 11033,
+   "rain_triggered": 8710,
+   "plus_landslide_type": 8665,
+   "all_years_strict": 4918,
+   "in_period_strict": 1812,
+   "in_period_relaxed": 2142
+  },
+  "COOLR_NEW": {
+   "rows": 15274,
+   "coords_ok": 15274,
+   "dated": 15274,
+   "rain_triggered": 15274,
+   "plus_landslide_type": 15274,
+   "all_years_strict": 15274,
+   "in_period_strict": 15274,
+   "in_period_relaxed": 15274
+  }
+ },
+ "glc_accuracy_counts_in_period_rain": {
+  "5km": 757,
+  "1km": 752,
+  "10km": 332,
+  "exact": 318,
+  "25km": 284,
+  "50km": 151,
+  "unknown": 57,
+  "100km": 17,
+  "250km": 13
+ },
+ "per_year_strict_global": {
+  "GLC": {
+   "2014": 90,
+   "2015": 500,
+   "2016": 469,
+   "2017": 753
+  },
+  "COOLR_NEW": {
+   "2019": 57,
+   "2022": 5163,
+   "2023": 10054
+  }
+ },
+ "top_windows_strict": [
+  {
+   "bbox_wsen": [
+    -97.0,
+    15.0,
+    -94.0,
+    18.0
+   ],
+   "total_records": 3872,
+   "strict_usable_events": 3862,
+   "relaxed_usable_events": 3864,
+   "strict_distinct_30m_cells_(expected_positive_cells_upper_bound)": 3841,
+   "by_source_strict": {
+    "COOLR_NEW": 3862
+   },
+   "per_year_strict": {
+    "2022": 3862
+   },
+   "countries_strict": {
+    "Mexico": 3862
+   },
+   "glc_accuracy_mix_all_usable_base": {
+    "5km": 5,
+    "10km": 2,
+    "unknown": 1,
+    "1km": 1,
+    "25km": 1
+   },
+   "all_years_strict_(2007+)": 3868,
+   "distinct_event_dates_strict": 1,
+   "top_event_dates_strict": {
+    "2022-05-30": 3862
+   },
+   "max_share_on_one_date": 1.0
+  },
+  {
+   "bbox_wsen": [
+    119.0,
+    16.0,
+    122.0,
+    19.0
+   ],
+   "total_records": 3380,
+   "strict_usable_events": 3199,
+   "relaxed_usable_events": 3211,
+   "strict_distinct_30m_cells_(expected_positive_cells_upper_bound)": 3186,
+   "by_source_strict": {
+    "COOLR_NEW": 3183,
+    "GLC": 16
+   },
+   "per_year_strict": {
+    "2015": 7,
+    "2016": 7,
+    "2017": 2,
+    "2023": 3183
+   },
+   "countries_strict": {
+    "Philippines": 3196
+   },
+   "glc_accuracy_mix_all_usable_base": {
+    "5km": 57,
+    "25km": 53,
+    "10km": 47,
+    "50km": 22,
+    "unknown": 10,
+    "1km": 7,
+    "exact": 1
+   },
+   "all_years_strict_(2007+)": 3245,
+   "distinct_event_dates_strict": 14,
+   "top_event_dates_strict": {
+    "2023-07-26": 3183,
+    "2015-08-21": 2,
+    "2016-08-16": 2
+   },
+   "max_share_on_one_date": 0.995
+  },
+  {
+   "bbox_wsen": [
+    102.0,
+    21.0,
+    105.0,
+    24.0
+   ],
+   "total_records": 1987,
+   "strict_usable_events": 1951,
+   "relaxed_usable_events": 1952,
+   "strict_distinct_30m_cells_(expected_positive_cells_upper_bound)": 1946,
+   "by_source_strict": {
+    "COOLR_NEW": 1950,
+    "GLC": 1
+   },
+   "per_year_strict": {
+    "2015": 1,
+    "2023": 1950
+   },
+   "countries_strict": {
+    "Vietnam": 1951
+   },
+   "glc_accuracy_mix_all_usable_base": {
+    "unknown": 14,
+    "25km": 10,
+    "50km": 7,
+    "10km": 3,
+    "5km": 3
+   },
+   "all_years_strict_(2007+)": 1953,
+   "distinct_event_dates_strict": 2,
+   "top_event_dates_strict": {
+    "2023-08-05": 1950,
+    "2015-08-12": 1
+   },
+   "max_share_on_one_date": 0.999
+  }
+ ],
+ "top_windows_glc_only": [
+  {
+   "bbox_wsen": [
+    -123.0,
+    37.0,
+    -120.0,
+    40.0
+   ],
+   "total_records": 223,
+   "strict_usable_events": 115,
+   "relaxed_usable_events": 121,
+   "strict_distinct_30m_cells_(expected_positive_cells_upper_bound)": 114,
+   "by_source_strict": {
+    "GLC": 115
+   },
+   "per_year_strict": {
+    "2014": 7,
+    "2015": 3,
+    "2016": 20,
+    "2017": 85
+   },
+   "countries_strict": {
+    "United States": 21
+   },
+   "glc_accuracy_mix_all_usable_base": {
+    "1km": 97,
+    "5km": 55,
+    "exact": 46,
+    "10km": 14,
+    "25km": 7,
+    "unknown": 3,
+    "50km": 1
+   },
+   "all_years_strict_(2007+)": 173,
+   "distinct_event_dates_strict": 58,
+   "top_event_dates_strict": {
+    "2017-01-09": 11,
+    "2017-02-21": 9,
+    "2017-02-07": 7
+   },
+   "max_share_on_one_date": 0.096
+  },
+  {
+   "bbox_wsen": [
+    -124.0,
+    45.0,
+    -121.0,
+    48.0
+   ],
+   "total_records": 770,
+   "strict_usable_events": 111,
+   "relaxed_usable_events": 124,
+   "strict_distinct_30m_cells_(expected_positive_cells_upper_bound)": 109,
+   "by_source_strict": {
+    "GLC": 111
+   },
+   "per_year_strict": {
+    "2014": 4,
+    "2015": 33,
+    "2016": 9,
+    "2017": 65
+   },
+   "countries_strict": {
+    "United States": 41
+   },
+   "glc_accuracy_mix_all_usable_base": {
+    "exact": 365,
+    "1km": 167,
+    "5km": 144,
+    "10km": 44,
+    "25km": 29,
+    "50km": 13,
+    "unknown": 8
+   },
+   "all_years_strict_(2007+)": 327,
+   "distinct_event_dates_strict": 62,
+   "top_event_dates_strict": {
+    "2017-02-16": 9,
+    "2015-01-05": 8,
+    "2017-02-09": 8
+   },
+   "max_share_on_one_date": 0.081
+  },
+  {
+   "bbox_wsen": [
+    -119.0,
+    32.0,
+    -116.0,
+    35.0
+   ],
+   "total_records": 222,
+   "strict_usable_events": 78,
+   "relaxed_usable_events": 81,
+   "strict_distinct_30m_cells_(expected_positive_cells_upper_bound)": 75,
+   "by_source_strict": {
+    "GLC": 78
+   },
+   "per_year_strict": {
+    "2014": 19,
+    "2015": 15,
+    "2016": 9,
+    "2017": 35
+   },
+   "countries_strict": {
+    "United States": 36,
+    "Mexico": 1
+   },
+   "glc_accuracy_mix_all_usable_base": {
+    "1km": 88,
+    "5km": 66,
+    "exact": 38,
+    "10km": 19,
+    "25km": 8,
+    "50km": 3
+   },
+   "all_years_strict_(2007+)": 167,
+   "distinct_event_dates_strict": 37,
+   "top_event_dates_strict": {
+    "2017-01-20": 8,
+    "2014-12-12": 7,
+    "2017-02-27": 7
+   },
+   "max_share_on_one_date": 0.103
+  }
+ ],
+ "top_windows_glc_all_years_static_use": [
+  {
+   "bbox_wsen": [
+    -124.0,
+    45.0,
+    -121.0,
+    48.0
+   ],
+   "total_records": 770,
+   "strict_usable_events": 111,
+   "relaxed_usable_events": 124,
+   "strict_distinct_30m_cells_(expected_positive_cells_upper_bound)": 109,
+   "by_source_strict": {
+    "GLC": 111
+   },
+   "per_year_strict": {
+    "2014": 4,
+    "2015": 33,
+    "2016": 9,
+    "2017": 65
+   },
+   "countries_strict": {
+    "United States": 41
+   },
+   "glc_accuracy_mix_all_usable_base": {
+    "exact": 365,
+    "1km": 167,
+    "5km": 144,
+    "10km": 44,
+    "25km": 29,
+    "50km": 13,
+    "unknown": 8
+   },
+   "all_years_strict_(2007+)": 327,
+   "distinct_event_dates_strict": 62,
+   "top_event_dates_strict": {
+    "2017-02-16": 9,
+    "2015-01-05": 8,
+    "2017-02-09": 8
+   },
+   "max_share_on_one_date": 0.081
+  },
+  {
+   "bbox_wsen": [
+    -123.0,
+    37.0,
+    -120.0,
+    40.0
+   ],
+   "total_records": 223,
+   "strict_usable_events": 115,
+   "relaxed_usable_events": 121,
+   "strict_distinct_30m_cells_(expected_positive_cells_upper_bound)": 114,
+   "by_source_strict": {
+    "GLC": 115
+   },
+   "per_year_strict": {
+    "2014": 7,
+    "2015": 3,
+    "2016": 20,
+    "2017": 85
+   },
+   "countries_strict": {
+    "United States": 21
+   },
+   "glc_accuracy_mix_all_usable_base": {
+    "1km": 97,
+    "5km": 55,
+    "exact": 46,
+    "10km": 14,
+    "25km": 7,
+    "unknown": 3,
+    "50km": 1
+   },
+   "all_years_strict_(2007+)": 173,
+   "distinct_event_dates_strict": 58,
+   "top_event_dates_strict": {
+    "2017-01-09": 11,
+    "2017-02-21": 9,
+    "2017-02-07": 7
+   },
+   "max_share_on_one_date": 0.096
+  },
+  {
+   "bbox_wsen": [
+    -119.0,
+    32.0,
+    -116.0,
+    35.0
+   ],
+   "total_records": 222,
+   "strict_usable_events": 78,
+   "relaxed_usable_events": 81,
+   "strict_distinct_30m_cells_(expected_positive_cells_upper_bound)": 75,
+   "by_source_strict": {
+    "GLC": 78
+   },
+   "per_year_strict": {
+    "2014": 19,
+    "2015": 15,
+    "2016": 9,
+    "2017": 35
+   },
+   "countries_strict": {
+    "United States": 36,
+    "Mexico": 1
+   },
+   "glc_accuracy_mix_all_usable_base": {
+    "1km": 88,
+    "5km": 66,
+    "exact": 38,
+    "10km": 19,
+    "25km": 8,
+    "50km": 3
+   },
+   "all_years_strict_(2007+)": 167,
+   "distinct_event_dates_strict": 37,
+   "top_event_dates_strict": {
+    "2017-01-20": 8,
+    "2014-12-12": 7,
+    "2017-02-27": 7
+   },
+   "max_share_on_one_date": 0.103
+  }
+ ]
+}

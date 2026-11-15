@@ -1,6 +1,6 @@
 # Phase 7: Predictive Risk Assessment Engine (architecture and ML slot, no ML)
 
-Status: **NOT_STARTED** (scope defined 2026-11-14; no code). Roadmap: [ROADMAP](../project/ROADMAP.md). Executable brief: [Prompts.md](../../Prompts.md) (Phase 7).
+Status: **COMPLETED** (contracts and empty ML slot, 2026-11-15; see Implementation status). Roadmap: [ROADMAP](../project/ROADMAP.md). Executable brief: [Prompts.md](../../Prompts.md) (Phase 7).
 
 ## Objective
 Define the landslide early-prediction **architecture** and reserve the **ML slot** where the user's finished model will be plugged in later without redesign. **No model is trained, loaded or run in this phase.**
@@ -26,13 +26,27 @@ Phases 4-6 schemas (manifest, feature schema, indicators).
 `PREDICTION_BACKEND=none` returns `MODEL_NOT_TRAINED` everywhere; schema validation tests; swap-path test passes with the TEST_DOUBLE; no score-like fields in app code; ADR-0008 (ML slot) followed and updated only if the design changes; ADR-0002 untouched.
 
 ## Implementation status
-Nothing implemented. Tests: none.
+**COMPLETED (2026-11-15), scope = architecture, contracts and an empty ML slot.** All acceptance items met with evidence below; no model, no score. Caveat: Phase 6 now exists (2026-11-15, synthetic only) but does not fill the per-point dynamic features, so the trigger head stays design-only; the slot itself is unaffected.
+
+| Item | Evidence |
+|---|---|
+| Two heads, analysis units, targets, label caveats, risk-category interpretation, training-data and validation protocol | [PREDICTION_DESIGN](../scientific/PREDICTION_DESIGN.md) (design, *proposed* parameters) |
+| Schemas `RiskModelInput` (wraps `ModelInputSpec`), `RiskModelOutput`, `ModelRegistryEntry`, `PredictionResponse` | `backend/app/schemas/prediction.py` |
+| `Predictor`, `NullPredictor`, `ModelRegistry`, `PredictionService`, `PREDICTION_BACKEND` (default `none`), `MODELS_DIR` | `backend/app/services/prediction/`, `core/config.py` |
+| Endpoints `/api/v1/prediction/status|models|susceptibility|trigger` -> `MODEL_NOT_TRAINED` under `none` | `backend/app/api/v1/prediction.py` |
+| Artifact folder, README, template (no weights) | `models/` |
+| Swap-path contract test with test-only `TestDouble` | `backend/tests/prediction/` |
+| How to add a model, checklist, frontend flip | [ML_INTEGRATION](../architecture/ML_INTEGRATION.md) |
+
+Tests (2026-11-15, Earthdata unset, throwaway database `precursor_t_p78`): `tests/prediction` **29 passed** (Phase 7 + 8 together); whole backend suite **630 passed, 4 skipped, 0 errors** (baseline 601 before Phases 7-8); `alembic check`: no drift (no migration, no DB table). An earlier run without a throwaway database showed 135 DB-guard errors, resolved by creating the database. ADR-0008 followed unchanged; ADR-0002 untouched.
+
+Open (by design, not defects): the registry has never loaded a real model (none exists); `ModelRegistry.attach` wiring at app start belongs to the separately authorized ML stage. Fixed after review: the default service rescans `models/` on each request (a model folder added while the app runs is picked up; attached predictors are kept).
 
 ## Constraints
 [ADR-0002](../adr/ADR-0002-ml-deferral.md), [ADR-0008](../adr/ADR-0008-ml-slot-and-labelled-mock-frontend.md), [scientific-integrity.md](../../.claude/rules/scientific-integrity.md).
 
 ## Known limitations
-Landslide catalogs are incomplete and biased toward reported places; GLC ends 2016-03-07.
+Landslide catalogs are incomplete and biased toward reported places; GLC last event is dated 2017-09-28 (corrected 2026-11-15, [M1 census](../../ml/reports/M1_census_and_download_list.md)).
 
 ## Dependencies
 Previous: Phases 4-6. Following: Phase 8 (explainer in the same registry), Phase 9 (UI contract).

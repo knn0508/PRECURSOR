@@ -1,0 +1,672 @@
+{
+  "schema": "ppt-master.svg-quality-report.v1",
+  "stage": "final",
+  "target": "C:\\Users\\Kanan\\OneDrive - Ministry of Education SABAH Groups\\Documents\\NASA\\precursor-ai\\pitch_deck\\precursor_ai_pitch_20261115",
+  "source_fingerprint": {
+    "algorithm": "sha256",
+    "digest": "f0cc5bca1b4f7b6359cfeb87720d54ba57dbd4d9712260e78e670b1efabd3a8c",
+    "file_count": 9,
+    "files": [
+      {
+        "file": "01_title.svg",
+        "sha256": "4c0f3d341f4b0b935b31d445c790a733bb1bfb4a56acdd8e08980f34689c8171"
+      },
+      {
+        "file": "02_challenge.svg",
+        "sha256": "5fdaebb50f7cf3cf057b6fb8b2c9a3f8e30d1f75dec6de0088c4e466c601e3b0"
+      },
+      {
+        "file": "03_solution.svg",
+        "sha256": "139044612f3c91e6a5dd8f550a4c8a84049b5591d4fdc8d9c06d68b2111129ba"
+      },
+      {
+        "file": "04_how_it_works.svg",
+        "sha256": "a783618389b6635be35ba36db286f4ca3769c49742b7b0208723b94caee85e34"
+      },
+      {
+        "file": "05_space_data.svg",
+        "sha256": "bc927c2656798ef79eba07797961cfb130a28704493bd31346858b588fa13d1e"
+      },
+      {
+        "file": "06_impact.svg",
+        "sha256": "2ea77f58e9a083255d55b8dd3ebdb49dfacd19c5ced66bc780e1efd8c978a89d"
+      },
+      {
+        "file": "07_next_steps.svg",
+        "sha256": "8821cb64f82521fe670896f65961584d9cb22745a4e7fd3debb5f7c17ea7edff"
+      },
+      {
+        "file": "08_team.svg",
+        "sha256": "7557d2dec27e3c386dbf0d395c281348d70d204a1827ac414af5440aaa7487d0"
+      },
+      {
+        "file": "09_thank_you.svg",
+        "sha256": "d236ef6b7622170dfe27c12bd10218afe268a0f2894b0fd47c4323d6b132f9f0"
+      }
+    ]
+  },
+  "summary": {
+    "total": 9,
+    "passed": 9,
+    "warnings": 0,
+    "errors": 0
+  },
+  "issue_types": {},
+  "categories": {
+    "blocking": {
+      "count": 0,
+      "issues": []
+    },
+    "introduced": {
+      "count": 0,
+      "issues": []
+    },
+    "inherited": {
+      "count": 0,
+      "issues": []
+    },
+    "source-import": {
+      "count": 0,
+      "summary": {
+        "warning_count": 0,
+        "by_code": {}
+      }
+    }
+  },
+  "drift": {
+    "colors": {},
+    "fonts": {},
+    "sizes": {}
+  },
+  "carrier_receipt": {
+    "scope": "informational-not-a-quota",
+    "pages": 9,
+    "totals": {
+      "text_elements": 101,
+      "image_placements": 0,
+      "icons": 12,
+      "svg_geometry_elements": 66,
+      "preset_shapes": 6,
+      "page_frame_elements": 27,
+      "marker_uses": 1,
+      "inline_emphasis_runs": 11,
+      "gradient_uses": 0,
+      "filter_uses": 0,
+      "text_effects": 0
+    },
+    "pages_with": {
+      "images": 0,
+      "icons": 5,
+      "presets": 1,
+      "charts": 0,
+      "tables": 1,
+      "formulas": 0,
+      "inline_emphasis_runs": 3,
+      "gradient_uses": 0,
+      "filter_uses": 0,
+      "text_effects": 0
+    },
+    "relationship_pages": 5,
+    "geometry_elements": {
+      "circle": 8,
+      "ellipse": 0,
+      "line": 16,
+      "path": 21,
+      "polygon": 0,
+      "polyline": 0,
+      "rect": 21
+    },
+    "preset_names": {
+      "chevron": 6
+    },
+    "native_objects": {
+      "chart": 0,
+      "formula_block": 0,
+      "formula_inline": 0,
+      "other": 0,
+      "table": 1
+    },
+    "image_page_max_frame_share_range": []
+  },
+  "project_issues": {
+    "template": [],
+    "animation": [],
+    "illustration": [],
+    "communication_trace": [],
+    "pptx_structure": []
+  },
+  "files": [
+    {
+      "file": "01_title.svg",
+      "path": "precursor-ai\\pitch_deck\\precursor_ai_pitch_20261115\\svg_output\\01_title.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 3,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 1,
+              "ellipse": 0,
+              "line": 2,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 4
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 8,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "\"Segoe UI\", sans-serif"
+        ],
+        "text_elements": 3,
+        "tspan_elements": 1
+      },
+      "passed": true,
+      "source_sha256": "4c0f3d341f4b0b935b31d445c790a733bb1bfb4a56acdd8e08980f34689c8171"
+    },
+    {
+      "file": "02_challenge.svg",
+      "path": "precursor-ai\\pitch_deck\\precursor_ai_pitch_20261115\\svg_output\\02_challenge.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 5,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 3,
+          "effects": {
+            "inline_emphasis_runs": 4,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 1,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 2
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 2,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "\"Segoe UI\", sans-serif",
+          "Consolas, monospace"
+        ],
+        "text_elements": 5,
+        "tspan_elements": 13
+      },
+      "passed": true,
+      "source_sha256": "5fdaebb50f7cf3cf057b6fb8b2c9a3f8e30d1f75dec6de0088c4e466c601e3b0"
+    },
+    {
+      "file": "03_solution.svg",
+      "path": "precursor-ai\\pitch_deck\\precursor_ai_pitch_20261115\\svg_output\\03_solution.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 13,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 5,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 4,
+              "ellipse": 0,
+              "line": 1,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 2
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 2,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 1
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "\"Segoe UI\", sans-serif",
+          "Consolas, monospace"
+        ],
+        "text_elements": 13,
+        "tspan_elements": 12
+      },
+      "passed": true,
+      "source_sha256": "139044612f3c91e6a5dd8f550a4c8a84049b5591d4fdc8d9c06d68b2111129ba"
+    },
+    {
+      "file": "04_how_it_works.svg",
+      "path": "precursor-ai\\pitch_deck\\precursor_ai_pitch_20261115\\svg_output\\04_how_it_works.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 21,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 1
+            },
+            "preset_shapes": 6,
+            "preset_names": {
+              "chevron": 6
+            },
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "\"Segoe UI\", sans-serif",
+          "Consolas, monospace"
+        ],
+        "text_elements": 21,
+        "tspan_elements": 8
+      },
+      "passed": true,
+      "source_sha256": "a783618389b6635be35ba36db286f4ca3769c49742b7b0208723b94caee85e34"
+    },
+    {
+      "file": "05_space_data.svg",
+      "path": "precursor-ai\\pitch_deck\\precursor_ai_pitch_20261115\\svg_output\\05_space_data.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 16,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 1,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 1,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 3
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 2,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 1,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "\"Segoe UI\", sans-serif",
+          "Consolas, monospace"
+        ],
+        "text_elements": 16,
+        "tspan_elements": 2
+      },
+      "passed": true,
+      "source_sha256": "bc927c2656798ef79eba07797961cfb130a28704493bd31346858b588fa13d1e"
+    },
+    {
+      "file": "06_impact.svg",
+      "path": "precursor-ai\\pitch_deck\\precursor_ai_pitch_20261115\\svg_output\\06_impact.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 10,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 3,
+          "effects": {
+            "inline_emphasis_runs": 2,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 2,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 2
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 2,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "\"Segoe UI\", sans-serif",
+          "Consolas, monospace"
+        ],
+        "text_elements": 10,
+        "tspan_elements": 6
+      },
+      "passed": true,
+      "source_sha256": "2ea77f58e9a083255d55b8dd3ebdb49dfacd19c5ced66bc780e1efd8c978a89d"
+    },
+    {
+      "file": "07_next_steps.svg",
+      "path": "precursor-ai\\pitch_deck\\precursor_ai_pitch_20261115\\svg_output\\07_next_steps.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 14,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 2,
+              "ellipse": 0,
+              "line": 3,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 2
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 2,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "\"Segoe UI\", sans-serif",
+          "Consolas, monospace"
+        ],
+        "text_elements": 14,
+        "tspan_elements": 5
+      },
+      "passed": true,
+      "source_sha256": "8821cb64f82521fe670896f65961584d9cb22745a4e7fd3debb5f7c17ea7edff"
+    },
+    {
+      "file": "08_team.svg",
+      "path": "precursor-ai\\pitch_deck\\precursor_ai_pitch_20261115\\svg_output\\08_team.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 14,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 4,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 4,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 2
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 2,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "\"Segoe UI\", sans-serif",
+          "Consolas, monospace"
+        ],
+        "text_elements": 14,
+        "tspan_elements": 1
+      },
+      "passed": true,
+      "source_sha256": "7557d2dec27e3c386dbf0d395c281348d70d204a1827ac414af5440aaa7487d0"
+    },
+    {
+      "file": "09_thank_you.svg",
+      "path": "precursor-ai\\pitch_deck\\precursor_ai_pitch_20261115\\svg_output\\09_thank_you.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 5,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 1,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 1,
+              "ellipse": 0,
+              "line": 2,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 3
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 6,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "\"Segoe UI\", sans-serif",
+          "Consolas, monospace"
+        ],
+        "text_elements": 5,
+        "tspan_elements": 0
+      },
+      "passed": true,
+      "source_sha256": "d236ef6b7622170dfe27c12bd10218afe268a0f2894b0fd47c4323d6b132f9f0"
+    }
+  ]
+}

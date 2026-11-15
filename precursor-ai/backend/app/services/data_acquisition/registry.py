@@ -23,6 +23,7 @@ _GRANULE = {
     ProviderName.NASADEM: ("enable_nasadem", "nasadem", "NASADEMDataProvider"),
     ProviderName.GPM: ("enable_gpm", "gpm", "GPMDataProvider"),
     ProviderName.SMAP: ("enable_smap", "smap", "SMAPDataProvider"),
+    ProviderName.OPERA: ("enable_opera", "opera", "OperaDispDataProvider"),
 }
 _ENABLE_FLAGS = {**{n: v[0] for n, v in _GRANULE.items()}, ProviderName.LANDSLIDE_CATALOG: "enable_landslide_catalog"}
 

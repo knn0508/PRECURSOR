@@ -43,10 +43,10 @@ log = logging.getLogger(__name__)
 
 DATASET_PAGE_URL = "https://data.nasa.gov/dataset/global-landslide-catalog-export"
 SOURCE_URL = "https://data.nasa.gov/docs/legacy/Global_Landslide_Catalog_Export/Global_Landslide_Catalog_Export_rows.csv"
-EXPORT_DATE = "2016-03-07"
-DEFAULT_VERSION = f"export-{EXPORT_DATE}"
+EXPORT_DATE = "2017-09-28"  # date of the last event in the export (M1 census, ml/reports/M1_census_and_download_list.md)
+DEFAULT_VERSION = "export-2016-03-07"  # legacy identifier kept as-is: it is stored in the DB default/migration and file names
 DATASET_NOTE = (
-    "NASA Open Data Portal export, a historical one-time export current as of 2016-03-07; "
+    "NASA Open Data Portal export, a historical one-time export whose last event is dated 2017-09-28; "
     "NOT a complete or current landslide inventory; absence of an event is not evidence that no landslide occurred."
 )
 LIMITATIONS = DATASET_NOTE
@@ -264,7 +264,15 @@ class LandslideCatalogProvider:
         col.documentation_url = DATASET_PAGE_URL
         col.metadata_json = meta
 
-    def run_import(self, force_download: bool = False, file_path: str | Path | None = None) -> schemas.LandslideImportResponse:
+    def run_import(self, force_download: bool = False, file_path: str | Path | None = None,
+                   allowed_root: Path | None = None) -> schemas.LandslideImportResponse:
+        """`allowed_root` (set by the API) confines a caller-supplied `file_path` to that directory tree: the API must never read arbitrary
+        server paths (Phase 2 issue 1). The local CLI passes None because the operator already has file access."""
+        if file_path and allowed_root is not None:
+            root = Path(allowed_root).resolve()
+            resolved = Path(file_path).resolve()
+            if resolved != root and root not in resolved.parents:
+                raise ValueError("file_path must be inside the configured data root")
         path = Path(file_path) if file_path else self.fetch(force=force_download)
         res = self.import_file(path)
         return schemas.LandslideImportResponse(

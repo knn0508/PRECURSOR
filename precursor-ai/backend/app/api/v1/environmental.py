@@ -36,7 +36,7 @@ from app.services.environmental.types import EnvError, LayerKind, NotAvailable
 router = APIRouter(prefix="/environmental", tags=["environmental"])
 
 HIST_LIMITS = [
-    "Cataloged historical events only: the NASA Global Landslide Catalog is a one-time export current to 2016-03-07.",
+    "Cataloged historical events only: the NASA Global Landslide Catalog is a one-time export whose last event is dated 2017-09-28.",
     "Incomplete, reporting-biased and not ground truth; absence of an event proves nothing.",
 ]
 SEISMIC_LIMITS = [

@@ -48,3 +48,7 @@ data/ml/*/*
 !data/ml/*/README.md
 data/ml/.scope_baseline.json
 ml/runs/
+
+# Phase 10: backups can hold downloaded NASA files and database dumps
+backups/
+.venv-displacement/

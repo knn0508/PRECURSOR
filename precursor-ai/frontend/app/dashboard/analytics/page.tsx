@@ -1,14 +1,5 @@
-import { LineChart } from "lucide-react";
-import { PlaceholderPage } from "@/components/dashboard/placeholder-page";
+import { AnalyticsPage } from "@/components/pages/analytics-page";
 
-export default function AnalyticsPage() {
-  return (
-    <PlaceholderPage
-      title="Analytics"
-      icon={LineChart}
-      description="Deformation time series and model diagnostics."
-      emptyTitle="No analytics yet"
-      emptyDescription="Time-series analysis needs processed deformation measurements. Charts will be added with that phase."
-    />
-  );
+export default function Page() {
+  return <AnalyticsPage />;
 }

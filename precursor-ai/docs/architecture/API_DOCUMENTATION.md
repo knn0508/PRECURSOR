@@ -82,4 +82,31 @@ Read-only (three GET routes; a test asserts no write or process route exists). E
 
 Methods: [FEATURE_EXTRACTION](../scientific/FEATURE_EXTRACTION.md), [LABELLED_DATASET](../scientific/LABELLED_DATASET.md). Decision: [ADR-0007](../adr/ADR-0007-feature-extraction-and-labelled-dataset.md). Verified with TestClient on synthetic data and live in the container (2026-11-14).
 
+## Phase 7 (`/prediction`, ML slot, no model)
+
+| Method | Path | Notes |
+|---|---|---|
+| GET | `/prediction/status` | `{backend, status, registered_models, refused_models, message}`; `status` is `MODEL_NOT_TRAINED` unless a registered model with an attached predictor exists |
+| GET | `/prediction/models` | `{registered: [...], refused: [{path, reason}]}` from `models/<id>/<version>/metadata.json` |
+| POST | `/prediction/susceptibility`, `/prediction/trigger` | body `{area_id, reference_time?, horizon_days?}`; HTTP 200 `{status: "MODEL_NOT_TRAINED", output: null}` under the default `PREDICTION_BACKEND=none`; HTTP 422 if the area's feature manifest is missing or incompatible with the model's `input_spec` |
+
+| POST | `/prediction/explain` | body `{area_id, head, scope: global|local, cell?}`; HTTP 200 `{status: "MODEL_NOT_AVAILABLE", explanation: null}` unless a registered model has an attached explainer (Phase 8) |
+| GET | `/uncertainty/areas/{id}/report` | Phase 8 data-quality ledger (`UncertaintyReport`) from the area's features manifest; `predictive_uncertainty` is always `NOT_ESTIMATED`; 404 if no feature run exists |
+
+Contract and how a model plugs in: [ML_INTEGRATION](ML_INTEGRATION.md); quality rules: [UNCERTAINTY_AND_RELIABILITY](../scientific/UNCERTAINTY_AND_RELIABILITY.md). Verified with TestClient only (2026-11-15); no model exists.
+
+## Phase 6 (`/timeseries`, read-only)
+
+| Method | Path | Notes |
+|---|---|---|
+| GET | `/timeseries/areas/{id}/series` | metadata of every stored series for the area (kind, zone, sensor, geometry, first/last time, synthetic flag) |
+| GET | `/timeseries/areas/{id}/series/{zone}/{kind}/analysis` | limitations report plus indicators (each a result or `NOT_AVAILABLE` with reason); query `alpha`, `gap_factor`, `min_period_days`, `wet_threshold_mm`, `api_k`; 404 if the series is missing, 422 for a bad kind/zone/parameter. No forecast route exists |
+
+Methods: [TIME_SERIES_METHODOLOGY](../scientific/TIME_SERIES_METHODOLOGY.md). Series are written by services/tests, not by the API. Verified with TestClient on synthetic data (2026-11-15).
+
 Verification (Phase 2): mock-tested (TestClient). Live: `/data/collections?refresh=true` and dry-run `/data/search` only (2026-11-14). Everything touching real downloads is NOT_VERIFIED.
+
+## Phase 10 behaviour changes
+- `POST /data/downloads`: returns HTTP 412 `{"error": {"code": "credentials_missing", ...}}` before queuing anything when no Earthdata credentials are configured.
+- `POST /data/landslide-events/import` with `file_path`: the path must resolve inside the configured data root, otherwise HTTP 422.
+- `POST /data/downloads/{id}/retry`: resets `attempts`, `progress` and `bytes_downloaded` to a fresh series.

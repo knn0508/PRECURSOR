@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="content" font-family="&quot;Segoe UI&quot;, sans-serif">
+  <rect id="bg" x="0" y="0" width="1280" height="720" fill="#0B1426" />
+  <path id="wash" data-pptx-role="decoration" d="M0 676 C180 662 330 690 520 672 C720 654 900 688 1080 668 C1160 660 1230 668 1280 660 L1280 720 L0 720 Z" fill="#2DD4BF" fill-opacity="0.12" />
+  <path id="wash-line" data-pptx-role="decoration" d="M0 676 C180 662 330 690 520 672 C720 654 900 688 1080 668 C1160 660 1230 668 1280 660" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-opacity="0.55" />
+  <g id="kicker" data-pptx-bounds="64 76 500 30">
+    <rect x="64" y="84" width="10" height="10" fill="#F2994A" />
+    <text x="86" y="96" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#9AA8C2">02 · CHALLENGE</text>
+  </g>
+  <g id="beat" data-pptx-bounds="64 200 480 190">
+    <text font-weight="bold" font-size="42" fill="#F4F6FA" x="64" y="250">The signal exists.</text><text font-weight="bold" font-size="42" fill="#F4F6FA" x="64" y="304">Almost nobody</text><text font-weight="bold" font-size="42" fill="#F4F6FA" x="64" y="358">can reach it.</text></g>
+  <g id="causes" data-pptx-bounds="590 150 626 400" font-size="24" fill="#F4F6FA">
+    <line x1="600" y1="170" x2="600" y2="530" stroke="#2A3A5C" stroke-width="2" />
+    <g id="cause-signs">
+      
+  <g transform="translate(632, 172) scale(0.15625)" fill="#2DD4BF">
+    <path d="M232,128c-52,110.85-78,55.43-104,0ZM24,128H128C102,72.57,76,17.15,24,128Z" opacity="0.2" />
+    <path d="M239.24,131.4c-22,46.8-41.4,68.6-61.2,68.6-25.1,0-40.73-33.32-57.28-68.6C107.7,103.56,92.9,72,78,72c-16.4,0-36.31,37.21-46.72,59.4a8,8,0,0,1-14.48-6.8C38.71,77.8,58.16,56,78,56c25.1,0,40.73,33.32,57.28,68.6C148.3,152.44,163.1,184,178,184c16.4,0,36.31-37.21,46.72-59.4a8,8,0,0,1,14.48,6.8Z" />
+  </g>
+      <text x="700" y="200"><tspan>Landslides often show <tspan fill="#2DD4BF" font-weight="bold">weak warning signs</tspan></tspan></text><text x="700" y="236">first: slow ground creep and heavy rain</text><text x="700" y="272">on saturated soil.</text></g>
+    <g id="cause-sensors">
+      
+  <g transform="translate(632, 322) scale(0.15625)" fill="#2DD4BF">
+    <path d="M200,40V200a8,8,0,0,1-8,8H32a8,8,0,0,1-5.66-13.66l160-160A8,8,0,0,1,200,40Z" opacity="0.2" />
+    <path d="M213.92,210.62l-160-176A8,8,0,1,0,42.07,45.38l58.07,63.86L20.69,188.68A16,16,0,0,0,32,216H192a16.13,16.13,0,0,0,4.56-.68l5.52,6.06a8,8,0,1,0,11.84-10.76ZM32,200l78.9-78.89L182.64,200ZM128.18,92.51a8,8,0,0,1,0-11.31l52.51-52.5A16,16,0,0,1,208,40V159.63a8,8,0,0,1-16,0V40L139.5,92.51A8,8,0,0,1,128.18,92.51Z" />
+  </g>
+      <text x="700" y="350"><tspan>Most hillsides have <tspan fill="#2DD4BF" font-weight="bold">no ground sensors</tspan>.</tspan></text></g>
+    <g id="cause-data">
+      
+  <g transform="translate(632, 412) scale(0.15625)" fill="#2DD4BF">
+    <path d="M216,152v48a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8H208A8,8,0,0,1,216,152ZM208,48H48a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8H208a8,8,0,0,0,8-8V56A8,8,0,0,0,208,48Z" opacity="0.2" />
+    <path d="M208,136H48a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V152A16,16,0,0,0,208,136Zm0,64H48V152H208v48Zm0-160H48A16,16,0,0,0,32,56v48a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V56A16,16,0,0,0,208,40Zm0,64H48V56H208v48ZM192,80a12,12,0,1,1-12-12A12,12,0,0,1,192,80Zm0,96a12,12,0,1,1-12-12A12,12,0,0,1,192,176Z" />
+  </g>
+      <text x="700" y="440"><tspan>Radar satellite data exists, but it is <tspan fill="#2DD4BF" font-weight="bold">huge</tspan></tspan></text><text x="700" y="476"><tspan><tspan fill="#2DD4BF" font-weight="bold">and technical</tspan>, so decision makers rarely</tspan></text><text x="700" y="512">use it.</text></g>
+  </g>
+</svg>

@@ -32,6 +32,11 @@ class UpstreamError(AppError):
     code = "upstream_error"
 
 
+class CredentialsMissing(AppError):
+    status_code = 412
+    code = "credentials_missing"
+
+
 class ValidationFailed(AppError):
     status_code = 422
     code = "validation_error"

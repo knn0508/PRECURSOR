@@ -10,7 +10,7 @@ AcquisitionStatus = Literal[
     "DISCOVERED", "QUEUED", "DOWNLOADING", "DOWNLOADED", "VALIDATING", "VALIDATED", "FAILED", "SKIPPED", "UNAVAILABLE"
 ]
 JobStatus = Literal["QUEUED", "RUNNING", "COMPLETED", "FAILED"]
-ProviderName = Literal["NISAR", "NASADEM", "GPM", "SMAP", "LANDSLIDE_CATALOG"]
+ProviderName = Literal["NISAR", "NASADEM", "GPM", "SMAP", "OPERA", "LANDSLIDE_CATALOG"]
 
 
 class CollectionRead(BaseModel):
@@ -47,6 +47,8 @@ class SearchRequest(BaseModel):
     aoi: AOIInput
     start_date: datetime | None = None
     end_date: datetime | None = None
+    providers: list[Literal["NISAR", "OPERA", "NASADEM", "GPM"]] = Field(default_factory=lambda: ["NISAR"], min_length=1,
+                                                                          description="Catalogs to search (metadata only). `products` and `maturities` apply to NISAR.")
     products: list[str] = Field(default_factory=lambda: ["GUNW", "GCOV", "GSLC"])
     maturities: list[Maturity] = Field(default_factory=lambda: ["VALIDATED"])
     max_results: int = Field(default=10, ge=1, le=100)

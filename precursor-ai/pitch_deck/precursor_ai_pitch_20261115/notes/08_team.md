@@ -1,0 +1,1 @@
+We are a small team covering engineering, design and AI. Kanan Salmanli is our full stack developer. Sema Abdullazade is our UI and UX designer. Intiqam is our frontend designer. And Farid Gahramanov is our AI engineer.

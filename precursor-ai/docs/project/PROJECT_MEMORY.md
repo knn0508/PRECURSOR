@@ -19,7 +19,7 @@ See [ADR-0001](../adr/ADR-0001-initial-architecture.md) (stack/layering) and [AD
 - A catalog hit is not a download; a download is not scientific validation. `VALIDATED` = file integrity only.
 - Never claim a dataset exists for an AOI until the catalog confirms it. Never silently mix maturities (VALIDATED default; PROVISIONAL/BETA opt-in). No validated NISAR soil-moisture (SME2) product existed at last check.
 - IMERG Final Run: ~0.1 degree, ~3.5-month latency, not real-time.
-- Global Landslide Catalog: one-time export current to 2016-03-07; incomplete; absence of an event proves nothing.
+- Global Landslide Catalog: one-time export, last event dated 2017-09-28 (corrected 2026-11-15, see ml/reports/M1_census_and_download_list.md); incomplete; absence of an event proves nothing.
 - GUNW gives LOS displacement only. Deformation is not proof of imminent landslide. See [scientific docs](../scientific/SCIENTIFIC_LIMITATIONS.md).
 
 ## Implementation discoveries
@@ -63,6 +63,29 @@ See [ADR-0001](../adr/ADR-0001-initial-architecture.md) (stack/layering) and [AD
 - Feature names, columns and manifest keys may not contain score-like words (risk, probab, susceptib, predict, score, hazard, danger, unstable, forecast); a test and the writers enforce it. `ModelInputSpec` is the contract the Phase 7 registry will validate a model against (MAJOR schema version must match).
 - Windowed COG writing: write tags BEFORE the COG copy; editing a COG afterwards raises a layout-break error.
 - A synthetic world must be larger than the event buffers or no background samples fit (a reported shortfall, not a bug).
+
+## Phase 7-8 decisions and discoveries
+- The ML slot is contracts only: `PredictionService` answers `MODEL_NOT_TRAINED` / `MODEL_NOT_AVAILABLE` unless a predictor/explainer is explicitly attached to a registry entry that passed the model-card, provenance, region/time and `ModelInputSpec` checks. Mock/TEST_DOUBLE objects live only in `backend/tests/`.
+- Phase 8 quality masks flag NaN (missing is not usable); a flat cell has no aspect, so LOS sensitivity is NaN there. Phase 3 does not record incidence angle, look azimuth or effective looks, which limits automatic propagation.
+- A throwaway test DB: `docker exec <postgres container> psql -U precursor -d postgres -c "CREATE DATABASE precursor_t_x"` plus `CREATE EXTENSION postgis`; build the URL in a shell variable without echoing the password.
+
+## Phase 6 decisions and discoveries
+- Time series use scipy/numpy ([ADR-0010](../adr/ADR-0010-time-series-with-scipy-no-statsmodels.md)); Mann-Kendall is written out (scipy has none). Indicator minimum N values are working choices and every indicator refuses below its N.
+- A series object cannot be built with mixed sensors or LOS geometry, so the guard cannot be bypassed by a caller.
+- Phase 3 gives independent pairs, not a displacement time series; only pair mean velocities at mid-time are series-able and they are serially dependent.
+- The Phase 5 score-word guard also catches the key `aliasing_risk` (the word risk); named `aliasing` instead.
+
+## Phase 9 decisions and discoveries
+- Mock predictions live only in `frontend/lib/mock-predictions.ts` (functions take only a seed and sizes, so no real value can enter) and render only when the API says MODEL_NOT_TRAINED AND `NEXT_PUBLIC_USE_MOCK_PREDICTIONS=true`; a real `OK` response always wins over mock. Component tests use `react-dom/server` with `createElement` in `.ts` files (no testing-library installed).
+- Mock views must not use the amber/red/green utility classes, including through shared badges; the PLACEHOLDER source badge is neutral for that reason. A near-neutral grey ramp is used (slate has a blue tint).
+- `next dev` allows one server per project directory; to test two flag values run them one after the other. The backend CORS list is only `http://localhost:3000`, so a live check from another dev port needs web security off.
+
+## Phase 10 decisions and discoveries
+- A test that asserts a known bug (retry attempts == 2) must be updated together with the fix, with a comment naming the issue.
+- `assert not path.glob(...)` is vacuous (a generator is truthy): wrap in `list` or a comprehension.
+- Fixtures that must hide real credentials belong in an autouse fixture in `tests/conftest.py` (also clear the `get_settings` cache).
+- Throwaway test database recipe is in the runbook and PROJECT_MEMORY earlier section; `docker exec <postgres> printenv POSTGRES_PASSWORD` into a shell variable avoids printing the secret.
+- Auth and rate limiting do not exist: the API must not be exposed beyond a trusted network until they do.
 
 ## Known limitations
 Live downloads, real-file validation, real InSAR processing, GLC date order, NISAR HDF5 layout and the phase sign convention are unverified; in-process job queue is lost on restart. Full list: [PROJECT_STATUS](PROJECT_STATUS.md).

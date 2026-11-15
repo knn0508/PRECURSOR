@@ -1,0 +1,32 @@
+# M4 cleaning configuration (user instructions of 2026-11-15). Hashed into the M4 manifest. Every rule is documented in ml/reports/M4_cleaning.md.
+seed: 20261115
+as_of_date: "2026-11-15"       # fixed "today" for the future-date rule so that runs and hashes are reproducible
+exclusion:                      # OBJECTIVE, OUTCOME-BLIND cell criteria: they never see labels
+  water_ocean_frac_max: 0.5     # exclude cell if (ocean + water) share of the cell is above this
+  dem_cover_min: 0.5            # exclude cell if less than this share has elevation data
+  soil_cover_min: 0.1           # with lc_valid_min: exclude cell with NO soil AND NO land-cover data
+  lc_valid_min: 0.1
+  sensitivity_water_thresholds: [0.3, 0.5, 0.7]
+labels:
+  min_year: 1980                # earlier dates are implausible for this inventory (series starts 2007; a few rows are older)
+  near_duplicate_m: 1000        # same calendar day and within this distance: same report (kept: lowest event_id)
+  exact_duplicate_deg: 0.0001   # coordinate rounding for exact duplicates (about 10 m)
+  rain_triggers: [rain, downpour, continuous_rain, tropical_cyclone, monsoon]
+  bad_categories: [snow_avalanche, lahar, riverbank_collapse, unknown]
+  strict_accuracy: [exact, 1km, 5km]
+background:
+  ratio: 5                      # background cells drawn per clean strict event (primary draw); all candidates are ranked so any ratio can be taken later
+  n_strata: 5
+  stratify_by: slope_mean
+  min_buffer_cells: 1           # buffer = max(2 x accuracy radius, 1 cell)
+  unknown_accuracy_radius_m: 5000   # events with unknown accuracy buffer as if 5 km (assumption)
+  buffer_events_max_radius_m: 10000 # USER DECISION 2026-11-15: only events with accuracy up to 10 km shield (2 x radius) the background; the literal every-event rule is kept as a recorded file
+  imprecise_radius_m: 10000         # candidates inside the accuracy circle of an event less precise than this are flagged background_in_imprecise_circle
+outliers:
+  robust_z: 6.0                 # flagged, never deleted
+audit:                          # PROVISIONAL split used ONLY to exercise the leakage checks (the final splits are M6)
+  block_km: 50
+  gap_m: 20000
+  test_fraction: 0.2
+  temporal_quantile: 0.7
+  auc_fail: 0.9

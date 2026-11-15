@@ -111,7 +111,7 @@ export function Services() {
 const TEAM = [
   { name: "Kanan Salmanli", role: "Full Stack Developer" },
   { name: "Sema Abdullazade", role: "UI/UX Designer" },
-  { name: "Intiqam", role: "Frontend Designer" },
+  { name: "Intigham Shumalov", role: "Frontend Developer" },
   { name: "Farid Gahramanov", role: "AI Engineer" },
 ];
 

@@ -1,0 +1,1 @@
+What does this add up to? Open NASA data in, one usable map out. The first two points, the result for our test area and the accuracy or validation, are placeholders that we will fill in with real numbers before the pitch. The third one is already true: any region NISAR covers can reuse it.

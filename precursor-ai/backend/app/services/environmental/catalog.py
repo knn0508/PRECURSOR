@@ -61,7 +61,7 @@ DATASETS: list[DatasetInfo] = [
     DatasetInfo(layer_type="HISTORICAL_LANDSLIDES", provider="NASA_GLC", dataset_name="NASA Global Landslide Catalog (Phase 2 import)",
                 implementation_status="IMPLEMENTED_BUT_NOT_TESTED_WITH_REAL_DATA",
                 description="Cataloged historical events inside the AOI, reused from the Phase 2 table without re-import.",
-                temporal_resolution="events (catalog current to 2016-03-07)",
+                temporal_resolution="events (catalog last event 2017-09-28)",
                 limitations=["One-time historical export: incomplete, reporting-biased, not ground truth.", "Phase 2 table is empty until the CSV is imported."]),
     DatasetInfo(layer_type="SEISMIC", provider="USGS", dataset_name="USGS Earthquake Catalog (FDSN event API)",
                 implementation_status="IMPLEMENTED_BUT_NOT_TESTED_WITH_REAL_DATA",

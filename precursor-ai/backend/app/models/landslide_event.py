@@ -12,8 +12,8 @@ from app.database.base import Base
 class LandslideEvent(Base):
     """NASA Global Landslide Catalog record.
 
-    HISTORICAL REFERENCE ONLY: the Open Data Portal export is a one-time export current as of
-    2016-03-07. It is neither complete nor current; absence of an event proves nothing.
+    HISTORICAL REFERENCE ONLY: the Open Data Portal export is a one-time export whose last event is
+    dated 2017-09-28. It is neither complete nor current; absence of an event proves nothing.
     """
 
     __tablename__ = "landslide_events"

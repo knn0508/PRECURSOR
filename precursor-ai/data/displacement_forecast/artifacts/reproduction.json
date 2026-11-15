@@ -1,0 +1,10 @@
+{
+ "corr_forecast_vs_last_observed_increment": -0.8136229171528748,
+ "forecast_q50_sd_mm": 1.363112211227417,
+ "issue_time": "2026-03-11",
+ "device": "cuda",
+ "pixels_compared": 20184,
+ "nan_pattern_equal": true,
+ "max_abs_diff_mm": 0.0015592575073242188,
+ "what": "saved model.pt + scaler.npz rerun on the processed stack, compared with the author's forecast.tif (nothing retrained)"
+}

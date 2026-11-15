@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="content" font-family='"Segoe UI", sans-serif'>
+  <rect id="bg" x="0" y="0" width="1280" height="720" fill="#0B1426"/>
+  <path id="wash" data-pptx-role="decoration" d="M0 672 C160 656 320 684 500 668 C700 650 880 684 1060 664 C1150 654 1230 662 1280 654 L1280 720 L0 720 Z" fill="#2DD4BF" fill-opacity="0.12"/>
+  <path id="wash-line" data-pptx-role="decoration" d="M0 672 C160 656 320 684 500 668 C700 650 880 684 1060 664 C1150 654 1230 662 1280 654" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-opacity="0.55"/>
+  <g id="kicker" data-pptx-bounds="64 76 500 30">
+    <rect x="64" y="84" width="10" height="10" fill="#F2994A"/>
+    <text x="86" y="96" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#9AA8C2">05 · SPACE DATA</text>
+  </g>
+  <g id="claim" data-pptx-bounds="64 150 320 170">
+    <use data-icon="phosphor-duotone/planet" x="64" y="156" width="44" height="44" fill="#2DD4BF"/>
+    <text x="64" y="252" font-size="42" font-weight="bold" fill="#F4F6FA">Built on<tspan x="64" dy="52">NASA data.</tspan></text>
+  </g>
+  <g id="to-fill" data-pptx-bounds="64 390 320 110">
+    <text x="64" y="414" font-family="Consolas, monospace" font-size="16" letter-spacing="2" fill="#F2994A">TO FILL · REAL FIGURES</text>
+    <text x="64" y="450" font-size="18" font-style="italic" fill="#9AA8C2">Lorem ipsum: area covered,<tspan x="64" dy="28">number of scenes, date range.</tspan></text>
+  </g>
+  <g id="nasa-sources" data-pptx-replace-with="table" data-pptx-bounds="400 160 816 416" data-pptx-fallback-sha256="a65c62769991807b2f8c1aef2cde04ee878c8608fb03da034cf86241954642fc">
+    <metadata type="application/json">
+      {
+        "schema": "ppt-master.semantic-table.v2",
+        "name": "nasa-sources",
+        "x": 400, "y": 160, "width": 816, "height": 416,
+        "column_widths": [380, 436],
+        "row_heights": [56, 72, 72, 72, 72, 72],
+        "style": {
+          "font_family": "Segoe UI", "font_size": 24, "header_font_size": 18,
+          "header_fill": "#14213D", "header_text": "#9AA8C2", "body_text": "#F4F6FA",
+          "band_row": false, "valign": "middle", "padding": 16
+        },
+        "defaults": {
+          "cell": {
+            "align": "l",
+            "borders": {
+              "left": {"style": "none"}, "right": {"style": "none"}, "top": {"style": "none"},
+              "bottom": {"style": "solid", "color": "#2A3A5C", "width": 1}
+            }
+          }
+        },
+        "columns": [
+          {"text": "Source", "align": "l", "borders": {"left": {"style": "none"}, "right": {"style": "none"}, "top": {"style": "none"}, "bottom": {"style": "solid", "color": "#2DD4BF", "width": 1.5}}},
+          {"text": "What it gives us", "align": "l", "borders": {"left": {"style": "none"}, "right": {"style": "none"}, "top": {"style": "none"}, "bottom": {"style": "solid", "color": "#2DD4BF", "width": 1.5}}}
+        ],
+        "rows": [
+          [{"text": "NISAR (L-band radar)", "color": "#2DD4BF"}, "Ground displacement; 12-day repeat"],
+          [{"text": "NASADEM", "color": "#2DD4BF"}, "Elevation, slope, aspect"],
+          [{"text": "GPM IMERG", "color": "#2DD4BF"}, "Rainfall"],
+          [{"text": "SMAP", "color": "#2DD4BF"}, "Soil moisture"],
+          [{"text": "NASA Global Landslide Catalog", "color": "#2DD4BF"}, "Past landslides"]
+        ]
+      }
+    </metadata>
+    <rect x="400" y="160" width="816" height="56" fill="#14213D"/>
+    <g id="table-header" font-size="18" fill="#9AA8C2">
+      <text x="416" y="194">Source</text>
+      <text x="796" y="194">What it gives us</text>
+    </g>
+    <line x1="400" y1="216" x2="1216" y2="216" stroke="#2DD4BF" stroke-width="1.5"/>
+    <g id="table-sources" font-size="24" fill="#2DD4BF">
+      <text x="416" y="260">NISAR (L-band radar)</text>
+      <text x="416" y="332">NASADEM</text>
+      <text x="416" y="404">GPM IMERG</text>
+      <text x="416" y="476">SMAP</text>
+      <text x="416" y="548">NASA Global Landslide Catalog</text>
+    </g>
+    <g id="table-gives" font-size="24" fill="#F4F6FA">
+      <text x="796" y="260">Ground displacement; 12-day repeat</text>
+      <text x="796" y="332">Elevation, slope, aspect</text>
+      <text x="796" y="404">Rainfall</text>
+      <text x="796" y="476">Soil moisture</text>
+      <text x="796" y="548">Past landslides</text>
+    </g>
+    <path id="table-rules" d="M400 288H1216 M400 360H1216 M400 432H1216 M400 504H1216 M400 576H1216" fill="none" stroke="#2A3A5C" stroke-width="1"/>
+  </g>
+</svg>

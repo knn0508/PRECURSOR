@@ -6,15 +6,18 @@ import type { FeatureCollection, Geometry } from "geojson";
 import { useEffect, useRef } from "react";
 import { AOI_COLOR, bboxOf } from "@/lib/environmental-helpers";
 
-// Offline-safe style (same as area-map.tsx): plain dark background, no tile server.
+// Same style as area-map.tsx: OSM raster tiles are a progressive enhancement over a dark background (tile failure breaks nothing).
 maplibregl.setWorkerUrl("/vendor/maplibre-gl-worker.js");
 const BASE_STYLE: maplibregl.StyleSpecification = {
   version: 8,
-  sources: {},
-  layers: [{ id: "background", type: "background", paint: { "background-color": "#0a1018" } }],
+  sources: { osm: { type: "raster", tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"], tileSize: 256, maxzoom: 19, attribution: "© OpenStreetMap contributors" } },
+  layers: [
+    { id: "background", type: "background", paint: { "background-color": "#0a1018" } },
+    { id: "osm", type: "raster", source: "osm", paint: { "raster-opacity": 0.9, "raster-saturation": -0.3, "raster-brightness-max": 0.85 } },
+  ],
 };
 
-export interface MapRaster { id: string; url: string; corners: [[number, number], [number, number], [number, number], [number, number]]; opacity: number }
+export interface MapRaster { id: string; url: string; corners: [[number, number], [number, number], [number, number], [number, number]]; opacity: number; smooth?: boolean }
 export interface MapVector { id: string; color: string; data: FeatureCollection; opacity: number }
 interface Props { aoi: Record<string, unknown>; rasters: MapRaster[]; vectors: MapVector[] }
 
@@ -47,7 +50,7 @@ export function LayerMap({ aoi, rasters, vectors }: Props) {
       const lyr = (spec: maplibregl.LayerSpecification) => { map.addLayer(spec); layers.push(spec.id); };
       for (const r of rasters) {
         src(`r-${r.id}`, { type: "image", url: r.url, coordinates: r.corners });
-        lyr({ id: `r-${r.id}`, type: "raster", source: `r-${r.id}`, paint: { "raster-opacity": r.opacity, "raster-resampling": "nearest" } });
+        lyr({ id: `r-${r.id}`, type: "raster", source: `r-${r.id}`, paint: { "raster-opacity": r.opacity, "raster-resampling": r.smooth ? "linear" : "nearest" } });
       }
       for (const v of vectors) {
         src(`v-${v.id}`, { type: "geojson", data: v.data });

@@ -1,0 +1,1 @@
+We are PRECURSOR AI. Our idea is simple: use NASA's radar satellite to look for the slow ground movement that comes before a landslide, so we can see landslides before they happen, from space. We built it for the NASA Space Apps Challenge, Dancing with the SARs.

@@ -47,6 +47,7 @@ class ProviderName(StrEnum):
     NASADEM = "NASADEM"
     GPM = "GPM"
     SMAP = "SMAP"
+    OPERA = "OPERA"
     LANDSLIDE_CATALOG = "LANDSLIDE_CATALOG"
 
 

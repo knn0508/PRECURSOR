@@ -1,0 +1,192 @@
+{
+ "primary_model": "E4_lstm_tcn",
+ "noise_floor": {
+  "zero_motion_MAE_stable_mm": 2.741210699081421,
+  "stable_increment_std_mm": 3.798938274383545,
+  "share_of_test_samples_stable": 0.9448739219712525,
+  "primary_MAE_stable_mm": 2.4292054176330566
+ },
+ "per_pixel": {
+  "n_pixels": 5441,
+  "share_pixels_model_better": 0.9404521227715493,
+  "median_pixel_skill_pct": 11.428898811340332
+ },
+ "timeseries_most_active_pixel": {
+  "pixel": [
+   58,
+   20
+  ],
+  "n": 49,
+  "MAE_model": 8.516197204589844,
+  "MAE_zero": 9.320356369018555,
+  "cov80": 0.20408163265306123,
+  "observed_total_mm": -59.602020263671875,
+  "forecast_total_mm": 75.30767822265625
+ },
+ "ground_truth_coverage": {
+  "valid_frac_moving_zone_2016_2022": 0.9539434924050307,
+  "valid_frac_moving_zone_JunNov2024": 0.731934731934732,
+  "valid_frac_all_JunNov2024": 0.7166844919786096,
+  "max_measured_LOS_rate_JunNov2024_mm_day": 2.272263844807943,
+  "p99_measured_LOS_rate_JunNov2024_mm_day": 1.8869347095489504,
+  "published_JPL_UAVSAR_SepOct2024_mm_day": 14.5,
+  "published_city_JulAug2024_mm_day": 43.5,
+  "c_band_12day_unwrap_limit_note": "~lambda/4 = 14 mm of LOS change between neighbouring pixels per pair"
+ },
+ "by_regime": [
+  {
+   "model": "zero_motion",
+   "MAE_all": 2.7901,
+   "MAE_moving": 3.6285,
+   "MAE_stable": 2.7412,
+   "MAE_high": 11.0134,
+   "cov80": NaN,
+   "cov80_moving": NaN,
+   "cov80_high": NaN,
+   "skill_all_%": 0.0,
+   "skill_moving_%": 0.0,
+   "skill_stable_%": 0.0,
+   "skill_high_%": 0.0
+  },
+  {
+   "model": "persistence_last_interval",
+   "MAE_all": 4.7214,
+   "MAE_moving": 6.1508,
+   "MAE_stable": 4.638,
+   "MAE_high": 15.064,
+   "cov80": NaN,
+   "cov80_moving": NaN,
+   "cov80_high": NaN,
+   "skill_all_%": -69.2195,
+   "skill_moving_%": -69.5134,
+   "skill_stable_%": -69.1968,
+   "skill_high_%": -36.779
+  },
+  {
+   "model": "constant_velocity_window",
+   "MAE_all": 3.0416,
+   "MAE_moving": 3.9222,
+   "MAE_stable": 2.9902,
+   "MAE_high": 11.5846,
+   "cov80": NaN,
+   "cov80_moving": NaN,
+   "cov80_high": NaN,
+   "skill_all_%": -9.0116,
+   "skill_moving_%": -8.0932,
+   "skill_stable_%": -9.0825,
+   "skill_high_%": -5.186
+  },
+  {
+   "model": "ridge_linear",
+   "MAE_all": 2.5026,
+   "MAE_moving": 3.3119,
+   "MAE_stable": 2.4553,
+   "MAE_high": 8.802,
+   "cov80": NaN,
+   "cov80_moving": NaN,
+   "cov80_high": NaN,
+   "skill_all_%": 10.3068,
+   "skill_moving_%": 8.7256,
+   "skill_stable_%": 10.4289,
+   "skill_high_%": 20.0788
+  },
+  {
+   "model": "E1_gru",
+   "MAE_all": 2.4658,
+   "MAE_moving": 3.2671,
+   "MAE_stable": 2.419,
+   "MAE_high": 8.7084,
+   "cov80": 0.7708,
+   "cov80_moving": 0.7097,
+   "cov80_high": 0.092,
+   "skill_all_%": 11.6244,
+   "skill_moving_%": 9.9607,
+   "skill_stable_%": 11.7528,
+   "skill_high_%": 20.9286
+  },
+  {
+   "model": "E1b_mlp",
+   "MAE_all": 2.4985,
+   "MAE_moving": 3.3307,
+   "MAE_stable": 2.4499,
+   "MAE_high": 8.6932,
+   "cov80": 0.7495,
+   "cov80_moving": 0.6904,
+   "cov80_high": 0.109,
+   "skill_all_%": 10.4527,
+   "skill_moving_%": 8.2072,
+   "skill_stable_%": 10.6261,
+   "skill_high_%": 21.0667
+  },
+  {
+   "model": "E2_lstm",
+   "MAE_all": 2.5004,
+   "MAE_moving": 3.2906,
+   "MAE_stable": 2.4543,
+   "MAE_high": 8.7376,
+   "cov80": 0.7502,
+   "cov80_moving": 0.6979,
+   "cov80_high": 0.0792,
+   "skill_all_%": 10.3831,
+   "skill_moving_%": 9.3124,
+   "skill_stable_%": 10.4658,
+   "skill_high_%": 20.6639
+  },
+  {
+   "model": "E3_lstm_tcn",
+   "MAE_all": 2.4535,
+   "MAE_moving": 3.2752,
+   "MAE_stable": 2.4055,
+   "MAE_high": 8.7023,
+   "cov80": 0.768,
+   "cov80_moving": 0.6992,
+   "cov80_high": 0.0969,
+   "skill_all_%": 12.0654,
+   "skill_moving_%": 9.7381,
+   "skill_stable_%": 12.2452,
+   "skill_high_%": 20.9844
+  },
+  {
+   "model": "E3b_tcn",
+   "MAE_all": 2.4707,
+   "MAE_moving": 3.2998,
+   "MAE_stable": 2.4224,
+   "MAE_high": 8.6897,
+   "cov80": 0.7551,
+   "cov80_moving": 0.6931,
+   "cov80_high": 0.0953,
+   "skill_all_%": 11.4472,
+   "skill_moving_%": 9.0595,
+   "skill_stable_%": 11.6315,
+   "skill_high_%": 21.0989
+  },
+  {
+   "model": "E4_lstm_tcn",
+   "MAE_all": 2.4813,
+   "MAE_moving": 3.2916,
+   "MAE_stable": 2.434,
+   "MAE_high": 8.8299,
+   "cov80": 0.7573,
+   "cov80_moving": 0.6845,
+   "cov80_high": 0.0741,
+   "skill_all_%": 11.0702,
+   "skill_moving_%": 9.2855,
+   "skill_stable_%": 11.2081,
+   "skill_high_%": 19.8254
+  },
+  {
+   "model": "E5_lstm_tcn",
+   "MAE_all": 2.463,
+   "MAE_moving": 3.2866,
+   "MAE_stable": 2.4149,
+   "MAE_high": 9.0204,
+   "cov80": 0.7645,
+   "cov80_moving": 0.6881,
+   "cov80_high": 0.0863,
+   "skill_all_%": 11.7254,
+   "skill_moving_%": 9.4236,
+   "skill_stable_%": 11.9032,
+   "skill_high_%": 18.096
+  }
+ ]
+}

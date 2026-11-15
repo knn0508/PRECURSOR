@@ -260,7 +260,7 @@ def test_events_endpoints_return_geojson_inside_the_aoi_only(env):
     process(env, a)
     h = env.client.get(f"{BASE}/areas/{a.id}/historical-landslides").json()
     assert h["total"] == 1 and h["geojson"]["features"][0]["properties"]["id"] == "SYN-1"
-    assert any("2016-03-07" in x for x in h["limitations"])
+    assert any("2017-09-28" in x for x in h["limitations"])
     s = env.client.get(f"{BASE}/areas/{a.id}/seismic").json()
     assert s["total"] == 2 and {f["properties"]["id"] for f in s["geojson"]["features"]} == {"us1", "us2"}
     assert any("No causal link" in x for x in s["limitations"])

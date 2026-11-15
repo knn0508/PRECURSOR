@@ -1,0 +1,565 @@
+{
+ "CGS/LandslideInventory_DC1_Younger": {
+  "error": null,
+  "copyright": "California Geological Survey, California Department of Conservation",
+  "counts": {
+   "Landslide (Single Feature) Point (Debris Flows)": {
+    "CA_N": 30,
+    "CA_S": 40
+   },
+   "Landslide (Single Feature) Point": {
+    "CA_N": 30,
+    "CA_S": 40
+   },
+   "Landslide (Deposit) Point (Debris Flows)": {
+    "CA_N": 0,
+    "CA_S": 0
+   },
+   "Landslide (Deposit) Point": {
+    "CA_N": 0,
+    "CA_S": 0
+   },
+   "Landslide (Source) Point (Debris Flow Scarp or Track)": {
+    "CA_N": 168,
+    "CA_S": 0
+   },
+   "Landslide (Source) Point": {
+    "CA_N": 168,
+    "CA_S": 0
+   },
+   "Landslide (Single Feature) Line": {
+    "CA_N": 0,
+    "CA_S": 0
+   },
+   "Landslide (Deposit) Line": {
+    "CA_N": 3644,
+    "CA_S": 58
+   },
+   "Landslide (Source) Line": {
+    "CA_N": 108,
+    "CA_S": 10
+   },
+   "Landslide (Single Feature)": {
+    "CA_N": 3740,
+    "CA_S": 4934
+   },
+   "Landslide (Single Feature-Direction of Movement)": {
+    "CA_N": 3740,
+    "CA_S": 4932
+   },
+   "Landslide (Source/Scarp)": {
+    "CA_N": 8,
+    "CA_S": 0
+   },
+   "Landslide (Deposit)": {
+    "CA_N": 811,
+    "CA_S": 391
+   },
+   "Landslide (Deposit-Direction of Movement)": {
+    "CA_N": 811,
+    "CA_S": 391
+   }
+  },
+  "sample_fields": {
+   "name": "Landslide (Single Feature) Point (Debris Flows)",
+   "geometry": "esriGeometryPoint",
+   "fields": [
+    "OBJECTID",
+    "creation_date",
+    "revision_date",
+    "geom_rev_date",
+    "geom_rev_staff",
+    "ls_id",
+    "ls_master",
+    "activity",
+    "init_type",
+    "subs_type",
+    "mvmt_mode",
+    "confidence",
+    "thickness",
+    "dir_mvmt",
+    "base_map",
+    "map_year",
+    "ls_data_source_type",
+    "ls_data_source_desc",
+    "prim_geol_unit_map_symb",
+    "prim_geol_unit_name",
+    "sec_geol_unit_map_symb",
+    "sec_geol_unit_name",
+    "geol_data_source",
+    "strike_az",
+    "dip",
+    "attitude_type",
+    "att_data_source",
+    "staff",
+    "peer_rev_staff",
+    "remarks",
+    "data_class",
+    "citable_product",
+    "mvmt_date_yr",
+    "mvmt_date_mon",
+    "mvmt_date_day",
+    "triggering_event",
+    "superseded",
+    "citable_product_url",
+    "gis_source",
+    "created_user",
+    "created_date",
+    "last_edited_user",
+    "last_edited_date",
+    "FeatID",
+    "display_class",
+    "SHAPE"
+   ],
+   "error": null
+  }
+ },
+ "CGS/LandslideInventory_DC1_Older": {
+  "error": null,
+  "copyright": "California Geological Survey, California Department of Conservation",
+  "counts": {
+   "Landslide (Single Feature) Point (Debris Flows)": {
+    "CA_N": 0,
+    "CA_S": 0
+   },
+   "Landslide (Single Feature) Point": {
+    "CA_N": 0,
+    "CA_S": 0
+   },
+   "Landslide (Deposit) Point (Debris Flows)": {
+    "CA_N": 0,
+    "CA_S": 0
+   },
+   "Landslide (Deposit) Point": {
+    "CA_N": 0,
+    "CA_S": 0
+   },
+   "Landslide (Source) Point (Debris Flow Scarp or Track)": {
+    "CA_N": 0,
+    "CA_S": 0
+   },
+   "Landslide (Source) Point": {
+    "CA_N": 0,
+    "CA_S": 0
+   },
+   "Landslide (Single Feature) Line": {
+    "CA_N": 0,
+    "CA_S": 0
+   },
+   "Landslide (Deposit) Line": {
+    "CA_N": 0,
+    "CA_S": 0
+   },
+   "Landslide (Source) Line": {
+    "CA_N": 0,
+    "CA_S": 0
+   },
+   "Landslide (Single Feature)": {
+    "CA_N": 2438,
+    "CA_S": 10875
+   },
+   "Landslide (Single Feature-Direction of Movement)": {
+    "CA_N": 2438,
+    "CA_S": 10873
+   },
+   "Landslide (Source/Scarp)": {
+    "CA_N": 3,
+    "CA_S": 0
+   },
+   "Landslide (Deposit)": {
+    "CA_N": 507,
+    "CA_S": 121
+   },
+   "Landslide (Deposit-Direction of Movement)": {
+    "CA_N": 507,
+    "CA_S": 121
+   }
+  },
+  "sample_fields": {
+   "name": "Landslide (Single Feature) Point (Debris Flows)",
+   "geometry": "esriGeometryPoint",
+   "fields": [
+    "OBJECTID",
+    "creation_date",
+    "revision_date",
+    "geom_rev_date",
+    "geom_rev_staff",
+    "ls_id",
+    "ls_master",
+    "activity",
+    "init_type",
+    "subs_type",
+    "mvmt_mode",
+    "confidence",
+    "thickness",
+    "dir_mvmt",
+    "base_map",
+    "map_year",
+    "ls_data_source_type",
+    "ls_data_source_desc",
+    "prim_geol_unit_map_symb",
+    "prim_geol_unit_name",
+    "sec_geol_unit_map_symb",
+    "sec_geol_unit_name",
+    "geol_data_source",
+    "strike_az",
+    "dip",
+    "attitude_type",
+    "att_data_source",
+    "staff",
+    "peer_rev_staff",
+    "remarks",
+    "data_class",
+    "citable_product",
+    "mvmt_date_yr",
+    "mvmt_date_mon",
+    "mvmt_date_day",
+    "triggering_event",
+    "superseded",
+    "citable_product_url",
+    "gis_source",
+    "created_user",
+    "created_date",
+    "last_edited_user",
+    "last_edited_date",
+    "FeatID",
+    "display_class",
+    "SHAPE"
+   ],
+   "error": null
+  }
+ },
+ "CGS/LandslideInventory_DC2": {
+  "error": null,
+  "copyright": "California Geological Survey, California Department of Conservation",
+  "counts": {
+   "Landslide (Single Feature) Point": {
+    "CA_N": 359,
+    "CA_S": 45
+   },
+   "Landslide (Deposit) Point": {
+    "CA_N": 3649,
+    "CA_S": 0
+   },
+   "Landslide (Source) Point": {
+    "CA_N": 3312,
+    "CA_S": 0
+   },
+   "Landslide (Single Feature) Line": {
+    "CA_N": 494,
+    "CA_S": 0
+   },
+   "Landslide (Deposit) Line": {
+    "CA_N": 2016,
+    "CA_S": 2
+   },
+   "Landslide (Source) Line": {
+    "CA_N": 167,
+    "CA_S": 25
+   },
+   "Landslide (Single Feature)": {
+    "CA_N": 2327,
+    "CA_S": 1043
+   },
+   "Landslide (Single Feature-Questionable)": {
+    "CA_N": 30,
+    "CA_S": 423
+   },
+   "Landslide (Source/Scarp)": {
+    "CA_N": 2901,
+    "CA_S": 226
+   },
+   "Landslide (Source/Scarp-Questionable)": {
+    "CA_N": 56,
+    "CA_S": 2
+   },
+   "Landslide (Deposit)": {
+    "CA_N": 10874,
+    "CA_S": 640
+   },
+   "Landslide (Deposit-Questionable)": {
+    "CA_N": 1096,
+    "CA_S": 0
+   }
+  },
+  "sample_fields": {
+   "name": "Landslide (Single Feature) Point",
+   "geometry": "esriGeometryPoint",
+   "fields": [
+    "OBJECTID",
+    "creation_date",
+    "revision_date",
+    "geom_rev_date",
+    "geom_rev_staff",
+    "ls_id",
+    "ls_master",
+    "activity",
+    "init_type",
+    "subs_type",
+    "mvmt_mode",
+    "confidence",
+    "thickness",
+    "dir_mvmt",
+    "base_map",
+    "map_year",
+    "ls_data_source_type",
+    "ls_data_source_desc",
+    "prim_geol_unit_map_symb",
+    "prim_geol_unit_name",
+    "sec_geol_unit_map_symb",
+    "sec_geol_unit_name",
+    "geol_data_source",
+    "strike_az",
+    "dip",
+    "attitude_type",
+    "att_data_source",
+    "staff",
+    "peer_rev_staff",
+    "remarks",
+    "data_class",
+    "citable_product",
+    "mvmt_date_yr",
+    "mvmt_date_mon",
+    "mvmt_date_day",
+    "triggering_event",
+    "superseded",
+    "citable_product_url",
+    "gis_source",
+    "created_user",
+    "created_date",
+    "last_edited_user",
+    "last_edited_date",
+    "FeatID",
+    "display_class",
+    "SHAPE"
+   ],
+   "error": null
+  }
+ },
+ "CGS/LandslideInventory_DC3": {
+  "error": null,
+  "copyright": "California Geological Survey, California Department of Conservation",
+  "counts": {
+   "Landslide (Single Feature) Point": {
+    "CA_N": 725,
+    "CA_S": 0
+   },
+   "Landslide (Deposit) Point": {
+    "CA_N": 1455,
+    "CA_S": 0
+   },
+   "Landslide (Source) Point": {
+    "CA_N": 0,
+    "CA_S": 0
+   },
+   "Landslide (Single Feature) Line": {
+    "CA_N": 0,
+    "CA_S": 0
+   },
+   "Landslide (Deposit) Line": {
+    "CA_N": 5446,
+    "CA_S": 0
+   },
+   "Landslide (Source) Line": {
+    "CA_N": 81,
+    "CA_S": 0
+   },
+   "Landslide (Single Feature)": {
+    "CA_N": 1562,
+    "CA_S": 1
+   },
+   "Landslide (Single Feature-Questionable)": {
+    "CA_N": 1313,
+    "CA_S": 0
+   },
+   "Landslide (Source/Scarp)": {
+    "CA_N": 702,
+    "CA_S": 0
+   },
+   "Landslide (Source/Scarp-Questionable)": {
+    "CA_N": 21,
+    "CA_S": 0
+   },
+   "Landslide (Deposit)": {
+    "CA_N": 2621,
+    "CA_S": 0
+   },
+   "Landslide (Deposit-Questionable)": {
+    "CA_N": 942,
+    "CA_S": 0
+   }
+  },
+  "sample_fields": {
+   "name": "Landslide (Single Feature) Point",
+   "geometry": "esriGeometryPoint",
+   "fields": [
+    "OBJECTID",
+    "creation_date",
+    "revision_date",
+    "geom_rev_date",
+    "geom_rev_staff",
+    "ls_id",
+    "ls_master",
+    "activity",
+    "init_type",
+    "subs_type",
+    "mvmt_mode",
+    "confidence",
+    "thickness",
+    "dir_mvmt",
+    "base_map",
+    "map_year",
+    "ls_data_source_type",
+    "ls_data_source_desc",
+    "prim_geol_unit_map_symb",
+    "prim_geol_unit_name",
+    "sec_geol_unit_map_symb",
+    "sec_geol_unit_name",
+    "geol_data_source",
+    "strike_az",
+    "dip",
+    "attitude_type",
+    "att_data_source",
+    "staff",
+    "peer_rev_staff",
+    "remarks",
+    "data_class",
+    "citable_product",
+    "mvmt_date_yr",
+    "mvmt_date_mon",
+    "mvmt_date_day",
+    "triggering_event",
+    "superseded",
+    "citable_product_url",
+    "gis_source",
+    "created_user",
+    "created_date",
+    "last_edited_user",
+    "last_edited_date",
+    "FeatID",
+    "display_class",
+    "SHAPE"
+   ],
+   "error": null
+  }
+ },
+ "DOGAMI/SLIDO42": {
+  "error": null,
+  "copyright": "",
+  "layers": {
+   "Historic Landslide Records (points)": {
+    "OR_WA": 6501,
+    "fields": [
+     "Shape",
+     "REF_ID_COD",
+     "UNIQUE_ID",
+     "DATA_SOURC",
+     "LOC_METHOD",
+     "ORIG_ID",
+     "SLIDE_NAME",
+     "LENGTH_ft",
+     "WIDTH_ft",
+     "DEPTH_ft",
+     "SLOPE",
+     "TYPE_MOVE",
+     "MOVE_CLASS",
+     "CONTR_FACT",
+     "TYPE_MTRL",
+     "AREA_ft2",
+     "VOLUME_ft3",
+     "DEEP_SHAL",
+     "DAMAGES",
+     "LOSSES",
+     "COMMENTS",
+     "YEAR",
+     "DATE_RANGE",
+     "MONTH",
+     "DAY",
+     "FID",
+     "ANNUAL_COS",
+     "REPAIR_COS",
+     "REACTIVATI"
+    ]
+   },
+   "Scarp": {
+    "OR_WA": 22621,
+    "fields": [
+     "Shape",
+     "REF_ID_COD",
+     "FID",
+     "Shape_Leng"
+    ]
+   },
+   "Head Scarp": {
+    "OR_WA": 14918,
+    "fields": [
+     "Shape",
+     "UNIQUE_ID",
+     "Shape_Area",
+     "REF_ID_COD",
+     "FID",
+     "Shape_Leng"
+    ]
+   },
+   "Deposits": {
+    "OR_WA": 27408,
+    "fields": [
+     "OBJECTID",
+     "Shape",
+     "REF_ID_COD",
+     "UNIQUE_ID",
+     "TYPE_MOVE",
+     "MOVE_CLASS",
+     "MOVE_CODE",
+     "CONFIDENCE",
+     "AGE",
+     "NAME",
+     "GEOL",
+     "SLOPE",
+     "HS_HEIGHT",
+     "FAN_HEIGHT",
+     "FAIL_DEPTH",
+     "DEEP_SHAL",
+     "HS_IS1",
+     "IS1_IS2",
+     "IS2_IS3",
+     "IS3_IS4",
+     "HD_AVE",
+     "DIRECT",
+     "AREA",
+     "VOL",
+     "MAP_UNIT_L",
+     "DESCRIPTION",
+     "YEAR",
+     "DATE_RANGE",
+     "REACTIVATION",
+     "MONTH",
+     "DAY",
+     "Shape_Length",
+     "Shape_Area",
+     "DATE_MOVE"
+    ]
+   }
+  }
+ },
+ "WADNR/Public_Geology/Landslide_Inventory_Database/MapServer": {
+  "error": {
+   "code": 499,
+   "message": "Token Required",
+   "details": []
+  },
+  "copyright": "",
+  "n_layers": 0,
+  "layers": {}
+ },
+ "WADNR/Hosted/Landslides_Offline/FeatureServer": {
+  "error": {
+   "code": 499,
+   "message": "Token Required",
+   "details": []
+  },
+  "copyright": "",
+  "n_layers": 0,
+  "layers": {}
+ }
+}
