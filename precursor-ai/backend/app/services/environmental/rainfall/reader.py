@@ -7,6 +7,7 @@ Units are checked: a daily file must be mm/day; mm/hr is refused (never silently
 from __future__ import annotations
 
 import app.core.geo_env  # noqa: F401  (must precede geo libs)
+from app.core.synthetic_guard import refuse_if_synthetic
 
 import re
 from dataclasses import dataclass, field
@@ -245,6 +246,7 @@ def read_daily_aoi(path: str | Path, aoi: BaseGeometry, date: Date | None = None
         if day is None:
             raise EnvError(f"{path.name}: no date given and none found in the file")
 
+        refuse_if_synthetic(SYNTHETIC_ATTR in f.attrs, EnvError, path.name)
         stat = aoi_statistic(vals, lat[ws_lat], lon[ws_lon], aoi)
         warns += stat.warnings
         ver = _attr(f, "ProductVersion") or _attr(f, "algorithm_version") or _attr(f, "version")

@@ -14,6 +14,7 @@ import { QualityTab } from "@/components/environmental/quality-tab";
 import { RainfallTab } from "@/components/environmental/rainfall-tab";
 import { TerrainTab } from "@/components/environmental/terrain-tab";
 import { InsarWorkbench } from "@/components/insar/insar-workbench";
+import { BacktestPanel } from "@/components/displacement/backtest-panel";
 import { AoiUpload } from "@/components/workspace/aoi-upload";
 import { EarlyWarningPanel } from "@/components/workspace/early-warning-panel";
 import { ResearchNotice } from "@/components/workspace/early-warning-views";
@@ -33,12 +34,14 @@ const TABS = [
   { id: "jobs", label: "Jobs" },
   { id: "insar", label: "InSAR" },
   { id: "lineage", label: "Metadata & lineage" },
+  { id: "backtest", label: "Forecast vs reality" },
   { id: "warning", label: "Early warning" },
 ] as const;
 type TabId = (typeof TABS)[number]["id"];
 
 function Panel({ tab, area }: { tab: TabId; area: MonitoredArea }) {
   switch (tab) {
+    case "backtest": return <BacktestPanel key={area.id} areaId={area.id} />;
     case "terrain": return <TerrainTab key={area.id} areaId={area.id} />;
     case "series": return <div className="space-y-6"><RainfallTab key={area.id} areaId={area.id} /><TimeseriesPanel key={`ts-${area.id}`} areaId={area.id} /></div>;
     case "events": return <EventsTab key={area.id} areaId={area.id} />;

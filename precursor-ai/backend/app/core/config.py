@@ -45,6 +45,7 @@ class Settings(BaseSettings):
     enable_smap: bool = False  # optional provider
     enable_opera: bool = True  # OPERA DISP-S1 search (no login); downloads still need approval
     enable_landslide_catalog: bool = True
+    allow_synthetic_inputs: bool = False  # real data only; tests set ALLOW_SYNTHETIC_INPUTS=true (see core/synthetic_guard.py)
 
     # --- Phase 3: InSAR processing -------------------------------------------------
     insar_block_rows: int = 256  # raster rows read per window (bounds memory use)

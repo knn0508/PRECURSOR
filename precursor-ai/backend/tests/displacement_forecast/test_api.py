@@ -55,3 +55,26 @@ def test_files_and_unknown(c):
     assert c.get(f"{U}/docs/limitations_v2").status_code == 200
     assert c.get(f"{U}/images/nope").status_code == 404
     assert c.get(f"{U}/docs/nope").status_code == 404
+
+
+def test_backtest_meta_and_grids(c):
+    m = c.get(f"{U}/backtest").json()
+    if "issue_dates" not in m:
+        pytest.skip("backtest not in bundle")
+    assert "exploratory" in m["kind"] and m["pooled"]["n_pixels"] > 0 and "held_out_note" in m
+    g = c.get(f"{U}/backtest/{m['issue_dates'][0]}").json()
+    assert g["height"] == len(g["actual_mm"]) and g["target"] == m["target_dates"][0]
+    nulls = sum(x is None for row in g["actual_mm"] for x in row)
+    assert nulls > 0                                              # masked pixels are null, never zero
+    for fr, ar, dr in zip(g["forecast"]["q50_mm"], g["actual_mm"], g["difference_mm"]):
+        for f_, a_, d_ in zip(fr, ar, dr):
+            assert (a_ is None or f_ is None) == (d_ is None) or f_ is None
+    assert c.get(f"{U}/backtest/1999-01-01").status_code == 404
+
+
+def test_area_coverage_logic():
+    from app.services.displacement_forecast import store
+    inside = {"type": "Polygon", "coordinates": [[[-118.37, 33.73], [-118.33, 33.73], [-118.33, 33.75], [-118.37, 33.75], [-118.37, 33.73]]]}
+    far = {"type": "Polygon", "coordinates": [[[-122.5, 37.7], [-122.4, 37.7], [-122.4, 37.8], [-122.5, 37.8], [-122.5, 37.7]]]}
+    assert store.area_coverage(DATA, inside)["covered"] and store.area_coverage(DATA, inside)["area_covered_pct"] > 99
+    assert not store.area_coverage(DATA, far)["covered"]

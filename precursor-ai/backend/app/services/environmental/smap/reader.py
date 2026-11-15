@@ -9,6 +9,7 @@ lat/lon arrays and 1-D axis vectors are therefore accepted, discovered BY NAME. 
 from __future__ import annotations
 
 import app.core.geo_env  # noqa: F401  (must precede geo libs)
+from app.core.synthetic_guard import refuse_if_synthetic
 
 import re
 from dataclasses import dataclass, field
@@ -277,6 +278,7 @@ def read_daily_aoi(path: str | Path, aoi: BaseGeometry, date: Date, quality_filt
             warns.append(f"grid shape {shape} is not the documented 9 km global grid {_GLOBAL_9KM_SHAPE}: native size not stated")
         ver = _attr(f, "ProductVersion") or _attr(f, "algorithm_version") or _attr(f, "version")
         name = _attr(f, "ShortName") or _attr(f, "short_name")
+        refuse_if_synthetic(SYNTHETIC_ATTR in f.attrs, EnvError, path.name)
         return DailySmap(
             date=date, overpasses=stats, units_declared=sorted(u for u in units_seen if u)[0] if any(units_seen) else None,
             fill_value=sorted(fills)[0], fill_declared=declared, quality_flag_present=qpresent,

@@ -12,6 +12,8 @@ import {
 import {
   displacementDocUrl, displacementImageUrl, getDisplacementForecast, getDisplacementMetrics, getDisplacementStatus,
 } from "@/services/displacement";
+import { BacktestPanel } from "@/components/displacement/backtest-panel";
+import { listAreas } from "@/services/areas";
 import type { ForecastGrid } from "@/types/displacement";
 
 type Band = "q10_mm" | "q50_mm" | "q90_mm";
@@ -117,6 +119,25 @@ function DocViewer() {
   );
 }
 
+function AreaBacktests() {
+  const areas = useApi((s) => listAreas(s));
+  const [sel, setSel] = useState("");
+  const items = areas.data?.items ?? [];
+  const id = sel || items[0]?.id;
+  if (areas.isLoading && !areas.data) return <LoadingState label="Loading areas" />;
+  if (!items.length) return <p className="text-sm text-ink-muted">Register a monitored area to see its forecast vs reality backtest.</p>;
+  return (
+    <div className="space-y-2">
+      <label className="flex items-center gap-2 text-sm">Monitored area
+        <select value={id} onChange={(e) => setSel(e.target.value)} className="rounded-md border border-line bg-surface-2 px-2 py-1 text-sm">
+          {items.map((a) => <option key={a.id} value={a.id}>{a.name}</option>)}
+        </select>
+      </label>
+      {id && <BacktestPanel key={id} areaId={id} />}
+    </div>
+  );
+}
+
 export function DisplacementWorkbench() {
   const status = useApi((s) => getDisplacementStatus(s));
   const metrics = useApi((s) => getDisplacementMetrics(s));
@@ -168,6 +189,8 @@ export function DisplacementWorkbench() {
 
       {forecast.error ? <ErrorState title="Could not load forecast" message={forecast.error.message} onRetry={forecast.refetch} /> :
         forecast.data ? <Heatmap grid={forecast.data} /> : <LoadingState label="Loading forecast grid" />}
+
+      <AreaBacktests />
 
       <Card>
         <CardHeader><CardTitle>Held-out benchmark (test 2024 to 2026, one site)</CardTitle></CardHeader>

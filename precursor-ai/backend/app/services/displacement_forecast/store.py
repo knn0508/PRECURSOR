@@ -108,3 +108,47 @@ def benchmark_rows(data_root: Path) -> list[dict[str, str]]:
         raise FileNotFoundError("benchmark_summary.csv not found")
     with p.open(newline="", encoding="utf-8") as f:
         return list(csv.DictReader(f))
+
+
+# ---- backtest (forecast vs reality) -------------------------------------------------------------------------------------------------
+def _bt_dir(data_root: Path) -> Path:
+    return root(data_root) / "backtest"
+
+
+def _grid_corners(data_root: Path) -> list[list[float]]:
+    return forecast_grid(data_root)["corners"]
+
+
+def backtest_meta(data_root: Path) -> dict[str, Any]:
+    return _clean(_json(_bt_dir(data_root) / "backtest.json"))
+
+
+def backtest_grids(data_root: Path, issue: str) -> dict[str, Any]:
+    """Forecast q10/q50/q90, actual and difference (forecast - actual) for one issue date. NaN -> null; masked pixels have no actual."""
+    import numpy as np
+
+    meta = backtest_meta(data_root)
+    if issue not in meta["issue_dates"]:
+        raise KeyError(f"no backtest for issue date {issue!r}")
+    i = meta["issue_dates"].index(issue)
+    z = np.load(_bt_dir(data_root) / "grids.npz")
+    f, a = z["forecast"][i].astype("float64"), z["actual"][i].astype("float64")
+
+    def rows(b: "np.ndarray") -> list[list[float | None]]:
+        return [[round(float(x), 3) if math.isfinite(x) else None for x in row] for row in b]
+
+    return {"label": LABEL, "issue": issue, "target": meta["target_dates"][i], "unit": "mm (LOS increment)", "corners": _grid_corners(data_root),
+            "height": int(a.shape[0]), "width": int(a.shape[1]),
+            "forecast": {"q10_mm": rows(f[0]), "q50_mm": rows(f[1]), "q90_mm": rows(f[2])}, "actual_mm": rows(a), "difference_mm": rows(f[1] - a),
+            "metrics": meta["per_date"][i]}
+
+
+def area_coverage(data_root: Path, area_geojson: dict[str, Any]) -> dict[str, Any]:
+    """How much of a monitored area the bundle's data footprint covers. covered=False means NO result may be shown for the area."""
+    from shapely.geometry import Polygon, shape
+
+    fp = Polygon(_grid_corners(data_root))
+    a = shape(area_geojson)
+    inter = a.intersection(fp).area
+    return {"covered": bool(inter > 0), "area_covered_pct": float(100 * inter / a.area) if a.area > 0 else 0.0,
+            "footprint_covered_by_area_pct": float(100 * inter / fp.area)}

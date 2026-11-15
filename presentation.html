@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Precursor AI</title>
+<style>
+:root{--bg:#060b1a;--fg:#e8eefc;--mut:#8fa0c4;--acc:#ff6b35;--acc2:#4dd0e1;--card:#101a36}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--fg);font:clamp(16px,1.6vw,24px)/1.5 system-ui,Segoe UI,sans-serif}
+#stars{position:fixed;inset:0;z-index:0}
+.slide{position:absolute;inset:0;padding:6vh 8vw;display:flex;flex-direction:column;justify-content:center;opacity:0;pointer-events:none;z-index:1;transform:scale(.97);transition:opacity .6s,transform .6s}
+.slide.on{opacity:1;pointer-events:auto;transform:none}
+h1{font-size:clamp(40px,8vw,120px);letter-spacing:.04em;line-height:1.05}
+h2{font-size:clamp(28px,4vw,56px);margin-bottom:.6em;color:var(--acc2)}
+h1 span{color:var(--acc)}
+.sub{font-size:1.4em;color:var(--mut);margin-top:.5em}
+em{color:var(--mut)}
+.tag{margin-top:2em;display:inline-block;border:1px solid var(--acc);color:var(--acc);padding:.3em 1em;border-radius:99px;width:fit-content}
+/* staggered reveal: children with .r animate in when slide is active */
+.r{opacity:0;transform:translateY(28px)}
+.on .r{animation:up .7s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i,0)*.18s + .25s)}
+@keyframes up{to{opacity:1;transform:none}}
+ul{list-style:none;display:grid;gap:.8em;max-width:60em}
+li{padding:.8em 1.2em;background:var(--card);border-left:4px solid var(--acc);border-radius:8px}
+.flow{display:flex;flex-wrap:wrap;gap:.6em;align-items:stretch}
+.step{flex:1 1 11em;background:var(--card);border-top:4px solid var(--acc2);border-radius:10px;padding:1em}
+.step b{display:block;color:var(--acc2);font-size:.8em}
+.step small{color:var(--mut);display:block;margin-top:.4em;font-size:.7em}
+.arrow{align-self:center;color:var(--acc);font-size:1.6em}
+table{border-collapse:collapse;width:100%;max-width:55em}
+td,th{text-align:left;padding:.6em 1em;border-bottom:1px solid #223}
+th{color:var(--acc2)}
+td:first-child{color:var(--acc);font-weight:700}
+.demo{height:68vh;border:2px solid #223;border-radius:16px;position:relative;overflow:hidden;background:#000}
+.shot{position:absolute;inset:0;opacity:0;animation:fade 12s infinite}
+.shot:nth-child(2){animation-delay:4s}.shot:nth-child(3){animation-delay:8s}
+.shot img{width:100%;height:100%;object-fit:contain}
+.shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:.5em 1em;background:#000b;color:var(--acc2);font-size:.8em}
+@keyframes fade{0%{opacity:0}6%,30%{opacity:1}36%,100%{opacity:0}}
+ol{display:grid;gap:.8em;max-width:60em;padding-left:1.2em}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(13em,1fr));gap:1em}
+.card{background:var(--card);padding:1.2em;border-radius:12px;text-align:center}
+.av{width:7em;height:7em;border-radius:50%;object-fit:cover;border:3px solid var(--acc2);display:block;margin:0 auto .8em}
+.card small{color:var(--mut)}
+.qr{width:11em;height:11em;background:#fff;color:#000;display:grid;place-items:center;border-radius:12px;font-size:.8em;text-align:center;padding:1em}
+.end{display:flex;align-items:center;gap:3em;flex-wrap:wrap;justify-content:center}
+.pulse{animation:p 2.5s ease-in-out infinite}
+@keyframes p{50%{transform:scale(1.04);box-shadow:0 0 40px #ff6b3566}}
+#bar{position:fixed;top:0;left:0;height:4px;background:var(--acc);z-index:9;transition:width .4s}
+#n{position:fixed;right:1.5vw;bottom:1.5vh;color:var(--mut);font-size:.7em;z-index:9}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;transition:none!important}}
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas><div id="bar"></div><div id="n"></div>
+
+<section class="slide">
+  <h1 class="r">PRECURSOR <span>AI</span></h1>
+  <p class="sub r" style="--i:1">Seeing landslides before they happen, from space.</p>
+  <p class="tag r" style="--i:2">NASA Space Apps Challenge: “Dancing with the SARs”</p>
+</section>
+
+<section class="slide">
+  <h2 class="r">Challenge</h2>
+  <ul>
+    <li class="r" style="--i:1">Landslides often show weak warning signs first: slow ground creep and heavy rain on saturated soil.</li>
+    <li class="r" style="--i:2">Most hillsides have no ground sensors.</li>
+    <li class="r" style="--i:3">Radar satellite data exists, but it is huge and technical, so decision makers rarely use it.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2 class="r">Solution</h2>
+  <p class="r sub" style="--i:1;margin:0 0 1em;color:var(--fg)">One platform that turns NASA radar and environmental data into a landslide early-warning map for any area.</p>
+  <ul>
+    <li class="r" style="--i:2">Pick an area on the map.</li>
+    <li class="r" style="--i:3">The platform finds, downloads and checks the NASA data.</li>
+    <li class="r" style="--i:4">It measures ground movement with InSAR.</li>
+    <li class="r" style="--i:5">It combines movement with terrain, rain, soil moisture and landslide history.</li>
+    <li class="r" style="--i:6">Risk estimate: a 12-day ground-movement forecast with uncertainty. No risk class until a validated model exists.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2 class="r">How it works</h2>
+  <div class="flow">
+    <div class="step r" style="--i:1"><b>1 · Acquire</b></div><span class="arrow r" style="--i:1">→</span>
+    <div class="step r" style="--i:2"><b>2 · Process</b>InSAR</div><span class="arrow r" style="--i:2">→</span>
+    <div class="step r" style="--i:3"><b>3 · Integrate</b></div><span class="arrow r" style="--i:3">→</span>
+    <div class="step r" style="--i:4"><b>4 · Analyze</b></div><span class="arrow r" style="--i:4">→</span>
+    <div class="step r" style="--i:5"><b>5 · Risk and explain</b><small>Forecast with uncertainty ranges and plain-language reasons. Risk classes only after validation.</small></div><span class="arrow r" style="--i:5">→</span>
+    <div class="step r" style="--i:6"><b>6 · Dashboard</b></div>
+  </div>
+</section>
+
+<section class="slide">
+  <h2 class="r">Space data</h2>
+  <table class="r" style="--i:1">
+    <tr><th>Source</th><th>What it gives us</th></tr>
+    <tr><td>NISAR (L-band radar)</td><td>Ground displacement; 12-day repeat</td></tr>
+    <tr><td>NASADEM</td><td>Elevation, slope, aspect</td></tr>
+    <tr><td>GPM IMERG</td><td>Rainfall</td></tr>
+    <tr><td>SMAP</td><td>Soil moisture</td></tr>
+    <tr><td>NASA Global Landslide Catalog</td><td>Past landslides</td></tr>
+  </table>
+  <p class="r" style="--i:2;margin-top:1.2em">Test area: Portuguese Bend, CA (187 × 150 px at 30 m). Sentinel-1 OPERA frame F16940, data to 2026-03-11. 237 files, 4.58 GB downloaded.</p>
+</section>
+
+<section class="slide">
+  <h2 class="r">Demo</h2>
+  <div class="demo r" style="--i:1">
+    <figure class="shot"><img src="shots/home.png" alt="Landing page"><figcaption>Landing page</figcaption></figure>
+    <figure class="shot"><img src="shots/dashboard.png" alt="Monitoring dashboard"><figcaption>Dashboard: 12-day displacement forecast map</figcaption></figure>
+    <figure class="shot"><img src="shots/dashboard-environmental.png" alt="Environmental data"><figcaption>Environmental and terrain data coverage</figcaption></figure>
+  </div>
+</section>
+
+<section class="slide">
+  <h2 class="r">Impact</h2>
+  <ul>
+    <li class="r" style="--i:1">Test area: the 12-day displacement forecast covers 72% of 28,050 pixels at Portuguese Bend, CA.</li>
+    <li class="r" style="--i:2">Held-out backtest: 10.7% lower error than a zero-motion baseline (MAE 2.51 vs 2.81 mm, 120,805 pixels). Research result, not a validated warning.</li>
+    <li class="r" style="--i:3">Open NASA data in, one usable map out. Any region NISAR covers can reuse it.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2 class="r">Next steps</h2>
+  <ol>
+    <li class="r" style="--i:1"><b>Phase A, United States.</b> Lighter data and a well-documented landslide history.</li>
+    <li class="r" style="--i:2"><b>Phase B, Azerbaijan.</b> Terabytes of raw radar data, so it comes after the pipeline is proven.</li>
+    <li class="r" style="--i:3"><b>Then:</b> live public dashboard, a validated susceptibility model, and NISAR-based forecasts.</li>
+  </ol>
+</section>
+
+<section class="slide">
+  <h2 class="r">Team</h2>
+  <div class="team">
+    <div class="card r" style="--i:1"><img class="av" src="shots/team-sama.jpg" alt="Sama Abdullazade"><b>Sama Abdullazade</b><br><small>UX/UI Designer</small></div>
+    <div class="card r" style="--i:2"><img class="av" src="shots/team-farid.jpg" alt="Farid Gahramanov"><b>Farid Gahramanov</b><br><small>AI Engineer</small></div>
+    <div class="card r" style="--i:3"><img class="av" src="shots/team-kanan.jpg" alt="Kanan Salmanli"><b>Kanan Salmanli</b><br><small>AI Engineer</small></div>
+    <div class="card r" style="--i:4"><img class="av" src="shots/team-intigam.jpg" alt="Intigam Shumalov"><b>Intigam Shumalov</b><br><small>Fullstack Developer</small></div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="end">
+    <div class="qr r pulse">[QR code to the app]</div>
+    <h1 class="r" style="--i:1">Thank <span>you.</span></h1>
+  </div>
+</section>
+
+<script>
+// starfield
+const c=document.getElementById('stars'),x=c.getContext('2d');let S=[];
+function rs(){c.width=innerWidth;c.height=innerHeight;S=Array.from({length:140},()=>({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.5+.3,v:Math.random()*.25+.05}))}
+rs();addEventListener('resize',rs);
+(function f(){x.clearRect(0,0,c.width,c.height);x.fillStyle='#fff';for(const s of S){s.y=(s.y+s.v)%c.height;x.globalAlpha=.3+s.r/2.5;x.beginPath();x.arc(s.x,s.y,s.r,0,7);x.fill()}requestAnimationFrame(f)})();
+// navigation
+const sl=[...document.querySelectorAll('.slide')];let i=0;
+function go(n){i=Math.max(0,Math.min(sl.length-1,n));sl.forEach((s,k)=>s.classList.toggle('on',k==i));
+ bar.style.width=(i+1)/sl.length*100+'%';document.getElementById('n').textContent=(i+1)+' / '+sl.length;location.hash=i+1}
+addEventListener('keydown',e=>{if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key))go(i+1);if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key))go(i-1);if(e.key=='Home')go(0);if(e.key=='End')go(sl.length-1)});
+addEventListener('click',e=>go(e.clientX>innerWidth/2?i+1:i-1));
+let tx;addEventListener('touchstart',e=>tx=e.touches[0].clientX);addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)go(i+(d<0?1:-1))});
+go((parseInt(location.hash.slice(1))||1)-1);
+</script>
+</body>
+</html>

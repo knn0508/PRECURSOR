@@ -43,6 +43,7 @@ services:
       ENABLE_NISAR: ${ENABLE_NISAR:-true}
       ENABLE_NASADEM: ${ENABLE_NASADEM:-true}
       ENABLE_OPERA: ${ENABLE_OPERA:-true}
+      ALLOW_SYNTHETIC_INPUTS: ${ALLOW_SYNTHETIC_INPUTS:-false}
       ENABLE_GPM: ${ENABLE_GPM:-true}
       ENABLE_LANDSLIDE_CATALOG: ${ENABLE_LANDSLIDE_CATALOG:-true}
       # Phase 3: InSAR processing (no credentials needed; reads files already on disk)

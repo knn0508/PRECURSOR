@@ -18,6 +18,7 @@ import rasterio
 from rasterio.crs import CRS
 from rasterio.errors import RasterioIOError
 
+from app.core.synthetic_guard import refuse_if_synthetic
 from app.services.environmental.types import SYNTHETIC_TAG, EnvError
 
 HGT_NODATA = -32768.0  # SRTM HGT void convention (GDAL's HGT driver also reports it); see TERRAIN_METHODOLOGY.md
@@ -100,6 +101,7 @@ def inspect_raster(path: str | Path) -> RasterMeta:
             if nodata is None and kind.endswith("hgt"):
                 nodata = HGT_NODATA
                 notes.append("nodata not declared by file; SRTM HGT void value -32768 assumed")
+            refuse_if_synthetic(tags.get(SYNTHETIC_TAG) == "1", EnvError, Path(path).name)
             t = ds.transform
             return RasterMeta(
                 source_name=Path(path).name, source_kind=kind, crs=crs, crs_error=crs_error, width=ds.width,
